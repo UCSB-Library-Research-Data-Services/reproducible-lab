@@ -1,0 +1,23 @@
+project:
+  type: website
+
+website:
+  title: "Designing a Reproducible and Collaborative Lab"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+    tools:
+      - icon: github
+        href: https://github.com/brunj7/EDS-214-analytical-workflows
+
+format:
+  html:
+    theme: 
+      - cosmo
+      - rdsstyles.scss
+    toc: true
+    include-after-body: _footer.html
+
+
