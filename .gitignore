@@ -1,6 +1,12 @@
+# R Stuff
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
 
+# quarto stuff
 /.quarto/
+/_site/
+
+# Mac stuff
+.DS_Store
