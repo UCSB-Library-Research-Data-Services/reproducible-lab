@@ -7,10 +7,17 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: coding.qmd
+        text: "Coding as a Lab"
+      - href: data.qmd
+        text: "Managing your data"
+      - href: workflow.qmd
+        text: "Analytical workflows"
+      - href: preserving.qmd
+        text: "Documenting and Preserving Things"
     tools:
       - icon: github
-        href: https://github.com/brunj7/EDS-214-analytical-workflows
+        href: https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab
 
 format:
   html:

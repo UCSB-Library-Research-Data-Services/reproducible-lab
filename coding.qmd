@@ -1,0 +1,21 @@
+---
+title: "Coding a a Lab"
+---
+
+- Quick intro to GitHub
+  - Why
+  - Website interface walk through
+
+- Github Organizations
+  - Why
+  - setup
+  - manage: teams and settings
+
+- Templates
+  - Repo
+  - Issues
+  - Projects
+
+- Collaborative coding
+  - Pair Programming
+  - Code Exchange
