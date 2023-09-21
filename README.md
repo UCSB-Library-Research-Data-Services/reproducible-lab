@@ -1,6 +1,4 @@
-# Designing a Reproducible and Collaborative Research Lab
+# Designing a Reproducible and Collaborative Research Lab (RCL)
 
-Repository used to track tasks for the different labs part of the program.
-
-Each lab will have a GitHub project to help track the 
+This repository hosts the content for the RCL workshop series website. It has been developed using [Quarto](https://quarto.org/).
 
