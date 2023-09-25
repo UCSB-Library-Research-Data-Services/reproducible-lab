@@ -7,43 +7,41 @@ website:
   search: 
     location: navbar
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - text: "Coding as a Lab"
-        menu: 
+    tools:
+      - icon: github
+        href: https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab    
+    
+  sidebar:
+    align: center
+    style: "docked"
+    search: true
+    contents:    
+      - section: "Coding as a Lab"
+        contents:
           - href: coding.qmd
             text: "Code as scientific product"
-          - text: "--- Leveraging GitHub ---"
+      - section: "Leveraging GitHub"
+        contents:
           - href: github_intro.qmd
             text: "Short intro to GitHub"
           - href: github_org.qmd
-            text: "GitHub org"
-          - href: github_teams.qmd
-            text: "Setting up teams"
-          - text: "--- Collaborative Coding ---"
+            text: "GitHub organizations"
+          - href: github_teams.qmdSetting up teams"
+      - section: "Collaborative Coding"
+        contents:
           - href: collab_pairprog.qmd
             text: "Pair Programming"
           - href: collab_exchange.qmd
             text: "Code Exchange"
-          - text: "--- Documenting things ---"
+      - section: "Documenting things"
+        contents:
           - href: github_template.qmd
             text: "Streamlining documentation"
-
-      - href: data.qmd
-        text: "Managing your data"
-      - href: workflow.qmd
-        text: "Analytical workflows"
-      - href: preserving.qmd
-        text: "Documenting and Preserving Things"
-    tools:
-      - icon: github
-        href: https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab
 
 format:
   html:
     theme: 
-      - cosmo
+      - cosmoqmdqmdqmd
       - rdsstyles.scss
     toc: true
     include-after-body: _footer.html
