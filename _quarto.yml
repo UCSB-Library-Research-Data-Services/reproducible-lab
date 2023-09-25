@@ -3,12 +3,33 @@ project:
 
 website:
   title: "Designing a Reproducible and Collaborative Lab"
+  page-navigation: true
+  search: 
+    location: navbar
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - href: coding.qmd
-        text: "Coding as a Lab"
+      - text: "Coding as a Lab"
+        menu: 
+          - href: coding.qmd
+            text: "Code as scientific product"
+          - text: "--- Leveraging GitHub ---"
+          - href: github_intro.qmd
+            text: "Short intro to GitHub"
+          - href: github_org.qmd
+            text: "GitHub org"
+          - href: github_teams.qmd
+            text: "Setting up teams"
+          - text: "--- Collaborative Coding ---"
+          - href: collab_pairprog.qmd
+            text: "Pair Programming"
+          - href: collab_exchange.qmd
+            text: "Code Exchange"
+          - text: "--- Documenting things ---"
+          - href: github_template.qmd
+            text: "Streamlining documentation"
+
       - href: data.qmd
         text: "Managing your data"
       - href: workflow.qmd
