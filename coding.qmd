@@ -1,5 +1,5 @@
 ---
-title: "Coding a a Lab"
+title: "Code as scientific product"
 ---
 
 Codes are part of the scientific products your Lab is producing. It is thus important to manage, document, and preserve them as you would do for any other of your scientific products. In this session, we will discuss tools and practices that can ease the management of your codes, as well as develop them in a collaborative way.
@@ -14,14 +14,14 @@ Today we will be focusing on using GitHub to collaborate and keep track of the d
 
 - Quick intro to GitHub
   - Why
-  - Website interface walk through
+  - Website interface walkthrough
 
 - Github Organizations
   - Why
   - setup
   - manage: teams and settings
 
-- Templates
+- Streamlining documentation with templates
   - Repo
   - Issues
   - Projects
@@ -29,3 +29,5 @@ Today we will be focusing on using GitHub to collaborate and keep track of the d
 - Collaborative coding
   - Pair Programming
   - Code Exchange via pull request
+  
+  
