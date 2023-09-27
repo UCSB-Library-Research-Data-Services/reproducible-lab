@@ -1,5 +1,5 @@
 ---
-title: "Designing a Reproducible and Collaborative Lab (RCL)"
+title: "Designing a Reproducible and Collaborative Lab"
 ---
 
 Workshop Series and Coaching Sessions for Faculty and their Teams
