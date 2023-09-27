@@ -20,25 +20,28 @@ website:
         contents:
           - href: coding.qmd
             text: "Code as scientific product"
-      - section: "Leveraging GitHub"
+          - section: "Leveraging GitHub"
+            contents:
+              - href: github_intro.qmd
+                text: "Short intro to GitHub"
+              - href: github_org.qmd
+                text: "GitHub organizations"
+              - href: github_teams.qmd
+                text: "Setting up teams"
+          - section: "Collaborative coding"
+            contents:
+              - href: collab_pairprog.qmd
+                text: "Pair Programming"
+              - href: collab_exchange.qmd
+                text: "Code Exchange"
+          - section: "Documenting things"
+            contents:
+              - href: github_template.qmd
+                text: "Streamlining code documentation"
+      - section: "Managing your Lab data"
         contents:
-          - href: github_intro.qmd
-            text: "Short intro to GitHub"
-          - href: github_org.qmd
-            text: "GitHub organizations"
-          - href: github_teams.qmd
-            text: "Setting up teams"
-      - section: "Collaborative coding"
-        contents:
-          - href: collab_pairprog.qmd
-            text: "Pair Programming"
-          - href: collab_exchange.qmd
-            text: "Code Exchange"
-      - section: "Documenting things"
-        contents:
-          - href: github_template.qmd
-            text: "Streamlining documentation"
-
+            - href: data_mgmt.qmd
+              text: "What is data management?"
 format:
   html:
     theme: 
