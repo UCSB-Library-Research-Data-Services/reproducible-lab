@@ -26,8 +26,9 @@ website:
             text: "Short intro to GitHub"
           - href: github_org.qmd
             text: "GitHub organizations"
-          - href: github_teams.qmdSetting up teams"
-      - section: "Collaborative Coding"
+          - href: github_teams.qmd
+            text: "Setting up teams"
+      - section: "Collaborative coding"
         contents:
           - href: collab_pairprog.qmd
             text: "Pair Programming"
