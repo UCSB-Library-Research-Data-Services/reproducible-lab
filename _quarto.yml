@@ -39,7 +39,7 @@ website:
             contents:
               - href: github_template.qmd
                 text: "Streamlining code documentation"
-      - section: "Managing your Lab data"
+      - section: "Managing your Research data"
         contents:
             - href: data_mgmt.qmd
               text: "What is data management?"
