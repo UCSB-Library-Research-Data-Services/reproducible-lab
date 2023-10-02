@@ -46,7 +46,7 @@ website:
 format:
   html:
     theme: 
-      - cosmoqmdqmdqmd
+      - cosmo
       - rdsstyles.scss
     toc: true
     include-after-body: _footer.html
