@@ -1,0 +1,19 @@
+---
+title: "GitHub Organizations"
+---
+
+## Advantages
+
+- Facilitate collaboration: 
+  - Create teams to easily assign people to repositories
+  - Manage tasks at the organization level (not tight to a specific repository)
+- Simplify code management:
+  - The organization owns the repository
+  - Design templates to streamline documentation
+  - Assign roles to users, including external collaborators
+- Increase your visibility on GitHub:
+  - Create a landing page introducing your lab
+  - One stop to see your Lab contributions
+
+## Creating your Lab's GitHub Organization
+
