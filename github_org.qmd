@@ -32,7 +32,7 @@ Since we are part of an University, students and faculty have access to special 
 
 ![](img/github_org_setup-03_setup.png)
 
-![](img/github_org_setup-04 )
+![](img/github_org_setup-04_collaborators.png)
 
 
 
