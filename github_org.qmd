@@ -15,5 +15,41 @@ title: "GitHub Organizations"
   - Create a landing page introducing your lab
   - One stop to see your Lab contributions
 
-## Creating your Lab's GitHub Organization
+## Setting up your Lab's GitHub Organization
 
+Before setting up your organization, make sure that you have claimed your education GitHub account first!! 
+
+::: {.callout-tip}
+## Did you know you are eligible for _GitHub Education_ perks?
+
+Since we are part of an University, students and faculty have access to special accounts benefits for free. The application process is straight forward. Get started here: <https://education.github.com/>
+:::
+
+
+![](img/github_org_setup-01_create_menu.png)
+
+![](img/github_org_setup-02_select_free.png)
+
+![](img/github_org_setup-03_setup.png)
+
+![](img/github_org_setup-04 )
+
+
+
+## Adding a landing page
+
+![](img/github_org-01_no_landingpage.png)
+
+![](img/github_org-02_start_landingpage.png)
+
+![](img/github_org-03_landingpage_reop.png)
+
+![](img/github_org-04_landingpage_repo_filled.png)
+
+![](img/github_org-05_landingpage_repo_created.png)
+
+![](img/github_org-06_landingpage_readme.png)
+
+![](img/github_org-07_landingpage_readme_fille.png)
+
+![](img/github_org-08_with_landingpage.png)
