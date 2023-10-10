@@ -2,7 +2,7 @@
 title: "GitHub Organizations"
 ---
 
-## Advantages
+## Why a GitHub organization
 
 - Facilitate collaboration: 
   - Create teams to easily assign people to repositories
@@ -15,6 +15,7 @@ title: "GitHub Organizations"
   - Create a landing page introducing your lab
   - One stop to see your Lab contributions
 
+
 ## Setting up your Lab's GitHub Organization
 
 Before setting up your organization, make sure that you have claimed your education GitHub account first!! 
@@ -25,17 +26,27 @@ Before setting up your organization, make sure that you have claimed your educat
 Since we are part of an University, students and faculty have access to special accounts benefits for free. The application process is straight forward. Get started here: <https://education.github.com/>
 :::
 
+1. You can create an organization by clicking on the `+` sign  menu at the top right of the GitHub task bar and select _New organization_
 
-![](img/github_org_setup-01_create_menu.png)
+![](img/github_org_setup-01_create_menu.png){fig-align="center" width=50%}
 
-![](img/github_org_setup-02_select_free.png)
+2. This will send you to a new page with several options to start your organization. Choose the free option at this time.
 
-![](img/github_org_setup-03_setup.png)
+![](img/github_org_setup-02_select_free.png){fig-align="center" width=50%}
 
-![](img/github_org_setup-04_collaborators.png)
+3. Now you can provide the name of your organization. We recommend to name it in a way that reflects your Lab name to help with the organization branding. Select the email you used to get the education discount and check the "my personal account" option.
 
-![](img/github_org_setup-05_org_created.png)
+![](img/github_org_setup-03_setup.png){fig-align="center" width=60%}
 
+4. And congratulations this is it!! You can now invite your collaborators to the organization (you will be able to do so later as well).
+
+![](img/github_org_setup-04_collaborators.png){fig-align="center" width=70%}
+
+5. Your organization page should look as follow:
+
+![](img/github_org_setup-05_org_created.png){fig-align="center" width=80%}
+
+Note all the suggestions that GitHub is providing to help you customize your organization according to your need. We are going to follow the recommendation on the right side to add a special README that will act as a landing page for your organization.
 
 ## Adding a landing page
 
