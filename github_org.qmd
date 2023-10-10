@@ -61,9 +61,9 @@ Note all the suggestions that GitHub is providing to help you customize your org
 
 ![](img/github_org-03_landingpage_repo_created.png)
 
-![](img/github_org-04_landingpage_readme.png){fig-align="center" width=70%}
+![](img/github_org-04_landingpage_readme.png){fig-align="center" width=90%}
 
-![](img/github_org-05_landingpage_readme_filled.png){fig-align="center" width=70%}
+![](img/github_org-05_landingpage_readme_filled.png){fig-align="center" width=90%}
 
 ![](img/github_org-06_landingpage_commit.png){fig-align="center" width=60%}
 
