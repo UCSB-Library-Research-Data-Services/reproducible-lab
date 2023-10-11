@@ -44,27 +44,44 @@ Since we are part of an University, students and faculty have access to special 
 
 5. Your organization page should look as follow:
 
-![](img/github_org_setup-05_org_created.png){fig-align="center" width=80%}
+![](img/github_org_setup-05_org_created.png){fig-align="center" width=90%}
 
-Note all the suggestions that GitHub is providing to help you customize your organization according to your need. We are going to follow the recommendation on the right side to add a special README that will act as a landing page for your organization.
+Note all the suggestions that GitHub is providing to help you customize your organization according to your need. We are going to follow the recommendation on the right side (red box) to add a special README.md that will act as a landing page for our organization.
 
 
 ## Adding a landing page
 
+Adding a landing page is a great opportunity to describe your research lab and what content one can expect to find in this organization. It is also a good location to describe guidelines how to best engage with you and provide contact information. 
 
+1. Click on the `create a README file` on the right side bar (see red box above). This will trigger the creation of a new special repository called `.github` tht will be used to host your README file. Click _Create repository_.
 
 ![](img/github_org-01_start_landingpage.png){fig-align="center" width=60%}
 
-![](img/github_org-02_landingpage_repo.png){fig-align="center" width=70%}
+2. Fill out the necessary information as follow:
+
+![](img/github_org-02_landingpage_repo.png){fig-align="center" width=80%}
+
+We recommend to check the box _Add a README file_ as a good practice but note it is not the README that will be used as your landing page, it is the one describing this new repository hosting your landing page README in a special subfolder.
 
 
+3. Create your landing page by clicking on the _Add README_ button on the right side bar (red box below)
 
 ![](img/github_org-03_landingpage_repo_created.png)
+Note the path to this special README: `.github/profile/README.md`
 
-![](img/github_org-04_landingpage_readme.png){fig-align="center" width=90%}
+4. Edit your landing page. The template used to create this special README provide suggestions about the type of information you might want to add to your landing page. Those suggestions are in a comment block (delimited by `<!--` & `-->`) and thus won't be shown when the READEM is rendered. We still do recommend to delete this block once you are done editing your README
 
-![](img/github_org-05_landingpage_readme_filled.png){fig-align="center" width=90%}
+![](img/github_org-04_landingpage_readme.png){fig-align="center"}
+
+Here is as example how we defined the landing page README for our test organization:
+
+
+![](img/github_org-05_landingpage_readme_filled.png){fig-align="center"}
+
+5. Save your README: Now that you have your first version of your GitHub organization landing page (you can always iterate later on it), we are ready to save this version by clicking on the _Commit changes_ button (red box above). This will prompt a new page where you can add a commit message to describe the changes. Finally you can hit the _Commit changes_ button to save this version. 
 
 ![](img/github_org-06_landingpage_commit.png){fig-align="center" width=60%}
+
+Voilà 🎉 !!  When you go back to your organization main page, you should now see the text you just wrote at the top of the landing page!
 
 ![](img/github_org-07_with_landingpage.png){fig-align="center" width=90%}
