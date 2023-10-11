@@ -84,4 +84,4 @@ Here is as example how we defined the landing page README for our test organizat
 
 Voilà 🎉 !! When you go back to your organization main page, you should now see the text you just wrote at the top of the landing page!
 
-![](img/github_org-07_with_landingpage.png){fig-align="center" width=90%}
+![](img/github_org-07_with_landingpage.png){fig-align="center"}
