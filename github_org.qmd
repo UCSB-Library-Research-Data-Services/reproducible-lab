@@ -49,7 +49,9 @@ Since we are part of an University, students and faculty have access to special 
 Note all the suggestions that GitHub is providing to help you customize your organization according to your need. We are going to follow the recommendation on the right side (red box) to add a special README.md that will act as a landing page for our organization.
 
 
-## Adding a landing page
+## Customizing your GitHub Organization
+
+### Adding a landing page
 
 Adding a landing page is a great opportunity to describe your research lab and what content one can expect to find in this organization. It is also a good location to describe guidelines how to best engage with you and provide contact information. 
 
@@ -85,3 +87,11 @@ Here is as example how we defined the landing page README for our test organizat
 Voilà 🎉 !! When you go back to your organization main page, you should now see the text you just wrote at the top of the landing page!
 
 ![](img/github_org-07_with_landingpage.png){fig-align="center"}
+
+###  Setting up your organization profile
+
+Now that you have a landing page, it is also a great idea to fill out some metadata about your organization under the _Settings_ tab of the main navigation bar (top right). This will help with the discovery of your Organization. You can provide a more Human friendly name, an email to reach out to you, a short description of your organisation, and an URL such as your lab home page.
+
+![](img/github_org_setup-06_org_settings.png)
+
+Finally, click _Update profile_ to save your changes.
