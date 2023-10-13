@@ -10,3 +10,20 @@ Teams are very convenient when a set of collaborators work on the same project a
 
 ## Create a team
 
+![](img/github_org_teams-01_team_page.png)
+
+
+![](img/github_org_teams-02_create.png)
+
+
+![](img/github_org_teams-03_first_team.png)
+
+![](img/github_org_teams-04_collaborators_invited.png)
+
+![](img/github_org_teams-05_second_team.png)
+
+![](img/github_org_teams-06_second_team.png)
+
+
+
+
