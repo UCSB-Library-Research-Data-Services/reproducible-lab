@@ -8,22 +8,36 @@ You can use teams to manage access for people in an organization and for sending
 
 Teams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually.
 
+
 ## Create a team
+
+In the navigation bar at the top of your organization page, click on the _Teams_ tab. Normally this is the page you use to see and manage the existing teams of your organization. Since we do not have teams yet, this page is providing a short overview of what teams can be used for. Click on the _New Team_ green button at the bottom to start creating your first team.
 
 ![](img/github_org_teams-01_team_page.png)
 
+Proved the name and a short description of your team. We recommend to let the other options to their default settings.
 
 ![](img/github_org_teams-02_create.png)
 
+Your team has been created, but as of now you are the only member. Let's invite some collaborators by clicking on the _Add a member_ button on the top right.
 
 ![](img/github_org_teams-03_first_team.png)
 
+On this new window you can search for GitHUb users by their username. If you do not know their username you can search by their full names. Note that if there are no pictures associated to the profile you fund or are not sure it is the right person, we recommend to **not** add this person at this time and to reach out asking for their username (which is unique). If you are sure you found the right persons, you can click on _Invite_.
+
+![](img/github_org_teams-035_invite.png)
+
+You collaborators will receive an invitation to join the team. They will have to accept the invitation before they can use the benefits (access to repositories, ...) associated with the team. Once your collaborators have accepted your team should look like below.
+
 ![](img/github_org_teams-04_collaborators_invited.png)
 
-![](img/github_org_teams-05_second_team.png)
+OK, let's create a second team! In this example we will create a Reserach Facilitators team with two members.
+
 
 ![](img/github_org_teams-06_second_team.png)
 
 
+Once your GitHub organization has teams, you will the number of existing teams next to the _Teams_ tab. 
 
+![](img/github_org_teams-05_org_wtih_teams.png)
 
