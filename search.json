@@ -1,17 +1,10 @@
 [
   {
-    "objectID": "coding.html",
-    "href": "coding.html",
-    "title": "Code as scientific product",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Designing a Reproducible and Collaborative Lab",
     "section": "",
-    "text": "Codes are part of the scientific products your Lab is producing. It is thus important to manage, document, and preserve them as you would do for any other of your scientific products. In this session, we will discuss tools and practices that can ease the management of your codes, as well as develop them in a collaborative way."
-  },
-  {
-    "objectID": "coding.html#code-repository",
-    "href": "coding.html#code-repository",
-    "title": "Code as scientific product",
-    "section": "Code repository",
-    "text": "Code repository\nAs data repositories, code repositories are a great way to preserve and share your code (including with your future self!!). One you might have already heard of is GitHub. However, there are others such as GitLab, Bitbucket Source Forge, and more.\nToday we will be focusing on using GitHub to collaborate and keep track of the development of our scripts and other code.\n\nQuick intro to GitHub\n\nWhy\nWebsite interface walkthrough\n\nGithub Organizations\n\nWhy\nsetup\nmanage: teams and settings\n\nStreamlining documentation with templates\n\nRepo\nIssues\nProjects\n\nCollaborative coding\n\nPair Programming\nCode Exchange via pull request"
+    "text": "Workshop Series and Coaching Sessions for Faculty and their Teams\n\nTopics\n\nCoding as a lab\nManaging your lab data Automating your analytical workflows\nDocumenting & preserving things to make them reusable\n\n\n\nFormat\n\nScheduled at your convenience\n4 workshops (2-3h) as a primer on a specific topic\nPersonalized coaching sessions focused on lab-specific needs\n\n\n\nOutcomes\n\nMore reproducible management of your lab’s scientific products (data, code etc.)\nStreamlined on- and off -boarding\nBetter analytical strategies for collaboration Safety nets for your research lab content\nMore efficient reuse of your work\n\n\n\nLearning Opportunities\n\nLeverage GitHub organizations to manage your Lab code\nDevelop strategies to centralize and manage your Lab data\nProtect your Lab scientific products against loss through backup and computing resources strategies\nSet up templates and guidelines on how to document your Lab research and improve its reusability\nEstablish Lab standard operating procedures and documentation standards\nCreate “good enough” research computing strategies for robust and more reusable code development"
   },
   {
     "objectID": "github_org.html",
@@ -63,10 +56,24 @@
     "text": "Create a team\nIn the navigation bar at the top of your organization page, click on the Teams tab. Normally this is the page you use to see and manage the existing teams of your organization. Since we do not have teams yet, this page is providing a short overview of what teams can be used for. Click on the New Team green button at the bottom to start creating your first team.\n\nProved the name and a short description of your team. We recommend to let the other options to their default settings.\n\nYour team has been created, but as of now you are the only member. Let’s invite some collaborators by clicking on the Add a member button on the top right.\n\nOn this new window you can search for GitHUb users by their username. If you do not know their username you can search by their full names. Note that if there are no pictures associated to the profile you fund or are not sure it is the right person, we recommend to not add this person at this time and to reach out asking for their username (which is unique). If you are sure you found the right persons, you can click on Invite.\n\nYou collaborators will receive an invitation to join the team. They will have to accept the invitation before they can use the benefits (access to repositories, …) associated with the team. Once your collaborators have accepted your team should look like below.\n\nOK, let’s create a second team! In this example we will create a Reserach Facilitators team with two members.\n\nOnce your GitHub organization has teams, you will the number of existing teams next to the Teams tab."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Designing a Reproducible and Collaborative Lab",
+    "objectID": "github_teams.html#leveraging-teams",
+    "href": "github_teams.html#leveraging-teams",
+    "title": "GitHub Teams",
+    "section": "Leveraging teams",
+    "text": "Leveraging teams\nLet’s create a new repository and use our newly created teams to add several collaborators at once."
+  },
+  {
+    "objectID": "coding.html",
+    "href": "coding.html",
+    "title": "Code as scientific product",
     "section": "",
-    "text": "Workshop Series and Coaching Sessions for Faculty and their Teams\n\nTopics\n\nCoding as a lab\nManaging your lab data Automating your analytical workflows\nDocumenting & preserving things to make them reusable\n\n\n\nFormat\n\nScheduled at your convenience\n4 workshops (2-3h) as a primer on a specific topic\nPersonalized coaching sessions focused on lab-specific needs\n\n\n\nOutcomes\n\nMore reproducible management of your lab’s scientific products (data, code etc.)\nStreamlined on- and off -boarding\nBetter analytical strategies for collaboration Safety nets for your research lab content\nMore efficient reuse of your work\n\n\n\nLearning Opportunities\n\nLeverage GitHub organizations to manage your Lab code\nDevelop strategies to centralize and manage your Lab data\nProtect your Lab scientific products against loss through backup and computing resources strategies\nSet up templates and guidelines on how to document your Lab research and improve its reusability\nEstablish Lab standard operating procedures and documentation standards\nCreate “good enough” research computing strategies for robust and more reusable code development"
+    "text": "Codes are part of the scientific products your Lab is producing. It is thus important to manage, document, and preserve them as you would do for any other of your scientific products. In this session, we will discuss tools and practices that can ease the management of your codes, as well as develop them in a collaborative way."
+  },
+  {
+    "objectID": "coding.html#code-repository",
+    "href": "coding.html#code-repository",
+    "title": "Code as scientific product",
+    "section": "Code repository",
+    "text": "Code repository\nAs data repositories, code repositories are a great way to preserve and share your code (including with your future self!!). One you might have already heard of is GitHub. However, there are others such as GitLab, Bitbucket Source Forge, and more.\nToday we will be focusing on using GitHub to collaborate and keep track of the development of our scripts and other code.\n\nQuick intro to GitHub\n\nWhy\nWebsite interface walkthrough\n\nGithub Organizations\n\nWhy\nsetup\nmanage: teams and settings\n\nStreamlining documentation with templates\n\nRepo\nIssues\nProjects\n\nCollaborative coding\n\nPair Programming\nCode Exchange via pull request"
   }
 ]
