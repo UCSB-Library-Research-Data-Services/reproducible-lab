@@ -1,10 +1,45 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Designing a Reproducible and Collaborative Lab",
+    "objectID": "github_teams.html",
+    "href": "github_teams.html",
+    "title": "GitHub Teams",
     "section": "",
-    "text": "Workshop Series and Coaching Sessions for Faculty and their Teams\n\nTopics\n\nCoding as a lab\nManaging your lab data Automating your analytical workflows\nDocumenting & preserving things to make them reusable\n\n\n\nFormat\n\nScheduled at your convenience\n4 workshops (2-3h) as a primer on a specific topic\nPersonalized coaching sessions focused on lab-specific needs\n\n\n\nOutcomes\n\nMore reproducible management of your lab’s scientific products (data, code etc.)\nStreamlined on- and off -boarding\nBetter analytical strategies for collaboration Safety nets for your research lab content\nMore efficient reuse of your work\n\n\n\nLearning Opportunities\n\nLeverage GitHub organizations to manage your Lab code\nDevelop strategies to centralize and manage your Lab data\nProtect your Lab scientific products against loss through backup and computing resources strategies\nSet up templates and guidelines on how to document your Lab research and improve its reusability\nEstablish Lab standard operating procedures and documentation standards\nCreate “good enough” research computing strategies for robust and more reusable code development"
+    "text": "You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google drive, this is the same concept.\nTeams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually."
+  },
+  {
+    "objectID": "github_teams.html#what-are-github-teams",
+    "href": "github_teams.html#what-are-github-teams",
+    "title": "GitHub Teams",
+    "section": "",
+    "text": "You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google drive, this is the same concept.\nTeams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually."
+  },
+  {
+    "objectID": "github_teams.html#create-a-team",
+    "href": "github_teams.html#create-a-team",
+    "title": "GitHub Teams",
+    "section": "Create a team",
+    "text": "Create a team\nIn the navigation bar at the top of your organization page, click on the Teams tab. Normally this is the page you use to see and manage the existing teams of your organization. Since we do not have teams yet, this page is providing a short overview of what teams can be used for. Click on the New Team green button at the bottom to start creating your first team.\n\nProved the name and a short description of your team. We recommend to let the other options to their default settings.\n\n\n\n\n\nYour team has been created, but as of now you are the only member. Let’s invite some collaborators by clicking on the Add a member button on the top right.\n\n\n\n\n\nOn this new window you can search for GitHUb users by their username. If you do not know their username you can search by their full names. Note that if there are no pictures associated to the profile you fund or are not sure it is the right person, we recommend to not add this person at this time and to reach out asking for their username (which is unique). If you are sure you found the right persons, you can click on Invite.\n\n\n\n\n\nYou collaborators will receive an invitation to join the team. They will have to accept the invitation before they can use the benefits (access to repositories, …) associated with the team. Once your collaborators have accepted your team should look like below.\n\n\n\n\n\nOK, let’s create a second team! In this example we will create a Reserach Facilitators team with two members.\n\n\n\n\n\nOnce your GitHub organization has teams, you will the number of existing teams next to the Teams tab."
+  },
+  {
+    "objectID": "github_teams.html#leveraging-teams",
+    "href": "github_teams.html#leveraging-teams",
+    "title": "GitHub Teams",
+    "section": "Leveraging teams",
+    "text": "Leveraging teams\nLet’s create a new repository and use our newly created teams to add several collaborators at once.\n\n\n\n\n\nUnder your newly created organization, create a new repository with the following settings:\n\n\n\n\n\nOnce the repository created, click on the Settings tab (top right in the grey bar)\n\n\n\n\n\n{fig-align=“center” width=70%}On the left panel, click on Collaborators and teams and then click on the green button Add teams\n\n\n\n\n\nStart typing the name of the team you would like to add. Suggestions of teams should come up as you type. Select the relevant team by clicking on the suggestion.\n\n\n\n\n\nFor close collaborators, we recommend to use the Maitain level of access that provides a good blend of people being able to do most of the actions they will need to do while not being allowed to conduct destructive actions on accident (like deleting the entire repository). For collaborators you are less familiar with, including their familiarity with GitHub, you might want to start with the Write access.\n\n\n\n\n\nOnce the team added, your settings should look as follow:\n\n\n\n\n\nThe good news is now if you add a collaborator to a specific team, this person will automatically gain access to all the repositories that team as access to! This will streamline the on and off boarding process of your team memebers."
+  },
+  {
+    "objectID": "coding.html",
+    "href": "coding.html",
+    "title": "Code as scientific product",
+    "section": "",
+    "text": "Codes are part of the scientific products your Lab is producing. It is thus important to manage, document, and preserve them as you would do for any other of your scientific products. In this session, we will discuss tools and practices that can ease the management of your codes, as well as develop them in a collaborative way."
+  },
+  {
+    "objectID": "coding.html#code-repository",
+    "href": "coding.html#code-repository",
+    "title": "Code as scientific product",
+    "section": "Code repository",
+    "text": "Code repository\nAs data repositories, code repositories are a great way to preserve and share your code (including with your future self!!). One you might have already heard of is GitHub. However, there are others such as GitLab, Bitbucket Source Forge, and more.\nToday we will be focusing on using GitHub to collaborate and keep track of the development of our scripts and other code.\n\nQuick intro to GitHub\n\nWhy\nWebsite interface walkthrough\n\nGithub Organizations\n\nWhy\nsetup\nmanage: teams and settings\n\nStreamlining documentation with templates\n\nRepo\nIssues\nProjects\n\nCollaborative coding\n\nPair Programming\nCode Exchange via pull request"
   },
   {
     "objectID": "github_org.html",
@@ -35,45 +70,10 @@
     "text": "Customizing your GitHub Organization\n\nAdding a landing page\nAdding a landing page is a great opportunity to describe your research lab and what content one can expect to find in this organization. It is also a good location to describe guidelines how to best engage with you and provide contact information.\n\nClick on the create a README file on the right side bar (see red box above). This will trigger the creation of a new special repository called .github tht will be used to host your README file. Click Create repository.\n\n\n\n\n\n\n\nFill out the necessary information as follow:\n\n\n\n\n\n\nWe recommend to check the box Add a README file as a good practice but note it is not the README that will be used as your landing page, it is the one describing this new repository hosting your landing page README in a special subfolder.\n\nCreate your landing page by clicking on the Add README button on the right side bar (red box below)\n\n Note the path to this special README: .github/profile/README.md\n\nEdit your landing page. The template used to create this special README provide suggestions about the type of information you might want to add to your landing page. Those suggestions are in a comment block (delimited by &lt;!-- & --&gt;) and thus won’t be shown when the READEM is rendered. We still do recommend to delete this block once you are done editing your README\n\n\n\n\n\n\nHere is as example how we defined the landing page README for our test organization:\n\n\n\n\n\n\nSave your README: Now that you have your first version of your GitHub organization landing page (you can always iterate later on it), we are ready to save this version by clicking on the Commit changes button (red box above). This will prompt a new page where you can add a commit message to describe the changes. Finally you can hit the Commit changes button to save this version.\n\n\n\n\n\n\nVoilà 🎉 !! When you go back to your organization main page, you should now see the text you just wrote at the top of the landing page!\n\n\n\n\n\n\n\nSetting up your organization profile\nNow that you have a landing page, it is also a great idea to fill out some metadata about your organization under the Settings tab of the main navigation bar (top right). This will help with the discovery of your Organization. You can provide a more Human friendly name, an email to reach out to you, a short description of your organisation, and an URL such as your lab home page.\n\nFinally, click Update profile to save your changes."
   },
   {
-    "objectID": "github_teams.html",
-    "href": "github_teams.html",
-    "title": "GitHub Teams",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Designing a Reproducible and Collaborative Lab",
     "section": "",
-    "text": "You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google drive, this is the same concept.\nTeams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually."
-  },
-  {
-    "objectID": "github_teams.html#what-are-github-teams",
-    "href": "github_teams.html#what-are-github-teams",
-    "title": "GitHub Teams",
-    "section": "",
-    "text": "You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google drive, this is the same concept.\nTeams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually."
-  },
-  {
-    "objectID": "github_teams.html#create-a-team",
-    "href": "github_teams.html#create-a-team",
-    "title": "GitHub Teams",
-    "section": "Create a team",
-    "text": "Create a team\nIn the navigation bar at the top of your organization page, click on the Teams tab. Normally this is the page you use to see and manage the existing teams of your organization. Since we do not have teams yet, this page is providing a short overview of what teams can be used for. Click on the New Team green button at the bottom to start creating your first team.\n\nProved the name and a short description of your team. We recommend to let the other options to their default settings.\n\nYour team has been created, but as of now you are the only member. Let’s invite some collaborators by clicking on the Add a member button on the top right.\n\nOn this new window you can search for GitHUb users by their username. If you do not know their username you can search by their full names. Note that if there are no pictures associated to the profile you fund or are not sure it is the right person, we recommend to not add this person at this time and to reach out asking for their username (which is unique). If you are sure you found the right persons, you can click on Invite.\n\nYou collaborators will receive an invitation to join the team. They will have to accept the invitation before they can use the benefits (access to repositories, …) associated with the team. Once your collaborators have accepted your team should look like below.\n\nOK, let’s create a second team! In this example we will create a Reserach Facilitators team with two members.\n\nOnce your GitHub organization has teams, you will the number of existing teams next to the Teams tab."
-  },
-  {
-    "objectID": "github_teams.html#leveraging-teams",
-    "href": "github_teams.html#leveraging-teams",
-    "title": "GitHub Teams",
-    "section": "Leveraging teams",
-    "text": "Leveraging teams\nLet’s create a new repository and use our newly created teams to add several collaborators at once."
-  },
-  {
-    "objectID": "coding.html",
-    "href": "coding.html",
-    "title": "Code as scientific product",
-    "section": "",
-    "text": "Codes are part of the scientific products your Lab is producing. It is thus important to manage, document, and preserve them as you would do for any other of your scientific products. In this session, we will discuss tools and practices that can ease the management of your codes, as well as develop them in a collaborative way."
-  },
-  {
-    "objectID": "coding.html#code-repository",
-    "href": "coding.html#code-repository",
-    "title": "Code as scientific product",
-    "section": "Code repository",
-    "text": "Code repository\nAs data repositories, code repositories are a great way to preserve and share your code (including with your future self!!). One you might have already heard of is GitHub. However, there are others such as GitLab, Bitbucket Source Forge, and more.\nToday we will be focusing on using GitHub to collaborate and keep track of the development of our scripts and other code.\n\nQuick intro to GitHub\n\nWhy\nWebsite interface walkthrough\n\nGithub Organizations\n\nWhy\nsetup\nmanage: teams and settings\n\nStreamlining documentation with templates\n\nRepo\nIssues\nProjects\n\nCollaborative coding\n\nPair Programming\nCode Exchange via pull request"
+    "text": "Workshop Series and Coaching Sessions for Faculty and their Teams\n\nTopics\n\nCoding as a lab\nManaging your lab data Automating your analytical workflows\nDocumenting & preserving things to make them reusable\n\n\n\nFormat\n\nScheduled at your convenience\n4 workshops (2-3h) as a primer on a specific topic\nPersonalized coaching sessions focused on lab-specific needs\n\n\n\nOutcomes\n\nMore reproducible management of your lab’s scientific products (data, code etc.)\nStreamlined on- and off -boarding\nBetter analytical strategies for collaboration Safety nets for your research lab content\nMore efficient reuse of your work\n\n\n\nLearning Opportunities\n\nLeverage GitHub organizations to manage your Lab code\nDevelop strategies to centralize and manage your Lab data\nProtect your Lab scientific products against loss through backup and computing resources strategies\nSet up templates and guidelines on how to document your Lab research and improve its reusability\nEstablish Lab standard operating procedures and documentation standards\nCreate “good enough” research computing strategies for robust and more reusable code development"
   }
 ]
