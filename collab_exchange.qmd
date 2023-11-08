@@ -1,4 +1,14 @@
 ---
-title: "collab_exchange"
+title: "Code ~~Review~~ Exchange"
 ---
+
+Code Exchange is an asynchronous activity that is a great way to:
+
+- Have one more pair of eyes looking at your code to detect potential bugs / improvements
+- Motivate development of good documentation
+- Generate conversation about code styling
+- Have several team members sharing knowledge
+- Great way to onboard new team members both in terms of code knowledge but also code styling
+
+The Reviewer should see this activity as a great way to learn from others through **constructive** feedback... and so should the Submitter!! 
 
