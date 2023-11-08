@@ -1,4 +1,32 @@
 ---
-title: "collab_pairprog"
+title: "Pair Programming"
 ---
 
+Pair programming is an *synchronous* team activity, where several programmers get to work together on the same piece of code. This is a great way to gain a better sense of what coding style people are using and better understand their way of solving challenges. It is also a great way to learn from each other. Generally, there is one Driver who is the person typing at the computer. The other role is called Navigator(s). The Navigator does not write code and focuses on finding solutions to the problem. Their use of computer should be limited to searching online for solutions.
+
+
+## Basic principles & practices 
+
+Adapted from Woody Zuill https://www.agileconnection.com/article/getting-started-mob-programming
+
+- **Treat each other with kindness, consideration, and respect** - makes group work more fun and sustainable
+- **Driver/navigator pair programming adapted to work with the whole team** - “For an idea to go from your head into the computer, it _must_ go through someone else’s hands.” Speak at the highest level of abstraction that the driver (and the rest of the team) is able to digest at the moment
+- **Timed Rotation** - 20-60 minutes. We don’t require that everyone take the driver role; it is everyone’s choice whether to do so
+- **Whole Team** - every contributor to the project is an integral part of the whole team; when we don’t have the skills we need within the team, we find someone who does and invite them to work with us to accomplish the needed work
+- **Reflect, Tune, and Adjust Frequently** - based on agile principle: “At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.” 
+
+
+
+## Tips and Tricks for Effective Team Programming  
+
+Adapted from Corey Johannsen: https://blog.newrelic.com/2017/10/31/mob-programming-hurdles/
+
+- **Suggest, don’t dictate:** Instead of telling the driver what to type into their editor, we explain what we’re trying to accomplish and then help the driver find the best solution. We’ve found that drivers learn better this way, and they don’t just end up feeling like a stenographer. Whenever possible, we ask questions that lead the driver to discover the answers on their own.
+- **Stay focused and be present:** Shut your laptop and put your phone away. I’ve struggled with following this guideline—we all have—and I recognize that the distraction almost always affects the rest of the mob. We tell all our mob members to be present, and if you can’t, it’s OK to leave until you can be.
+- **Use a timer, but be ready to pause it:** We switch drivers every 20 - 60 minutes. However, we often wander off implementation into design discussions—it’s unavoidable—so this is when we pause the timer. This is another key guideline of our mob: the time you spend driving should be dedicated to writing the code that helps complete the task, not discussing design solutions.
+- **Set specific tasks for each session:** When our mob gathers for a session, we first agree on and create a checklist of the tasks we are going to complete, and order them by priority on a whiteboard. This ensures we are all focused on the same task and keeps us moving forward. Additionally, this keeps us aligned with Minimal Marketable Feature (MMF) work, which we can communicate with our engineering and product managers to assure them we’re completing tasks that align with developing small, self-contained features that demonstrate immediate customer value.
+
+
+## Aknowledgements
+
+This section reuses a lot of materials from an R Meetup organized by the Santa Barbara R Users group (https://github.com/R-Meetup-SB/hackathon-201806), including material prepared by Irene Steves.
