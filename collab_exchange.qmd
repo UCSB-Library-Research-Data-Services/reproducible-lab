@@ -2,9 +2,9 @@
 title: "Code ~~Review~~ Exchange"
 ---
 
-Code Exchange is an asynchronous activity that is a great way to:
+Code Exchange is an asynchronous activity that takes place when a teammate is finished working on an script (or a part of). This teammate will submit a request to another team memeber to look over the code and provide feedback. It is a great way to:
 
-- Have one more pair of eyes looking at your code to detect potential bugs / improvements
+- Have one more pair of eyes looking at your code to detect potential bugs / improvements, including analytical aspects of the code 
 - Motivate development of good documentation
 - Generate conversation about code styling
 - Have several team members sharing knowledge
