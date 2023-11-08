@@ -7,7 +7,7 @@ Pair programming is an *synchronous* team activity, where several programmers ge
 
 ## Basic principles & practices 
 
-Adapted from Woody Zuill https://www.agileconnection.com/article/getting-started-mob-programming
+Adapted from Woody Zuill <https://www.agileconnection.com/article/getting-started-mob-programming>
 
 - **Treat each other with kindness, consideration, and respect** - makes group work more fun and sustainable
 - **Driver/navigator pair programming adapted to work with the whole team** - “For an idea to go from your head into the computer, it _must_ go through someone else’s hands.” Speak at the highest level of abstraction that the driver (and the rest of the team) is able to digest at the moment
