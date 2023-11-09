@@ -28,6 +28,13 @@
     "text": "Leveraging teams\nLet’s create a new repository and use our newly created teams to add several collaborators at once.\n\n\n\n\n\nUnder your newly created organization, create a new repository with the following settings:\n\n\n\n\n\nOnce the repository created, click on the Settings tab (top right in the grey bar)\n\n\n\n\n\n{fig-align=“center” width=70%}On the left panel, click on Collaborators and teams and then click on the green button Add teams\n\n\n\n\n\nStart typing the name of the team you would like to add. Suggestions of teams should come up as you type. Select the relevant team by clicking on the suggestion.\n\n\n\n\n\nFor close collaborators, we recommend to use the Maitain level of access that provides a good blend of people being able to do most of the actions they will need to do while not being allowed to conduct destructive actions on accident (like deleting the entire repository). For collaborators you are less familiar with, including their familiarity with GitHub, you might want to start with the Write access.\n\n\n\n\n\nOnce the team added, your settings should look as follow:\n\n\n\n\n\nThe good news is now if you add a collaborator to a specific team, this person will automatically gain access to all the repositories that team as access to! This will streamline the on and off boarding process of your team memebers."
   },
   {
+    "objectID": "collab_exchange.html",
+    "href": "collab_exchange.html",
+    "title": "Code Review Exchange",
+    "section": "",
+    "text": "Code Exchange is an asynchronous activity that takes place when a teammate is finished working on an script (or a part of). This teammate will submit a request to another team memeber to look over the code and provide feedback. It is a great way to:\n\nHave one more pair of eyes looking at your code to detect potential bugs / improvements, including analytical aspects of the code\nMotivate development of good documentation\nGenerate conversation about code styling\nHave several team members sharing knowledge\nGreat way to onboard new team members both in terms of code knowledge but also code styling\n\nThe Reviewer should see this activity as a great way to learn from others through constructive feedback… and so should the Submitter!!"
+  },
+  {
     "objectID": "coding.html",
     "href": "coding.html",
     "title": "Code as scientific product",
@@ -39,7 +46,7 @@
     "href": "coding.html#code-repository",
     "title": "Code as scientific product",
     "section": "Code repository",
-    "text": "Code repository\nAs data repositories, code repositories are a great way to preserve and share your code (including with your future self!!). One you might have already heard of is GitHub. However, there are others such as GitLab, Bitbucket Source Forge, and more.\nToday we will be focusing on using GitHub to collaborate and keep track of the development of our scripts and other code.\n\nQuick intro to GitHub\n\nWhy\nWebsite interface walkthrough\n\nGithub Organizations\n\nWhy\nsetup\nmanage: teams and settings\n\nStreamlining documentation with templates\n\nRepo\nIssues\nProjects\n\nCollaborative coding\n\nPair Programming\nCode Exchange via pull request"
+    "text": "Code repository\nAs data repositories, code repositories are a great way to preserve and share your code (including with your future self!!). One you might have already heard of is GitHub. However, there are other options such as GitLab, Bitbucket Source Forge, and more.\nToday we will be focusing on using GitHub to collaborate and keep track of the development of our scripts.\n\nQuick intro to GitHub\n\nWhy\nWebsite interface walk through\n\nGithub Organizations\n\nWhy\nsetup\nmanage: teams and settings\n\nStreamlining documentation with templates\n\nRepo\nIssues\nProjects\n\nCollaborative coding\n\nPair Programming\nCode Exchange via pull request"
   },
   {
     "objectID": "github_org.html",
