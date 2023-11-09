@@ -12,7 +12,12 @@ Code Exchange is an asynchronous activity that takes place when a teammate is fi
 
 The Reviewer should see this activity as a great way to learn from others through **constructive** feedback... and so should the Submitter!! 
 
+There are different way to conduct a code review. It ranges from asking a colleague to look at your code once you reached a milestone, for example a new analysis is working, to leveraging Pull Request (PR), which is a way to ask to merge your changes with the previous version. 
 
-## Pull request
 
+## Pull Request (PR)
+
+A big advantage of Pull Request is to document and provide a space to discuss the new code and discuss potential modifications. You can even tag others if you want them to chime in.
+
+To be able to create a PR, you need to first either create a branch or a fork, which are two ways to encapsulate your changes while you are working on them. Once you are done you can ask to send back and merge those changes to the current version of the main branch of the repository (for now we will only merge back to main).
 
