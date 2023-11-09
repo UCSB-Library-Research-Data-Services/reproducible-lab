@@ -6,15 +6,15 @@ Codes are part of the scientific products your Lab is producing. It is thus impo
 
 ## Code repository
 
-As data repositories, code repositories are a great way to preserve and share your code (including with your future self!!). One you might have already heard of is GitHub. However, there are others such as GitLab, Bitbucket Source Forge, and more.
+As data repositories, code repositories are a great way to preserve and share your code (including with your future self!!). One you might have already heard of is GitHub. However, there are other options such as GitLab, Bitbucket Source Forge, and more.
 
-Today we will be focusing on using GitHub to collaborate and keep track of the development of our scripts and other code.
+Today we will be focusing on using GitHub to collaborate and keep track of the development of our scripts.
 
 
 
 - Quick intro to GitHub
   - Why
-  - Website interface walkthrough
+  - Website interface walk through
 
 - Github Organizations
   - Why
