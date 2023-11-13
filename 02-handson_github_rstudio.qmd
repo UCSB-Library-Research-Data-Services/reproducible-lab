@@ -1,0 +1,51 @@
+---
+title: "GitHub branches using RStudio"
+format:
+  html:
+    embed-resources: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Is your fav' dessert iconic !?!
+
+Write and R script to compare the csv with your favorite desserts you modified previously with the top 42 most iconic American desserts 
+
+1. Clone the repository you just created to Taylor
+2. Create a new branch using RStudio and name it `*myinitials*_rstudio`
+3. Start a new script named `desserts_match_*myinitials*.R` 
+4. As pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see code below) into R and find out if your favorite dessert is part of the [most iconic desserts](https://www.eatthis.com/iconic-desserts-united-states/)!
+5. Push your changes to GitHub
+6. On the GitHub website, create a Pull Request (PR) and assign your teammate as reviewer
+7. Reviewer -- Review the PR. Make comments and/or OK the merge
+8. Requester -- Merge and close the PR  
+
+
+
+::: {.callout-tip}
+### Code to get the iconic desserts listing
+
+```{r getting the data, eval=FALSE, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(rvest)  # use to scrape website content
+
+# Check if that data folder exists and creates it if not
+dir.create("data", showWarnings = FALSE)
+
+# Read the webpage code
+webpage <- read_html("https://www.eatthis.com/iconic-desserts-united-states/")
+
+# Extract the desserts listing
+dessert_elements<- html_elements(webpage, "h2")
+dessert_listing <- dessert_elements %>% 
+  html_text2() %>%             # extracting the text associated with this type of elements of the webpage
+  as_tibble() %>%              # make it a data frame
+  rename(dessert = value) %>%  # better name for the column
+  head(.,-3) %>%               # 3 last ones were not desserts 
+  rowid_to_column("rank") %>%  # adding a column using the row number as proxy for the rank
+  write_csv("data/iconic_desserts.csv") # save it as csv
+
+```
+:::
