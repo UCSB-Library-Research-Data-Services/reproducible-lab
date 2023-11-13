@@ -57,24 +57,27 @@ Although there many ways to start a new repository, [GitHub](https://github.com/
 	
 **GitHub is a company that hosts git repositories online** and provides several collaboration features (among which `forking`). GitHub fosters a great user community and has built a nice web interface to git, also adding great visualization/rendering capacities of your data.
 
-- **GitHub.com**: <https://github.com>
-- **A user account**: <https://github.com/brunj7>
-- **An organization account**: <https://github.com/nceas>
-
 
 ### GitHub Dashboard
 
 This is the default landing page when you log into your account. It provide a mix of the most recent resources and activities of your and your collaborators actions, as well as some resources relevant to your work. The dashboard therefore changes on a regular basis. Once logged in, you can access your dashboard at <https://github.com>
+
+![](img/github_overview-01_dashboard.png)
 
 
 ### GtiHub User page
 
 This page can be reached using witht eh following URL: https://github.com/`username`. For my user (`brunj7`) it would be: <https://github.com/brunj7>. It is a great space for you to provide some information about yourself and the main repositories you are working on. It also list the GitHub Organizations you are part of. But more importantly, Users own repositories to host and share their code. You can list repositories from a User by clicking on the _repositories_ tab in the main GitHub menu bar at the top.
 
+![](github_overview-02_user.png)
+
 
 ### GtiHub Organization page
 
 We will talk more about GitHub Organizations later. In a nutshell organizations are like groups or teams that users can be member of. Like Users, Organizations can have a landing page and own repositories. However they add several perks in terms of user managements. Similarly to Users, you can access repositories from an Organization by clicking on the _repositories_ tab in the main GitHub menu bar at the top. You can acces an organization's page similarly to a user: https://github.com/`organization-name`; e.g.  <https://github.com/UCSB-Library-Research-Data-Services>
+
+
+![](img/github_overview-03_organization.png)
 
 
 ### Let's look at a repository on GitHub
@@ -102,6 +105,11 @@ be effective for tracking versions of scientific code, figures, and manuscripts
 to accomplish a reproducible workflow.
 
 
+## Recap
+
+- **GitHub.com / your dashboard (if logged in)**: <https://github.com>
+- **A user account**: <https://github.com/brunj7>
+- **An organization account**: <https://github.com/UCSB-Library-Research-Data-Services>
 
 
 ## Aknowledgements
