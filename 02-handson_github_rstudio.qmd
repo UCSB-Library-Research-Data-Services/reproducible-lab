@@ -1,8 +1,5 @@
 ---
 title: "GitHub branches using RStudio"
-format:
-  html:
-    embed-resources: true
 ---
 
 ```{r setup, include=FALSE}

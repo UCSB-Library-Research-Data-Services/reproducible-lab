@@ -1,8 +1,5 @@
 ---
 title: "Forks and Branches using the GitHub website"
-format:
-  html:
-    embed-resources: true
 ---
 
 ```{r setup, include=FALSE}

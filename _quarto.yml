@@ -25,6 +25,10 @@ website:
             contents:
               - href: github_intro.qmd
                 text: "Short intro to GitHub"
+              - href: 01-handson_github_website.qmd
+                text: "Using Github's website to track your work"
+              - href: 02-handson_github_rstudio.qmd
+                text: "Using Rstudio, git and GitHub to track your work"
               - href: github_org.qmd
                 text: "GitHub organizations"
               - href: github_teams.qmd
