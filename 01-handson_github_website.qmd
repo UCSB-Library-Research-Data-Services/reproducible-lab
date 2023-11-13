@@ -2,10 +2,6 @@
 title: "Forks and Branches using the GitHub website"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
-
 
 In this section we will be using the GitHub.com website and demonstrate that you do not need to be a programmer to use version control and edit files on GitHub, nor using branches
 

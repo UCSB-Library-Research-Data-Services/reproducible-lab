@@ -2,9 +2,6 @@
 title: "GitHub branches using RStudio"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ## Is your fav' dessert iconic !?!
 
