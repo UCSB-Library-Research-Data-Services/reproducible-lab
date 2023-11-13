@@ -1,4 +1,109 @@
 ---
-title: "GitHub"
+title: "git and GitHub"
 ---
 
+# Version Control with `git` and `GitHub`
+
+Aka  --  **Say goodbye to  `script_JB_03v5b.R` !!**
+
+
+## The problem with `save_as`
+
+```{r phd_comics_final, out.width='80%', fig.align="center",echo=FALSE}
+knitr::include_graphics("img/phd_comics_final.png")
+```
+
+Every file in the scientific process changes.  Manuscripts are edited. Figures get revised.  Code gets fixed when problems are discovered.  Data files
+get combined together, then errors are fixed, and then they are split and combined again. In the course of a single analysis, one can expect thousands of
+changes to files.  And yet, all we use to track this are simplistic *filenames*.  You might think there is a better way, and you'd be right: __version control__.
+
+Version control systems help you track all of the changes to your files, without
+the spaghetti mess that ensues from simple file renaming.  In other words, version control is a system that helps you to manage the different versions of your files in an organized manner. It will help you to never have to duplicate files using `save as` as a way to keep different versions of a file (see below). Version control help you to create a timeline of snapshots containing the different versions of a file. At any point in time, you will be able to roll back to a specific version. Bonus: you can add a short description (commit message) to remember what each specific version is about.
+
+**What is the difference between `git` and `GitHub`?**
+
+- __git__: is a version control software used to track files in a folder (a repository)
+    - git creates a timeline or history of your files
+- __GitHub__: is a code repository in the cloud that enables users to store their git repositories and share them with others. Github also add many features to manage projects and document your work.
+
+
+## git
+
+ <img style="float: right;width: 100px;" src="img/git_icon.png">
+
+This section focuses on the code versioning system called `Git`. Note that there are others, such as `Mercurial` or `svn` for example.
+
+Git is a *free* and *open source* distributed *version control system*. It has many functionalities and was originally geared towards software development and production environment. In fact, Git was initially designed and developed in 2005 by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel. Here is a [fun video](https://www.youtube.com/watch?v=4XpnKHJAok8) of Linus Torvalds touting Git to Google. 
+
+**How does it work?**
+
+Git can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a **repository** (which formally is a specific data structure storing versioning information).
+
+**What git is not:**
+
+- **Git is not a backup per se**
+- Git is not good at versioning large files (there are workarounds) => not meant for large data
+
+### Repository
+
+Git can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a **repository** (which formally is a specific data structure storing versioning information).
+
+Although there many ways to start a new repository, [GitHub](https://github.com/) (or any other cloud solutions, such as [GitLab](https://about.gitlab.com/)) provide among the most convenient way of starting a repository.
+
+<img style="float: right;width: 100px;" src="img/github-logo.png">
+
+
+## GitHub  
+	
+**GitHub is a company that hosts git repositories online** and provides several collaboration features (among which `forking`). GitHub fosters a great user community and has built a nice web interface to git, also adding great visualization/rendering capacities of your data.
+
+- **GitHub.com**: <https://github.com>
+- **A user account**: <https://github.com/brunj7>
+- **An organization account**: <https://github.com/nceas>
+
+
+### GitHub Dashboard
+
+This is the default landing page when you log into your account. It provide a mix of the most recent resources and activities of your and your collaborators actions, as well as some resources relevant to your work. The dashboard therefore changes on a regular basis. Once logged in, you can access your dashboard at <https://github.com>
+
+
+### GtiHub User page
+
+This page can be reached using witht eh following URL: https://github.com/`username`. For my user (`brunj7`) it would be: <https://github.com/brunj7>. It is a great space for you to provide some information about yourself and the main repositories you are working on. It also list the GitHub Organizations you are part of. But more importantly, Users own repositories to host and share their code. You can list repositories from a User by clicking on the _repositories_ tab in the main GitHub menu bar at the top.
+
+
+### GtiHub Organization page
+
+We will talk more about GitHub Organizations later. In a nutshell organizations are like groups or teams that users can be member of. Like Users, Organizations can have a landing page and own repositories. However they add several perks in terms of user managements. Similarly to Users, you can access repositories from an Organization by clicking on the _repositories_ tab in the main GitHub menu bar at the top. You can acces an organization's page similarly to a user: https://github.com/`organization-name`; e.g.  <https://github.com/UCSB-Library-Research-Data-Services>
+
+
+### Let's look at a repository on GitHub
+
+This screen shows the copy of a repository stored on GitHub,
+with its <span style="color:red">list of files</span>, <span style="color:green">when the files and directories were last modified</span>, 
+and <span style="color:blue">some information on who made the most recent changes.</span>  
+
+![](img/ss3sim-github_colored.png)
+
+If we drill into the 
+"<span style="color:orange">commits</span>" for the repository, we can see the history of changes made to all of 
+the files.  Looks like `kellijohnson` and `seananderson` were fixing things in
+June and July:
+
+![](img/ss3sim-commits_colored.png)
+
+And finally, if we drill into the changes made on June 13, we can see exactly what
+was changed in each file:
+
+![](img/ss3sim-diff.png)
+Tracking these changes, and seeing how they relate to released versions of software and files
+is exactly what Git and GitHub are good for. We will show how they can really 
+be effective for tracking versions of scientific code, figures, and manuscripts
+to accomplish a reproducible workflow.
+
+
+
+
+## Aknowledgements
+
+This materials was adapted from [NCEAS Reproducible Research Techniques for Synthesis](https://learning.nceas.ucsb.edu/2021-02-RRCourse/index.html) & [Collaborative Coding with GitHub. LNO Scientific Computing Team](https://github.com/NCEAS/scicomp-workshop-collaborative-coding).
