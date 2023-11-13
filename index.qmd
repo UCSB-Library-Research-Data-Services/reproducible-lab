@@ -8,8 +8,10 @@ Workshop Series and Coaching Sessions for Faculty and their Teams
 ### Topics
 
 - Coding as a lab
-- Managing your lab data Automating your analytical workflows
+- Managing your lab data
+- Automating your analytical workflows
 - Documenting & preserving things to make them reusable
+
 
 ### Format
 
@@ -17,12 +19,14 @@ Workshop Series and Coaching Sessions for Faculty and their Teams
 - 4 workshops (2-3h) as a primer on a specific topic
 - Personalized coaching sessions focused on lab-specific needs
 
+
 ### Outcomes
 
 - More reproducible management of your lab's scientific products (data, code etc.) 
 - Streamlined on- and off -boarding
 - Better analytical strategies for collaboration Safety nets for your research lab content 
 - More efficient reuse of your work
+
 
 ### Learning Opportunities
 
