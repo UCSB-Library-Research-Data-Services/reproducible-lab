@@ -47,7 +47,7 @@ Git can be enabled on a specific folder/directory on your file system to version
 ::: {.callout-note collapse=true}
 ### Fun fact
 
-Git was initially designed and developed in 2005 by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel. Here is a [fun video](https://www.youtube.com/watch?v=4XpnKHJAok8) of Linus Torvalds touting Git to Google. 
+Git was initially designed and developed by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel in 2005. Here is a [fun video](https://www.youtube.com/watch?v=4XpnKHJAok8) of Linus Torvalds touting Git to Google engineers. 
 :::
 
 ### Repository
