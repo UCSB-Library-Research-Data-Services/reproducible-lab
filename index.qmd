@@ -36,3 +36,6 @@ Workshop Series and Coaching Sessions for Faculty and their Teams
 - Set up templates and guidelines on how to document your Lab research and improve its reusability
 - Establish Lab standard operating procedures and documentation standards
 - Create "good enough" research computing strategies for robust and more reusable code development
+
+
+![](img/rds_hex.png){fig-align="center" width=50%}
