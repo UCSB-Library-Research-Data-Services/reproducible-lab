@@ -44,7 +44,7 @@ Depending on the version, you might have to run a few commands from the terminal
 
 ## Setting up your `git` identity
 
-Before you start using git on any computer, you will have to set your identity on your system, as every snapshot of files is associated with the user whom implemented the modifications to the file(s).
+Before you start using git on any computer, you will have to set your identity on your system, as every snapshot of files is associated with the user who implemented the modifications to the file(s).
 
 Open the `Terminal` or `git bash` and then type the following commands.
 
@@ -83,9 +83,9 @@ Problem with any of those steps? Check out Jenny Brian [Happy git trouble shooti
 
 ## Linking git and RStudio
 
-In most of the cases, RStudio should automatically detect `git` when it is installed on your computer. The best way to check this is to go to the `Tools` menu `-> Global Option`s and click on `git/SVN`
+In most cases, RStudio should automatically detect `git` when it is installed on your computer. The best way to check this is to go to the `Tools` menu `-> Global Option`s and click on `git/SVN`
 
-If `git` is properly setup, the window should look like this:
+If `git` is properly set up, the window should look like this:
 
 <img style="align: left;width: 450px;" src=img/rstudio-git.png />
 
@@ -112,9 +112,9 @@ We can make an analogy with taking a family picture, where each family member wo
 - **Add**ing files (to the staging area), is like deciding which family member(s) are going to be on your next picture
 - **Commit**ting is like taking the picture
 
-These 2-step process enables you to flexibly group files into a specific commit.
+This 2-step process enables you to flexibly group files into a specific commit.
 
-These steps are repeated for every version you want to keep (every time you would like to use `save as`). Every time you commit, you create a new snapshot, you add the new version of the file to the git database, while keeping all the previous versions in the database. It creates an history of the content of your repository that is like a graph that you can navigate:
+These steps are repeated for every version you want to keep (every time you would like to use `save as`). Every time you commit, you create a new snapshot, and you add the new version of the file to the git database while keeping all the previous versions in the database. It creates a history of the content of your repository that is like a graph that you can navigate:
 
 <img style="align: left;width: 200px;" src=img/version-graph_mattJones.png />
 
@@ -122,7 +122,7 @@ These steps are repeated for every version you want to keep (every time you woul
 
 ### Tracking changes
 
-RStudio provides a great interface to git helping you navigating the git workflow and getting information about the state of your repository through nice icons and visualizations of the information.
+RStudio provides a great interface to git helping you navigate the git workflow and getting information about the state of your repository through nice icons and visualizations of the information.
 
 If you click on the `Git` tab in your RStudio upper-right panel, you should see the following information
 
@@ -140,7 +140,7 @@ In our case, it means that:
 - the `.gitignore`file has been modified since the last commit
 - the  `.Rproj` file has never been tracked by `git`  (remember RStudio just created this project file for us)
 
-Note also that the `README.md` file is not listed, but it exists (see `Files`pane). It is because files with no modifications since last commit are not listed. 
+Note also that the `README.md` file is not listed, but it exists (see `Files`pane). It is because files with no modifications since the last commit are not listed. 
 
 GitHub has created the `.gitignore` file for us and we have not modified it since. So why is it listed as modified? We can check this by clicking on the `Diff` button (upper-left on the Git pane).
 
@@ -148,7 +148,7 @@ GitHub has created the `.gitignore` file for us and we have not modified it sinc
 knitr::include_graphics("img/rstudio-git-diff.png")
 ```
 
-We can see that a new line (in green) has been added at the end of the `.gitignore` file. In fact, RStudio did that when creating the project to make sure that some temporary files are not tracked by git.
+We can see that a new line (in green) has been added at the end of the `.gitignore` file. In fact, RStudio did that when creating the project to make sure that some temporary files were not tracked by git.
 
 Let us improve the content of the `README.md` file  as below to make it more descriptive.
 
@@ -156,13 +156,13 @@ Let us improve the content of the `README.md` file  as below to make it more des
 knitr::include_graphics("img/rstudio-git-readme.png")
 ```
 
-As soon as you saved your changes, you should see the `README.md` file listed as modified in the git pane.
+As soon as you save your changes, you should see the `README.md` file listed as modified in the git pane.
 
 ```{r RStudio git pane mod, out.width='70%', fig.align='center', echo = FALSE}
 knitr::include_graphics("img/rstudio-git-panel-modified.png")
 ```
 
-Let us look at the diff of the `README.md` file. As you can see, the original lines are in red, in other words for git those lines have been deleted. The new lines that we just typed are in green, which indicates that these lines have been added for git. Note the line numbers in the left margin that help you to track which line have been removed and added.
+Let us look at the diff of the `README.md` file. As you can see, the original lines are in red, in other words for git those lines have been deleted. The new lines that we just typed are in green, which indicates that these lines have been added for git. Note the line numbers in the left margin that help you to track which lines have been removed and added.
 
 
 ```{r RStudio git diff readme, out.width='70%', fig.align='center', echo = FALSE}
@@ -178,7 +178,7 @@ Note that the icon `M` will move to the left to show you that this file is now s
 2. Commit:
     a. Click the `Commit` button at the top of the git pane
     b. Write a short but descriptive commit message in the new window
-    c. Click on the he `Commit` button to save this version of the file in the git database
+    c. Click on the the `Commit` button to save this version of the file in the git database
     d. Close the windows to get back to the main RStudio window
 
 ```{r RStudio git first commit, out.width='70%', fig.align='center', echo = FALSE}
@@ -192,9 +192,9 @@ Once done, add both the `.gitignore` and the `myfirst-repo.Rproj` and commit tho
 
 ### Good Commit Message Tips
 
-Clearly, good documentation of what you’ve done is critical to making the version history of your repository meaningful and helpful. Its tempting to skip the commit message altogether, or to add some stock blurd like ‘Updates’. Its better to use messages that will be helpful to your future self in deducing not just what you did, but why you did it. Also, commit messages are best understood if they follow the active verb convention. For example, you can see that my commit messages all started with a past tense verb, and then explained what was changed.
+Clearly, good documentation of what you’ve done is critical to making the version history of your repository meaningful and helpful. It is tempting to skip the commit message altogether, or to add some simple message like ‘Updates’. It is better to use messages that will be helpful to your future self in deducing not just what you did, but why you did it. Also, commit messages are best understood if they follow the active verb convention. For example, you can see that my commit messages all started with a past tense verb, and then explained what was changed.
 
-While some of the changes we illustrated here were simple and easily explained in a short phrase, for more complex changes, its best to provide a more complete message. The convention, however, is to always have a short, terse first sentence, followed by a more verbose explanation of the details and rationale for the change. This keeps the high level details readable in the version log. I can’t count the number of times I’ve looked at the commit log from 2, 3, or 10 years prior and been so grateful for diligence of my past self and collaborators.
+While some of the changes we illustrated here were simple and easily explained in a short phrase, for more complex changes, it is best to provide a more complete message. The convention, however, is to always have a short, terse first sentence, followed by a more verbose explanation of the details and rationale for the change. This keeps the high level details readable in the version log. I can not count the number of times I have looked at the commit log from 2, 3, or 10 years prior and been so grateful for the diligence of my past self and collaborators.
 
 ```{r commit message comic, out.width='60%', fig.align='center', echo = FALSE, fig.cap = 'from xkcd comics'}
 knitr::include_graphics("img/xkcd_commit_comic.png")
@@ -209,7 +209,7 @@ We have done 2 new commits at this point. Let us look at the commit timeline we 
 knitr::include_graphics("img/rstudio-git-history.png")
 ```
 
-You can see that there has been 3 commits so far. The first one has been done by GitHub when we created the repository and the 2 commits we just did. The most recent commit is at the top.
+You can see that there has been 3 commits so far. The first one was done by GitHub when we created the repository and the 2 commits we just did. The most recent commit is at the top.
 
 
 ## Sending changes back to GitHub
@@ -220,7 +220,8 @@ Now that we have created these two commits on our local machine, our local versi
 knitr::include_graphics("img/repo-not-synched.png")
 ```
 
-There are two git commands to exchange between a local and remote versions of a repository:
+There are two git commands to exchange between local and remote versions of a repository:
+
 - `pull`: git will get the latest remote version and try to merge it with your local version
 - `push`: git will send your local version to the remote version of the repository (in our case GitHub)
 
@@ -229,9 +230,9 @@ Before sending your local version to the remote, you should always get the lates
 1. `pull`
 2. `push`
 
-Of course RStudio have icons for that on top of the git pane, with the blue arrow down being for `pull` and the green arrow up being for `push`. Remember the icons are organized in sequence!
+RStudio has icons for that on top of the git pane, with the blue arrow down being for `pull` and the green arrow up being for `push`. Remember the icons are organized in sequence!
 
-Let us do the pull and push to synchronized the remote repositories. We have now synchronized the local (our computer) and remote (on GitHub) versions of our repository.
+Let us do the pull and push to synchronize the remote repositories. We have now synchronized the local (our computer) and remote (on GitHub) versions of our repository.
 
 ```{r RStudio git, repo in sync, fig.align='center', echo = FALSE}
 knitr::include_graphics("img/repo-synched.png")
