@@ -21,24 +21,31 @@ website:
         contents:
           - href: coding.qmd
             text: "Code as scientific product"
-          - section: "Leveraging GitHub"
+          - section: "Leveraging GitHub to manage and share code... and more"
             contents:
               - href: github_intro.qmd
                 text: "Short intro to GitHub"
               - href: 01-handson_github_website.qmd
-                text: "Using Github's website to track your work"
-              - href: 02-handson_github_rstudio.qmd
-                text: "Using Rstudio, git and GitHub to track your work"
+                text: "Using Github's website to track & share your work"
               - href: github_org.qmd
-                text: "GitHub organizations"
+                text: "GitHub organizations for your Lab"
               - href: github_teams.qmd
-                text: "Setting up teams"
+                text: "Setting up teams to better collaborate"
+              - href: git_rstudio.qmd
+                text: "Using RStudio, git and GitHub to track your work"
           - section: "Collaborative coding"
             contents:
               - href: collab_pairprog.qmd
                 text: "Pair Programming"
               - href: collab_exchange.qmd
                 text: "Code Exchange"
+              - href: github_workflows.qmd
+                text: "Collaborating with GitHub"
+              - href: 03-handson_github_workflows.qmd
+                text: "Hands-on: GitHub collaborative workflows"
+              - href: 02-handson_github_rstudio.qmd
+                text: "Hands-on: using branches from RStudio"
+                
           - section: "Documenting things"
             contents:
               - href: github_template.qmd
