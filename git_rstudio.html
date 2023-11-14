@@ -370,7 +370,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="setting-up-your-git-identity" class="level2">
 <h2 class="anchored" data-anchor-id="setting-up-your-git-identity">Setting up your <code>git</code> identity</h2>
-<p>Before you start using git on any computer, you will have to set your identity on your system, as every snapshot of files is associated with the user whom implemented the modifications to the file(s).</p>
+<p>Before you start using git on any computer, you will have to set your identity on your system, as every snapshot of files is associated with the user who implemented the modifications to the file(s).</p>
 <p>Open the <code>Terminal</code> or <code>git bash</code> and then type the following commands.</p>
 <section id="setup-your-profile" class="level3">
 <h3 class="anchored" data-anchor-id="setup-your-profile">Setup your profile</h3>
@@ -400,8 +400,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="linking-git-and-rstudio" class="level2">
 <h2 class="anchored" data-anchor-id="linking-git-and-rstudio">Linking git and RStudio</h2>
-<p>In most of the cases, RStudio should automatically detect <code>git</code> when it is installed on your computer. The best way to check this is to go to the <code>Tools</code> menu <code>-&gt; Global Option</code>s and click on <code>git/SVN</code></p>
-<p>If <code>git</code> is properly setup, the window should look like this:</p>
+<p>In most cases, RStudio should automatically detect <code>git</code> when it is installed on your computer. The best way to check this is to go to the <code>Tools</code> menu <code>-&gt; Global Option</code>s and click on <code>git/SVN</code></p>
+<p>If <code>git</code> is properly set up, the window should look like this:</p>
 <p><img style="align: left;width: 450px;" src="img/rstudio-git.png"></p>
 <p>Click <code>OK</code>.</p>
 <p><em>Note:</em> if <code>git</code> was not enabled, you might be asked to restart RStudio to enable it.</p>
@@ -422,15 +422,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Add</strong>ing files (to the staging area), is like deciding which family member(s) are going to be on your next picture</li>
 <li><strong>Commit</strong>ting is like taking the picture</li>
 </ul>
-<p>These 2-step process enables you to flexibly group files into a specific commit.</p>
-<p>These steps are repeated for every version you want to keep (every time you would like to use <code>save as</code>). Every time you commit, you create a new snapshot, you add the new version of the file to the git database, while keeping all the previous versions in the database. It creates an history of the content of your repository that is like a graph that you can navigate:</p>
+<p>This 2-step process enables you to flexibly group files into a specific commit.</p>
+<p>These steps are repeated for every version you want to keep (every time you would like to use <code>save as</code>). Every time you commit, you create a new snapshot, and you add the new version of the file to the git database while keeping all the previous versions in the database. It creates a history of the content of your repository that is like a graph that you can navigate:</p>
 <p><img style="align: left;width: 200px;" src="img/version-graph_mattJones.png"></p>
 </section>
 <section id="using-git-from-rstudio" class="level2">
 <h2 class="anchored" data-anchor-id="using-git-from-rstudio">Using git from Rstudio</h2>
 <section id="tracking-changes" class="level3">
 <h3 class="anchored" data-anchor-id="tracking-changes">Tracking changes</h3>
-<p>RStudio provides a great interface to git helping you navigating the git workflow and getting information about the state of your repository through nice icons and visualizations of the information.</p>
+<p>RStudio provides a great interface to git helping you navigate the git workflow and getting information about the state of your repository through nice icons and visualizations of the information.</p>
 <p>If you click on the <code>Git</code> tab in your RStudio upper-right panel, you should see the following information</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -457,7 +457,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>the <code>.gitignore</code>file has been modified since the last commit</li>
 <li>the <code>.Rproj</code> file has never been tracked by <code>git</code> (remember RStudio just created this project file for us)</li>
 </ul>
-<p>Note also that the <code>README.md</code> file is not listed, but it exists (see <code>Files</code>pane). It is because files with no modifications since last commit are not listed.</p>
+<p>Note also that the <code>README.md</code> file is not listed, but it exists (see <code>Files</code>pane). It is because files with no modifications since the last commit are not listed.</p>
 <p>GitHub has created the <code>.gitignore</code> file for us and we have not modified it since. So why is it listed as modified? We can check this by clicking on the <code>Diff</code> button (upper-left on the Git pane).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -468,7 +468,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>We can see that a new line (in green) has been added at the end of the <code>.gitignore</code> file. In fact, RStudio did that when creating the project to make sure that some temporary files are not tracked by git.</p>
+<p>We can see that a new line (in green) has been added at the end of the <code>.gitignore</code> file. In fact, RStudio did that when creating the project to make sure that some temporary files were not tracked by git.</p>
 <p>Let us improve the content of the <code>README.md</code> file as below to make it more descriptive.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -479,7 +479,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>As soon as you saved your changes, you should see the <code>README.md</code> file listed as modified in the git pane.</p>
+<p>As soon as you save your changes, you should see the <code>README.md</code> file listed as modified in the git pane.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -489,7 +489,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Let us look at the diff of the <code>README.md</code> file. As you can see, the original lines are in red, in other words for git those lines have been deleted. The new lines that we just typed are in green, which indicates that these lines have been added for git. Note the line numbers in the left margin that help you to track which line have been removed and added.</p>
+<p>Let us look at the diff of the <code>README.md</code> file. As you can see, the original lines are in red, in other words for git those lines have been deleted. The new lines that we just typed are in green, which indicates that these lines have been added for git. Note the line numbers in the left margin that help you to track which lines have been removed and added.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -510,7 +510,7 @@ Note that the icon <code>M</code> will move to the left to show you that this fi
 <ol type="a">
 <li>Click the <code>Commit</code> button at the top of the git pane</li>
 <li>Write a short but descriptive commit message in the new window</li>
-<li>Click on the he <code>Commit</code> button to save this version of the file in the git database</li>
+<li>Click on the the <code>Commit</code> button to save this version of the file in the git database</li>
 <li>Close the windows to get back to the main RStudio window</li>
 </ol></li>
 </ol>
@@ -528,8 +528,8 @@ Note that the icon <code>M</code> will move to the left to show you that this fi
 </section>
 <section id="good-commit-message-tips" class="level3">
 <h3 class="anchored" data-anchor-id="good-commit-message-tips">Good Commit Message Tips</h3>
-<p>Clearly, good documentation of what you’ve done is critical to making the version history of your repository meaningful and helpful. Its tempting to skip the commit message altogether, or to add some stock blurd like ‘Updates’. Its better to use messages that will be helpful to your future self in deducing not just what you did, but why you did it. Also, commit messages are best understood if they follow the active verb convention. For example, you can see that my commit messages all started with a past tense verb, and then explained what was changed.</p>
-<p>While some of the changes we illustrated here were simple and easily explained in a short phrase, for more complex changes, its best to provide a more complete message. The convention, however, is to always have a short, terse first sentence, followed by a more verbose explanation of the details and rationale for the change. This keeps the high level details readable in the version log. I can’t count the number of times I’ve looked at the commit log from 2, 3, or 10 years prior and been so grateful for diligence of my past self and collaborators.</p>
+<p>Clearly, good documentation of what you’ve done is critical to making the version history of your repository meaningful and helpful. It is tempting to skip the commit message altogether, or to add some simple message like ‘Updates’. It is better to use messages that will be helpful to your future self in deducing not just what you did, but why you did it. Also, commit messages are best understood if they follow the active verb convention. For example, you can see that my commit messages all started with a past tense verb, and then explained what was changed.</p>
+<p>While some of the changes we illustrated here were simple and easily explained in a short phrase, for more complex changes, it is best to provide a more complete message. The convention, however, is to always have a short, terse first sentence, followed by a more verbose explanation of the details and rationale for the change. This keeps the high level details readable in the version log. I can not count the number of times I have looked at the commit log from 2, 3, or 10 years prior and been so grateful for the diligence of my past self and collaborators.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -554,7 +554,7 @@ Note that the icon <code>M</code> will move to the left to show you that this fi
 </div>
 </div>
 </div>
-<p>You can see that there has been 3 commits so far. The first one has been done by GitHub when we created the repository and the 2 commits we just did. The most recent commit is at the top.</p>
+<p>You can see that there has been 3 commits so far. The first one was done by GitHub when we created the repository and the 2 commits we just did. The most recent commit is at the top.</p>
 </section>
 <section id="sending-changes-back-to-github" class="level2">
 <h2 class="anchored" data-anchor-id="sending-changes-back-to-github">Sending changes back to GitHub</h2>
@@ -568,14 +568,18 @@ Note that the icon <code>M</code> will move to the left to show you that this fi
 </div>
 </div>
 </div>
-<p>There are two git commands to exchange between a local and remote versions of a repository: - <code>pull</code>: git will get the latest remote version and try to merge it with your local version - <code>push</code>: git will send your local version to the remote version of the repository (in our case GitHub)</p>
+<p>There are two git commands to exchange between local and remote versions of a repository:</p>
+<ul>
+<li><code>pull</code>: git will get the latest remote version and try to merge it with your local version</li>
+<li><code>push</code>: git will send your local version to the remote version of the repository (in our case GitHub)</li>
+</ul>
 <p>Before sending your local version to the remote, you should always get the latest remote version first. In other words, you should pull first and push second. This is the way git protects the remote version against incompatibilities with the local version. You always deal with potential problems on your local machine. Therefore your sequence will always be:</p>
 <ol type="1">
 <li><code>pull</code></li>
 <li><code>push</code></li>
 </ol>
-<p>Of course RStudio have icons for that on top of the git pane, with the blue arrow down being for <code>pull</code> and the green arrow up being for <code>push</code>. Remember the icons are organized in sequence!</p>
-<p>Let us do the pull and push to synchronized the remote repositories. We have now synchronized the local (our computer) and remote (on GitHub) versions of our repository.</p>
+<p>RStudio has icons for that on top of the git pane, with the blue arrow down being for <code>pull</code> and the green arrow up being for <code>push</code>. Remember the icons are organized in sequence!</p>
+<p>Let us do the pull and push to synchronize the remote repositories. We have now synchronized the local (our computer) and remote (on GitHub) versions of our repository.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
