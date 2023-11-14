@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Designing a Reproducible and Collaborative Lab (RCL) - GitHub</title>
+<title>Designing a Reproducible and Collaborative Lab (RCL) - git and GitHub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./github_org.html" rel="next">
+<link href="./01-handson_github_website.html" rel="next">
 <link href="./coding.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -137,6 +137,18 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./01-handson_github_website.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using Github’s website to track your work</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-handson_github_rstudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using Rstudio, git and GitHub to track your work</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./github_org.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GitHub organizations</span></a>
   </div>
@@ -214,14 +226,36 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#version-control-with-git-and-github" id="toc-version-control-with-git-and-github" class="nav-link active" data-scroll-target="#version-control-with-git-and-github">Version Control with <code>git</code> and <code>GitHub</code></a>
+  <ul class="collapse">
+  <li><a href="#the-problem-with-save_as" id="toc-the-problem-with-save_as" class="nav-link" data-scroll-target="#the-problem-with-save_as">The problem with <code>save_as</code></a></li>
+  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git">git</a>
+  <ul class="collapse">
+  <li><a href="#repository" id="toc-repository" class="nav-link" data-scroll-target="#repository">Repository</a></li>
+  </ul></li>
+  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">GitHub</a>
+  <ul class="collapse">
+  <li><a href="#github-dashboard" id="toc-github-dashboard" class="nav-link" data-scroll-target="#github-dashboard">GitHub Dashboard</a></li>
+  <li><a href="#gtihub-user-page" id="toc-gtihub-user-page" class="nav-link" data-scroll-target="#gtihub-user-page">GtiHub User page</a></li>
+  <li><a href="#gtihub-organization-page" id="toc-gtihub-organization-page" class="nav-link" data-scroll-target="#gtihub-organization-page">GtiHub Organization page</a></li>
+  <li><a href="#lets-look-at-a-repository-on-github" id="toc-lets-look-at-a-repository-on-github" class="nav-link" data-scroll-target="#lets-look-at-a-repository-on-github">Let’s look at a repository on GitHub</a></li>
+  </ul></li>
+  <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
+  <li><a href="#aknowledgements" id="toc-aknowledgements" class="nav-link" data-scroll-target="#aknowledgements">Aknowledgements</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">GitHub</h1>
+<h1 class="title">git and GitHub</h1>
 </div>
 
 
@@ -236,8 +270,93 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="version-control-with-git-and-github" class="level1">
+<h1>Version Control with <code>git</code> and <code>GitHub</code></h1>
+<p>Aka – <strong>Say goodbye to <code>script_JB_03v5b.R</code> !!</strong></p>
+<section id="the-problem-with-save_as" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-with-save_as">The problem with <code>save_as</code></h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/phd_comics_final.png" class="img-fluid figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Every file in the scientific process changes. Manuscripts are edited. Figures get revised. Code gets fixed when problems are discovered. Data files get combined together, then errors are fixed, and then they are split and combined again. In the course of a single analysis, one can expect thousands of changes to files. And yet, all we use to track this are simplistic <em>filenames</em>. You might think there is a better way, and you’d be right: <strong>version control</strong>.</p>
+<p>Version control systems help you track all of the changes to your files, without the spaghetti mess that ensues from simple file renaming. In other words, version control is a system that helps you to manage the different versions of your files in an organized manner. It will help you to never have to duplicate files using <code>save as</code> as a way to keep different versions of a file (see below). Version control help you to create a timeline of snapshots containing the different versions of a file. At any point in time, you will be able to roll back to a specific version. Bonus: you can add a short description (commit message) to remember what each specific version is about.</p>
+<p><strong>What is the difference between <code>git</code> and <code>GitHub</code>?</strong></p>
+<ul>
+<li><strong>git</strong>: is a version control software used to track files in a folder (a repository)
+<ul>
+<li>git creates a timeline or history of your files</li>
+</ul></li>
+<li><strong>GitHub</strong>: is a code repository in the cloud that enables users to store their git repositories and share them with others. Github also add many features to manage projects and document your work.</li>
+</ul>
+</section>
+<section id="git" class="level2">
+<h2 class="anchored" data-anchor-id="git">git</h2>
+<p><img style="float: right;width: 100px;" src="img/git_icon.png"></p>
+<p>This section focuses on the code versioning system called <code>Git</code>. Note that there are others, such as <code>Mercurial</code> or <code>svn</code> for example.</p>
+<p>Git is a <em>free</em> and <em>open source</em> distributed <em>version control system</em>. It has many functionalities and was originally geared towards software development and production environment. In fact, Git was initially designed and developed in 2005 by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel. Here is a <a href="https://www.youtube.com/watch?v=4XpnKHJAok8">fun video</a> of Linus Torvalds touting Git to Google.</p>
+<p><strong>How does it work?</strong></p>
+<p>Git can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a <strong>repository</strong> (which formally is a specific data structure storing versioning information).</p>
+<p><strong>What git is not:</strong></p>
+<ul>
+<li><strong>Git is not a backup per se</strong></li>
+<li>Git is not good at versioning large files (there are workarounds) =&gt; not meant for large data</li>
+</ul>
+<section id="repository" class="level3">
+<h3 class="anchored" data-anchor-id="repository">Repository</h3>
+<p>Git can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a <strong>repository</strong> (which formally is a specific data structure storing versioning information).</p>
+<p>Although there many ways to start a new repository, <a href="https://github.com/">GitHub</a> (or any other cloud solutions, such as <a href="https://about.gitlab.com/">GitLab</a>) provide among the most convenient way of starting a repository.</p>
+<p><img style="float: right;width: 100px;" src="img/github-logo.png"></p>
+</section>
+</section>
+<section id="github" class="level2">
+<h2 class="anchored" data-anchor-id="github">GitHub</h2>
+<p><strong>GitHub is a company that hosts git repositories online</strong> and provides several collaboration features (among which <code>forking</code>). GitHub fosters a great user community and has built a nice web interface to git, also adding great visualization/rendering capacities of your data.</p>
+<section id="github-dashboard" class="level3">
+<h3 class="anchored" data-anchor-id="github-dashboard">GitHub Dashboard</h3>
+<p>This is the default landing page when you log into your account. It provide a mix of the most recent resources and activities of your and your collaborators actions, as well as some resources relevant to your work. The dashboard therefore changes on a regular basis. Once logged in, you can access your dashboard at <a href="https://github.com" class="uri">https://github.com</a></p>
+<p><img src="img/github_overview-01_dashboard.png" class="img-fluid"></p>
+</section>
+<section id="gtihub-user-page" class="level3">
+<h3 class="anchored" data-anchor-id="gtihub-user-page">GtiHub User page</h3>
+<p>This page can be reached using witht eh following URL: https://github.com/<code>username</code>. For my user (<code>brunj7</code>) it would be: <a href="https://github.com/brunj7" class="uri">https://github.com/brunj7</a>. It is a great space for you to provide some information about yourself and the main repositories you are working on. It also list the GitHub Organizations you are part of. But more importantly, Users own repositories to host and share their code. You can list repositories from a User by clicking on the <em>repositories</em> tab in the main GitHub menu bar at the top.</p>
+<p><img src="github_overview-02_user.png" class="img-fluid"></p>
+</section>
+<section id="gtihub-organization-page" class="level3">
+<h3 class="anchored" data-anchor-id="gtihub-organization-page">GtiHub Organization page</h3>
+<p>We will talk more about GitHub Organizations later. In a nutshell organizations are like groups or teams that users can be member of. Like Users, Organizations can have a landing page and own repositories. However they add several perks in terms of user managements. Similarly to Users, you can access repositories from an Organization by clicking on the <em>repositories</em> tab in the main GitHub menu bar at the top. You can acces an organization’s page similarly to a user: https://github.com/<code>organization-name</code>; e.g.&nbsp;<a href="https://github.com/UCSB-Library-Research-Data-Services" class="uri">https://github.com/UCSB-Library-Research-Data-Services</a></p>
+<p><img src="img/github_overview-03_organization.png" class="img-fluid"></p>
+</section>
+<section id="lets-look-at-a-repository-on-github" class="level3">
+<h3 class="anchored" data-anchor-id="lets-look-at-a-repository-on-github">Let’s look at a repository on GitHub</h3>
+<p>This screen shows the copy of a repository stored on GitHub, with its <span style="color:red">list of files</span>, <span style="color:green">when the files and directories were last modified</span>, and <span style="color:blue">some information on who made the most recent changes.</span></p>
+<p><img src="img/ss3sim-github_colored.png" class="img-fluid"></p>
+<p>If we drill into the “<span style="color:orange">commits</span>” for the repository, we can see the history of changes made to all of the files. Looks like <code>kellijohnson</code> and <code>seananderson</code> were fixing things in June and July:</p>
+<p><img src="img/ss3sim-commits_colored.png" class="img-fluid"></p>
+<p>And finally, if we drill into the changes made on June 13, we can see exactly what was changed in each file:</p>
+<p><img src="img/ss3sim-diff.png" class="img-fluid"> Tracking these changes, and seeing how they relate to released versions of software and files is exactly what Git and GitHub are good for. We will show how they can really be effective for tracking versions of scientific code, figures, and manuscripts to accomplish a reproducible workflow.</p>
+</section>
+</section>
+<section id="recap" class="level2">
+<h2 class="anchored" data-anchor-id="recap">Recap</h2>
+<ul>
+<li><strong>GitHub.com / your dashboard (if logged in)</strong>: <a href="https://github.com" class="uri">https://github.com</a></li>
+<li><strong>A user account</strong>: <a href="https://github.com/brunj7" class="uri">https://github.com/brunj7</a></li>
+<li><strong>An organization account</strong>: <a href="https://github.com/UCSB-Library-Research-Data-Services" class="uri">https://github.com/UCSB-Library-Research-Data-Services</a></li>
+</ul>
+</section>
+<section id="aknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="aknowledgements">Aknowledgements</h2>
+<p>This materials was adapted from <a href="https://learning.nceas.ucsb.edu/2021-02-RRCourse/index.html">NCEAS Reproducible Research Techniques for Synthesis</a> &amp; <a href="https://github.com/NCEAS/scicomp-workshop-collaborative-coding">Collaborative Coding with GitHub. LNO Scientific Computing Team</a>.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <div>
@@ -486,8 +605,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./github_org.html" class="pagination-link">
-        <span class="nav-page-text">GitHub organizations</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./01-handson_github_website.html" class="pagination-link">
+        <span class="nav-page-text">Using Github’s website to track your work</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

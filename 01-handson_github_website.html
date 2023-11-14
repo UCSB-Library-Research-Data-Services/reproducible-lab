@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Designing a Reproducible and Collaborative Lab (RCL) - data_mgmt</title>
+<title>Designing a Reproducible and Collaborative Lab (RCL) - Forks and Branches using the GitHub website</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,7 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./github_template.html" rel="prev">
+<link href="./02-handson_github_rstudio.html" rel="next">
+<link href="./github_intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -86,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your Research data</a></li><li class="breadcrumb-item"><a href="./data_mgmt.html">What is data management?</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./github_intro.html">Leveraging GitHub</a></li><li class="breadcrumb-item"><a href="./01-handson_github_website.html">Using Github’s website to track your work</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -121,13 +156,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Leveraging GitHub</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./github_intro.html" class="sidebar-item-text sidebar-link">
@@ -136,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01-handson_github_website.html" class="sidebar-item-text sidebar-link">
+  <a href="./01-handson_github_website.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Using Github’s website to track your work</span></a>
   </div>
 </li>
@@ -213,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_mgmt.html" class="sidebar-item-text sidebar-link active">
+  <a href="./data_mgmt.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">What is data management?</span></a>
   </div>
 </li>
@@ -225,14 +260,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a></li>
+  <li><a href="#forks" id="toc-forks" class="nav-link" data-scroll-target="#forks">Forks</a></li>
+  <li><a href="#branches" id="toc-branches" class="nav-link" data-scroll-target="#branches">Branches</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">data_mgmt</h1>
+<h1 class="title">Forks and Branches using the GitHub website</h1>
 </div>
 
 
@@ -247,8 +290,176 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>In this section we will be using the GitHub.com website and demonstrate that you do not need to be a programmer to use version control and edit files on GitHub, nor using branches</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Don’t have a GitHub account?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If you have not already created a GitHub username, please do so now:</p>
+<ul>
+<li>GitHub: <a href="https://github.com" class="uri">https://github.com</a></li>
+<li>Follow optional <a href="https://happygitwithr.com/github-acct.html">advice on choosing your username</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Our asks
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<section id="as-a-team-of-two" class="level3">
+<h3 class="anchored" data-anchor-id="as-a-team-of-two">As a Team of two</h3>
+<ul>
+<li>Help each other, everyone is bringing different skills! Talk it out!</li>
+<li>Listen to each other; avoid judgment and solutioneering.</li>
+<li>Have fun!</li>
+</ul>
+</section>
+<section id="prompt" class="level3">
+<h3 class="anchored" data-anchor-id="prompt">Prompt</h3>
+<p>We want to log the information about people’s favorite dessert using a repository.</p>
+</section>
+</div>
+</div>
+<section id="setup" class="level3">
+<h3 class="anchored" data-anchor-id="setup">Setup</h3>
+<section id="person-1-owner" class="level4">
+<h4 class="anchored" data-anchor-id="person-1-owner">Person 1 (owner):</h4>
+<ul>
+<li>Create a repository using the following these <a href="https://docs.github.com/en/github/getting-started-with-github/create-a-repo">instructions</a> steps 1-6</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="img/github-dessert-repo.png" class="img-fluid"></p>
+</div>
+</div>
+<ul>
+<li>Edit the <code>README.md</code> to:
+<ul>
+<li>Click on pen at the top of the <code>README.md</code> file</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="img/github-readme-edit.png" class="img-fluid" style="width:80.0%"></p>
+</div>
+</div>
+<ul>
+<li>Replace the title (first line starting with <code>#</code>) with something better! Maybe <code>Favorite Desserts</code></li>
+<li>Add your name and your favorite dessert below the title: e.g.&nbsp;<code>- Julien: crepes</code></li>
+</ul>
+<p>You should now have a README similar to this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"img/github-readme_desserts.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="img/github-readme_desserts.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="forks" class="level3">
+<h3 class="anchored" data-anchor-id="forks">Forks</h3>
+<section id="person-2-create-a-fork" class="level4">
+<h4 class="anchored" data-anchor-id="person-2-create-a-fork">Person 2: Create a Fork</h4>
+<ul>
+<li>Ask your teammate to Slack you the link to the repository</li>
+<li>Create a Fork by clicking on the Fork button on the top right view of your repository homepage</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="img/github-fork-button.png" class="img-fluid" style="width:60.0%"></p>
+</div>
+</div>
+<ul>
+<li><p>On your Fork, start editing the <code>README.md</code></p></li>
+<li><p>Add your name and your favorite dessert below your teammate entry: e.g.&nbsp;<code>- Sophia: chocolate</code></p></li>
+<li><p>Add a descriptive commit message</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"img/github-commit.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="img/github-commit.png" class="img-fluid"></p>
+</div>
+</div>
+<ul>
+<li>Commit your changes</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="img/github-commit-button.png" class="img-fluid" style="width:20.0%"></p>
+</div>
+</div>
+<ul>
+<li>Create a pull request to merge those changes to the main repository using these <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork">instructions</a></li>
+</ul>
+</section>
+<section id="person-1" class="level4">
+<h4 class="anchored" data-anchor-id="person-1">Person 1:</h4>
+<ul>
+<li>Go to <em>your</em> repository and merge the PR</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="branches" class="level3">
+<h3 class="anchored" data-anchor-id="branches">Branches</h3>
+<section id="person-1-add-a-file" class="level4">
+<h4 class="anchored" data-anchor-id="person-1-add-a-file">Person 1: add a file</h4>
+<p>Download this <a href="https://aurora.nceas.ucsb.edu/~brun/favorite_desserts.csv">csv file</a> about your favorite desserts to your computer</p>
+<ul>
+<li>Just drag and drop it on the Github web page of your repository to upload it</li>
+<li>Add a short message about the file: e.g.&nbsp;<code>Adding dessert csv</code> &amp; hit <code>Commit changes</code></li>
+<li>Your file has been uploaded. Click on the filename to see it!</li>
+</ul>
+<p>You should have something similar to this repo: <a href="https://github.com/brunj7/favorite-desserts/blob/master/favorite_desserts.csv" class="uri">https://github.com/brunj7/favorite-desserts/blob/master/favorite_desserts.csv</a></p>
+<p>Now you want to collaborate more closely and do not wan your teammate to have to create a fork and be able to work directly on your repository</p>
+<ul>
+<li>Add Person 2 as a collaborator following these <a href="https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository">instructions</a></li>
+</ul>
+</section>
+<section id="person-2-create-a-branch" class="level4">
+<h4 class="anchored" data-anchor-id="person-2-create-a-branch">Person 2: Create a branch</h4>
+<ul>
+<li>Check your email or Github Notifications to accept the invitation</li>
+<li>Go to the repository website (link is provided in the invitation)</li>
+<li>Create a new branch named after your first name</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"img/github-create_branch.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="img/github-create_branch.png" class="img-fluid"></p>
+</div>
+</div>
+<ul>
+<li>Edit the csv file directly on GitHub to add your favorite dessert to it</li>
+<li>Create a <strong>P</strong>ull <strong>R</strong>equest (PR) to merge you branch back to main</li>
+<li>Assign person 1 as a reviewer (<a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review">instructions</a>)</li>
+</ul>
+</section>
+<section id="person-1-merge-the-branch" class="level4">
+<h4 class="anchored" data-anchor-id="person-1-merge-the-branch">Person 1: Merge the branch</h4>
+<ul>
+<li>Review PR</li>
+<li>Merge and close PR</li>
+</ul>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <div>
@@ -492,11 +703,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./github_template.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Streamlining code documentation</span>
+      <a href="./github_intro.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Short intro to GitHub</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./02-handson_github_rstudio.html" class="pagination-link">
+        <span class="nav-page-text">Using Rstudio, git and GitHub to track your work</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
