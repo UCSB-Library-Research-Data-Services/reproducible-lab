@@ -14,9 +14,9 @@ Today we will be focusing on using GitHub to collaborate and keep track of the d
 
 - Quick intro to GitHub
   - Why
-  - Website interface walk through
+  - Website interface walk-through
 
-- Github Organizations
+- GitHub Organizations
   - Why
   - setup
   - manage: teams and settings
