@@ -44,6 +44,12 @@ Git can be enabled on a specific folder/directory on your file system to version
 - **Git is not a backup per se**
 - Git is not good at versioning large files (there are workarounds) => not meant for large data
 
+::: {.callout-note collapse=true}
+### Fun fact
+
+Git was initially designed and developed in 2005 by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel. Here is a [fun video](https://www.youtube.com/watch?v=4XpnKHJAok8) of Linus Torvalds touting Git to Google. 
+:::
+
 ### Repository
 
 Git can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a **repository** (which formally is a specific data structure storing versioning information).
