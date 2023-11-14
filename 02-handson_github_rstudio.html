@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./github_org.html" rel="next">
-<link href="./01-handson_github_website.html" rel="prev">
+<link href="./github_template.html" rel="next">
+<link href="./03-handson_github_workflows.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -121,7 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./github_intro.html">Leveraging GitHub</a></li><li class="breadcrumb-item"><a href="./02-handson_github_rstudio.html">Using Rstudio, git and GitHub to track your work</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./collab_pairprog.html">Collaborative coding</a></li><li class="breadcrumb-item"><a href="./02-handson_github_rstudio.html">Hands-on: using branches from RStudio</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -156,13 +156,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Leveraging GitHub</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">Leveraging GitHub to manage and share code… and more</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./github_intro.html" class="sidebar-item-text sidebar-link">
@@ -172,38 +172,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./01-handson_github_website.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Using Github’s website to track your work</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./02-handson_github_rstudio.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Using Rstudio, git and GitHub to track your work</span></a>
+ <span class="menu-text">Using Github’s website to track &amp; share your work</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./github_org.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">GitHub organizations</span></a>
+ <span class="menu-text">GitHub organizations for your Lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./github_teams.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Setting up teams</span></a>
+ <span class="menu-text">Setting up teams to better collaborate</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./git_rstudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using RStudio, git and GitHub to track your work</span></a>
   </div>
 </li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">Collaborative coding</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./collab_pairprog.html" class="sidebar-item-text sidebar-link">
@@ -214,6 +214,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="./collab_exchange.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code Exchange</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./github_workflows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Collaborating with GitHub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-handson_github_workflows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hands-on: GitHub collaborative workflows</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-handson_github_rstudio.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Hands-on: using branches from RStudio</span></a>
   </div>
 </li>
       </ul>
@@ -292,7 +310,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="is-your-fav-dessert-iconic">Is your fav’ dessert iconic !?!</h2>
 <p>Write and R script to compare the csv with your favorite desserts you modified previously with the top 42 most iconic American desserts</p>
 <ol type="1">
-<li>Clone the repository you just created to Taylor</li>
+<li>Clone the repository you just created about your favorite desserts</li>
 <li>Create a new branch using RStudio and name it <code>*myinitials*_rstudio</code></li>
 <li>Start a new script named <code>desserts_match_*myinitials*.R</code></li>
 <li>As pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see code below) into R and find out if your favorite dessert is part of the <a href="https://www.eatthis.com/iconic-desserts-united-states/">most iconic desserts</a>!</li>
@@ -579,13 +597,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./01-handson_github_website.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Using Github’s website to track your work</span>
+      <a href="./03-handson_github_workflows.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Hands-on: GitHub collaborative workflows</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./github_org.html" class="pagination-link">
-        <span class="nav-page-text">GitHub organizations</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./github_template.html" class="pagination-link">
+        <span class="nav-page-text">Streamlining code documentation</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
