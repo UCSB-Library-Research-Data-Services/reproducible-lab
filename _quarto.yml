@@ -26,7 +26,7 @@ website:
               - href: github_intro.qmd
                 text: "Short intro to GitHub"
               - href: 01-handson_github_website.qmd
-                text: "Using Github's website to track & share your work"
+                text: "Hands-on: Using Github's website"
               - href: github_org.qmd
                 text: "GitHub organizations for your Lab"
               - href: github_teams.qmd
@@ -42,9 +42,9 @@ website:
               - href: github_workflows.qmd
                 text: "Collaborating with GitHub"
               - href: 03-handson_github_workflows.qmd
-                text: "Hands-on: GitHub collaborative workflows"
+                text: "Hands-on: Collaborative workflows"
               - href: 02-handson_github_rstudio.qmd
-                text: "Hands-on: using branches from RStudio"
+                text: "Hands-on: Branches from RStudio"
                 
           - section: "Documenting things"
             contents:
