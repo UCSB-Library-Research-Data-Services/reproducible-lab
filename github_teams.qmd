@@ -4,14 +4,14 @@ title: "GitHub Teams"
 
 ## What are GitHub teams
 
-You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google drive, this is the same concept. 
+You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages, and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google Drive, this is the same concept. 
 
 Teams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually.
 
 
 ## Create a team
 
-In the navigation bar at the top of your organization page, click on the _Teams_ tab. Normally this is the page you use to see and manage the existing teams of your organization. Since we do not have teams yet, this page is providing a short overview of what teams can be used for. Click on the _New Team_ green button at the bottom to start creating your first team.
+In the navigation bar at the top of your organization page, click on the _Teams_ tab. Normally this is the page you use to see and manage the existing teams of your organization. Since we do not have teams yet, this page provides a short overview of what teams can be used for. Click on the _New Team_ green button at the bottom to start creating your first team.
 
 ![](img/github_org_teams-01_team_page.png)
 
@@ -23,15 +23,15 @@ Your team has been created, but as of now you are the only member. Let's invite 
 
 ![](img/github_org_teams-03_first_team.png){fig-align="center" width=90%}
 
-On this new window you can search for GitHUb users by their username. If you do not know their username you can search by their full names. Note that if there are no pictures associated to the profile you fund or are not sure it is the right person, we recommend to **not** add this person at this time and to reach out asking for their username (which is unique). If you are sure you found the right persons, you can click on _Invite_.
+On this new window, you can search for GitHub users by their username. If you do not know their username you can search by their full names. Note that if there are no pictures associated with the profile you found or are not sure it is the right person, we recommend **not** adding this person at this time and reaching out asking for their username (which is unique). When you are sure you found the right persons you can click on _Invite_.
 
 ![](img/github_org_teams-035_invite.png){fig-align="center" width=60%}
 
-You collaborators will receive an invitation to join the team. They will have to accept the invitation before they can use the benefits (access to repositories, ...) associated with the team. Once your collaborators have accepted your team should look like below.
+Your collaborators will receive an invitation to join the team. They will have to accept the invitation before they can use the benefits (access to repositories, ...) associated with the team. Once your collaborators have accepted your team should look like below.
 
 ![](img/github_org_teams-04_collaborators_invited.png){fig-align="center" width=90%}
 
-OK, let's create a second team! In this example we will create a Reserach Facilitators team with two members.
+OK, let's create a second team! In this example, we will create a Research Facilitators team with two members.
 
 
 ![](img/github_org_teams-06_second_team.png){fig-align="center" width=90%}
@@ -54,11 +54,11 @@ Under your newly created organization, create a new repository with the followin
 
 ![](img/github_org_collaborators-02_create_repo.png){fig-align="center" width=80%}
 
-Once the repository created, click on the _Settings_ tab (top right in the grey bar)
+Once the repository is created, click on the _Settings_ tab (top right in the grey bar)
 
-![](img/github_org_collaborators-03_repo_created.png){fig-align="center" width=90%}
+![](img/github_org_collaborators-03_repo_created.png){fig-align="center" width=80%}
 
-{fig-align="center" width=70%}On the left panel, click on _Collaborators and teams_ and then click on the green button _Add teams_
+On the left panel, click on _Collaborators and teams_ and then click on the green button _Add teams_
 
 
 ![](img/github_org_collaborators-04_settings.png){fig-align="center" width=90%}
@@ -68,7 +68,7 @@ Start typing the name of the team you would like to add. Suggestions of teams sh
 
 ![](img/github_org_collaborators-05_add_team.png){fig-align="center" width=60%}
 
-For close collaborators, we recommend to use the _Maitain_ level of access that provides a good blend of people being able to do most of the actions they will need to do while not being allowed to conduct destructive actions on accident (like deleting the entire repository). For collaborators you are less familiar with, including their familiarity with GitHub, you might want to start with the _Write_ access.
+For close collaborators, we recommend using the _Maitain_ level of access that provides a good blend of people being able to do most of the actions they will need to do while not being allowed to conduct destructive actions on accident (like deleting the entire repository). For collaborators you are less familiar with, including their familiarity with GitHub, you might want to start with the _Write_ access.
 
 ![](img/github_org_collaborators-06_choose_rights.png){fig-align="center" width=70%}
 
@@ -76,7 +76,7 @@ Once the team added, your settings should look as follow:
 
 ![](img/github_org_collaborators-07_team_added.png){fig-align="center" width=90%}
 
-The good news is now if you add a collaborator to a specific team, this person will automatically gain access to all the repositories that team as access to! This will streamline the on and off boarding process of your team memebers.
+The good news is now if you add a collaborator to a specific team, this person will automatically gain access to all the repositories that team has access to! This will streamline the on- and off- boarding process of your team members.
 
 
 
