@@ -3,7 +3,7 @@ title: "Using the GitHub website"
 ---
 
 
-In this section we will be using the GitHub.com website and demonstrate that you do not need to be a programmer to use version control and edit files on GitHub.
+In this section, we will be using the GitHub.com website and demonstrate that you do not need to be a programmer to use version control and edit files on GitHub.
 
 ::: {.callout-note collapse=true}
 ### Don't have a GitHub account?
@@ -26,9 +26,8 @@ If you have not already created a GitHub username, please do so now:
 
 ### Prompt
 
-We want to log the information about people's favorite dessert using a repository.
+We want to log the information about people's favorite desserts using a repository.
 :::
-
 
 
 #### Person 1 (owner):
@@ -45,7 +44,7 @@ We want to log the information about people's favorite dessert using a repositor
 knitr::include_graphics("img/github-readme_desserts.png")
 ```
 
-- Add Person 2 as collaborator following these [instructions](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository)
+- Add Person 2 as a collaborator following these [instructions](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository)
 
 
 #### Person 2 (collaborator): 
