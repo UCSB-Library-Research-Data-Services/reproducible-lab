@@ -7,7 +7,7 @@ title: "GitHub branches using RStudio"
 
 Write and R script to compare the csv with your favorite desserts you modified previously with the top 42 most iconic American desserts 
 
-1. Clone the repository you just created to Taylor
+1. Clone the repository you just created about your favorite desserts
 2. Create a new branch using RStudio and name it `*myinitials*_rstudio`
 3. Start a new script named `desserts_match_*myinitials*.R` 
 4. As pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see code below) into R and find out if your favorite dessert is part of the [most iconic desserts](https://www.eatthis.com/iconic-desserts-united-states/)!
