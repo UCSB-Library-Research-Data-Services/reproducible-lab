@@ -21,7 +21,7 @@ website:
         contents:
           - href: coding.qmd
             text: "Code as scientific product"
-          - section: "Leveraging GitHub to manage and share code... and more"
+          - section: "Leveraging GitHub"
             contents:
               - href: github_intro.qmd
                 text: "Short intro to GitHub"
