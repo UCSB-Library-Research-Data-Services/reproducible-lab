@@ -32,9 +32,9 @@ Since we are part of an University, students and faculty have access to special 
 
 2. This will send you to a new page with several options to start your organization. Choose the free option at this time.
 
-![](img/github_org_setup-02_select_free.png){fig-align="center" width=50%}
+![](img/github_org_setup-02_select_free.png){fig-align="center" width=35%}
 
-3. Now you can provide the name of your organization. We recommend to naming it in a way that reflects your Lab name to help with the organization's branding. Select the email you used to get the education discount and check the "my personal account" option.
+3. Now you can provide the name of your organization. We recommend naming it in a way that reflects your Lab name to help with the organization's branding. Select the email you used to get the education discount and check the "my personal account" option.
 
 ![](img/github_org_setup-03_setup.png){fig-align="center" width=60%}
 
