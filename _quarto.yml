@@ -49,10 +49,10 @@ website:
           #   contents:
           #     - href: github_template.qmd
           #       text: "Streamlining code documentation"
-      - section: "Managing your Research data"
-        contents:
-            - href: data_mgmt.qmd
-              text: "What is data management?"
+      # - section: "Managing your Research data"
+      #   contents:
+      #       - href: data_mgmt.qmd
+      #         text: "What is data management?"
 format:
   html:
     theme: 
