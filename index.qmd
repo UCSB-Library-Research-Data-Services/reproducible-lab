@@ -31,12 +31,12 @@ enable reuse of their own work, and collaborate more effectively.
 
 ### Learning Opportunities
 
-- Leverage GitHub organizations to manage your Lab code 
-- Develop strategies to centralize and manage your Lab data 
-- Protect your Lab scientific products against loss through backup and computing resources strategies
+- Leverage GitHub to manage and collaborate on your Lab’s code 
+- Develop strategies to centralize and manage your Lab’s data 
 - Set up templates and guidelines on how to document your Lab research and improve its reusability
 - Establish Lab standard operating procedures and documentation standards
-- Create "good enough" research computing strategies for robust and more reusable code development
+- Protect your Lab’s scientific products against loss through backup and computing resources strategies
+
 
 
 ![](img/rds_hex.png){fig-align="center" width=50%}
