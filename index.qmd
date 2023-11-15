@@ -24,9 +24,9 @@ enable reuse of their own work, and collaborate more effectively.
 ### Outcomes
 
 - More reproducible management of your lab's scientific products (data, code etc.) 
-- Streamlined on- and off -boarding
 - Better analytical strategies for collaboration Safety nets for your research lab content 
 - More efficient reuse of your work
+- Streamlined on- and off -boarding
 
 
 ### Learning Opportunities
