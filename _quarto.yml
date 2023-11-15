@@ -45,11 +45,10 @@ website:
                 text: "Hands-on: Collaborative workflows"
               - href: 02-handson_github_rstudio.qmd
                 text: "Hands-on: Branches from RStudio"
-                
-          - section: "Documenting things"
-            contents:
-              - href: github_template.qmd
-                text: "Streamlining code documentation"
+          # - section: "Documenting things"
+          #   contents:
+          #     - href: github_template.qmd
+          #       text: "Streamlining code documentation"
       - section: "Managing your Research data"
         contents:
             - href: data_mgmt.qmd
