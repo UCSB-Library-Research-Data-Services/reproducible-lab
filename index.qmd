@@ -1,8 +1,9 @@
 ---
-title: "Designing a Reproducible and Collaborative Lab"
+title: "Designing a Reproducible and Collaborative Lab (RCL)"
 ---
 
-Workshop Series and Coaching Sessions for Faculty and their Teams
+Workshop Series and Coaching Sessions for Faculty and their Teams to help Research Labs set up infrastructures and practices to make their research more reproducible,
+enable reuse of their own work, and collaborate more effectively.
 
 
 ### Topics
