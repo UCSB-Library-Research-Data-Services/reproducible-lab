@@ -4,28 +4,28 @@ title: "Using GitHub Templates to document things"
 
 ## Repository templates
 
-You can create templates to model a specific repository setup when creating new repository. The advantage of such template is that you can provide a boiler plate for the README and any other files you would like collaborator to provide when setting up a new project / repository.
+You can create templates to model a specific repository setup when creating a new repository. The advantage of such a template is that you can provide a boilerplate for the README and any other files you would like your collaborators to provide when setting up a new project / repository.
 
 To create a template repository you can either use an existing one or create a new one for this specific purpose. We are going to do the latter.
 
-Let's create a new repository as we have done previously we recommend to add template in the name so it makes its purpose more obvious
+Let's create a new repository as we have done previously we recommend adding the word "template" in the name so it makes its purpose more obvious
 
 ![](img/github_template-01_create_repo.png){fig-align="center" width=80%}
 
 Now you can work on the content of the repository, for example adding a README with instructions to follow when setting up a new repository: <https://github.com/awesomer-lab/repo-template>
 
-Once your repository ready, you can go to the _Settings_ tab in the taskbar of the repository and check the box _Template repository_ under the repository name.
+Once your repository is ready, you can go to the _Settings_ tab in the taskbar of the repository and check the box _Template repository_ under the repository name.
 
 ![](img/github_template-02_template_setup.png){fig-align="center" width=80%}
 
 Note that you can keep editing the template repository after this step.
 
 
-Now you can use your template when creating a new repository by selecting your template from the dropdown menu above the repository name. Note is might take a few second to fetch all your templates.
+Now you can use your template when creating a new repository by selecting your template from the dropdown menu above the repository name. Note is might take a few seconds to fetch all your templates.
 
 ![](img/github_template-03_using_template.png){fig-align="center" width=80%}
 
-Voilà! Now you can create standardized repositories and documentation quite easily!! Note that under the name of the newly created repository from the template, there is mentioned that it was created from a template.
+Voilà! Now you can create standardized repositories and documentation quite easily!! Note that under the name of the newly created repository from the template, it is mentioned that it was created from a template.
 
 ![](img/github_template-04_repo_from_template.png){fig-align="center" width=60%}
 
