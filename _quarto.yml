@@ -45,10 +45,10 @@ website:
                 text: "Hands-on: forks & branches with Github website"
               - href: 02-handson_github_rstudio.qmd
                 text: "Hands-on: Branches using RStudio"
-          # - section: "Documenting things"
-          #   contents:
-          #     - href: github_template.qmd
-          #       text: "Streamlining code documentation"
+          - section: "Streamlining documentation"
+            contents:
+              - href: github_template.qmd
+                text: "Repository template"
       # - section: "Managing your Research data"
       #   contents:
       #       - href: data_mgmt.qmd
