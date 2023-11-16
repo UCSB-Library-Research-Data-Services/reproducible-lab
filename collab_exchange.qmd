@@ -21,3 +21,8 @@ A big advantage of Pull Request is to document and provide a space to discuss th
 
 To be able to create a PR, you need to first either create a branch or a fork, which are two ways to encapsulate your changes while you are working on them. Once you are done you can ask to send back and merge those changes to the current version of the main branch of the repository (for now we will only merge back to main).
 
+## Recommended Reading
+
+Ivimey-Cook ER, Pick JL, Bairos-Novak KR, Culina A, Gould E, Grainger M, et al. _Implementing code review in the scientific workflow: Insights from ecology and evolutionary biology._ Journal of Evolutionary Biology. 2023;36: 1347–1356. [doi:10.1111/jeb.14230](https://doi.org/10.1111/jeb.14230)
+
+

@@ -116,6 +116,12 @@ to accomplish a reproducible workflow.
 - **An organization account**: <https://github.com/UCSB-Library-Research-Data-Services>
 
 
+## Recommended reading
+
+Braga PHP, Hébert K, Hudgins EJ, Scott ER, Edwards BPM, Sánchez Reyes LL, et al. _Not just for programmers: How GitHub can accelerate collaborative and reproducible research in ecology and evolution._ Methods in Ecology and Evolution. 2023;14: 1364–1380. [doi:10.1111/2041-210X.14108](https://doi.org/10.1111/2041-210X.14108)
+
+
+
 ## Aknowledgements
 
 This materials was adapted from [NCEAS Reproducible Research Techniques for Synthesis](https://learning.nceas.ucsb.edu/2021-02-RRCourse/index.html) & [Collaborative Coding with GitHub. LNO Scientific Computing Team](https://github.com/NCEAS/scicomp-workshop-collaborative-coding).
