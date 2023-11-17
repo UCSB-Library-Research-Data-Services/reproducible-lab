@@ -40,7 +40,7 @@ We want to log the information about people's favorite desserts using a reposito
    - Replace the title (first line starting with `#`) with something better! Maybe `Favorite Desserts`
    - Add your name and your favorite dessert below the title: e.g.  ` - Julien: crepes`
 
-```{r}
+```{r echo=FALSE}
 knitr::include_graphics("img/github-readme_desserts.png")
 ```
 
@@ -53,7 +53,7 @@ knitr::include_graphics("img/github-readme_desserts.png")
 - Go to the repository website (link is provided in the invitation)
 - Start editing the README.md by clicking on pen at the top of the README.md file to edit it
 
-```{r}
+```{r echo=FALSE}
 knitr::include_graphics("img/github-readme-edit.png")
 ```
 
@@ -62,7 +62,7 @@ knitr::include_graphics("img/github-readme-edit.png")
 - Add a descriptive commit message, "add my favorite dessert"
 
 
-```{r}
+```{r echo=FALSE}
 knitr::include_graphics("img/github-commit.png")
 ```
 
@@ -81,7 +81,7 @@ Download this [csv file](https://aurora.nceas.ucsb.edu/~brun/favorite_desserts.c
 - Add a short message about the file e.g. `Adding dessert csv` & hit `Commit changes`
 - Your have has been uploaded. Click on the filename to see it!
 
-You should have something similar to this repo: https://github.com/brunj7/favorite-desserts
+You should have something similar to this repo: <https://github.com/brunj7/favorite-desserts>
 
 
 #### Bonus 
