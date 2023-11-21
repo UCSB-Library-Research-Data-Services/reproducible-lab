@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Designing a Reproducible and Collaborative Lab (RCL) - Collaborative workflows to code together</title>
+<title>Designing a Reproducible and Collaborative Lab (RCL) - Managing git merge conflicts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./03-handson_github_workflows.html" rel="next">
-<link href="./collab_exchange.html" rel="prev">
+<link href="./collab_pairprog.html" rel="next">
+<link href="./git_rstudio.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -87,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./collab_pairprog.html">Collaborative strategies</a></li><li class="breadcrumb-item"><a href="./github_workflows.html">Collaborative workflows: forks &amp; branches</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./github_intro.html">Coding together</a></li><li class="breadcrumb-item"><a href="./git_conflicts.html">Managing version conflicts</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -122,13 +156,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Coding together</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./github_intro.html" class="sidebar-item-text sidebar-link">
@@ -161,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git_conflicts.html" class="sidebar-item-text sidebar-link">
+  <a href="./git_conflicts.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Managing version conflicts</span></a>
   </div>
 </li>
@@ -169,13 +203,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
  <span class="menu-text">Collaborative strategies</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./collab_pairprog.html" class="sidebar-item-text sidebar-link">
@@ -190,7 +224,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./github_workflows.html" class="sidebar-item-text sidebar-link active">
+  <a href="./github_workflows.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Collaborative workflows: forks &amp; branches</span></a>
   </div>
 </li>
@@ -237,21 +271,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#collaborative-workflows-with-github" id="toc-collaborative-workflows-with-github" class="nav-link active" data-scroll-target="#collaborative-workflows-with-github">Collaborative Workflows with <code>GitHub</code></a>
+  <li><a href="#few-tips-to-deal-with-merge-conflicts" id="toc-few-tips-to-deal-with-merge-conflicts" class="nav-link active" data-scroll-target="#few-tips-to-deal-with-merge-conflicts">Few tips to deal with merge conflicts</a></li>
+  <li><a href="#few-tips-to-avoid-merge-conflicts" id="toc-few-tips-to-avoid-merge-conflicts" class="nav-link" data-scroll-target="#few-tips-to-avoid-merge-conflicts">Few tips to avoid merge conflicts</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a>
   <ul class="collapse">
-  <li><a href="#collaborating-through-forking-aka-the-github-workflow" id="toc-collaborating-through-forking-aka-the-github-workflow" class="nav-link" data-scroll-target="#collaborating-through-forking-aka-the-github-workflow">Collaborating through Forking, aka the GitHub workflow</a></li>
-  <li><a href="#collaborating-through-write-push-access" id="toc-collaborating-through-write-push-access" class="nav-link" data-scroll-target="#collaborating-through-write-push-access">Collaborating through write / push access</a>
-  <ul class="collapse">
-  <li><a href="#adding-collaborators-to-a-repository" id="toc-adding-collaborators-to-a-repository" class="nav-link" data-scroll-target="#adding-collaborators-to-a-repository">Adding collaborators to a repository</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#branches" id="toc-branches" class="nav-link" data-scroll-target="#branches">Branches</a>
-  <ul class="collapse">
-  <li><a href="#working-with-branches" id="toc-working-with-branches" class="nav-link" data-scroll-target="#working-with-branches">Working with branches</a>
-  <ul class="collapse">
-  <li><a href="#creating-a-new-branch" id="toc-creating-a-new-branch" class="nav-link" data-scroll-target="#creating-a-new-branch">Creating a new branch</a></li>
-  <li><a href="#using-a-branch" id="toc-using-a-branch" class="nav-link" data-scroll-target="#using-a-branch">Using a branch</a></li>
-  </ul></li>
+  <li><a href="#git-general-introduction" id="toc-git-general-introduction" class="nav-link" data-scroll-target="#git-general-introduction">Git general introduction</a></li>
+  <li><a href="#git-workflows" id="toc-git-workflows" class="nav-link" data-scroll-target="#git-workflows">Git workflows</a></li>
+  <li><a href="#branches" id="toc-branches" class="nav-link" data-scroll-target="#branches">Branches</a></li>
+  <li><a href="#undoing-things" id="toc-undoing-things" class="nav-link" data-scroll-target="#undoing-things">Undoing things</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -261,7 +288,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Collaborative workflows to code together</h1>
+<h1 class="title">Managing git merge conflicts</h1>
 </div>
 
 
@@ -276,105 +303,95 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="collaborative-workflows-with-github" class="level1">
-<h1>Collaborative Workflows with <code>GitHub</code></h1>
-<section id="collaborating-through-forking-aka-the-github-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="collaborating-through-forking-aka-the-github-workflow">Collaborating through Forking, aka the GitHub workflow</h2>
-<p>A <strong>fork</strong> is a <strong>copy of a repository</strong> that will be stored under your user account. Forking a repository allows you to freely experiment with changes without affecting the original project. We can create a fork on Github by clicking the “fork” button in the top right corner of our repository webpage. <img src="img/github-fork.png" class="img-fluid"></p>
-<p>Most commonly, forks are used to either propose changes to someone else’s project or to use someone else’s project as a starting point for your own idea.</p>
-<p>When you are satisfied with your work, you can initiate a <strong><em>Pull Request</em></strong> to initiate discussion about your modifications and requesting to integrate your changes to the main repository. Your commit history allows the original repository administrators to see exactly what changes would be merged if they accept your request. Do this by going to the original repository and clicking the “New pull request” button<img src="img/github-pull-request.png" class="img-fluid"></p>
-<p>Next, click “compare across forks”, and use the dropdown menus to select your fork as the “head fork” and the original repository as the “base fork”.<img src="img/github-compare-forks.png" class="img-fluid"></p>
-<p>Then type a title and description for the changes you would like to make. By using GitHub’s <code>@mention</code> syntax in your Pull Request message, you can ask for feedback from specific people or teams.</p>
-<p>This workflow is recommended when you do not have push/write access to a repository, such as contributing to a open source software or R package, or if you are heavily changing a project.</p>
-</section>
-<section id="collaborating-through-write-push-access" class="level2">
-<h2 class="anchored" data-anchor-id="collaborating-through-write-push-access">Collaborating through write / push access</h2>
-<p>When you collaborate closely and actively with colleagues, you do not want necessarily to have to review all their changes through pull requests. You can then give them write access (<code>git push</code>) to your repository to allow them to directly edit and contribute to its content. This is the workflow we will recommend to use within your working group.</p>
-<section id="adding-collaborators-to-a-repository" class="level3">
-<h3 class="anchored" data-anchor-id="adding-collaborators-to-a-repository">Adding collaborators to a repository</h3>
-<ul>
-<li>Click on the repository</li>
-<li>On the right panel, click <img src="img/github-repo-settings.png" class="img-fluid"></li>
-<li>On the left pane, click <code>Collaborators</code> and enter the usernames you want to add<img src="img/github-collaborators.png" class="img-fluid" alt="collaborators"></li>
-</ul>
-<p>Under this collaborative workflow, we recommend to use git <code>branches</code> combined with pull requests to avoid conflicts and to track and discuss collaborators contributions.</p>
-</section>
-</section>
-</section>
-<section id="branches" class="level1">
-<h1>Branches</h1>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/atlassian_branches_sketch.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">source: https://www.atlassian.com/git/tutorials/git-merge</figcaption>
-</figure>
-</div>
-<p>What are branches? Well in fact nothing new, as the <code>master</code> is a branch. A branch represents an independent line of development, parallel to the master (branch).</p>
-<p>Why should you use branches? For 2 main reasons:</p>
-<ul>
-<li>We want the master to only keep a version of the code that is working</li>
-<li>We want to version the code we are developing to add/test new features (for now we mostly talk about feature branch) in our script without altering the version on the master.</li>
-</ul>
-<section id="working-with-branches" class="level2">
-<h2 class="anchored" data-anchor-id="working-with-branches">Working with branches</h2>
-<section id="creating-a-new-branch" class="level3">
-<h3 class="anchored" data-anchor-id="creating-a-new-branch">Creating a new branch</h3>
-<p>In RStudio, you can create a branch using the git tab.</p>
+<p>First: <code>git pull</code> = <code>git fetch</code> (getting things from GitHub) + <code>git merge</code> (merging the versions between your local and GitHub)`</p>
+<p>Second: you did nothing wrong!! Git tries to merge files automatically. When the changes on the same file are far apart, git will figure it out on his own and do the merge automatically. However if changes are overalpping, git will call you to the rescue.</p>
+<section id="few-tips-to-deal-with-merge-conflicts" class="level3">
+<h3 class="anchored" data-anchor-id="few-tips-to-deal-with-merge-conflicts">Few tips to deal with merge conflicts</h3>
 <ol type="1">
-<li>Click on the branch button</li>
+<li>If you <strong>were not expecting</strong> a conflict or want to roll back to your status before the conflict arise</li>
 </ol>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/rstudio-git-branch-create.png" class="img-fluid figure-img" style="width:60.0%"></p>
-</figure>
-</div>
-</div>
-</div>
+<pre><code>git merge --abort</code></pre>
+<p>This does not resolve the conflict but let you look more into why you are having a conflict whiel keeping your local copy of the repository usable.</p>
 <ol start="2" type="1">
-<li>Fill the branch name in the new branch window; in this example, we are going to use <code>test</code> for the name; leave the other options as default and click create</li>
+<li>If you <strong>know for sure</strong> what file version you want to keep:</li>
 </ol>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/rstudio-git-branch-test.png" class="img-fluid figure-img" style="width:40.0%"></p>
-</figure>
-</div>
-</div>
-</div>
+<ul>
+<li>keep the remote file: <code>git checkout --theirs conflicted_file.txt</code></li>
+<li>keep the local file: <code>git checkout --ours conflicted_file.txt</code></li>
+</ul>
+<p><em>=&gt; You still have to</em> <code>git add</code> <em>and</em> <code>git commit</code> <em>after this</em></p>
 <ol start="3" type="1">
-<li>you will be directly creating a local and remote branch and switch to it</li>
+<li>If you do not know why there is a conflict: Dig into the files, looking for:</li>
 </ol>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/rstudio-git-branch-new.png" class="img-fluid figure-img" style="width:62.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Congratulations you just created your first branch!</p>
-<p>Let us check on Github:</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/github-new-branch.png" class="img-fluid figure-img" style="width:45.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>As you can see, now there are two branches on our remote repository: - master - test</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">local</span> <span class="va">version</span> <span class="va">(</span>ours<span class="va">)</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">=======</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">remote</span> version <span class="er">(</span><span class="ex">theirs</span><span class="kw">)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span class="ex">[remote</span> version <span class="er">(</span><span class="ex">commit#</span><span class="kw">)</span><span class="ex">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Manually edit the file and save.</p>
+<p><em>=&gt; You still have to</em> <code>git add</code> <em>and</em> <code>git commit</code> <em>after this</em></p>
+<ul>
+<li>You can always abort a merge, for example you choose to keep the wrong version</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge <span class="at">--abort</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you realize you made a mistake once the merge resolved, you can always run to go back to the previous commit:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--hard</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>tool: <a href="http://meldmerge.org/">Meld</a></li>
+</ul>
 </section>
-<section id="using-a-branch" class="level3">
-<h3 class="anchored" data-anchor-id="using-a-branch">Using a branch</h3>
-<p>Here there is nothing new. The workflow is exactly the same as we did before, excepts our commit will be created on the <code>test</code> branch instead of the master branch.</p>
+<section id="few-tips-to-avoid-merge-conflicts" class="level3">
+<h3 class="anchored" data-anchor-id="few-tips-to-avoid-merge-conflicts">Few tips to avoid merge conflicts</h3>
+<ul>
+<li>try to use the rebase instead of merge:</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull <span class="at">--rebase</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>pull before commiting: By doing a pull before committing, you can avoid a lot of git conflicts. Your git workflow should therefore be:</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">commit</span> <span class="at">-m</span> <span class="st">"descriptive message"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<section id="git-general-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="git-general-introduction">Git general introduction</h2>
+<ul>
+<li>Jenny Bryan Happy git with R <a href="http://happygitwithr.com/" class="uri">http://happygitwithr.com/</a></li>
+<li>Intro to GitHub and using git from RStudio GUI: <a href="http://ohi-science.org/data-science-training/collaborating.html" class="uri">http://ohi-science.org/data-science-training/collaborating.html</a></li>
+<li>Intro to git and Github using the command line: <a href="https://nceas.github.io/oss-lessons/version-control/1-git-basics.html" class="uri">https://nceas.github.io/oss-lessons/version-control/1-git-basics.html</a></li>
+<li>Try git in 15min: <a href="https://try.github.io/levels/1/challenges/1" class="uri">https://try.github.io/levels/1/challenges/1</a></li>
+<li>Git terminology: <a href="https://www.atlassian.com/git/glossary/terminology" class="uri">https://www.atlassian.com/git/glossary/terminology</a></li>
+<li>git <code>rebase</code> <a href="https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase" class="uri">https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase</a></li>
+</ul>
+</section>
+<section id="git-workflows" class="level2">
+<h2 class="anchored" data-anchor-id="git-workflows">Git workflows</h2>
+<ul>
+<li>Comparing workflow: <a href="https://www.atlassian.com/git/tutorials/comparing-workflows" class="uri">https://www.atlassian.com/git/tutorials/comparing-workflows</a></li>
+<li>Forking vs branching: <a href="https://stackoverflow.com/questions/3611256/forking-vs-branching-in-github" class="uri">https://stackoverflow.com/questions/3611256/forking-vs-branching-in-github</a></li>
+<li>Development workflow: <a href="https://github.com/sevntu-checkstyle/sevntu.checkstyle/wiki/Development-workflow-with-Git:-Fork,-Branching,-Commits,-and-Pull-Request" class="uri">https://github.com/sevntu-checkstyle/sevntu.checkstyle/wiki/Development-workflow-with-Git:-Fork,-Branching,-Commits,-and-Pull-Request</a></li>
+</ul>
+</section>
+<section id="branches" class="level2">
+<h2 class="anchored" data-anchor-id="branches">Branches</h2>
+<ul>
+<li>Interactive tutorial to learn more about git branches and more <a href="https://learngitbranching.js.org/" class="uri">https://learngitbranching.js.org/</a></li>
+</ul>
+</section>
+<section id="undoing-things" class="level2">
+<h2 class="anchored" data-anchor-id="undoing-things">Undoing things</h2>
+<ul>
+<li>Help to decide how to undo your problem: <a href="http://justinhileman.info/article/git-pretty/git-pretty.png" class="uri">http://justinhileman.info/article/git-pretty/git-pretty.png</a></li>
+<li>Undo almost everything with git <a href="https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/" class="uri">https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/</a></li>
+<li>Difference between git reset soft, mixed and hard <a href="https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/" class="uri">https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/</a></li>
+<li>Resetting, Checking Out &amp; Reverting <a href="https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting" class="uri">https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting</a></li>
+</ul>
 
 
-</section>
 </section>
 </section>
 
@@ -620,13 +637,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./collab_exchange.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Code Exchange</span>
+      <a href="./git_rstudio.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Using RStudio, git and GitHub to track your work</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03-handson_github_workflows.html" class="pagination-link">
-        <span class="nav-page-text">Hands-on: forks &amp; branches with Github website</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./collab_pairprog.html" class="pagination-link">
+        <span class="nav-page-text">Pair Programming</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
