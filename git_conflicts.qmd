@@ -69,7 +69,7 @@ git pull
 git push
 ```
 
-# References
+# Further readings
 
 ## Git general introduction
 
