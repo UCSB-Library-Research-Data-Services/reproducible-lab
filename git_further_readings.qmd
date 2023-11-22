@@ -1,0 +1,30 @@
+---
+title: "Further readings"
+---
+
+
+## Git general introduction
+
+- Jenny Bryan Happy git with R <http://happygitwithr.com/>
+- Intro to GitHub and using git from RStudio GUI: <http://ohi-science.org/data-science-training/collaborating.html> 
+- Intro to git and Github using the command line: <https://nceas.github.io/oss-lessons/version-control/1-git-basics.html>
+- Try git in 15min: <https://try.github.io/levels/1/challenges/1>
+- Git terminology: <https://www.atlassian.com/git/glossary/terminology>
+- git `rebase` <https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase>
+
+## Git workflows
+
+- Comparing workflow: <https://www.atlassian.com/git/tutorials/comparing-workflows>
+- Forking vs branching: <https://stackoverflow.com/questions/3611256/forking-vs-branching-in-github>
+- Development workflow: <https://github.com/sevntu-checkstyle/sevntu.checkstyle/wiki/Development-workflow-with-Git:-Fork,-Branching,-Commits,-and-Pull-Request>
+
+## Branches
+
+- Interactive tutorial to learn more about git branches and more <https://learngitbranching.js.org/>
+
+## Undoing things
+
+- Help to decide how to undo your problem: <http://justinhileman.info/article/git-pretty/git-pretty.png>
+- Undo almost everything with git <https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/>
+- Difference between git reset soft, mixed and hard <https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/>
+- Resetting, Checking Out & Reverting <https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting>

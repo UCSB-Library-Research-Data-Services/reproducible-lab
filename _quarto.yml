@@ -35,6 +35,8 @@ website:
                 text: "Using RStudio, git and GitHub to track your work"
               - href: git_conflicts.qmd
                 text: "Managing version conflicts"
+              - href: git_further_readings.qmd
+                text: "Git and GitHub further readings"
           - section: "Collaborative strategies"
             contents:
               - href: collab_pairprog.qmd
