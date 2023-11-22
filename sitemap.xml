@@ -2,62 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/github_workflows.html</loc>
-    <lastmod>2023-11-21T23:33:46.055Z</lastmod>
+    <lastmod>2023-11-22T17:54:52.334Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/03-handson_github_workflows.html</loc>
-    <lastmod>2023-11-21T23:33:44.719Z</lastmod>
+    <lastmod>2023-11-22T17:54:50.982Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/github_org.html</loc>
-    <lastmod>2023-11-21T23:33:43.083Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/github_template.html</loc>
-    <lastmod>2023-11-21T23:33:41.747Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/git_conflicts.html</loc>
-    <lastmod>2023-11-21T23:33:41.103Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/index.html</loc>
-    <lastmod>2023-11-21T23:33:40.467Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/01-handson_github_website.html</loc>
-    <lastmod>2023-11-21T23:33:39.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/git_rstudio.html</loc>
-    <lastmod>2023-11-21T23:33:37.471Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/github_teams.html</loc>
-    <lastmod>2023-11-21T23:33:38.115Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/02-handson_github_rstudio.html</loc>
-    <lastmod>2023-11-21T23:33:40.155Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/coding.html</loc>
-    <lastmod>2023-11-21T23:33:40.759Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/collab_pairprog.html</loc>
-    <lastmod>2023-11-21T23:33:41.443Z</lastmod>
+    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/git_further_readings.html</loc>
+    <lastmod>2023-11-22T17:54:49.390Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/github_intro.html</loc>
-    <lastmod>2023-11-21T23:33:42.671Z</lastmod>
+    <lastmod>2023-11-22T17:54:48.702Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/collab_pairprog.html</loc>
+    <lastmod>2023-11-22T17:54:47.486Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/coding.html</loc>
+    <lastmod>2023-11-22T17:54:46.838Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/02-handson_github_rstudio.html</loc>
+    <lastmod>2023-11-22T17:54:46.266Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/github_teams.html</loc>
+    <lastmod>2023-11-22T17:54:44.226Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/git_rstudio.html</loc>
+    <lastmod>2023-11-22T17:54:43.590Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/01-handson_github_website.html</loc>
+    <lastmod>2023-11-22T17:54:45.322Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/index.html</loc>
+    <lastmod>2023-11-22T17:54:46.558Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/git_conflicts.html</loc>
+    <lastmod>2023-11-22T17:54:47.146Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/github_template.html</loc>
+    <lastmod>2023-11-22T17:54:47.774Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/github_org.html</loc>
+    <lastmod>2023-11-22T17:54:49.106Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/collab_exchange.html</loc>
-    <lastmod>2023-11-21T23:33:43.375Z</lastmod>
+    <lastmod>2023-11-22T17:54:49.706Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/data_mgmt.html</loc>
-    <lastmod>2023-11-21T23:33:44.971Z</lastmod>
+    <lastmod>2023-11-22T17:54:51.234Z</lastmod>
   </url>
 </urlset>

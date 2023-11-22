@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Designing a Reproducible and Collaborative Lab (RCL) - Managing git merge conflicts</title>
+<title>Designing a Reproducible and Collaborative Lab (RCL) - Further readings</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./git_further_readings.html" rel="next">
-<link href="./git_rstudio.html" rel="prev">
+<link href="./collab_pairprog.html" rel="next">
+<link href="./git_conflicts.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -121,7 +87,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./github_intro.html">Coding together</a></li><li class="breadcrumb-item"><a href="./git_conflicts.html">Managing version conflicts</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./github_intro.html">Coding together</a></li><li class="breadcrumb-item"><a href="./git_further_readings.html">Git and GitHub further readings</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -195,13 +161,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git_conflicts.html" class="sidebar-item-text sidebar-link active">
+  <a href="./git_conflicts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Managing version conflicts</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git_further_readings.html" class="sidebar-item-text sidebar-link">
+  <a href="./git_further_readings.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Git and GitHub further readings</span></a>
   </div>
 </li>
@@ -277,7 +243,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#few-tips-to-deal-with-merge-conflicts" id="toc-few-tips-to-deal-with-merge-conflicts" class="nav-link active" data-scroll-target="#few-tips-to-deal-with-merge-conflicts">Few tips to deal with merge conflicts</a></li>
+  <li><a href="#git-general-introduction" id="toc-git-general-introduction" class="nav-link active" data-scroll-target="#git-general-introduction">Git general introduction</a></li>
+  <li><a href="#git-workflows" id="toc-git-workflows" class="nav-link" data-scroll-target="#git-workflows">Git workflows</a></li>
+  <li><a href="#branches" id="toc-branches" class="nav-link" data-scroll-target="#branches">Branches</a></li>
+  <li><a href="#undoing-things" id="toc-undoing-things" class="nav-link" data-scroll-target="#undoing-things">Undoing things</a></li>
   </ul>
 </nav>
     </div>
@@ -286,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Managing git merge conflicts</h1>
+<h1 class="title">Further readings</h1>
 </div>
 
 
@@ -301,51 +270,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>First: <code>git pull</code> = <code>git fetch</code> (getting things from GitHub) + <code>git merge</code> (merging the versions between your local and GitHub)`</p>
-<p>Second: you did nothing wrong!! Git tries to merge files automatically. When the changes on the same file are far apart, git will figure it out on his own and do the merge automatically. However if changes are overlapping, git will call you to the rescue.</p>
-<section id="few-tips-to-deal-with-merge-conflicts" class="level3">
-<h3 class="anchored" data-anchor-id="few-tips-to-deal-with-merge-conflicts">Few tips to deal with merge conflicts</h3>
-<ol type="1">
-<li>If you <strong>were not expecting</strong> a conflict or want to roll back to your status before the conflict arise</li>
-</ol>
-<pre><code>git merge --abort</code></pre>
-<p>This does not resolve the conflict but let you look more into why you are having a conflict while keeping your local copy of the repository usable.</p>
-<ol start="2" type="1">
-<li>If you <strong>know for sure</strong> what file version you want to keep:</li>
-</ol>
+<section id="git-general-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="git-general-introduction">Git general introduction</h2>
 <ul>
-<li>keep the remote file: <code>git checkout --theirs conflicted_file.txt</code></li>
-<li>keep the local file: <code>git checkout --ours conflicted_file.txt</code></li>
+<li>Jenny Bryan Happy git with R <a href="http://happygitwithr.com/" class="uri">http://happygitwithr.com/</a></li>
+<li>Intro to GitHub and using git from RStudio GUI: <a href="http://ohi-science.org/data-science-training/collaborating.html" class="uri">http://ohi-science.org/data-science-training/collaborating.html</a></li>
+<li>Intro to git and Github using the command line: <a href="https://nceas.github.io/oss-lessons/version-control/1-git-basics.html" class="uri">https://nceas.github.io/oss-lessons/version-control/1-git-basics.html</a></li>
+<li>Try git in 15min: <a href="https://try.github.io/levels/1/challenges/1" class="uri">https://try.github.io/levels/1/challenges/1</a></li>
+<li>Git terminology: <a href="https://www.atlassian.com/git/glossary/terminology" class="uri">https://www.atlassian.com/git/glossary/terminology</a></li>
+<li>git <code>rebase</code> <a href="https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase" class="uri">https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase</a></li>
 </ul>
-<p><em>=&gt; You still have to</em> <code>git add</code> <em>and</em> <code>git commit</code> <em>after this</em></p>
-<ol start="3" type="1">
-<li>If you do not know why there is a conflict: Dig into the files, looking for:</li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">local</span> <span class="va">version</span> <span class="va">(</span>ours<span class="va">)</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">=======</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">remote</span> version <span class="er">(</span><span class="ex">theirs</span><span class="kw">)</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span class="ex">[remote</span> version <span class="er">(</span><span class="ex">commit#</span><span class="kw">)</span><span class="ex">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Manually edit the file and save.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>=&gt; You still have to use <code>git add</code> and <code>git commit</code> after this to commit your changes to the git history</p>
-</div>
-</div>
+</section>
+<section id="git-workflows" class="level2">
+<h2 class="anchored" data-anchor-id="git-workflows">Git workflows</h2>
 <ul>
-<li>You can always abort a merge, for example you choose to keep the wrong version</li>
+<li>Comparing workflow: <a href="https://www.atlassian.com/git/tutorials/comparing-workflows" class="uri">https://www.atlassian.com/git/tutorials/comparing-workflows</a></li>
+<li>Forking vs branching: <a href="https://stackoverflow.com/questions/3611256/forking-vs-branching-in-github" class="uri">https://stackoverflow.com/questions/3611256/forking-vs-branching-in-github</a></li>
+<li>Development workflow: <a href="https://github.com/sevntu-checkstyle/sevntu.checkstyle/wiki/Development-workflow-with-Git:-Fork,-Branching,-Commits,-and-Pull-Request" class="uri">https://github.com/sevntu-checkstyle/sevntu.checkstyle/wiki/Development-workflow-with-Git:-Fork,-Branching,-Commits,-and-Pull-Request</a></li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge <span class="at">--abort</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If you realize you made a mistake once the merge resolved, you can always run to go back to the previous commit:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--hard</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="branches" class="level2">
+<h2 class="anchored" data-anchor-id="branches">Branches</h2>
+<ul>
+<li>Interactive tutorial to learn more about git branches and more <a href="https://learngitbranching.js.org/" class="uri">https://learngitbranching.js.org/</a></li>
+</ul>
+</section>
+<section id="undoing-things" class="level2">
+<h2 class="anchored" data-anchor-id="undoing-things">Undoing things</h2>
+<ul>
+<li>Help to decide how to undo your problem: <a href="http://justinhileman.info/article/git-pretty/git-pretty.png" class="uri">http://justinhileman.info/article/git-pretty/git-pretty.png</a></li>
+<li>Undo almost everything with git <a href="https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/" class="uri">https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/</a></li>
+<li>Difference between git reset soft, mixed and hard <a href="https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/" class="uri">https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/</a></li>
+<li>Resetting, Checking Out &amp; Reverting <a href="https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting" class="uri">https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting</a></li>
+</ul>
 
 
 </section>
@@ -592,13 +549,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./git_rstudio.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Using RStudio, git and GitHub to track your work</span>
+      <a href="./git_conflicts.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Managing version conflicts</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./git_further_readings.html" class="pagination-link">
-        <span class="nav-page-text">Git and GitHub further readings</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./collab_pairprog.html" class="pagination-link">
+        <span class="nav-page-text">Pair Programming</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
