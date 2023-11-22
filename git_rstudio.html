@@ -287,9 +287,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#setting-up-your-git-identity" id="toc-setting-up-your-git-identity" class="nav-link" data-scroll-target="#setting-up-your-git-identity">Setting up your <code>git</code> identity</a>
   <ul class="collapse">
   <li><a href="#setup-your-profile" id="toc-setup-your-profile" class="nav-link" data-scroll-target="#setup-your-profile">Setup your profile</a></li>
-  <li><a href="#optional" id="toc-optional" class="nav-link" data-scroll-target="#optional">Optional</a></li>
   </ul></li>
   <li><a href="#linking-git-and-rstudio" id="toc-linking-git-and-rstudio" class="nav-link" data-scroll-target="#linking-git-and-rstudio">Linking git and RStudio</a></li>
+  <li><a href="#setting-up-your-github-personal-access-token-pat" id="toc-setting-up-your-github-personal-access-token-pat" class="nav-link" data-scroll-target="#setting-up-your-github-personal-access-token-pat">Setting up your GitHub Personal Access Token (PAT)</a></li>
   </ul></li>
   <li><a href="#tracking-file-changes-with-git" id="toc-tracking-file-changes-with-git" class="nav-link" data-scroll-target="#tracking-file-changes-with-git">Tracking File Changes with <code>git</code></a>
   <ul class="collapse">
@@ -344,16 +344,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Setting up git on your computer</h1>
 <p><code>MacOSX</code> and <code>Linux</code> computers all come with git pre-installed, but it is not always directly usable. The best way to test if <code>git</code> is ready to use is at the command line:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>git version 2.42.0</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># git version 2.39.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>It should return something like above. <strong>If you get an error, you will have to install git</strong></p>
-<p><code>Windows</code> users will have to install a software called <code>git bash</code> before being able to use git.</p>
 <section id="installing-git" class="level2">
 <h2 class="anchored" data-anchor-id="installing-git">Installing git</h2>
-<p>You can download a copy of <code>git</code> here: https://git-scm.com/downloads and follow the instructions.</p>
+<p>You can download a copy of <code>git</code> here: https://git-scm.com/downloads and follow the instructions according to your Operating System.</p>
 <section id="windows" class="level3">
 <h3 class="anchored" data-anchor-id="windows">Windows</h3>
 <p>You can keep the options to default during the installation, until you reach <code>Configuring the terminal emulator to use with Git Bash</code> -&gt; be sure <code>Use MinTTY</code> is selected. This will install both git and a set of useful command-line tools using a trimmed down Bash shell.</p>
@@ -369,14 +366,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Open the <code>Terminal</code> or <code>git bash</code> and then type the following commands.</p>
 <section id="setup-your-profile" class="level3">
 <h3 class="anchored" data-anchor-id="setup-your-profile">Setup your profile</h3>
-<p>Your name and email:</p>
+<section id="at-the-commande-line" class="level4">
+<h4 class="anchored" data-anchor-id="at-the-commande-line">At the commande line</h4>
+<p>If you are not sure if you have already set your git identity you can check this running this command:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you identity is not set yet, you need to provide your name and email (we recommend to use the same email as used when setting your GitHub account):</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"your Full Name"</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"your Email"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="optional" class="level3">
-<h3 class="anchored" data-anchor-id="optional">Optional</h3>
+<section id="optional" class="level5">
+<h5 class="anchored" data-anchor-id="optional">Optional</h5>
 <p>Check that everything is correct:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -393,6 +395,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Problem with any of those steps? Check out Jenny Brian <a href="http://happygitwithr.com/troubleshooting.html" target="_blank">Happy git trouble shooting section</a></p>
 </section>
 </section>
+<section id="using-r" class="level4">
+<h4 class="anchored" data-anchor-id="using-r">Using R</h4>
+<p>If you are an R user, the <code>usethis</code> package is your friend!! You can use this package to check and set up your git identity.</p>
+<p>Check if you identity is set up:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.package(usethis)</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you git identity is not yet set, you should see something like this:</p>
+<p><img src="img/github_config_check.png" class="img-fluid"></p>
+<p>You can set your git user name and email as follow:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git_config</span>(<span class="at">user.name =</span> <span class="st">"Julien Brun"</span>, <span class="at">user.email =</span> <span class="st">"julien.brun@ucsb.edu"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+</section>
 <section id="linking-git-and-rstudio" class="level2">
 <h2 class="anchored" data-anchor-id="linking-git-and-rstudio">Linking git and RStudio</h2>
 <p>In most cases, RStudio should automatically detect <code>git</code> when it is installed on your computer. The best way to check this is to go to the <code>Tools</code> menu <code>-&gt; Global Option</code>s and click on <code>git/SVN</code></p>
@@ -400,6 +419,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img style="align: left;width: 450px;" src="img/rstudio-git.png"></p>
 <p>Click <code>OK</code>.</p>
 <p><em>Note:</em> if <code>git</code> was not enabled, you might be asked to restart RStudio to enable it.</p>
+</section>
+<section id="setting-up-your-github-personal-access-token-pat" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-your-github-personal-access-token-pat">Setting up your GitHub Personal Access Token (PAT)</h2>
+<p>Almost there! The last setup step we need to do is taking care of our authentication with GitHub, so we can download and upload changes to GitHub.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This will open your web browser and send you to a page on GitHub (you might be asked to log in your account). Most of the options have already been set for us, we only need to update:</p>
+<ul>
+<li>the <em>Note</em> field by describing what is the token for. We recommend a combination describing the computer it is use on and what it is going to be use for.</li>
+<li><em>Expiration</em> to 90 days. Note that GitHub will send you an email when it’s time to renew your token that is about to expire. It is easier to not let the token expire, otherwise you will have to regenerate a new one and do all the setup again.</li>
+</ul>
+<p><img src="img/github_setup-01_pat.png" class="img-fluid"> You can leave all the other options as selected. Click on <em>Generate token</em> green button at the bottom of the page.</p>
+<p>You should be redirected to a new page where you can see your token. <strong>This is the only time you will be able to see it, so do <em>not</em> close this page before you are done with the setup!</strong>. Copy your PAT to your clipboard. Back to RStudio, run the following command:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This will prompt you to paste the PAT you just copied from GitHub. Paste your PAT and hit Enter. You you should see a few message letting you know that the token has been setup.</p>
+<p>Congratulations, you are all done with setting up your computer 🎉 It is a one time job, but note that if you use several computers/servers, you will have to do those steps again on each machine.</p>
+<hr>
 </section>
 </section>
 <section id="tracking-file-changes-with-git" class="level1">
