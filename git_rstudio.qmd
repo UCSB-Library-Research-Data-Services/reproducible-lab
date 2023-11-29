@@ -96,7 +96,7 @@ If you are an R user, the `usethis` package is your friend!! You can use this pa
 Check if you identity is set up:
 
 ```{r git identity check, eval=FALSE}
-# install.package(usethis)
+# install.packages("usethis")
 usethis::git_sitrep()
 ```
 
