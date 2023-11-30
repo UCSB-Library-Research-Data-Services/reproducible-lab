@@ -9,6 +9,9 @@ https://ucsb-library-research-data-services.github.io/reproducible-lab/
 
 Julien Brun, Renata Curty, and Greg Janée, Research Data Services (RDS), UC Santa Barbara Library
 
+#### How to cite
+
+Brun Julien, Curty Renata, and Janée Greg, "Designing a Reproducible and Collaborative Research Lab (RCL)", 2023, Research Data Services (RDS), UC Santa Barbara Library
 
 
-It has been developed using [Quarto](https://quarto.org/).
+This resource has been developed using [Quarto](https://quarto.org/).
