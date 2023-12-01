@@ -280,6 +280,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#first-and-foremost" id="toc-first-and-foremost" class="nav-link active" data-scroll-target="#first-and-foremost">First and foremost</a></li>
   <li><a href="#a-few-tips-to-deal-with-merge-conflicts" id="toc-a-few-tips-to-deal-with-merge-conflicts" class="nav-link" data-scroll-target="#a-few-tips-to-deal-with-merge-conflicts">A few tips to deal with merge conflicts</a></li>
   <li><a href="#how-to-minimize-the-risk-of-conflicts" id="toc-how-to-minimize-the-risk-of-conflicts" class="nav-link" data-scroll-target="#how-to-minimize-the-risk-of-conflicts">How to minimize the risk of conflicts?</a></li>
+  <li><a href="#example-using-rstudio" id="toc-example-using-rstudio" class="nav-link" data-scroll-target="#example-using-rstudio">Example using RStudio</a></li>
   </ul>
 </nav>
     </div>
@@ -384,6 +385,81 @@ Important
 </ol>
 <p>These two tips should help you on your git conflict free journey!!</p>
 <p><em>If conflicts keep happening in your collaboration, using <code>git branches</code> might be the next step to consider for your team.</em></p>
+</section>
+<section id="example-using-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="example-using-rstudio">Example using RStudio</h2>
+<p>Ok, let’s create a conflict with our favorite desserts repository.</p>
+<p>User 1 is going to change a line on the README an push the change to GitHub.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/git_conflict-01_user1_change.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+<p>Now user 2, is going to also make an edit to the README on this same line while <strong>forgetting</strong> to pull before starting to edit the file</p>
+<p>In this example, we will be changing the favorite dessert of the same person:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/git_conflict-02_user2_change.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<p>Save and commit your changes.</p>
+<p>Now it is time to pull and push your changes… however git is unsure how to reconcile the two versions of the README.md</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/git_conflict-04_merge_conflict.png" class="img-fluid figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before this you might first have the pop-up below on your screen that prompts you to tell git what techniques it should use to resolve conflicts</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/git_conflict-03_merge_settings.png" class="img-fluid figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<p>We recommend to choose the <code>merge</code> option by copy pasting this line at the terminal:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config pull.rebase false</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>Note the tags that git has automatically inserted in the text to highlight: 1. where is the conflict and 2. what are the two versions you are trying to reconcile. Note also that RStudio is flagging the file with an orange U logo to let you know that the files are <em>U</em>nmerged.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/git_conflict-05_rstudio_conflict.png" class="img-fluid figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<p>You can edit the README to resolve the conflict to your liking. You could opt to choose one of the version</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/git_conflict-06_fixing conflict_oneside.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+<p>or to come up with a “blended” version:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/git_conflict-07_fixing_conflict_compromise.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+<p>Once you are satisfied with your version, you can save the file and commit your changes</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/git_conflict-08_commit_fix.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+<p>Don’t forget to pull and push to synchronize your local changes with GitHub.</p>
+<p>If you now look at the history, you can see how git has tracked the conflict resolution. We will talk about branches later on, but spoiler alert it looks very much how you would merge a branch back to the main branch.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/git_conflict-09_post_merge_history.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
 
 
 </section>
