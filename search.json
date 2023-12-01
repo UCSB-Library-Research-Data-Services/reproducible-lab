@@ -284,14 +284,7 @@
     "href": "git_conflicts.html",
     "title": "Managing git merge conflicts",
     "section": "",
-    "text": "You did nothing wrong!! Git is simply asking for your help to merge files because it can not figure it out own its own.\nA conflict arise when git can not merge two file versions automatically every time you git pull. Generally when the changes are on different files or on the same file but far apart, git will figure it out on his own and do the merge automatically. However if changes are overlapping, git will call you to the rescue. When you are in this situation, you are “stuck” between the git fetch & the git merge."
-  },
-  {
-    "objectID": "git_conflicts.html#example",
-    "href": "git_conflicts.html#example",
-    "title": "Managing git merge conflicts",
-    "section": "Example",
-    "text": "Example"
+    "text": "You did nothing wrong!! Git is simply asking for your help to merge files because it can not figure it out own its own.\n\n\n\n\n\n\nA few things to note\n\n\n\n\ngit pull = git fetch (getting things from GitHub) + git merge (merging the versions between your local and GitHub)\nHow to minimize risk of conflicts? Communicate & commit, pull, and push often will already get you a long way!!\nIf conflicts keep happening in your collaboration, using git branches might be the next steps for your team\n\n\n\nA conflict arise when git can not merge two file versions automatically every time you git pull. Generally when the changes are on different files or on the same file but far apart, git will figure it out on his own and do the merge automatically. However if changes are overlapping, git will call you to the rescue. When you are in this situation, you are “stuck” between the git fetch & the git merge.\n\nFew tips to deal with merge conflicts\n\nIf you were not expecting a conflict or want to roll back to your status before the conflict arise\n\ngit merge --abort\nThis does not resolve the conflict but let you look more into why you are having a conflict while keeping your local copy of the repository usable.\n\nIf you know for sure what file version you want to keep:\n\n\nkeep the remote file: bashgit checkout --theirs conflicted_file.txt\nkeep the local file: git checkout --ours conflicted_file.txt\n\n=&gt; You still have to git add and git commit after this\n\nIf you do not know why there is a conflict: Dig into the files, looking for:\n\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\nlocal version (ours)\n=======\nremote version (theirs)\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; [remote version (commit#)]\nManually edit the file deleting and modifying your script as needed (including all the symbols git added to flag the conflict). Save the script/file when you are done editing.\n\n\n\n\n\n\nImportant\n\n\n\n=&gt; You still have to use git add and git commit after this to commit your changes to the git history\n\n\n\nYou can always abort a merge, for example you choose to keep the wrong version\n\ngit merge --abort\nIf you realize you made a mistake once the merge resolved, you can always run to go back to the previous commit:\ngit reset --hard"
   },
   {
     "objectID": "github_template.html",
