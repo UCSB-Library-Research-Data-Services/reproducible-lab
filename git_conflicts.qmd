@@ -100,7 +100,7 @@ Before this you might first have the pop-up below on your screen that prompts yo
 
 ![](img/git_conflict-03_merge_settings.png){fig-align="center" width=90%}
 
-We recommend to choose the `merge` option by copy pasting this line at the terminal:
+We recommend to choose the `merge` option by copy-pasting this line in the terminal:
 
 ```bash
 git config pull.rebase false
