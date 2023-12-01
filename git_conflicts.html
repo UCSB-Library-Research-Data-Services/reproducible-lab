@@ -278,6 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#few-tips-to-deal-with-merge-conflicts" id="toc-few-tips-to-deal-with-merge-conflicts" class="nav-link active" data-scroll-target="#few-tips-to-deal-with-merge-conflicts">Few tips to deal with merge conflicts</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
   </ul>
 </nav>
     </div>
@@ -301,20 +302,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>First: <code>git pull</code> = <code>git fetch</code> (getting things from GitHub) + <code>git merge</code> (merging the versions between your local and GitHub)`</p>
-<p>Second: you did nothing wrong!! Git tries to merge files automatically. When the changes on the same file are far apart, git will figure it out on his own and do the merge automatically. However if changes are overlapping, git will call you to the rescue.</p>
+<p><strong>You did nothing wrong!!</strong> Git is simply asking for your help to merge files because it can not figure it out own its own.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+A few things to note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><code>git pull</code> = <code>git fetch</code> (getting things from GitHub) + <code>git merge</code> (merging the versions between your local and GitHub)</li>
+<li>How to minimize risk of conflicts? <strong>Communicate</strong> &amp; <code>commit</code>, <code>pull</code>, and <code>push</code> often will already get you a long way!!</li>
+<li>If conflicts keep happening in your collaboration, using <code>git branches</code> might be the next steps for your team</li>
+</ol>
+</div>
+</div>
+<p>A conflict arise when git can not merge two file versions automatically every time you <code>git pull</code>. Generally when the changes are on different files or on the same file but far apart, git will figure it out on his own and do the merge automatically. However if changes are overlapping, git will call you to the rescue. When you are in this situation, you are “stuck” between the <code>git fetch</code> &amp; the <code>git merge</code>.</p>
 <section id="few-tips-to-deal-with-merge-conflicts" class="level3">
 <h3 class="anchored" data-anchor-id="few-tips-to-deal-with-merge-conflicts">Few tips to deal with merge conflicts</h3>
 <ol type="1">
 <li>If you <strong>were not expecting</strong> a conflict or want to roll back to your status before the conflict arise</li>
 </ol>
-<pre><code>git merge --abort</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge <span class="at">--abort</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This does not resolve the conflict but let you look more into why you are having a conflict while keeping your local copy of the repository usable.</p>
 <ol start="2" type="1">
 <li>If you <strong>know for sure</strong> what file version you want to keep:</li>
 </ol>
 <ul>
-<li>keep the remote file: <code>git checkout --theirs conflicted_file.txt</code></li>
+<li>keep the remote file: <code>bashgit checkout --theirs conflicted_file.txt</code></li>
 <li>keep the local file: <code>git checkout --ours conflicted_file.txt</code></li>
 </ul>
 <p><em>=&gt; You still have to</em> <code>git add</code> <em>and</em> <code>git commit</code> <em>after this</em></p>
@@ -326,7 +344,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">=======</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">remote</span> version <span class="er">(</span><span class="ex">theirs</span><span class="kw">)</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span class="ex">[remote</span> version <span class="er">(</span><span class="ex">commit#</span><span class="kw">)</span><span class="ex">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Manually edit the file and save.</p>
+<p>Manually edit the file deleting and modifying your script as needed (including all the symbols git added to flag the conflict). Save the script/file when you are done editing.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -346,6 +364,9 @@ Important
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge <span class="at">--abort</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you realize you made a mistake once the merge resolved, you can always run to go back to the previous commit:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--hard</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
 
 
 </section>
