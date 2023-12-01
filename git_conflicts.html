@@ -277,7 +277,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#few-tips-to-deal-with-merge-conflicts" id="toc-few-tips-to-deal-with-merge-conflicts" class="nav-link active" data-scroll-target="#few-tips-to-deal-with-merge-conflicts">Few tips to deal with merge conflicts</a></li>
+  <li><a href="#a-few-tips-to-deal-with-merge-conflicts" id="toc-a-few-tips-to-deal-with-merge-conflicts" class="nav-link active" data-scroll-target="#a-few-tips-to-deal-with-merge-conflicts">A few tips to deal with merge conflicts</a></li>
+  <li><a href="#how-to-minimize-the-risk-of-conflicts" id="toc-how-to-minimize-the-risk-of-conflicts" class="nav-link" data-scroll-target="#how-to-minimize-the-risk-of-conflicts">How to minimize the risk of conflicts?</a></li>
   </ul>
 </nav>
     </div>
@@ -301,43 +302,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p><strong>You did nothing wrong!!</strong> Git is simply asking for your help to merge files because it can not figure it out own its own.</p>
+<p><strong>First and foremost, You did nothing wrong!!</strong> Git is simply asking for your help to merge files because it can not figure it out on its own.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-A few things to note
+One thing to note before we continue
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ol type="1">
-<li><code>git pull</code> = <code>git fetch</code> (getting things from GitHub) + <code>git merge</code> (merging the versions between your local and GitHub)</li>
-<li>How to minimize risk of conflicts? <strong>Communicate</strong> &amp; <code>commit</code>, <code>pull</code>, and <code>push</code> often will already get you a long way!!</li>
-<li>If conflicts keep happening in your collaboration, using <code>git branches</code> might be the next steps for your team</li>
-</ol>
+<p><code>git pull</code> = <code>git fetch</code> (getting things from GitHub) + <code>git merge</code> (merging the versions between your local and GitHub)</p>
 </div>
 </div>
-<p>A conflict arise when git can not merge two file versions automatically every time you <code>git pull</code>. Generally when the changes are on different files or on the same file but far apart, git will figure it out on his own and do the merge automatically. However if changes are overlapping, git will call you to the rescue. When you are in this situation, you are “stuck” between the <code>git fetch</code> &amp; the <code>git merge</code>.</p>
-<section id="few-tips-to-deal-with-merge-conflicts" class="level3">
-<h3 class="anchored" data-anchor-id="few-tips-to-deal-with-merge-conflicts">Few tips to deal with merge conflicts</h3>
-<ol type="1">
-<li>If you <strong>were not expecting</strong> a conflict or want to roll back to your status before the conflict arise</li>
-</ol>
+<p>A conflict arises when git can not automatically merge two versions of a file. When the changes are on different files or on the same file but far apart, git will figure it out on his own and do the merge automatically. However, if changes are overlapping, git will call you to the rescue because it is not sure which version should be kept. When you are in this situation, you are “stalled” between the <code>git fetch</code> &amp; the <code>git merge</code> and you need to edit the file(s) where there is a conflict. Luckily, git will flag the lines that have different versions for you to look at.</p>
+<section id="a-few-tips-to-deal-with-merge-conflicts" class="level3">
+<h3 class="anchored" data-anchor-id="a-few-tips-to-deal-with-merge-conflicts">A few tips to deal with merge conflicts</h3>
+<section id="if-you-were-not-expecting-a-conflict-or-want-to-roll-back-to-your-status-before-the-conflict-arise" class="level4">
+<h4 class="anchored" data-anchor-id="if-you-were-not-expecting-a-conflict-or-want-to-roll-back-to-your-status-before-the-conflict-arise">1. If you <strong>were not expecting</strong> a conflict or want to roll back to your status before the conflict arise</h4>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge <span class="at">--abort</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This does not resolve the conflict but let you look more into why you are having a conflict while keeping your local copy of the repository usable.</p>
-<ol start="2" type="1">
-<li>If you <strong>know for sure</strong> what file version you want to keep:</li>
-</ol>
+<p>This does not resolve the conflict but it lets you look more into why you are having a conflict while keeping your local copy of the repository usable.</p>
+</section>
+<section id="if-you-know-for-sure-what-file-version-you-want-to-keep" class="level4">
+<h4 class="anchored" data-anchor-id="if-you-know-for-sure-what-file-version-you-want-to-keep">2. If you <strong>know for sure</strong> what file version you want to keep</h4>
 <ul>
-<li>keep the remote file: <code>bashgit checkout --theirs conflicted_file.txt</code></li>
+<li>keep the remote file: <code>git checkout --theirs conflicted_file.txt</code></li>
 <li>keep the local file: <code>git checkout --ours conflicted_file.txt</code></li>
 </ul>
-<p><em>=&gt; You still have to</em> <code>git add</code> <em>and</em> <code>git commit</code> <em>after this</em></p>
-<ol start="3" type="1">
-<li>If you do not know why there is a conflict: Dig into the files, looking for:</li>
-</ol>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>=&gt; You still have to use <code>git add</code> and <code>git commit</code> after this to commit your changes to the git history</p>
+</div>
+</div>
+</section>
+<section id="if-you-do-not-know-which-version-to-keep" class="level4">
+<h4 class="anchored" data-anchor-id="if-you-do-not-know-which-version-to-keep">3. If you <strong>do not know</strong> which version to keep</h4>
+<p>Dig into the files, looking for:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">local</span> <span class="va">version</span> <span class="va">(</span>ours<span class="va">)</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">=======</span></span>
@@ -357,12 +366,20 @@ Important
 <p>=&gt; You still have to use <code>git add</code> and <code>git commit</code> after this to commit your changes to the git history</p>
 </div>
 </div>
-<ul>
-<li>You can always abort a merge, for example you choose to keep the wrong version</li>
-</ul>
+<p>Even after modifying the files, you can still abort a merge, for example you realized you kept the wrong version.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge <span class="at">--abort</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If you realize you made a mistake once the merge resolved, you can always run to go back to the previous commit:</p>
+<p>If you realize you made a mistake once the merge is resolved, you can always run to go back to the previous commit:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--hard</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="how-to-minimize-the-risk-of-conflicts" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-minimize-the-risk-of-conflicts">How to minimize the risk of conflicts?</h2>
+<ol type="1">
+<li><strong>Communicate</strong>!! Who is working on what script/file today? GitHub issues and tagging people is a great way to do this</li>
+<li><code>commit</code>, <code>pull</code>, and <code>push</code> <strong>often</strong> , so the changes between versions are kept minimal</li>
+</ol>
+<p>These two tips should help you on your git conflict free journey!!</p>
+<p><em>If conflicts keep happening in your collaboration, using <code>git branches</code> might be the next step to consider for your team.</em></p>
 
 
 </section>
