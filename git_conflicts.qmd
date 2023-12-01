@@ -61,6 +61,4 @@ If you realize you made a mistake once the merge resolved, you can always run to
 git reset --hard
 ```
 
-## Example
-
 
