@@ -2,38 +2,40 @@
 title: "Managing git merge conflicts"
 ---
 
-**You did nothing wrong!!** Git is simply asking for your help to merge files because it can not figure it out own its own. 
+**First and foremost, You did nothing wrong!!** Git is simply asking for your help to merge files because it can not figure it out on its own. 
 
 ::: {.callout-note}
-## A few things to note
+## One thing to note before we continue
 
-1. `git pull` = `git fetch` (getting things from GitHub) + `git merge` (merging the versions between your local and GitHub)
-2. How to minimize risk of conflicts? **Communicate** & `commit`, `pull`, and `push` often will already get you a long way!!
-3. If conflicts keep happening in your collaboration, using `git branches` might be the next steps for your team
+`git pull` = `git fetch` (getting things from GitHub) + `git merge` (merging the versions between your local and GitHub)
 :::
 
-A conflict arise when git can not merge two file versions automatically every time you `git pull`. Generally when the changes are on different files or on the same file but far apart, git will figure it out on his own and do the merge automatically. However if changes are overlapping, git will call you to the rescue. When you are in this situation, you are "stuck" between the `git fetch` & the `git merge`.
+A conflict arises when git can not automatically merge two versions of a file. When the changes are on different files or on the same file but far apart, git will figure it out on his own and do the merge automatically. However, if changes are overlapping, git will call you to the rescue because it is not sure which version should be kept. When you are in this situation, you are "stalled" between the `git fetch` & the `git merge` and you need to edit the file(s) where there is a conflict. Luckily, git will flag the lines that have different versions for you to look at.
 
 
-### Few tips to deal with merge conflicts
+### A few tips to deal with merge conflicts
 
-1. If you **were not expecting** a conflict or want to roll back to your status before the conflict arise
+#### 1. If you **were not expecting** a conflict or want to roll back to your status before the conflict arise
 
 ```bash
 git merge --abort
 ```
 
-This does not resolve the conflict but let you look more into why you are having a conflict while keeping your local copy of the repository usable.
+This does not resolve the conflict but it lets you look more into why you are having a conflict while keeping your local copy of the repository usable.
 
-2. If you **know for sure** what file version you want to keep:
 
- * keep the remote file: ```bashgit checkout --theirs conflicted_file.txt```
- * keep the local file: ```git checkout --ours conflicted_file.txt```
+#### 2. If you **know for sure** what file version you want to keep
 
-*=> You still have to* ```git add``` *and* ```git commit``` *after this*
+- keep the remote file: ```git checkout --theirs conflicted_file.txt```
+-  keep the local file: ```git checkout --ours conflicted_file.txt```
 
-3. If you do not know why there is a conflict:
-  Dig into the files, looking for:
+::: {.callout-important}
+=> You still have to use `git add` and `git commit` after this to commit your changes to the git history
+:::
+
+#### 3. If you **do not know** which version to keep
+
+Dig into the files, looking for:
 
 ```bash
 <<<<<<< HEAD
@@ -49,16 +51,24 @@ Manually edit the file deleting and modifying your script as needed (including a
 => You still have to use `git add` and `git commit` after this to commit your changes to the git history
 :::
 
-- You can always abort a merge, for example you choose to keep the wrong version
+Even after modifying the files, you can still abort a merge, for example you realized you kept the wrong version.
 
 ```bash
 git merge --abort
 ```
 
-If you realize you made a mistake once the merge resolved, you can always run to go back to the previous commit:
+If you realize you made a mistake once the merge is resolved, you can always run to go back to the previous commit:
 
 ```bash
 git reset --hard
 ```
 
+## How to minimize the risk of conflicts? 
+
+1. **Communicate**!! Who is working on what script/file today? GitHub issues and tagging people is a great way to do this
+2. `commit`, `pull`, and `push` **often** , so the changes between versions are kept minimal
+
+These two tips should help you on your git conflict free journey!!
+
+_If conflicts keep happening in your collaboration, using `git branches` might be the next step to consider for your team._
 
