@@ -74,3 +74,60 @@ These two tips should help you on your git conflict free journey!!
 
 _If conflicts keep happening in your collaboration, using `git branches` might be the next step to consider for your team._
 
+
+## Example using RStudio
+
+Ok, let's create a conflict with our favorite desserts repository. 
+
+User 1 is going to change a line on the README an push the change to GitHub.
+
+![](img/git_conflict-01_user1_change.png){fig-align="center" width=60%}
+
+Now user 2, is going to also make an edit to the README on this same line while **forgetting** to pull before starting to edit the file
+
+In this example, we will be changing the favorite dessert of the same person:
+
+![](img/git_conflict-02_user2_change.png){fig-align="center" width=70%}
+
+Save and commit your changes.
+
+Now it is time to pull and push your changes... however git is unsure how to reconcile the two versions of the README.md
+
+![](img/git_conflict-04_merge_conflict.png){fig-align="center" width=90%}
+
+::: {.callout-note}
+Before this you might first have the pop-up below on your screen that prompts you to tell git what techniques it should use to resolve conflicts
+
+![](img/git_conflict-03_merge_settings.png){fig-align="center" width=90%}
+
+We recommend to choose the `merge` option by copy pasting this line at the terminal:
+
+```bash
+git config pull.rebase false
+```
+:::
+
+
+Note the tags that git has automatically inserted in the text to highlight: 1. where is the conflict and 2. what are the two versions you are trying to reconcile. Note also that RStudio is flagging the file with an orange U logo to let you know that the files are *U*nmerged.
+
+![](img/git_conflict-05_rstudio_conflict.png){fig-align="center" width=50%}
+
+You can edit the README to resolve the conflict to your liking. You could opt to choose one of the version
+
+![](img/git_conflict-06_fixing conflict_oneside.png){fig-align="center" width=60%}
+
+or to come up with a "blended" version:
+
+![](img/git_conflict-07_fixing_conflict_compromise.png){fig-align="center" width=60%}
+
+Once you are satisfied with your version, you can save the file and commit your changes
+
+![](img/git_conflict-08_commit_fix.png){fig-align="center" width=60%}
+
+Don't forget to pull and push to synchronize your local changes with GitHub.
+
+
+If you now look at the history, you can see how git has tracked the conflict resolution. We will talk about branches later on, but spoiler alert it looks very much how you would merge a branch back to the main branch.
+
+![](img/git_conflict-09_post_merge_history.png){fig-align="center" width=60%}
+
