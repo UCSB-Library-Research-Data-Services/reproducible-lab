@@ -2,7 +2,9 @@
 title: "Managing git merge conflicts"
 ---
 
-**First and foremost, You did nothing wrong!!** Git is simply asking for your help to merge files because it can not figure it out on its own. 
+### First and foremost
+
+**You did nothing wrong!!** Git is simply asking for your help to merge files because it can not figure it out on its own. 
 
 ::: {.callout-note}
 ## One thing to note before we continue
