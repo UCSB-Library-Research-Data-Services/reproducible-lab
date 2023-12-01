@@ -2,15 +2,24 @@
 title: "Managing git merge conflicts"
 ---
 
-First: `git pull` = `git fetch` (getting things from GitHub) + `git merge` (merging the versions between your local and GitHub)`
+**You did nothing wrong!!** Git is simply asking for your help to merge files because it can not figure it out own its own. 
 
-Second: you did nothing wrong!! Git tries to merge files automatically. When the changes on the same file are far apart, git will figure it out on his own and do the merge automatically. However if changes are overlapping, git will call you to the rescue.
+::: {.callout-note}
+## A few things to note
+
+1. `git pull` = `git fetch` (getting things from GitHub) + `git merge` (merging the versions between your local and GitHub)
+2. How to minimize risk of conflicts? **Communicate** & `commit`, `pull`, and `push` often will already get you a long way!!
+3. If conflicts keep happening in your collaboration, using `git branches` might be the next steps for your team
+:::
+
+A conflict arise when git can not merge two file versions automatically every time you `git pull`. Generally when the changes are on different files or on the same file but far apart, git will figure it out on his own and do the merge automatically. However if changes are overlapping, git will call you to the rescue. When you are in this situation, you are "stuck" between the `git fetch` & the `git merge`.
+
 
 ### Few tips to deal with merge conflicts
 
 1. If you **were not expecting** a conflict or want to roll back to your status before the conflict arise
 
-```
+```bash
 git merge --abort
 ```
 
@@ -18,7 +27,7 @@ This does not resolve the conflict but let you look more into why you are having
 
 2. If you **know for sure** what file version you want to keep:
 
- * keep the remote file: ```git checkout --theirs conflicted_file.txt```
+ * keep the remote file: ```bashgit checkout --theirs conflicted_file.txt```
  * keep the local file: ```git checkout --ours conflicted_file.txt```
 
 *=> You still have to* ```git add``` *and* ```git commit``` *after this*
@@ -34,7 +43,7 @@ remote version (theirs)
 >>>>>>> [remote version (commit#)]
 ```
 
-Manually edit the file and save.
+Manually edit the file deleting and modifying your script as needed (including all the symbols git added to flag the conflict). Save the script/file when you are done editing.
 
 ::: {.callout-important}
 => You still have to use `git add` and `git commit` after this to commit your changes to the git history
@@ -51,4 +60,7 @@ If you realize you made a mistake once the merge resolved, you can always run to
 ```bash
 git reset --hard
 ```
+
+## Example
+
 
