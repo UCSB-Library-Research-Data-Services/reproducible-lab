@@ -277,7 +277,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a-few-tips-to-deal-with-merge-conflicts" id="toc-a-few-tips-to-deal-with-merge-conflicts" class="nav-link active" data-scroll-target="#a-few-tips-to-deal-with-merge-conflicts">A few tips to deal with merge conflicts</a></li>
+  <li><a href="#first-and-foremost" id="toc-first-and-foremost" class="nav-link active" data-scroll-target="#first-and-foremost">First and foremost</a></li>
+  <li><a href="#a-few-tips-to-deal-with-merge-conflicts" id="toc-a-few-tips-to-deal-with-merge-conflicts" class="nav-link" data-scroll-target="#a-few-tips-to-deal-with-merge-conflicts">A few tips to deal with merge conflicts</a></li>
   <li><a href="#how-to-minimize-the-risk-of-conflicts" id="toc-how-to-minimize-the-risk-of-conflicts" class="nav-link" data-scroll-target="#how-to-minimize-the-risk-of-conflicts">How to minimize the risk of conflicts?</a></li>
   </ul>
 </nav>
@@ -302,7 +303,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p><strong>First and foremost, You did nothing wrong!!</strong> Git is simply asking for your help to merge files because it can not figure it out on its own.</p>
+<section id="first-and-foremost" class="level3">
+<h3 class="anchored" data-anchor-id="first-and-foremost">First and foremost</h3>
+<p><strong>You did nothing wrong!!</strong> Git is simply asking for your help to merge files because it can not figure it out on its own.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -317,6 +320,7 @@ One thing to note before we continue
 </div>
 </div>
 <p>A conflict arises when git can not automatically merge two versions of a file. When the changes are on different files or on the same file but far apart, git will figure it out on his own and do the merge automatically. However, if changes are overlapping, git will call you to the rescue because it is not sure which version should be kept. When you are in this situation, you are “stalled” between the <code>git fetch</code> &amp; the <code>git merge</code> and you need to edit the file(s) where there is a conflict. Luckily, git will flag the lines that have different versions for you to look at.</p>
+</section>
 <section id="a-few-tips-to-deal-with-merge-conflicts" class="level3">
 <h3 class="anchored" data-anchor-id="a-few-tips-to-deal-with-merge-conflicts">A few tips to deal with merge conflicts</h3>
 <section id="if-you-were-not-expecting-a-conflict-or-want-to-roll-back-to-your-status-before-the-conflict-arise" class="level4">
