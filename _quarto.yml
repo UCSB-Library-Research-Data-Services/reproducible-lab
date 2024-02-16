@@ -57,6 +57,12 @@ website:
         contents:
           - href: data_mgmt.qmd
             text: "What is data management?"
+          - href: datamgmt_plan.qmd
+            text: "Plan"
+          - href: datamgmt_manage.qmd
+            text: "Manage"
+          - href: datamgmt_preserve.qmd
+            text: "Preserve"
 format:
   html:
     theme: 

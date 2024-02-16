@@ -1,0 +1,73 @@
+---
+title: "Data Management Plan (DMP)"
+---
+
+In a nutshell, **your goal is to organize your research lab in a way that will let you document and preserve your scientific products** - including raw and derived data when possible. When delivering a project to a client, it is important to ensure the client can understand and reuse the products (code, data, apps) you have developed. For those reasons, more and more funders require a data management plan as part of their proposal submission process; therefore, it is a great skill to develop.
+
+Having a plan to manage your data will save you from some potential painful hiccups and time as you progress through your project data life cycle. In other words, it is time well spent to develop your data management plan, and the earlier in your project, the better you have a good sense of how you will manage your data. The discussion with your team about what should be included in the plan is as important as the plan itself since the questions you will have to answer will help you think more about your data (e.g., type, size, processing methods, etc.) and assign roles and responsibilities among project members.
+
+Your overarching goal is to archive and share your data in a publicly accessible data repository such as [Dryad](https://datadryad.org/stash) as your project is completed or important milestones are achieved. For your work to be reproducible, metadata and documentation must also be developed, and the scripts you have developed for your analysis. Here is an example of a previous group archive: <https://doi.org/10.25349/D97G9Z> -- especially look at the `README.md` describing the content.
+
+Before writing your plan, we recommend you get familiar with the [FAIR](https://www.go-fair.org/fair-principles/) and [CARE](https://www.gida-global.org/care) principles to guide your process.
+
+![source: <https://www.gida-global.org/care>](images/be-FAIR-and-CARE.png){width="80%" fig-align="left"}
+
+Those two principles should be the overarching guidelines that will guide the development of your data management plan.
+
+
+## Developing your Data Management Plan (DMP)
+
+When developing your data management plan, we recommend using the FAIR & CARE principles as guidance to maximize the reusability of your data by you, your collaborators, other researchers, and future-you.  Your plan should ensure that detailed documentation adopting existing standards is developed during the entire duration of your project (don't wait until the very end!!) and that this documentation is archived along with your data and code in a publicly accessible data repository will set you up for success.
+
+![source: <https://www.library.ucsb.edu/sites/default/files/dls-n04-2021-fair-navy.pdf>](images/fair-principles.png)
+
+Below is a set of questions that will help your team think about the data and resources you will need along your project's data lifecycle.
+
+1.  **Describing the research data**: Provide a description of the data the group will collect or re-use, including the file types, data set size, the number of expected files or sets, content, and source of the data (creator and method of collection).
+
+    i)  What data are needed?
+    ii) Are such data available?
+    iii) When and how will the data be acquired?
+
+2.  **Data formats**:
+
+    i)  Are there any standard formats in the specific research field for managing or disseminating the data sets that have been identified (e.g., XML, ASCII, CSV, .shp, .gdb, GeoTIFF)?
+    ii) Who from the group will have responsibility for ensuring that data standards are properly applied, and data are properly formatted?
+
+3.  **Metadata**: Metadata is documentation that helps make data sets reusable. Think about what details someone would need in order to be able to understand and use these files. For example, perhaps a `readme.txt` file is necessary to explain variables, the structure of the files, etc. In addition, it is recommended to leverage metadata disciplinary standards, including ontologies and vocabularies. Here is a [good resource](https://rdamsc.bath.ac.uk/subject/Environmental%20sciences) for metadata standards in environmental sciences.  When applicable, also describe other scientific products - models, scripts, and/or workflows - your group will be producing using README files and documenting your code.
+
+4.  **Data sharing and access** The data may have significant value for other researchers beyond this project, and sharing this data is part of the group's responsibility as members of the scientific community. Specify the extent to which data can be reused, including any access limitations. List any proprietary software that might be needed to read the files. If some data is not shareable due to confidentiality, non-disclosure agreements (NDA), or disclosure risk, state such limitations and the rationale behind them.
+
+5.  **Intellectual property and re-use**: If data were collected from the client organization, does the group have the right to redistribute it? If so, are there any restrictions on redistribution? If the group created its data files, would it assign a Creative Commons license to its data?
+
+6.  **Data archiving and preservation**: Throughout the project, the group may produce a large number of files. At the end of the project, groups must submit data produced by the project (except data protected by non-disclosure agreements) and when relevant raw data as well. Not all data needs to be saved. Here are some questions to ask yourselves:
+
+    i)  If another researcher wanted to replicate the group's work or re-use the group's data, what data and documentation would be required for them to do so?\
+    ii) Where will the data and metadata be stored after the project is completed?
+    iii) Is there a subject-specific and/or open-access repository that is appropriate for the data?
+
+One advantage to depositing your data in a data repository is that you can get a [DOI](https://www.doi.org/the-identifier/what-is-a-doi/) that lets you easily share and cite your data. Most of the data repositories also track views, downloads, and citations for your data archive, which can be used as a metric or a proxy for research impact.
+
+## Data Management Plan Tool
+
+There is a tool that you can use to guide your process: **the DMP Tool**. It is a little bit like an online form on steroids. Note that you do not have to use this tool for your project, but from our experience, it provides good guidance for this process.
+
+-   (Almost) everything in one page: <https://www.library.ucsb.edu/sites/default/files/dls-n05-2022-dmptool-navy_0.pdf>
+
+<iframe width="100%" height="1000" src="https://www.library.ucsb.edu/sites/default/files/dls-n05-2022-dmptool-navy_0.pdf">
+
+</iframe>
+
+-   Guidelines on developing your project data management plan using the DMP Tool: *Renata G Curty. (2023). DMP Recommendations (DCC Template). Zenodo.* <https://doi.org/10.5281/zenodo.7566971>
+
+-   Get started with the tool: <http://dmptool.org/>\
+    *Make sure to create an account using your UCSB email!*
+
+## Using your Data Management Plan
+
+Ok, you have a plan, now what!? **A data management plan should be seen as a living document** that you update as your project develops and data needs evolve. We thus recommend sharing this plan with all your team members and external partners when relevant. The DMP Tool has the capacity to share plans directly from the tool. If you do not choose to use it, we recommend choosing a file format that can be collectively edited and provide some versioning/track changes feature, such as Google Docs or other cloud-based storage and documents.
+
+## Further Reading Recommendations
+
+-   Good overview of Data management concepts: *Arteaga Cuevas, Maria; Taylor, Shawna; and Narlock, Mikala. (2023). Introduction to Research Data Management for Researchers. Data Curation Network* [Primer for Researchers on how to Manage Data](https://github.com/DataCurationNetwork/data-primers/blob/master/Primer%20for%20Researchers%20on%20How%20to%20Manage%20Data/Primer-for-researchers-on-how-to-manage-data.md#data-management-and-curation-principles)
+-   Good overview of the data lifecycle, including itemized checklist: <https://osf.io/d8fqh>
