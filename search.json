@@ -118,7 +118,7 @@
     "href": "datamgmt_preserve.html",
     "title": "Preserve your data for reuse",
     "section": "",
-    "text": "As you finalize your project, an important task is to archive your data in a publicly available repository (pending sensitivity and by non-disclosure agreement exceptions). There are a few important steps to ensure that your data can be reused by others and thus make your work more reproducible.",
+    "text": "As you finalize your projects, often an important task is to archive your data in a publicly available repository (pending sensitivity and by non-disclosure agreement exceptions). There are a few important steps to ensure that your data can be reused by others and thus make your work more reproducible.",
     "crumbs": [
       "Managing your research data",
       "Preserve"
@@ -140,7 +140,7 @@
     "href": "datamgmt_preserve.html#choosing-a-data-repository",
     "title": "Preserve your data for reuse",
     "section": "Choosing a data repository",
-    "text": "Choosing a data repository\nOK, we know what we want to archive. Now let’s decide where we want to preserve things!\nUCSB’s institutional data repository Dryad will be your default data repository. However, we encourage you to discuss with your Faculty Advisor to determine if other data repositories might suit your targeted audience/community better. If you would like to research on your own which data repository could be best for your project, the Registry of Research Data Repositories is a great resource to do so.\n\nDryad\nDryad is free of use for any affiliated researcher. Here is an overview of the process of submitting data to DRYAD:\n\n\n\nDRYAD data submission overview",
+    "text": "Choosing a data repository\nWe know what we want to archive, now we need to decide where we want to preserve things!\nUCSB’s institutional data repository Dryad will be your default data repository. However, we encourage you to discuss with your Faculty Advisor to determine if other data repositories might suit your targeted audience/community better.\nIf you would like to research on your own which data repository could be best for your project, the Registry of Research Data Repositories is a great resource to do so.\n\nDryad\nDryad is free of use for any affiliated researcher. Here is an overview of the process of submitting data to DRYAD:\n\n\n\nDRYAD data submission overview",
     "crumbs": [
       "Managing your research data",
       "Preserve"
