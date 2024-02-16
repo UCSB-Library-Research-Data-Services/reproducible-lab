@@ -279,7 +279,7 @@
     "href": "datamgmt_manage.html",
     "title": "Manage your data as you go",
     "section": "",
-    "text": "While actively working on your project, there are several practices that can help you to manage your data in an efficient manner that will help you to collaborate with others (including your future self!) and make your work more reproducible.",
+    "text": "While actively working on your projects, there are several practices that can help you to manage your data in an efficient manner that will help you to collaborate with others (including your futureself!) and make your work more reproducible.",
     "crumbs": [
       "Managing your research data",
       "Manage"
@@ -301,7 +301,7 @@
     "href": "datamgmt_manage.html#keep-raw-data-raw",
     "title": "Manage your data as you go",
     "section": "Keep raw data raw",
-    "text": "Keep raw data raw\nDuring the data collection phase, also make sure to create a dedicated folder to save the raw data version you just acquired.\nIf you are using a programmatic approach to process your data (e.g., API), make sure to only read the raw data and save any processed intermediate data products in a different folder. We recommend changing the permissions on your raw data folder to read-only to avoid any unexpected incidents.\nIf you are accessing the data using a Graphical User Interface (GUI), we recommend you create a “working copy” of your raw data in a separate folder and use those files as it is often very easy to accidentally overwrite it.",
+    "text": "Keep raw data raw\nDuring the data collection phase, also make sure to create a dedicated folder(s) to save the raw data version you just acquired.\nIf you are using a programmatic approach to acquire your data (e.g., API), make sure to only read the raw data and save any processed intermediate data products in a different folder. We recommend changing the permissions on your raw data folder to read-only to avoid any unexpected incidents.\nIf you are accessing the data using a Graphical User Interface (GUI), we recommend you create a “working copy” of your raw data in a separate folder and use those files as it is often very easy to accidentally overwrite it.",
     "crumbs": [
       "Managing your research data",
       "Manage"
@@ -312,7 +312,7 @@
     "href": "datamgmt_manage.html#project-organization",
     "title": "Manage your data as you go",
     "section": "Project organization",
-    "text": "Project organization\nWe recommend encapsulating your project into one folder. It will make it more portable when combined with a relative path and help you keep the information centralized in one place. Here is a starting point for your file structure with three subfolders:\n\nData: where you will store your data with the following file structure\n\nInput_data: to store the raw data you collected or/and are reusing\nIntermediate_data: to store any cleaned or merged data sets\nAnalysis_data: any model analytical outputs that you computed\n\nCode or Scripts: you can store your scripts in this folder. You can keep everything within the folder using filename to organize it or create subfolders as needed\nResults: to store tables, graphs, reports, or any other scientific products you are producing\n\nIn the top-level folder, we also recommend you write a README to explain your project, list the contributors and provide information on how to best navigate your project folder as well as a short description of the files it contains.\n\n\n\nSource: RDS Data Literacy Series\n\n\nOf course, each project is different, so adapt these recommendations to your own project needs!",
+    "text": "Project organization\nWe generally recommend encapsulating your project into few folders. It will make it more portable when combined with a relative path and help you keep the information centralized in one place. Here is a potential starting point for your file structure with three subfolders:\n\nData: where you will store your data with the following file structure\n\nInput_data: to store the raw data you collected or/and are reusing\nIntermediate_data: to store any cleaned or merged data sets\nAnalysis_data: any model analytical outputs that you computed\n\nCode or Scripts: you can store your scripts in this folder. You can keep everything within the folder using filename to organize it or create subfolders as needed\nResults: to store tables, graphs, reports, or any other scientific products you are producing\n\nIn the top-level folder, we also recommend you write a README to explain your project, list the contributors and provide information on how to best navigate your project folder as well as a short description of the files it contains.\n\n\n\nSource: RDS Data Literacy Series\n\n\nThink of what README template could be developed for your research lab to help with standardizing this information across projects.",
     "crumbs": [
       "Managing your research data",
       "Manage"
