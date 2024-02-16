@@ -482,7 +482,6 @@
     "section": "",
     "text": "Data are also part of the scientific products your Lab is producing. It is thus important to develop strategies to manage them well, so you can reuse them. Well managed, data can become an an asset for your lab and your collaborators.\n\n\nTo help you think about your Lab data management, you can divide the life cycle of a data set in several phases:\n\n\n\nResearch Data Management lifecycle; source: https://osf.io/d8fqh\n\n\n\n\n\nHere are a few prompts to help you start your thinking about how you manage your data and where are potential challenges. These prompts should help you to decide where to start and we encourge to discuss them with the entire team:\n\nWhat are your lab challenges related to accessing, manipulating and/or moving data?\nWhat are your lab needs, pain points, or where do you feel time is wasted related to ensuring future use of data by yourself or others?\nWhat are your main security or data loss concerns related to your data?\nWhat are your data that might contain sensitive information (geolocation, human subjects, …) and thus need special handling?\nHow have funder mandates for data or publication deposits created challenges for you?",
     "crumbs": [
-      "Coding as a Lab",
       "Managing your Research data",
       "What is data management?"
     ]
@@ -494,7 +493,6 @@
     "section": "",
     "text": "Data are also part of the scientific products your Lab is producing. It is thus important to develop strategies to manage them well, so you can reuse them. Well managed, data can become an an asset for your lab and your collaborators.\n\n\nTo help you think about your Lab data management, you can divide the life cycle of a data set in several phases:\n\n\n\nResearch Data Management lifecycle; source: https://osf.io/d8fqh\n\n\n\n\n\nHere are a few prompts to help you start your thinking about how you manage your data and where are potential challenges. These prompts should help you to decide where to start and we encourge to discuss them with the entire team:\n\nWhat are your lab challenges related to accessing, manipulating and/or moving data?\nWhat are your lab needs, pain points, or where do you feel time is wasted related to ensuring future use of data by yourself or others?\nWhat are your main security or data loss concerns related to your data?\nWhat are your data that might contain sensitive information (geolocation, human subjects, …) and thus need special handling?\nHow have funder mandates for data or publication deposits created challenges for you?",
     "crumbs": [
-      "Coding as a Lab",
       "Managing your Research data",
       "What is data management?"
     ]
