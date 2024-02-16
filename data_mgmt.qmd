@@ -17,7 +17,7 @@ To help you think about your Lab data management, you can divide the life cycle 
 
 ### How are you feeling about your data?
 
-Here are a few prompts to help you start thinking about how you manage your data and where are potential challenges. These prompts should help you to decide where to start:
+Here are a few prompts to help you start your thinking about how you manage your data and where are potential challenges. These prompts should help you to decide where to start and we encourge to discuss them with the entire team:
 
 - What are your lab challenges related to accessing, manipulating and/or moving data?
 - What are your lab needs, pain points, or where do you feel time is wasted related to ensuring future use of data by yourself or others? 
