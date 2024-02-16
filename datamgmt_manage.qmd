@@ -2,7 +2,7 @@
 title: "Manage your data as you go"
 ---
 
-While actively working on your project, there are several practices that can help you to manage your data in an efficient manner that will help you to collaborate with others (including your future self!) and make your work more reproducible.
+While actively working on your projects, there are several practices that can help you to manage your data in an efficient manner that will help you to collaborate with others (including your futureself!) and make your work more reproducible.
 
 
 ## Track your data sources
@@ -17,16 +17,16 @@ As you collect your data, if using pre-existing data sources, we strongly recomm
 
 ## Keep raw data raw
 
-During the data collection phase, also make sure to create a dedicated folder to save the raw data version you just acquired. 
+During the data collection phase, also make sure to create a dedicated folder(s) to save the raw data version you just acquired. 
 
-If you are using a programmatic approach to process your data (e.g., API), make sure to only read the raw data and save any processed intermediate data products in a different folder. We recommend changing the permissions on your raw data folder to read-only to avoid any unexpected incidents.
+If you are using a programmatic approach to acquire your data (e.g., API), make sure to only read the raw data and save any processed intermediate data products in a different folder. We recommend changing the permissions on your raw data folder to read-only to avoid any unexpected incidents.
 
 If you are accessing the data using a Graphical User Interface (GUI), we recommend you create a "working copy" of your raw data in a separate folder and use those files as it is often very easy to accidentally overwrite it.  
 
 
 ## Project organization
 
-We recommend encapsulating your project into one folder. It will make it more portable when combined with a [relative path](https://www.educative.io/answers/absolute-vs-relative-path) and help you keep the information centralized in one place. Here is a starting point for your file structure with three subfolders:
+We generally recommend encapsulating your project into few folders. It will make it more portable when combined with a [relative path](https://www.educative.io/answers/absolute-vs-relative-path) and help you keep the information centralized in one place. Here is a potential starting point for your file structure with three subfolders:
 
 - Data: where you will store your data with the following file structure
     - Input_data: to store the raw data you collected or/and are reusing
@@ -38,10 +38,10 @@ We recommend encapsulating your project into one folder. It will make it more po
 In the top-level folder, we also recommend you write a README to explain your project, list the contributors and provide information on how to best navigate your project folder as well as a short description of the files it contains.
 
 
-![Source: [RDS Data Literacy Series](https://www.library.ucsb.edu/sites/default/files/dls-n8-2021-projectfolder-navy.pdf)](images/project_organization.png)
+![Source: [RDS Data Literacy Series](https://www.library.ucsb.edu/sites/default/files/dls-n8-2021-projectfolder-navy.pdf)](img/datamgmt_project_organization.png)
 
 
-Of course, each project is different, so adapt these recommendations to your own project needs!
+ **Think of what README template could be developed for your research lab to help with standardizing this information across projects.**
 
 
 ## Adopt a consistent naming convention
@@ -78,4 +78,4 @@ A [good reference](https://speakerdeck.com/jennybc/how-to-name-files) on this to
 
 Don't forget, things happen!!!
 
-![](images/broken_laptop.png){width=70% fig-align="center"}
+![](img/datamgmt_broken_laptop.png){width=70% fig-align="center"}
