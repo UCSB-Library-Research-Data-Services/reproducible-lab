@@ -53,10 +53,10 @@ website:
             contents:
               - href: github_template.qmd
                 text: "Repository template"
-      # - section: "Managing your Research data"
-      #   contents:
-      #       - href: data_mgmt.qmd
-      #         text: "What is data management?"
+       - section: "Managing your Research data"
+         contents:
+             - href: data_mgmt.qmd
+               text: "What is data management?"
 format:
   html:
     theme: 

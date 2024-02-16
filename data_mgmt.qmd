@@ -1,4 +1,27 @@
 ---
-title: "data_mgmt"
+title: "Managing your lab data"
 ---
+
+
+## Data are a scientific product
+
+Data are also part of the scientific products your Lab is producing. It is thus important to develop strategies to manage them well, so you can reuse them. Well managed, data can become an an asset for your lab and your collaborators.
+
+
+### Data Life Cycle
+
+To help thinking about your Lab data management, you can divide the life cycle of a data set in several phases:
+
+![Research Data Management lifecycle; source: <https://osf.io/d8fqh>](images/data_lifecycle_rdm.png)
+
+
+### How are you feeling about your data?
+
+Here are a few prompts to help you start thinking about how you manage your data and where are potential challenges. These prompts should help you to decide where to start:
+
+- What are your lab challenges related to accessing, manipulating and/or moving data?
+- What are your lab needs, pain points, or where do you feel time is wasted related to ensuring future use of data by yourself or others? 
+- What are your main security or data loss concerns related to your data?
+- What are your data that might be containing sensitive information (geolocation, human subjects, ...) and thus need special handling?
+- How have funder mandates for data or publication deposits created challenges for you?
 
