@@ -3,7 +3,7 @@ title: "Preserve your data for reuse"
 ---
 
 
-As you finalize your project, an important task is to archive your data in a publicly available repository (pending sensitivity and by non-disclosure agreement exceptions). There are a few important steps to ensure that your data can be reused by others and thus make your work more reproducible.
+As you finalize your projects, often an important task is to archive your data in a publicly available repository (pending sensitivity and by non-disclosure agreement exceptions). There are a few important steps to ensure that your data can be reused by others and thus make your work more reproducible.
 
 
 ## What scientific products to preserve?
@@ -46,13 +46,14 @@ We recommend including any data set used to produce statistics, figures maps, an
 
 ## Choosing a data repository
 
-OK, we know what we want to archive. Now let’s decide where we want to preserve things!
+We know what we want to archive, now we need to decide where we want to preserve things!
 
 UCSB's institutional data repository [Dryad](https://datadryad.org/stash) will be your default data repository. However, we encourage you to discuss with your Faculty Advisor to determine if other data repositories might suit your targeted audience/community better. 
+
 If you would like to research on your own which data repository could be best for your project, the [Registry of Research Data Repositories](https://www.re3data.org) is a great resource to do so.
 
 ### Dryad
 
 [Dryad](https://datadryad.org/stash) is free of use for any affiliated researcher. Here is an overview of the process of submitting data to DRYAD:
 
-![DRYAD data submission overview](images/dryad_workflow.png)
+![DRYAD data submission overview](img/datamgmt_dryad_workflow.png)
