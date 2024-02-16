@@ -2,28 +2,28 @@
 title: "Data Management Plan (DMP)"
 ---
 
-In a nutshell, **your goal is to organize your research lab in a way that will let you document and preserve your scientific products** - including raw and derived data when possible. When delivering a project to a client, it is important to ensure the client can understand and reuse the products (code, data, apps) you have developed. For those reasons, more and more funders require a data management plan as part of their proposal submission process; therefore, it is a great skill to develop.
+In a nutshell, **your goal is to organize your research lab in a way that will let you document and preserve your scientific products** - including raw and derived data when possible. When delivering a project to a funder, it is important to ensure the funder can understand and reuse the products (code, data, apps) you have developed. For those reasons, more and more funders require a data management plan as part of their proposal submission process; therefore, it is a great skill to develop.
 
-Having a plan to manage your data will save you from some potential painful hiccups and time as you progress through your project data life cycle. In other words, it is time well spent to develop your data management plan, and the earlier in your project, the better you have a good sense of how you will manage your data. The discussion with your team about what should be included in the plan is as important as the plan itself since the questions you will have to answer will help you think more about your data (e.g., type, size, processing methods, etc.) and assign roles and responsibilities among project members.
+Having a plan to manage your data will save you from some potential painful hiccups and time as you progress through your project data life cycle. In other words, it is time well spent to develop your data management plan, and the earlier in your project, the better you have a good sense of how you will manage your data. The discussion with your project team about what should be included in the plan is as important as the plan itself since the questions you will have to answer will help you think more about your data (e.g., type, size, processing methods, etc.) and assign roles and responsibilities among project members.
 
-Your overarching goal is to archive and share your data in a publicly accessible data repository such as [Dryad](https://datadryad.org/stash) as your project is completed or important milestones are achieved. For your work to be reproducible, metadata and documentation must also be developed, and the scripts you have developed for your analysis. Here is an example of a previous group archive: <https://doi.org/10.25349/D97G9Z> -- especially look at the `README.md` describing the content.
+Once your lab data are well managed, it becomes easier to archive and share relevant data in a publicly accessible data repository such as [Dryad](https://datadryad.org/stash) as your projects are completed or important milestones are achieved. For your work to generate a reproducible data archive, metadata and documentation must also be provided, as well as the scripts you have developed for your analysis. Here is a good example of a well-documented data archive: <https://doi.org/10.25349/D9JK6N>
 
 Before writing your plan, we recommend you get familiar with the [FAIR](https://www.go-fair.org/fair-principles/) and [CARE](https://www.gida-global.org/care) principles to guide your process.
 
-![source: <https://www.gida-global.org/care>](images/be-FAIR-and-CARE.png){width="80%" fig-align="left"}
+![source: <https://www.gida-global.org/care>](img/datamgmt_be-FAIR-and-CARE.png){width="80%" fig-align="left"}
 
 Those two principles should be the overarching guidelines that will guide the development of your data management plan.
 
 
-## Developing your Data Management Plan (DMP)
+## Developing your Lab Data Management Plan (DMP)
 
-When developing your data management plan, we recommend using the FAIR & CARE principles as guidance to maximize the reusability of your data by you, your collaborators, other researchers, and future-you.  Your plan should ensure that detailed documentation adopting existing standards is developed during the entire duration of your project (don't wait until the very end!!) and that this documentation is archived along with your data and code in a publicly accessible data repository will set you up for success.
+You might already have experience with writing project specific data management plans as they are often required in proposals. The process to develop your lab's data management plan is very similar, but will be more focused on developing general guidelines for your lab that can be adatped for project specific needs. We recommend using the FAIR & CARE principles as guidance to maximize the reusability of your data by you, your collaborators, other researchers, and futureself.  Your plan should ensure that detailed documentation adopting existing standards is developed during the entire duration of your project (don't wait until the very end!!) and that this documentation is archived along with your data and code in a publicly accessible data repository will set you up for success.
 
-![source: <https://www.library.ucsb.edu/sites/default/files/dls-n04-2021-fair-navy.pdf>](images/fair-principles.png)
+![source: <https://www.library.ucsb.edu/sites/default/files/dls-n04-2021-fair-navy.pdf>](img/datamgmt_fair-principles.png){width="80%" fig-align="left"}
 
-Below is a set of questions that will help your team think about the data and resources you will need along your project's data lifecycle.
+Below is a set of questions that will help your team think about the data and resources you will need along your projects' data lifecycle.
 
-1.  **Describing the research data**: Provide a description of the data the group will collect or re-use, including the file types, data set size, the number of expected files or sets, content, and source of the data (creator and method of collection).
+1.  **Describing the research data generated by your lab**: Provide a description of the data the group will collect or re-use, including the file types, data set size, the number of expected files or sets, content, and source of the data (creator and method of collection).
 
     i)  What data are needed?
     ii) Are such data available?
