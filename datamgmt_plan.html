@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Designing a Reproducible and Collaborative Lab (RCL) - Pair Programming</title>
+<title>Designing a Reproducible and Collaborative Lab (RCL) - Data Management Plan (DMP)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./collab_exchange.html" rel="next">
-<link href="./git_further_readings.html" rel="prev">
+<link href="./datamgmt_manage.html" rel="next">
+<link href="./data_mgmt.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./collab_pairprog.html">Collaborative strategies</a></li><li class="breadcrumb-item"><a href="./collab_pairprog.html">Pair Programming</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your Research data</a></li><li class="breadcrumb-item"><a href="./datamgmt_plan.html">Plan</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -181,16 +181,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
  <span class="menu-text">Collaborative strategies</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./collab_pairprog.html" class="sidebar-item-text sidebar-link active">
+  <a href="./collab_pairprog.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pair Programming</span></a>
   </div>
 </li>
@@ -256,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datamgmt_plan.html" class="sidebar-item-text sidebar-link">
+  <a href="./datamgmt_plan.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Plan</span></a>
   </div>
 </li>
@@ -284,18 +284,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#basic-principles-practices" id="toc-basic-principles-practices" class="nav-link active" data-scroll-target="#basic-principles-practices">Basic principles &amp; practices</a></li>
-  <li><a href="#tips-and-tricks-for-effective-team-programming" id="toc-tips-and-tricks-for-effective-team-programming" class="nav-link" data-scroll-target="#tips-and-tricks-for-effective-team-programming">Tips and Tricks for Effective Team Programming</a></li>
-  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  <li><a href="#developing-your-lab-data-management-plan-dmp" id="toc-developing-your-lab-data-management-plan-dmp" class="nav-link active" data-scroll-target="#developing-your-lab-data-management-plan-dmp">Developing your Lab Data Management Plan (DMP)</a></li>
+  <li><a href="#data-management-plan-tool" id="toc-data-management-plan-tool" class="nav-link" data-scroll-target="#data-management-plan-tool">Data Management Plan Tool</a></li>
+  <li><a href="#using-your-data-management-plan" id="toc-using-your-data-management-plan" class="nav-link" data-scroll-target="#using-your-data-management-plan">Using your Data Management Plan</a></li>
+  <li><a href="#further-reading-recommendations" id="toc-further-reading-recommendations" class="nav-link" data-scroll-target="#further-reading-recommendations">Further Reading Recommendations</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./collab_pairprog.html">Collaborative strategies</a></li><li class="breadcrumb-item"><a href="./collab_pairprog.html">Pair Programming</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your Research data</a></li><li class="breadcrumb-item"><a href="./datamgmt_plan.html">Plan</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Pair Programming</h1>
+<h1 class="title">Data Management Plan (DMP)</h1>
 </div>
 
 
@@ -312,31 +313,76 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Pair programming is an <em>synchronous</em> team activity, where several programmers get to work together on the same piece of code. This is a great way to gain a better sense of what coding style people are using and better understand their way of solving challenges. It is also a great way to learn from each other. Generally, there is one Driver who is the person typing at the computer. The other role is called Navigator(s). The Navigator does not write code and focuses on finding solutions to the problem. Their use of computers should be limited to searching online for solutions.</p>
-<section id="basic-principles-practices" class="level2">
-<h2 class="anchored" data-anchor-id="basic-principles-practices">Basic principles &amp; practices</h2>
-<p>Adapted from Woody Zuill <a href="https://www.agileconnection.com/article/getting-started-mob-programming" class="uri">https://www.agileconnection.com/article/getting-started-mob-programming</a></p>
+<p>In a nutshell, <strong>your goal is to organize your research lab in a way that will let you document and preserve your scientific products</strong> - including raw and derived data when possible. When delivering a project to a funder, it is important to ensure the funder can understand and reuse the products (code, data, apps) you have developed. For those reasons, more and more funders require a data management plan as part of their proposal submission process; therefore, it is a great skill to develop.</p>
+<p>Having a plan to manage your data will save you from some potential painful hiccups and time as you progress through your project data life cycle. In other words, it is time well spent to develop your data management plan, and the earlier in your project, the better you have a good sense of how you will manage your data. The discussion with your project team about what should be included in the plan is as important as the plan itself since the questions you will have to answer will help you think more about your data (e.g., type, size, processing methods, etc.) and assign roles and responsibilities among project members.</p>
+<p>Once your lab data are well managed, it becomes easier to archive and share relevant data in a publicly accessible data repository such as <a href="https://datadryad.org/stash">Dryad</a> as your projects are completed or important milestones are achieved. For your work to generate a reproducible data archive, metadata and documentation must also be provided, as well as the scripts you have developed for your analysis. Here is a good example of a well-documented data archive: <a href="https://doi.org/10.25349/D9JK6N" class="uri">https://doi.org/10.25349/D9JK6N</a></p>
+<p>Before writing your plan, we recommend you get familiar with the <a href="https://www.go-fair.org/fair-principles/">FAIR</a> and <a href="https://www.gida-global.org/care">CARE</a> principles to guide your process.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="img/datamgmt_be-FAIR-and-CARE.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></p>
+<figcaption>source: <a href="https://www.gida-global.org/care" class="uri">https://www.gida-global.org/care</a></figcaption>
+</figure>
+</div>
+<p>Those two principles should be the overarching guidelines that will guide the development of your data management plan.</p>
+<section id="developing-your-lab-data-management-plan-dmp" class="level2">
+<h2 class="anchored" data-anchor-id="developing-your-lab-data-management-plan-dmp">Developing your Lab Data Management Plan (DMP)</h2>
+<p>You might already have experience with writing project specific data management plans as they are often required in proposals. The process to develop your lab’s data management plan is very similar, but will be more focused on developing general guidelines for your lab that can be adatped for project specific needs. We recommend using the FAIR &amp; CARE principles as guidance to maximize the reusability of your data by you, your collaborators, other researchers, and futureself. Your plan should ensure that detailed documentation adopting existing standards is developed during the entire duration of your project (don’t wait until the very end!!) and that this documentation is archived along with your data and code in a publicly accessible data repository will set you up for success.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="img/datamgmt_fair-principles.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></p>
+<figcaption>source: <a href="https://www.library.ucsb.edu/sites/default/files/dls-n04-2021-fair-navy.pdf" class="uri">https://www.library.ucsb.edu/sites/default/files/dls-n04-2021-fair-navy.pdf</a></figcaption>
+</figure>
+</div>
+<p>Below is a set of questions that will help your team think about the data and resources you will need along your projects’ data lifecycle.</p>
+<ol type="1">
+<li><p><strong>Describing the research data generated by your lab</strong>: Provide a description of the data the group will collect or re-use, including the file types, data set size, the number of expected files or sets, content, and source of the data (creator and method of collection).</p>
+<ol type="i">
+<li>What data are needed?</li>
+<li>Are such data available?</li>
+<li>When and how will the data be acquired?</li>
+</ol></li>
+<li><p><strong>Data formats</strong>:</p>
+<ol type="i">
+<li>Are there any standard formats in the specific research field for managing or disseminating the data sets that have been identified (e.g., XML, ASCII, CSV, .shp, .gdb, GeoTIFF)?</li>
+<li>Who from the group will have responsibility for ensuring that data standards are properly applied, and data are properly formatted?</li>
+</ol></li>
+<li><p><strong>Metadata</strong>: Metadata is documentation that helps make data sets reusable. Think about what details someone would need in order to be able to understand and use these files. For example, perhaps a <code>readme.txt</code> file is necessary to explain variables, the structure of the files, etc. In addition, it is recommended to leverage metadata disciplinary standards, including ontologies and vocabularies. Here is a <a href="https://rdamsc.bath.ac.uk/subject/Environmental%20sciences">good resource</a> for metadata standards in environmental sciences. When applicable, also describe other scientific products - models, scripts, and/or workflows - your group will be producing using README files and documenting your code.</p></li>
+<li><p><strong>Data sharing and access</strong> The data may have significant value for other researchers beyond this project, and sharing this data is part of the group’s responsibility as members of the scientific community. Specify the extent to which data can be reused, including any access limitations. List any proprietary software that might be needed to read the files. If some data is not shareable due to confidentiality, non-disclosure agreements (NDA), or disclosure risk, state such limitations and the rationale behind them.</p></li>
+<li><p><strong>Intellectual property and re-use</strong>: If data were collected from the client organization, does the group have the right to redistribute it? If so, are there any restrictions on redistribution? If the group created its data files, would it assign a Creative Commons license to its data?</p></li>
+<li><p><strong>Data archiving and preservation</strong>: Throughout the project, the group may produce a large number of files. At the end of the project, groups must submit data produced by the project (except data protected by non-disclosure agreements) and when relevant raw data as well. Not all data needs to be saved. Here are some questions to ask yourselves:</p>
+<ol type="i">
+<li>If another researcher wanted to replicate the group’s work or re-use the group’s data, what data and documentation would be required for them to do so?<br>
+</li>
+<li>Where will the data and metadata be stored after the project is completed?</li>
+<li>Is there a subject-specific and/or open-access repository that is appropriate for the data?</li>
+</ol></li>
+</ol>
+<p>One advantage to depositing your data in a data repository is that you can get a <a href="https://www.doi.org/the-identifier/what-is-a-doi/">DOI</a> that lets you easily share and cite your data. Most of the data repositories also track views, downloads, and citations for your data archive, which can be used as a metric or a proxy for research impact.</p>
+</section>
+<section id="data-management-plan-tool" class="level2">
+<h2 class="anchored" data-anchor-id="data-management-plan-tool">Data Management Plan Tool</h2>
+<p>There is a tool that you can use to guide your process: <strong>the DMP Tool</strong>. It is a little bit like an online form on steroids. Note that you do not have to use this tool for your project, but from our experience, it provides good guidance for this process.</p>
 <ul>
-<li><strong>Treat each other with kindness, consideration, and respect</strong> - makes group work more fun and sustainable</li>
-<li><strong>Driver/navigator pair programming adapted to work with the whole team</strong> - “For an idea to go from your head into the computer, it <em>must</em> go through someone else’s hands.” Speak at the highest level of abstraction that the driver (and the rest of the team) is able to digest at the moment</li>
-<li><strong>Timed Rotation</strong> - 20-40 minutes. We don’t require that everyone take the driver role; it is everyone’s choice whether to do so</li>
-<li><strong>Whole Team</strong> - every contributor to the project is an integral part of the whole team; when we don’t have the skills we need within the team, we find someone who does and invite them to work with us to accomplish the needed work</li>
-<li><strong>Reflect, Tune, and Adjust Frequently</strong> - based on agile principle: “At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.”</li>
+<li>(Almost) everything in one page: <a href="https://www.library.ucsb.edu/sites/default/files/dls-n05-2022-dmptool-navy_0.pdf" class="uri">https://www.library.ucsb.edu/sites/default/files/dls-n05-2022-dmptool-navy_0.pdf</a></li>
+</ul>
+<iframe width="100%" height="1000" src="https://www.library.ucsb.edu/sites/default/files/dls-n05-2022-dmptool-navy_0.pdf">
+</iframe>
+<ul>
+<li><p>Guidelines on developing your project data management plan using the DMP Tool: <em>Renata G Curty. (2023). DMP Recommendations (DCC Template). Zenodo.</em> <a href="https://doi.org/10.5281/zenodo.7566971" class="uri">https://doi.org/10.5281/zenodo.7566971</a></p></li>
+<li><p>Get started with the tool: <a href="http://dmptool.org/" class="uri">http://dmptool.org/</a><br>
+<em>Make sure to create an account using your UCSB email!</em></p></li>
 </ul>
 </section>
-<section id="tips-and-tricks-for-effective-team-programming" class="level2">
-<h2 class="anchored" data-anchor-id="tips-and-tricks-for-effective-team-programming">Tips and Tricks for Effective Team Programming</h2>
-<p>Adapted from Corey Johannsen: https://blog.newrelic.com/2017/10/31/mob-programming-hurdles/</p>
-<ul>
-<li><strong>Suggest, don’t dictate:</strong> Instead of telling the driver what to type into their editor, we explain what we are trying to accomplish and then help the driver find the best solution. We have found that drivers learn better this way, and they don’t just end up feeling like a stenographer. Whenever possible, we ask questions that lead the driver to discover the answers on their own.</li>
-<li><strong>Stay focused and be present:</strong> Shut your laptop and put your phone away. I have struggled with following this guideline—we all have—and I recognize that the distraction almost always affects the rest of the mob. We tell all our mob members to be present, and if you can not, it is OK to leave until you can be.</li>
-<li><strong>Use a timer, but be ready to pause it:</strong> We switch drivers every 20 - 60 minutes. However, we often wander off implementation into design discussions—it’s unavoidable—so this is when we pause the timer. This is another key guideline of our mob: the time you spend driving should be dedicated to writing the code that helps complete the task, not discussing design solutions.</li>
-<li><strong>Set specific tasks for each session:</strong> When our mob gathers for a session, we first agree on and create a checklist of the tasks we are going to complete and order them by priority on a whiteboard. This ensures we are all focused on the same task and keeps us moving forward. Additionally, this keeps us aligned with Minimal Marketable Feature (MMF) work, which we can communicate with our engineering and product managers to assure them we are completing tasks that align with developing small, self-contained features that demonstrate immediate customer value.</li>
-</ul>
+<section id="using-your-data-management-plan" class="level2">
+<h2 class="anchored" data-anchor-id="using-your-data-management-plan">Using your Data Management Plan</h2>
+<p>Ok, you have a plan, now what!? <strong>A data management plan should be seen as a living document</strong> that you update as your project develops and data needs evolve. We thus recommend sharing this plan with all your team members and external partners when relevant. The DMP Tool has the capacity to share plans directly from the tool. If you do not choose to use it, we recommend choosing a file format that can be collectively edited and provide some versioning/track changes feature, such as Google Docs or other cloud-based storage and documents.</p>
 </section>
-<section id="acknowledgements" class="level2">
-<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
-<p>This section reuses a lot of materials from an R Meetup organized by the Santa Barbara R Users group (https://github.com/R-Meetup-SB/hackathon-201806), including material prepared by Irene Steves.</p>
+<section id="further-reading-recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading-recommendations">Further Reading Recommendations</h2>
+<ul>
+<li>Good overview of Data management concepts: <em>Arteaga Cuevas, Maria; Taylor, Shawna; and Narlock, Mikala. (2023). Introduction to Research Data Management for Researchers. Data Curation Network</em> <a href="https://github.com/DataCurationNetwork/data-primers/blob/master/Primer%20for%20Researchers%20on%20How%20to%20Manage%20Data/Primer-for-researchers-on-how-to-manage-data.md#data-management-and-curation-principles">Primer for Researchers on how to Manage Data</a></li>
+<li>Good overview of the data lifecycle, including itemized checklist: <a href="https://osf.io/d8fqh" class="uri">https://osf.io/d8fqh</a></li>
+</ul>
 
 
 </section>
@@ -737,13 +783,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./git_further_readings.html" class="pagination-link" aria-label="Git and GitHub further readings">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Git and GitHub further readings</span>
+      <a href="./data_mgmt.html" class="pagination-link" aria-label="What is data management?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">What is data management?</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./collab_exchange.html" class="pagination-link" aria-label="Code Exchange">
-        <span class="nav-page-text">Code Exchange</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./datamgmt_manage.html" class="pagination-link" aria-label="Manage">
+        <span class="nav-page-text">Manage</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

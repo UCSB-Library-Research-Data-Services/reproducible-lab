@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Designing a Reproducible and Collaborative Lab (RCL) - Pair Programming</title>
+<title>Designing a Reproducible and Collaborative Lab (RCL) - Manage your data as you go</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./collab_exchange.html" rel="next">
-<link href="./git_further_readings.html" rel="prev">
+<link href="./datamgmt_preserve.html" rel="next">
+<link href="./datamgmt_plan.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./collab_pairprog.html">Collaborative strategies</a></li><li class="breadcrumb-item"><a href="./collab_pairprog.html">Pair Programming</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your Research data</a></li><li class="breadcrumb-item"><a href="./datamgmt_manage.html">Manage</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -181,16 +181,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
  <span class="menu-text">Collaborative strategies</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./collab_pairprog.html" class="sidebar-item-text sidebar-link active">
+  <a href="./collab_pairprog.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pair Programming</span></a>
   </div>
 </li>
@@ -262,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datamgmt_manage.html" class="sidebar-item-text sidebar-link">
+  <a href="./datamgmt_manage.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Manage</span></a>
   </div>
 </li>
@@ -284,18 +284,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#basic-principles-practices" id="toc-basic-principles-practices" class="nav-link active" data-scroll-target="#basic-principles-practices">Basic principles &amp; practices</a></li>
-  <li><a href="#tips-and-tricks-for-effective-team-programming" id="toc-tips-and-tricks-for-effective-team-programming" class="nav-link" data-scroll-target="#tips-and-tricks-for-effective-team-programming">Tips and Tricks for Effective Team Programming</a></li>
-  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  <li><a href="#track-your-data-sources" id="toc-track-your-data-sources" class="nav-link active" data-scroll-target="#track-your-data-sources">Track your data sources</a></li>
+  <li><a href="#keep-raw-data-raw" id="toc-keep-raw-data-raw" class="nav-link" data-scroll-target="#keep-raw-data-raw">Keep raw data raw</a></li>
+  <li><a href="#project-organization" id="toc-project-organization" class="nav-link" data-scroll-target="#project-organization">Project organization</a></li>
+  <li><a href="#adopt-a-consistent-naming-convention" id="toc-adopt-a-consistent-naming-convention" class="nav-link" data-scroll-target="#adopt-a-consistent-naming-convention">Adopt a consistent naming convention</a></li>
+  <li><a href="#backup-your-data" id="toc-backup-your-data" class="nav-link" data-scroll-target="#backup-your-data">Backup your data</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./collab_pairprog.html">Collaborative strategies</a></li><li class="breadcrumb-item"><a href="./collab_pairprog.html">Pair Programming</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your Research data</a></li><li class="breadcrumb-item"><a href="./datamgmt_manage.html">Manage</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Pair Programming</h1>
+<h1 class="title">Manage your data as you go</h1>
 </div>
 
 
@@ -312,31 +314,84 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Pair programming is an <em>synchronous</em> team activity, where several programmers get to work together on the same piece of code. This is a great way to gain a better sense of what coding style people are using and better understand their way of solving challenges. It is also a great way to learn from each other. Generally, there is one Driver who is the person typing at the computer. The other role is called Navigator(s). The Navigator does not write code and focuses on finding solutions to the problem. Their use of computers should be limited to searching online for solutions.</p>
-<section id="basic-principles-practices" class="level2">
-<h2 class="anchored" data-anchor-id="basic-principles-practices">Basic principles &amp; practices</h2>
-<p>Adapted from Woody Zuill <a href="https://www.agileconnection.com/article/getting-started-mob-programming" class="uri">https://www.agileconnection.com/article/getting-started-mob-programming</a></p>
+<p>While actively working on your project, there are several practices that can help you to manage your data in an efficient manner that will help you to collaborate with others (including your future self!) and make your work more reproducible.</p>
+<section id="track-your-data-sources" class="level2">
+<h2 class="anchored" data-anchor-id="track-your-data-sources">Track your data sources</h2>
+<p>As you collect your data, if using pre-existing data sources, we strongly recommend that you keep track of where/by whom you accessed the data you will use. It can be a link to a data archive, an official agency website, or the contact information of a person. This data log can be developed using a spreadsheet that you can share with your team. The goal here is to make sure you can:</p>
 <ul>
-<li><strong>Treat each other with kindness, consideration, and respect</strong> - makes group work more fun and sustainable</li>
-<li><strong>Driver/navigator pair programming adapted to work with the whole team</strong> - “For an idea to go from your head into the computer, it <em>must</em> go through someone else’s hands.” Speak at the highest level of abstraction that the driver (and the rest of the team) is able to digest at the moment</li>
-<li><strong>Timed Rotation</strong> - 20-40 minutes. We don’t require that everyone take the driver role; it is everyone’s choice whether to do so</li>
-<li><strong>Whole Team</strong> - every contributor to the project is an integral part of the whole team; when we don’t have the skills we need within the team, we find someone who does and invite them to work with us to accomplish the needed work</li>
-<li><strong>Reflect, Tune, and Adjust Frequently</strong> - based on agile principle: “At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.”</li>
+<li>Go back to the original source and the right version of the data</li>
+<li>Correctly attribute/cite the data sources when you project</li>
+<li>Reach out to data creators and ask for potential clarifications you might need to correctly interpret the data</li>
+<li>Inquiry for any data updates at a later date</li>
 </ul>
 </section>
-<section id="tips-and-tricks-for-effective-team-programming" class="level2">
-<h2 class="anchored" data-anchor-id="tips-and-tricks-for-effective-team-programming">Tips and Tricks for Effective Team Programming</h2>
-<p>Adapted from Corey Johannsen: https://blog.newrelic.com/2017/10/31/mob-programming-hurdles/</p>
-<ul>
-<li><strong>Suggest, don’t dictate:</strong> Instead of telling the driver what to type into their editor, we explain what we are trying to accomplish and then help the driver find the best solution. We have found that drivers learn better this way, and they don’t just end up feeling like a stenographer. Whenever possible, we ask questions that lead the driver to discover the answers on their own.</li>
-<li><strong>Stay focused and be present:</strong> Shut your laptop and put your phone away. I have struggled with following this guideline—we all have—and I recognize that the distraction almost always affects the rest of the mob. We tell all our mob members to be present, and if you can not, it is OK to leave until you can be.</li>
-<li><strong>Use a timer, but be ready to pause it:</strong> We switch drivers every 20 - 60 minutes. However, we often wander off implementation into design discussions—it’s unavoidable—so this is when we pause the timer. This is another key guideline of our mob: the time you spend driving should be dedicated to writing the code that helps complete the task, not discussing design solutions.</li>
-<li><strong>Set specific tasks for each session:</strong> When our mob gathers for a session, we first agree on and create a checklist of the tasks we are going to complete and order them by priority on a whiteboard. This ensures we are all focused on the same task and keeps us moving forward. Additionally, this keeps us aligned with Minimal Marketable Feature (MMF) work, which we can communicate with our engineering and product managers to assure them we are completing tasks that align with developing small, self-contained features that demonstrate immediate customer value.</li>
-</ul>
+<section id="keep-raw-data-raw" class="level2">
+<h2 class="anchored" data-anchor-id="keep-raw-data-raw">Keep raw data raw</h2>
+<p>During the data collection phase, also make sure to create a dedicated folder to save the raw data version you just acquired.</p>
+<p>If you are using a programmatic approach to process your data (e.g., API), make sure to only read the raw data and save any processed intermediate data products in a different folder. We recommend changing the permissions on your raw data folder to read-only to avoid any unexpected incidents.</p>
+<p>If you are accessing the data using a Graphical User Interface (GUI), we recommend you create a “working copy” of your raw data in a separate folder and use those files as it is often very easy to accidentally overwrite it.</p>
 </section>
-<section id="acknowledgements" class="level2">
-<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
-<p>This section reuses a lot of materials from an R Meetup organized by the Santa Barbara R Users group (https://github.com/R-Meetup-SB/hackathon-201806), including material prepared by Irene Steves.</p>
+<section id="project-organization" class="level2">
+<h2 class="anchored" data-anchor-id="project-organization">Project organization</h2>
+<p>We recommend encapsulating your project into one folder. It will make it more portable when combined with a <a href="https://www.educative.io/answers/absolute-vs-relative-path">relative path</a> and help you keep the information centralized in one place. Here is a starting point for your file structure with three subfolders:</p>
+<ul>
+<li>Data: where you will store your data with the following file structure
+<ul>
+<li>Input_data: to store the raw data you collected or/and are reusing</li>
+<li>Intermediate_data: to store any cleaned or merged data sets</li>
+<li>Analysis_data: any model analytical outputs that you computed</li>
+</ul></li>
+<li>Code or Scripts: you can store your scripts in this folder. You can keep everything within the folder using filename to organize it or create subfolders as needed</li>
+<li>Results: to store tables, graphs, reports, or any other scientific products you are producing</li>
+</ul>
+<p>In the top-level folder, we also recommend you write a README to explain your project, list the contributors and provide information on how to best navigate your project folder as well as a short description of the files it contains.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/project_organization.png" class="img-fluid figure-img"></p>
+<figcaption>Source: <a href="https://www.library.ucsb.edu/sites/default/files/dls-n8-2021-projectfolder-navy.pdf">RDS Data Literacy Series</a></figcaption>
+</figure>
+</div>
+<p>Of course, each project is different, so adapt these recommendations to your own project needs!</p>
+</section>
+<section id="adopt-a-consistent-naming-convention" class="level2">
+<h2 class="anchored" data-anchor-id="adopt-a-consistent-naming-convention">Adopt a consistent naming convention</h2>
+<p>Develop naming conventions for files and folders:</p>
+<ul>
+<li>Avoid spaces (use underscores or dashes)</li>
+<li>Avoid punctuation or special characters</li>
+<li>Try to leverage alphabetical order (e.g., start with dates: 2020-05-08)</li>
+<li>Use descriptive naming (lite metadata)</li>
+<li>Use folders to structure/organize content</li>
+<li>Keep it simple</li>
+<li>Make it programmatically useful:
+<ul>
+<li>Useful to select files (Wildcard *, regular expression)</li>
+<li>But don’t forget Humans need to read file names too!!</li>
+<li>Tip: leverage the use of <code>_</code> and <code>-</code> to make your filename readable by both Humans and machines!</li>
+</ul></li>
+</ul>
+<section id="try-it" class="level4">
+<h4 class="anchored" data-anchor-id="try-it">Try it:</h4>
+<p>Which filename would be the most useful?</p>
+<ul>
+<li><code>06-2020-08-sensor2-plot1.csv</code></li>
+<li><code>2020-05-08_light-sensor-1_plot-1.csv</code></li>
+<li><code>Measurement 1.csv</code></li>
+<li><code>2020-05-08-light-sensor-1-plot-2.csv</code></li>
+<li><code>2020-05-08-windSensor1-plot3.csv</code></li>
+</ul>
+<p><strong><em>Remember, the most important is to make it consistent!</em></strong></p>
+<p>A <a href="https://speakerdeck.com/jennybc/how-to-name-files">good reference</a> on this topic from Jenny Bryan (Posit).</p>
+</section>
+</section>
+<section id="backup-your-data" class="level2">
+<h2 class="anchored" data-anchor-id="backup-your-data">Backup your data</h2>
+<p>Don’t forget, things happen!!!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/broken_laptop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
 
 
 </section>
@@ -737,13 +792,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./git_further_readings.html" class="pagination-link" aria-label="Git and GitHub further readings">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Git and GitHub further readings</span>
+      <a href="./datamgmt_plan.html" class="pagination-link" aria-label="Plan">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Plan</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./collab_exchange.html" class="pagination-link" aria-label="Code Exchange">
-        <span class="nav-page-text">Code Exchange</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./datamgmt_preserve.html" class="pagination-link" aria-label="Preserve">
+        <span class="nav-page-text">Preserve</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

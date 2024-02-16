@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Designing a Reproducible and Collaborative Lab (RCL) - Pair Programming</title>
+<title>Designing a Reproducible and Collaborative Lab (RCL) - Preserve your data for reuse</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./collab_exchange.html" rel="next">
-<link href="./git_further_readings.html" rel="prev">
+<link href="./datamgmt_manage.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -93,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./collab_pairprog.html">Collaborative strategies</a></li><li class="breadcrumb-item"><a href="./collab_pairprog.html">Pair Programming</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your Research data</a></li><li class="breadcrumb-item"><a href="./datamgmt_preserve.html">Preserve</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -181,16 +180,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
  <span class="menu-text">Collaborative strategies</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./collab_pairprog.html" class="sidebar-item-text sidebar-link active">
+  <a href="./collab_pairprog.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pair Programming</span></a>
   </div>
 </li>
@@ -268,7 +267,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datamgmt_preserve.html" class="sidebar-item-text sidebar-link">
+  <a href="./datamgmt_preserve.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Preserve</span></a>
   </div>
 </li>
@@ -284,18 +283,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#basic-principles-practices" id="toc-basic-principles-practices" class="nav-link active" data-scroll-target="#basic-principles-practices">Basic principles &amp; practices</a></li>
-  <li><a href="#tips-and-tricks-for-effective-team-programming" id="toc-tips-and-tricks-for-effective-team-programming" class="nav-link" data-scroll-target="#tips-and-tricks-for-effective-team-programming">Tips and Tricks for Effective Team Programming</a></li>
-  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  <li><a href="#what-scientific-products-to-preserve" id="toc-what-scientific-products-to-preserve" class="nav-link active" data-scroll-target="#what-scientific-products-to-preserve">What scientific products to preserve?</a>
+  <ul class="collapse">
+  <li><a href="#raw-data" id="toc-raw-data" class="nav-link" data-scroll-target="#raw-data">Raw data</a></li>
+  <li><a href="#intermediate-data" id="toc-intermediate-data" class="nav-link" data-scroll-target="#intermediate-data">Intermediate data</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
+  <li><a href="#final-products" id="toc-final-products" class="nav-link" data-scroll-target="#final-products">Final products</a></li>
+  </ul></li>
+  <li><a href="#choosing-a-data-repository" id="toc-choosing-a-data-repository" class="nav-link" data-scroll-target="#choosing-a-data-repository">Choosing a data repository</a>
+  <ul class="collapse">
+  <li><a href="#dryad" id="toc-dryad" class="nav-link" data-scroll-target="#dryad">Dryad</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./collab_pairprog.html">Collaborative strategies</a></li><li class="breadcrumb-item"><a href="./collab_pairprog.html">Pair Programming</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your Research data</a></li><li class="breadcrumb-item"><a href="./datamgmt_preserve.html">Preserve</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Pair Programming</h1>
+<h1 class="title">Preserve your data for reuse</h1>
 </div>
 
 
@@ -312,33 +319,60 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Pair programming is an <em>synchronous</em> team activity, where several programmers get to work together on the same piece of code. This is a great way to gain a better sense of what coding style people are using and better understand their way of solving challenges. It is also a great way to learn from each other. Generally, there is one Driver who is the person typing at the computer. The other role is called Navigator(s). The Navigator does not write code and focuses on finding solutions to the problem. Their use of computers should be limited to searching online for solutions.</p>
-<section id="basic-principles-practices" class="level2">
-<h2 class="anchored" data-anchor-id="basic-principles-practices">Basic principles &amp; practices</h2>
-<p>Adapted from Woody Zuill <a href="https://www.agileconnection.com/article/getting-started-mob-programming" class="uri">https://www.agileconnection.com/article/getting-started-mob-programming</a></p>
+<p>As you finalize your project, an important task is to archive your data in a publicly available repository (pending sensitivity and by non-disclosure agreement exceptions). There are a few important steps to ensure that your data can be reused by others and thus make your work more reproducible.</p>
+<section id="what-scientific-products-to-preserve" class="level2">
+<h2 class="anchored" data-anchor-id="what-scientific-products-to-preserve">What scientific products to preserve?</h2>
+<p>Often the first question that comes to mind when starting to preserve your work is: What should I include in my data archive? Generally speaking, you want to preserve <strong>your</strong> work. This means capturing the methodology you used, the raw data you collected, any data cleaning you did, and any data and output (figure, report, etc.) you generated. Okay… so you mean everything!? Well, yes and no. Everything that was relevant to help you to come to the findings and conclusions discussed in your project report or any other publications and deliverables. Let’s break this down!</p>
+<section id="raw-data" class="level3">
+<h3 class="anchored" data-anchor-id="raw-data">Raw data</h3>
+<p>Here are a few questions to ask yourself to determine if you should refer in your documentation to the raw data you used or also include them in your data archive.</p>
+<ol type="1">
+<li>The <strong>raw data is already publicly accessible</strong>, and the hosting solution (website, FTP server, etc.) seems well maintained (ideally providing a recommended citation)</li>
+</ol>
+<p>=&gt; Document the website or process you used to collect the data and when you accessed/downloaded the data you used. Try also to determine if a pecific version number is associated with the data you used.*</p>
+<ol start="2" type="1">
+<li>The raw data is <strong>not</strong> publicly accessible</li>
+</ol>
+<p>Note that we are not talking about data under a non-disclosure agreement (NDA) here but more about data with an unclear reuse status or obtained by interactions with a person or an institution. For example, if the data you used were sent to you privately, then we recommend that you:</p>
 <ul>
-<li><strong>Treat each other with kindness, consideration, and respect</strong> - makes group work more fun and sustainable</li>
-<li><strong>Driver/navigator pair programming adapted to work with the whole team</strong> - “For an idea to go from your head into the computer, it <em>must</em> go through someone else’s hands.” Speak at the highest level of abstraction that the driver (and the rest of the team) is able to digest at the moment</li>
-<li><strong>Timed Rotation</strong> - 20-40 minutes. We don’t require that everyone take the driver role; it is everyone’s choice whether to do so</li>
-<li><strong>Whole Team</strong> - every contributor to the project is an integral part of the whole team; when we don’t have the skills we need within the team, we find someone who does and invite them to work with us to accomplish the needed work</li>
-<li><strong>Reflect, Tune, and Adjust Frequently</strong> - based on agile principle: “At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.”</li>
+<li>inquire with your person of contact about the status of licensing and if they would be willing to let you share those data publicly. You might face resistance at first, so take the time to explain why you think it is valuable to your work to also share those data sets.</li>
+<li>if, in the end, it is not possible to share the data, please still describe the data in your documentation and list the contact information (person or institution) to inquire about this data set.</li>
 </ul>
 </section>
-<section id="tips-and-tricks-for-effective-team-programming" class="level2">
-<h2 class="anchored" data-anchor-id="tips-and-tricks-for-effective-team-programming">Tips and Tricks for Effective Team Programming</h2>
-<p>Adapted from Corey Johannsen: https://blog.newrelic.com/2017/10/31/mob-programming-hurdles/</p>
+<section id="intermediate-data" class="level3">
+<h3 class="anchored" data-anchor-id="intermediate-data">Intermediate data</h3>
+<p>This is data you generated either while cleaning or analyzing the raw data. You should preserve it if:</p>
 <ul>
-<li><strong>Suggest, don’t dictate:</strong> Instead of telling the driver what to type into their editor, we explain what we are trying to accomplish and then help the driver find the best solution. We have found that drivers learn better this way, and they don’t just end up feeling like a stenographer. Whenever possible, we ask questions that lead the driver to discover the answers on their own.</li>
-<li><strong>Stay focused and be present:</strong> Shut your laptop and put your phone away. I have struggled with following this guideline—we all have—and I recognize that the distraction almost always affects the rest of the mob. We tell all our mob members to be present, and if you can not, it is OK to leave until you can be.</li>
-<li><strong>Use a timer, but be ready to pause it:</strong> We switch drivers every 20 - 60 minutes. However, we often wander off implementation into design discussions—it’s unavoidable—so this is when we pause the timer. This is another key guideline of our mob: the time you spend driving should be dedicated to writing the code that helps complete the task, not discussing design solutions.</li>
-<li><strong>Set specific tasks for each session:</strong> When our mob gathers for a session, we first agree on and create a checklist of the tasks we are going to complete and order them by priority on a whiteboard. This ensures we are all focused on the same task and keeps us moving forward. Additionally, this keeps us aligned with Minimal Marketable Feature (MMF) work, which we can communicate with our engineering and product managers to assure them we are completing tasks that align with developing small, self-contained features that demonstrate immediate customer value.</li>
+<li>it was not directly generated by a script (otherwise, preserve the code instead)</li>
+<li>it has reusable value. For example, cleaned-up versions of raw data can be very valuable for others to reuse!</li>
 </ul>
 </section>
-<section id="acknowledgements" class="level2">
-<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
-<p>This section reuses a lot of materials from an R Meetup organized by the Santa Barbara R Users group (https://github.com/R-Meetup-SB/hackathon-201806), including material prepared by Irene Steves.</p>
+<section id="code" class="level3">
+<h3 class="anchored" data-anchor-id="code">Code</h3>
+<p>Scripting your analytical workflow from the raw data to the end products is a great way to make your work more reproducible and more reusable by others. We thus strongly encourage your team to develop code to process and analyze data. Cloud-based code repository services, such as GitHub, GitLab, BitBucket, and more, are a great way to both manage and preserve your code.</p>
+<p>Those services are often well-integrated with data repositories that link your code repository with your data archive. They also offer a way to tag a specific version of your code to ensure it is the exact code you used for a specific analysis.</p>
+</section>
+<section id="final-products" class="level3">
+<h3 class="anchored" data-anchor-id="final-products">Final products</h3>
+<p>We recommend including any data set used to produce statistics, figures maps, and other visualizations that were used in your work, in this case, even if generated by scripts.</p>
+</section>
+</section>
+<section id="choosing-a-data-repository" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-a-data-repository">Choosing a data repository</h2>
+<p>OK, we know what we want to archive. Now let’s decide where we want to preserve things!</p>
+<p>UCSB’s institutional data repository <a href="https://datadryad.org/stash">Dryad</a> will be your default data repository. However, we encourage you to discuss with your Faculty Advisor to determine if other data repositories might suit your targeted audience/community better. If you would like to research on your own which data repository could be best for your project, the <a href="https://www.re3data.org">Registry of Research Data Repositories</a> is a great resource to do so.</p>
+<section id="dryad" class="level3">
+<h3 class="anchored" data-anchor-id="dryad">Dryad</h3>
+<p><a href="https://datadryad.org/stash">Dryad</a> is free of use for any affiliated researcher. Here is an overview of the process of submitting data to DRYAD:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dryad_workflow.png" class="img-fluid figure-img"></p>
+<figcaption>DRYAD data submission overview</figcaption>
+</figure>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -737,14 +771,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./git_further_readings.html" class="pagination-link" aria-label="Git and GitHub further readings">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Git and GitHub further readings</span>
+      <a href="./datamgmt_manage.html" class="pagination-link" aria-label="Manage">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Manage</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./collab_exchange.html" class="pagination-link" aria-label="Code Exchange">
-        <span class="nav-page-text">Code Exchange</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
