@@ -1,1 +1,1 @@
-Sitemap: https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab/sitemap.xml
+Sitemap: https://UCSB-Library-Research-Data-Services.github.io/reproducible-lab/sitemap.xml
