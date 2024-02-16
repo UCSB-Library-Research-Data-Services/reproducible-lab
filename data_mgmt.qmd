@@ -10,7 +10,7 @@ Data are also part of the scientific products your Lab is producing. It is thus 
 
 ### Data Life Cycle
 
-To help thinking about your Lab data management, you can divide the life cycle of a data set in several phases:
+To help you think about your Lab data management, you can divide the life cycle of a data set in several phases:
 
 ![Research Data Management lifecycle; source: <https://osf.io/d8fqh>](images/data_lifecycle_rdm.png)
 
@@ -22,6 +22,6 @@ Here are a few prompts to help you start thinking about how you manage your data
 - What are your lab challenges related to accessing, manipulating and/or moving data?
 - What are your lab needs, pain points, or where do you feel time is wasted related to ensuring future use of data by yourself or others? 
 - What are your main security or data loss concerns related to your data?
-- What are your data that might be containing sensitive information (geolocation, human subjects, ...) and thus need special handling?
+- What are your data that might contain sensitive information (geolocation, human subjects, ...) and thus need special handling?
 - How have funder mandates for data or publication deposits created challenges for you?
 
