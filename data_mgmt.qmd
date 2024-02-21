@@ -12,7 +12,7 @@ Data are also part of the scientific products your Lab is producing. It is thus 
 
 To help you think about your Lab data management, you can divide the life cycle of a data set in several phases:
 
-![Research Data Management lifecycle; source: <https://osf.io/d8fqh>](img/data_lifecycle_rdm.png)
+![Research Data Management lifecycle; source: <https://osf.io/d8fqh>](img/data_lifecycle_rdm.png){width="70%" fig-align="center"}
 
 
 
