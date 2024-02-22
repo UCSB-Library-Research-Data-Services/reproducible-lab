@@ -276,7 +276,7 @@ You can see that there has been 3 commits so far. The first one was done by GitH
 Now that we have created these two commits on our local machine, our local version of the repository is different from the version on GitHub. RStudio communicate this information to you. If you look below the icons on the git pane, you will see the warning message: "Your branch is ahead of 'origin/master' by two commits". This can be translated as you have two additional commits on your local machine that you never shared back to the remote repository on GitHub. Open your favorite web browser and look at the content of your repository on GitHub. You will see the old version of the `README.md` and `.gitignore` file and no trace of the `.Rproj` file.
 
 ```{r RStudio git 2 local commits, fig.align='center', echo = FALSE}
-knitr::include_graphics("img/repo-not-synched.png")
+knitr::include_graphics("img/git_repo-not-synched.png")
 ```
 
 There are two git commands to exchange between local and remote versions of a repository:
@@ -294,7 +294,7 @@ RStudio has icons for that on top of the git pane, with the blue arrow down bein
 Let us do the pull and push to synchronize the remote repositories. We have now synchronized the local (our computer) and remote (on GitHub) versions of our repository.
 
 ```{r RStudio git, repo in sync, fig.align='center', echo = FALSE}
-knitr::include_graphics("img/repo-synched.png")
+knitr::include_graphics("img/git_repo-synched.png")
 ```
 
 You can now look at the page of your repository on GitHub, you should see 3 files with the exact same version that you have on your local!
