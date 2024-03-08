@@ -1,7 +1,249 @@
 ---
 title: "Using git and GitHub from the Command line"
+execute: 
+  eval: FALSE
 ---
 
 
 ## Short introduction to the command line interface (CLI)
 
+The CLI provides a direct way to interact with the Operating System, by typing in commands. 
+
+### Why the CLI is worth learning
+
+* Might be the only interface you have to a High Performance Computer (HPC)
+* Command statements can be reused easily and saved as scripts
+* Easier automation and text files manipulation
+
+      
+### A little bit of terminology
+
+- `Command Line Interface (CLI)`: This is a user interface that lets you interact with a computer. It is a legacy from the early days of computers. Now a days computers have graphical user interfaces instead (MacOSX, Windows, Linux, ...) 
+- `Terminal`: It is a an application that lets you run a command line interface. It used to be a physical machine connected to a mainframe computer
+- `Shell`: It is the program that runs the command line. There are many different shells, the most common (an default on most system) being `bash` (Bourne Again SHell)
+
+::: {.callout-tip}
+Not convinced? Check this out: [the CLI pitch](https://brunj7.github.io/eds214-handson-cli/cli-pitch.html)
+:::
+
+### The Terminal from RStudio
+
+You can access the command line directly from RStudio by using the `Terminal` tab next to your R console.
+
+![](img/cli-rstudio.png)
+### Navigating and managing files/directories in *NIX
+
+
+![](img/unix_filetree.gif)
+
+
+* `pwd`: Know where you are
+* `ls`: List the content of the directory
+* `cd`: Go inside a directory
+
+Some pseudo directory names. Wherever you are:
+
+* `~` : Home directory
+* `.` : Here (current directory)
+* `..`: Up one level (upper directory)
+
+Let's put this into action: 
+
+* go to my "Home" directory:  `cd ~`
+* go up one directory level: `cd ..`
+* list the content: `ls`
+* list the content showing hidden files: `ls -a`  note that `-a` is referred as an option (modifies the command)
+ 
+More files/directories manipulations:
+
+* `mkdir`: Create a directory
+* `cp`: Copy a file
+* `mv`: Move a file  **it is also how you rename a file!**
+* `rm` / `rmdir`: Remove a file / directory  **use those carefully, there is no return / Trash!!**
+
+
+**Note: typing is not your thing? the `<tab>` key is your friend!** One hit it will auto-complete the file/directory/path name for you. If there are many options, hit it twice to see the options.
+
+
+### Permissions
+
+All files have permissions and ownership.
+
+![File permissions](img/UnixFileLongFormat.png)
+
+* List files showing ownership and permissions: `ls -l`
+
+```{bash}
+brun@taylor:/courses/EDS214$ ls -l
+total 16
+drwxrwxr-x+ 3 brun      esmdomainusers 4096 Aug 20 04:49 data
+drwxrwxr-x+ 2 katherine esmdomainusers 4096 Aug 18 18:32 example	
+```
+
+You can change those permissions:
+
+* Change permissions: `chmod`
+* Change ownership: `chown`
+
+
+::: {.callout-tip}
+Clear contents in terminal window: `clear`
+:::
+
+
+## General command syntax
+
+* `command [options] [arguments]`
+
+where `command` must be an _executable_ file on your `PATH`
+* `echo $PATH`
+
+and `options` can usually take two forms
+* short form: `-a`
+* long form: `--all`
+
+You can combine the options:
+
+```{bash}
+ls -ltrh
+```
+
+What do these options do?
+
+```{bash}
+man ls
+```
+
+::: {.callout-tip}
+hit `spacebar` to get to the next page of the manual
+hit `q` to exit the help
+:::
+
+## Connecting to a remote server via `ssh`
+
+From the gitbash (MS Windows) or the terminal (Mac) type:
+
+```{bash}
+ssh taylor.bren.ucsb.edu
+```
+
+You will be prompted for your username and password.
+
+![aurora_ssh](img/aurora-ssh.png)
+
+You can also directly add your username:
+
+```{bash}
+ssh brun@taylor.bren.ucsb.edu
+```
+
+In this case, you will be only asked for your password as you already specified which user you want to connect with.
+
+
+
+## Unix systems are multi-user
+* Who else is logged into this machine?  `who`
+* Who is logged into "this shell"?  `whoami`
+
+
+
+## Getting help
+
+* `<command> -h`, `<command> --help`
+* `man`, `info`, `apropos`, `whereis`
+* Search the web!
+
+
+## finding stuff
+
+Show me my Rmarkdown files!
+
+```{bash}
+find . -iname '*.Rmd'
+```
+
+Which files are larger than 1GB?
+
+```{bash}
+find . -size +1G
+```
+
+With more details about the files:
+
+```{bash}
+find . -size +1G -ls
+```
+
+
+## Getting things done
+
+### Some useful, special commands using the Control key
+
+* Cancel (abort) a command: `Ctrl-c`  Note: very different than Windows!!
+* Stop (suspend) a command: `Ctrl-z`
+* `Ctrl-z` can be used to suspend, then background a process
+
+
+### Process management
+
+* Like Windows Task Manager, OSX Activity Monitor
+* **`top`**, `ps`, `jobs` (hit `q` to get out!)
+* `kill` to delete an unwanted job or process
+* Foreground and background: `&`
+
+
+### What about "space"
+
+* How much storage is available on this system?  `df -h`
+* How much storage am "I" using overall?  `du -hs <folder>`
+* How much storage am "I" using, by sub directory?  `du -h <folder>`
+
+### History
+
+* See your command history:  `history`
+* Re-run last command:  `!!`  (pronounced "bang-bang")
+* Re-run 32th command: `!32`
+* Re-run 5th from last command: `!-5`
+* Re-run last command that started with 'c': `!c`
+
+
+## A sampling of simple commands for dealing with files
+
+* `wc` count lines, words, and/or characters
+* `diff` compare two files for differences
+* `sort` sort lines in a file
+* `uniq` report or filter out repeated lines in a file
+
+
+## Get into the flow, with pipes 
+
+![`stdin`, `stdout`, `stderr`](img/pipe_split.png
+    "http://www.ucblueash.edu/thomas/Intro_Unix_Text/Images/pipe_split.png")
+
+```{bash}
+$ ls *.png | wc -l
+$ ls *.png | wc -l > pngcount.txt
+$ diff <(sort file1.txt) <(sort file2.txt)
+$ ls foo 2>/dev/null
+```
+
+* note use of `*` as character wildcard for zero or more matches (same in Mac and Windows)
+* `?` matches single character; `_` is SQL query equivalent
+
+
+## Text editing
+
+### Some editors
+
+* `vim`
+* `emacs`
+* `nano`
+
+```{bash}
+$ nano .bashrc
+```
+
+
+## Hands-on
+
+Let's practice our new skills! Click [here](https://brunj7.github.io/eds214-handson-cli/cli-handson-files.html){.external target="_blank"}
