@@ -1,5 +1,5 @@
 ---
-title: "Using git and GitHub from the Command line"
+title: "Using the Command line Interface"
 execute: 
   eval: FALSE
 ---
@@ -31,6 +31,7 @@ Not convinced? Check this out: [the CLI pitch](https://brunj7.github.io/eds214-h
 You can access the command line directly from RStudio by using the `Terminal` tab next to your R console.
 
 ![](img/cli-rstudio.png)
+
 ### Navigating and managing files/directories in *NIX
 
 
@@ -91,7 +92,7 @@ Clear contents in terminal window: `clear`
 :::
 
 
-## General command syntax
+### General command syntax
 
 * `command [options] [arguments]`
 
@@ -119,7 +120,7 @@ hit `spacebar` to get to the next page of the manual
 hit `q` to exit the help
 :::
 
-## Connecting to a remote server via `ssh`
+### Connecting to a remote server via `ssh`
 
 From the gitbash (MS Windows) or the terminal (Mac) type:
 
@@ -141,20 +142,21 @@ In this case, you will be only asked for your password as you already specified 
 
 
 
-## Unix systems are multi-user
+### Unix systems are multi-user
+
 * Who else is logged into this machine?  `who`
 * Who is logged into "this shell"?  `whoami`
 
 
 
-## Getting help
+### Getting help
 
 * `<command> -h`, `<command> --help`
 * `man`, `info`, `apropos`, `whereis`
 * Search the web!
 
 
-## finding stuff
+### finding stuff
 
 Show me my Rmarkdown files!
 
@@ -175,16 +177,16 @@ find . -size +1G -ls
 ```
 
 
-## Getting things done
+### Getting things done
 
-### Some useful, special commands using the Control key
+#### Some useful, special commands using the Control key
 
 * Cancel (abort) a command: `Ctrl-c`  Note: very different than Windows!!
 * Stop (suspend) a command: `Ctrl-z`
 * `Ctrl-z` can be used to suspend, then background a process
 
 
-### Process management
+#### Process management
 
 * Like Windows Task Manager, OSX Activity Monitor
 * **`top`**, `ps`, `jobs` (hit `q` to get out!)
@@ -192,13 +194,13 @@ find . -size +1G -ls
 * Foreground and background: `&`
 
 
-### What about "space"
+#### What about "space"
 
 * How much storage is available on this system?  `df -h`
 * How much storage am "I" using overall?  `du -hs <folder>`
 * How much storage am "I" using, by sub directory?  `du -h <folder>`
 
-### History
+#### History
 
 * See your command history:  `history`
 * Re-run last command:  `!!`  (pronounced "bang-bang")
@@ -207,7 +209,7 @@ find . -size +1G -ls
 * Re-run last command that started with 'c': `!c`
 
 
-## A sampling of simple commands for dealing with files
+### A sampling of simple commands for dealing with files
 
 * `wc` count lines, words, and/or characters
 * `diff` compare two files for differences
@@ -215,7 +217,7 @@ find . -size +1G -ls
 * `uniq` report or filter out repeated lines in a file
 
 
-## Get into the flow, with pipes 
+### Get into the flow, with pipes 
 
 ![`stdin`, `stdout`, `stderr`](img/pipe_split.png
     "http://www.ucblueash.edu/thomas/Intro_Unix_Text/Images/pipe_split.png")
@@ -231,9 +233,9 @@ $ ls foo 2>/dev/null
 * `?` matches single character; `_` is SQL query equivalent
 
 
-## Text editing
+### Text editing
 
-### Some editors
+#### Some editors
 
 * `vim`
 * `emacs`
