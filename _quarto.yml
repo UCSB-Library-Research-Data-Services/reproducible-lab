@@ -33,8 +33,10 @@ website:
                 text: "Setting up Teams to better collaborate"
               - href: git_rstudio.qmd
                 text: "Using RStudio, git and GitHub to track your work"
+              - href: intro_cli.qmd
+                text: "Using the command line"
               - href: git_cli.qmd
-                text: "Using the command line, git and GitHub to track your work"
+                text: "Using git at the command line"
               - href: git_conflicts.qmd
                 text: "Managing version conflicts"
               - href: git_further_readings.qmd
