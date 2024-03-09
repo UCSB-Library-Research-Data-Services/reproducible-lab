@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Designing a Reproducible and Collaborative Lab (RCL) - Preserve your data for reuse</title>
+<title>Designing a Reproducible and Collaborative Lab (RCL) - Using the Command line Interface</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,7 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./datamgmt_manage.html" rel="prev">
+<link href="./git_cli.qmd" rel="next">
+<link href="./git_rstudio.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -92,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your research data</a></li><li class="breadcrumb-item"><a href="./datamgmt_preserve.html">Preserve</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./github_intro.html">Coding together</a></li><li class="breadcrumb-item"><a href="./intro_cli.html">Using the command line</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -127,13 +162,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Coding together</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./github_intro.html" class="sidebar-item-text sidebar-link">
@@ -166,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro_cli.html" class="sidebar-item-text sidebar-link">
+  <a href="./intro_cli.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Using the command line</span></a>
   </div>
 </li>
@@ -279,7 +314,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datamgmt_preserve.html" class="sidebar-item-text sidebar-link active">
+  <a href="./datamgmt_preserve.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preserve</span></a>
   </div>
 </li>
@@ -295,26 +330,34 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-scientific-products-to-preserve" id="toc-what-scientific-products-to-preserve" class="nav-link active" data-scroll-target="#what-scientific-products-to-preserve">What scientific products to preserve?</a>
+  <li><a href="#short-introduction-to-the-command-line-interface-cli" id="toc-short-introduction-to-the-command-line-interface-cli" class="nav-link active" data-scroll-target="#short-introduction-to-the-command-line-interface-cli">Short introduction to the command line interface (CLI)</a>
   <ul class="collapse">
-  <li><a href="#raw-data" id="toc-raw-data" class="nav-link" data-scroll-target="#raw-data">Raw data</a></li>
-  <li><a href="#intermediate-data" id="toc-intermediate-data" class="nav-link" data-scroll-target="#intermediate-data">Intermediate data</a></li>
-  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
-  <li><a href="#final-products" id="toc-final-products" class="nav-link" data-scroll-target="#final-products">Final products</a></li>
+  <li><a href="#why-the-cli-is-worth-learning" id="toc-why-the-cli-is-worth-learning" class="nav-link" data-scroll-target="#why-the-cli-is-worth-learning">Why the CLI is worth learning</a></li>
+  <li><a href="#a-little-bit-of-terminology" id="toc-a-little-bit-of-terminology" class="nav-link" data-scroll-target="#a-little-bit-of-terminology">A little bit of terminology</a></li>
+  <li><a href="#the-terminal-from-rstudio" id="toc-the-terminal-from-rstudio" class="nav-link" data-scroll-target="#the-terminal-from-rstudio">The Terminal from RStudio</a></li>
+  <li><a href="#navigating-and-managing-filesdirectories-in-nix" id="toc-navigating-and-managing-filesdirectories-in-nix" class="nav-link" data-scroll-target="#navigating-and-managing-filesdirectories-in-nix">Navigating and managing files/directories in *NIX</a></li>
+  <li><a href="#permissions" id="toc-permissions" class="nav-link" data-scroll-target="#permissions">Permissions</a></li>
+  <li><a href="#general-command-syntax" id="toc-general-command-syntax" class="nav-link" data-scroll-target="#general-command-syntax">General command syntax</a></li>
+  <li><a href="#connecting-to-a-remote-server-via-ssh" id="toc-connecting-to-a-remote-server-via-ssh" class="nav-link" data-scroll-target="#connecting-to-a-remote-server-via-ssh">Connecting to a remote server via <code>ssh</code></a></li>
+  <li><a href="#unix-systems-are-multi-user" id="toc-unix-systems-are-multi-user" class="nav-link" data-scroll-target="#unix-systems-are-multi-user">Unix systems are multi-user</a></li>
+  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help">Getting help</a></li>
+  <li><a href="#finding-stuff" id="toc-finding-stuff" class="nav-link" data-scroll-target="#finding-stuff">finding stuff</a></li>
+  <li><a href="#getting-things-done" id="toc-getting-things-done" class="nav-link" data-scroll-target="#getting-things-done">Getting things done</a></li>
+  <li><a href="#a-sampling-of-simple-commands-for-dealing-with-files" id="toc-a-sampling-of-simple-commands-for-dealing-with-files" class="nav-link" data-scroll-target="#a-sampling-of-simple-commands-for-dealing-with-files">A sampling of simple commands for dealing with files</a></li>
+  <li><a href="#get-into-the-flow-with-pipes" id="toc-get-into-the-flow-with-pipes" class="nav-link" data-scroll-target="#get-into-the-flow-with-pipes">Get into the flow, with pipes</a></li>
+  <li><a href="#text-editing" id="toc-text-editing" class="nav-link" data-scroll-target="#text-editing">Text editing</a></li>
   </ul></li>
-  <li><a href="#choosing-a-data-repository" id="toc-choosing-a-data-repository" class="nav-link" data-scroll-target="#choosing-a-data-repository">Choosing a data repository</a>
-  <ul class="collapse">
-  <li><a href="#dryad" id="toc-dryad" class="nav-link" data-scroll-target="#dryad">Dryad</a></li>
-  </ul></li>
+  <li><a href="#hands-on" id="toc-hands-on" class="nav-link" data-scroll-target="#hands-on">Hands-on</a></li>
+  <li><a href="#aknowledgements" id="toc-aknowledgements" class="nav-link" data-scroll-target="#aknowledgements">Aknowledgements</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your research data</a></li><li class="breadcrumb-item"><a href="./datamgmt_preserve.html">Preserve</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./github_intro.html">Coding together</a></li><li class="breadcrumb-item"><a href="./intro_cli.html">Using the command line</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Preserve your data for reuse</h1>
+<h1 class="title">Using the Command line Interface</h1>
 </div>
 
 
@@ -331,61 +374,278 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>As you finalize your projects, often an important task is to archive your data in a publicly available repository (pending sensitivity and by non-disclosure agreement exceptions). There are a few important steps to ensure that your data can be reused by others and thus make your work more reproducible.</p>
-<section id="what-scientific-products-to-preserve" class="level2">
-<h2 class="anchored" data-anchor-id="what-scientific-products-to-preserve">What scientific products to preserve?</h2>
-<p>Often the first question that comes to mind when starting to preserve your work is: What should I include in my data archive? Generally speaking, you want to preserve <strong>your</strong> work. This means capturing the methodology you used, the raw data you collected, any data cleaning you did, and any data and output (figure, report, etc.) you generated. Okay… so you mean everything!? Well, yes and no. Everything that was relevant to help you to come to the findings and conclusions discussed in your project report or any other publications and deliverables. Let’s break this down!</p>
-<section id="raw-data" class="level3">
-<h3 class="anchored" data-anchor-id="raw-data">Raw data</h3>
-<p>Here are a few questions to ask yourself to determine if you should refer in your documentation to the raw data you used or also include them in your data archive.</p>
-<ol type="1">
-<li>The <strong>raw data is already publicly accessible</strong>, and the hosting solution (website, FTP server, etc.) seems well maintained (ideally providing a recommended citation)</li>
-</ol>
-<p>=&gt; Document the website or process you used to collect the data and when you accessed/downloaded the data you used. Try also to determine if a pecific version number is associated with the data you used.*</p>
-<ol start="2" type="1">
-<li>The raw data is <strong>not</strong> publicly accessible</li>
-</ol>
-<p>Note that we are not talking about data under a non-disclosure agreement (NDA) here but more about data with an unclear reuse status or obtained by interactions with a person or an institution. For example, if the data you used were sent to you privately, then we recommend that you:</p>
+<section id="short-introduction-to-the-command-line-interface-cli" class="level2">
+<h2 class="anchored" data-anchor-id="short-introduction-to-the-command-line-interface-cli">Short introduction to the command line interface (CLI)</h2>
+<p>The CLI provides a direct way to interact with the Operating System, by typing in commands.</p>
+<section id="why-the-cli-is-worth-learning" class="level3">
+<h3 class="anchored" data-anchor-id="why-the-cli-is-worth-learning">Why the CLI is worth learning</h3>
 <ul>
-<li>inquire with your person of contact about the status of licensing and if they would be willing to let you share those data publicly. You might face resistance at first, so take the time to explain why you think it is valuable to your work to also share those data sets.</li>
-<li>if, in the end, it is not possible to share the data, please still describe the data in your documentation and list the contact information (person or institution) to inquire about this data set.</li>
+<li>Might be the only interface you have to a High Performance Computer (HPC)</li>
+<li>Command statements can be reused easily and saved as scripts</li>
+<li>Easier automation and text files manipulation</li>
 </ul>
 </section>
-<section id="intermediate-data" class="level3">
-<h3 class="anchored" data-anchor-id="intermediate-data">Intermediate data</h3>
-<p>This is data you generated either while cleaning or analyzing the raw data. You should preserve it if:</p>
+<section id="a-little-bit-of-terminology" class="level3">
+<h3 class="anchored" data-anchor-id="a-little-bit-of-terminology">A little bit of terminology</h3>
 <ul>
-<li>it was not directly generated by a script (otherwise, preserve the code instead)</li>
-<li>it has reusable value. For example, cleaned-up versions of raw data can be very valuable for others to reuse!</li>
+<li><code>Command Line Interface (CLI)</code>: This is a user interface that lets you interact with a computer. It is a legacy from the early days of computers. Now a days computers have graphical user interfaces instead (MacOSX, Windows, Linux, …)</li>
+<li><code>Terminal</code>: It is a an application that lets you run a command line interface. It used to be a physical machine connected to a mainframe computer</li>
+<li><code>Shell</code>: It is the program that runs the command line. There are many different shells, the most common (an default on most system) being <code>bash</code> (Bourne Again SHell)</li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Not convinced? Check this out: <a href="https://brunj7.github.io/eds214-handson-cli/cli-pitch.html">the CLI pitch</a></p>
+</div>
+</div>
 </section>
-<section id="code" class="level3">
-<h3 class="anchored" data-anchor-id="code">Code</h3>
-<p>Scripting your analytical workflow from the raw data to the end products is a great way to make your work more reproducible and more reusable by others. We thus strongly encourage your team to develop code to process and analyze data. Cloud-based code repository services, such as GitHub, GitLab, BitBucket, and more, are a great way to both manage and preserve your code.</p>
-<p>Those services are often well-integrated with data repositories that link your code repository with your data archive. They also offer a way to tag a specific version of your code to ensure it is the exact code you used for a specific analysis.</p>
+<section id="the-terminal-from-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="the-terminal-from-rstudio">The Terminal from RStudio</h3>
+<p>You can access the command line directly from RStudio by using the <code>Terminal</code> tab next to your R console.</p>
+<p><img src="img/cli-rstudio.png" class="img-fluid"></p>
 </section>
-<section id="final-products" class="level3">
-<h3 class="anchored" data-anchor-id="final-products">Final products</h3>
-<p>We recommend including any data set used to produce statistics, figures maps, and other visualizations that were used in your work, in this case, even if generated by scripts.</p>
+<section id="navigating-and-managing-filesdirectories-in-nix" class="level3">
+<h3 class="anchored" data-anchor-id="navigating-and-managing-filesdirectories-in-nix">Navigating and managing files/directories in *NIX</h3>
+<p><img src="img/unix_filetree.gif" class="img-fluid"></p>
+<ul>
+<li><code>pwd</code>: Know where you are</li>
+<li><code>ls</code>: List the content of the directory</li>
+<li><code>cd</code>: Go inside a directory</li>
+</ul>
+<p>Some pseudo directory names. Wherever you are:</p>
+<ul>
+<li><code>~</code> : Home directory</li>
+<li><code>.</code> : Here (current directory)</li>
+<li><code>..</code>: Up one level (upper directory)</li>
+</ul>
+<p>Let’s put this into action:</p>
+<ul>
+<li>go to my “Home” directory: <code>cd ~</code></li>
+<li>go up one directory level: <code>cd ..</code></li>
+<li>list the content: <code>ls</code></li>
+<li>list the content showing hidden files: <code>ls -a</code> note that <code>-a</code> is referred as an option (modifies the command)</li>
+</ul>
+<p>More files/directories manipulations:</p>
+<ul>
+<li><code>mkdir</code>: Create a directory</li>
+<li><code>cp</code>: Copy a file</li>
+<li><code>mv</code>: Move a file <strong>it is also how you rename a file!</strong></li>
+<li><code>rm</code> / <code>rmdir</code>: Remove a file / directory <strong>use those carefully, there is no return / Trash!!</strong></li>
+</ul>
+<p><strong>Note: typing is not your thing? the <code>&lt;tab&gt;</code> key is your friend!</strong> One hit it will auto-complete the file/directory/path name for you. If there are many options, hit it twice to see the options.</p>
 </section>
-</section>
-<section id="choosing-a-data-repository" class="level2">
-<h2 class="anchored" data-anchor-id="choosing-a-data-repository">Choosing a data repository</h2>
-<p>We know what we want to archive, now we need to decide where we want to preserve things!</p>
-<p>UCSB’s institutional data repository <a href="https://datadryad.org/stash">Dryad</a> will be your default data repository. However, we encourage you to discuss with your Faculty Advisor to determine if other data repositories might suit your targeted audience/community better.</p>
-<p>If you would like to research on your own which data repository could be best for your project, the <a href="https://www.re3data.org">Registry of Research Data Repositories</a> is a great resource to do so.</p>
-<section id="dryad" class="level3">
-<h3 class="anchored" data-anchor-id="dryad">Dryad</h3>
-<p><a href="https://datadryad.org/stash">Dryad</a> is free of use for any affiliated researcher. Here is an overview of the process of submitting data to DRYAD:</p>
+<section id="permissions" class="level3">
+<h3 class="anchored" data-anchor-id="permissions">Permissions</h3>
+<p>All files have permissions and ownership.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/datamgmt_dryad_workflow.png" class="img-fluid figure-img"></p>
-<figcaption>DRYAD data submission overview</figcaption>
+<p><img src="img/UnixFileLongFormat.png" class="img-fluid figure-img"></p>
+<figcaption>File permissions</figcaption>
 </figure>
 </div>
-
-
+<ul>
+<li>List files showing ownership and permissions: <code>ls -l</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brun@taylor:/courses/EDS214$</span> ls <span class="at">-l</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">total</span> 16</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxrwxr-x+</span> 3 brun      esmdomainusers 4096 Aug 20 04:49 data</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxrwxr-x+</span> 2 katherine esmdomainusers 4096 Aug 18 18:32 example    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can change those permissions:</p>
+<ul>
+<li>Change permissions: <code>chmod</code></li>
+<li>Change ownership: <code>chown</code></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Clear contents in terminal window: <code>clear</code></p>
+</div>
+</div>
 </section>
+<section id="general-command-syntax" class="level3">
+<h3 class="anchored" data-anchor-id="general-command-syntax">General command syntax</h3>
+<ul>
+<li><code>command [options] [arguments]</code></li>
+</ul>
+<p>where <code>command</code> must be an <em>executable</em> file on your <code>PATH</code> * <code>echo $PATH</code></p>
+<p>and <code>options</code> can usually take two forms * short form: <code>-a</code> * long form: <code>--all</code></p>
+<p>You can combine the options:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-ltrh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>What do these options do?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>hit <code>spacebar</code> to get to the next page of the manual hit <code>q</code> to exit the help</p>
+</div>
+</div>
+</section>
+<section id="connecting-to-a-remote-server-via-ssh" class="level3">
+<h3 class="anchored" data-anchor-id="connecting-to-a-remote-server-via-ssh">Connecting to a remote server via <code>ssh</code></h3>
+<p>From the gitbash (MS Windows) or the terminal (Mac) type:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> taylor.bren.ucsb.edu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You will be prompted for your username and password.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/aurora-ssh.png" class="img-fluid figure-img"></p>
+<figcaption>aurora_ssh</figcaption>
+</figure>
+</div>
+<p>You can also directly add your username:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> brun@taylor.bren.ucsb.edu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In this case, you will be only asked for your password as you already specified which user you want to connect with.</p>
+</section>
+<section id="unix-systems-are-multi-user" class="level3">
+<h3 class="anchored" data-anchor-id="unix-systems-are-multi-user">Unix systems are multi-user</h3>
+<ul>
+<li>Who else is logged into this machine? <code>who</code></li>
+<li>Who is logged into “this shell”? <code>whoami</code></li>
+</ul>
+</section>
+<section id="getting-help" class="level3">
+<h3 class="anchored" data-anchor-id="getting-help">Getting help</h3>
+<ul>
+<li><code>&lt;command&gt; -h</code>, <code>&lt;command&gt; --help</code></li>
+<li><code>man</code>, <code>info</code>, <code>apropos</code>, <code>whereis</code></li>
+<li>Search the web!</li>
+</ul>
+</section>
+<section id="finding-stuff" class="level3">
+<h3 class="anchored" data-anchor-id="finding-stuff">finding stuff</h3>
+<p>Show me my Rmarkdown files!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> . <span class="at">-iname</span> <span class="st">'*.Rmd'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Which files are larger than 1GB?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> . <span class="at">-size</span> +1G</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>With more details about the files:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> . <span class="at">-size</span> +1G <span class="at">-ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="getting-things-done" class="level3">
+<h3 class="anchored" data-anchor-id="getting-things-done">Getting things done</h3>
+<section id="some-useful-special-commands-using-the-control-key" class="level4">
+<h4 class="anchored" data-anchor-id="some-useful-special-commands-using-the-control-key">Some useful, special commands using the Control key</h4>
+<ul>
+<li>Cancel (abort) a command: <code>Ctrl-c</code> Note: very different than Windows!!</li>
+<li>Stop (suspend) a command: <code>Ctrl-z</code></li>
+<li><code>Ctrl-z</code> can be used to suspend, then background a process</li>
+</ul>
+</section>
+<section id="process-management" class="level4">
+<h4 class="anchored" data-anchor-id="process-management">Process management</h4>
+<ul>
+<li>Like Windows Task Manager, OSX Activity Monitor</li>
+<li><strong><code>top</code></strong>, <code>ps</code>, <code>jobs</code> (hit <code>q</code> to get out!)</li>
+<li><code>kill</code> to delete an unwanted job or process</li>
+<li>Foreground and background: <code>&amp;</code></li>
+</ul>
+</section>
+<section id="what-about-space" class="level4">
+<h4 class="anchored" data-anchor-id="what-about-space">What about “space”</h4>
+<ul>
+<li>How much storage is available on this system? <code>df -h</code></li>
+<li>How much storage am “I” using overall? <code>du -hs &lt;folder&gt;</code></li>
+<li>How much storage am “I” using, by sub directory? <code>du -h &lt;folder&gt;</code></li>
+</ul>
+</section>
+<section id="history" class="level4">
+<h4 class="anchored" data-anchor-id="history">History</h4>
+<ul>
+<li>See your command history: <code>history</code></li>
+<li>Re-run last command: <code>!!</code> (pronounced “bang-bang”)</li>
+<li>Re-run 32th command: <code>!32</code></li>
+<li>Re-run 5th from last command: <code>!-5</code></li>
+<li>Re-run last command that started with ‘c’: <code>!c</code></li>
+</ul>
+</section>
+</section>
+<section id="a-sampling-of-simple-commands-for-dealing-with-files" class="level3">
+<h3 class="anchored" data-anchor-id="a-sampling-of-simple-commands-for-dealing-with-files">A sampling of simple commands for dealing with files</h3>
+<ul>
+<li><code>wc</code> count lines, words, and/or characters</li>
+<li><code>diff</code> compare two files for differences</li>
+<li><code>sort</code> sort lines in a file</li>
+<li><code>uniq</code> report or filter out repeated lines in a file</li>
+</ul>
+</section>
+<section id="get-into-the-flow-with-pipes" class="level3">
+<h3 class="anchored" data-anchor-id="get-into-the-flow-with-pipes">Get into the flow, with pipes</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/pipe_split.png" title="http://www.ucblueash.edu/thomas/Intro_Unix_Text/Images/pipe_split.png" class="img-fluid figure-img"></p>
+<figcaption><code>stdin</code>, <code>stdout</code>, <code>stderr</code></figcaption>
+</figure>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="pp">*</span>.png <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="pp">*</span>.png <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span> <span class="op">&gt;</span> pngcount.txt</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> diff <span class="op">&lt;(</span><span class="fu">sort</span> file1.txt<span class="op">)</span> <span class="op">&lt;(</span><span class="fu">sort</span> file2.txt<span class="op">)</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls foo <span class="dv">2</span><span class="op">&gt;</span>/dev/null</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>note use of <code>*</code> as character wildcard for zero or more matches (same in Mac and Windows)</li>
+<li><code>?</code> matches single character; <code>_</code> is SQL query equivalent</li>
+</ul>
+</section>
+<section id="text-editing" class="level3">
+<h3 class="anchored" data-anchor-id="text-editing">Text editing</h3>
+<section id="some-editors" class="level4">
+<h4 class="anchored" data-anchor-id="some-editors">Some editors</h4>
+<ul>
+<li><code>vim</code></li>
+<li><code>emacs</code></li>
+<li><code>nano</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano .bashrc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="hands-on" class="level2">
+<h2 class="anchored" data-anchor-id="hands-on">Hands-on</h2>
+<p>Let’s practice our new skills! Click <a href="https://brunj7.github.io/eds214-handson-cli/cli-handson-files.html" class="external" target="_blank">here</a></p>
+</section>
+<section id="aknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="aknowledgements">Aknowledgements</h2>
+<p>This section adapted materials from <a href="https://learning.nceas.ucsb.edu/">NCEAS Open Science for Synthesis (OSS)</a> intensive summer schools and other training. Contributions to this content have been made by Mark Schildhauer, Matt Jones, Jim Regetz and many others; and from EDS-213 <a href="https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-class-data/blob/main/week5/bash-essentials.md">10 bash essentials</a> developed by Greg Janée</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -806,11 +1066,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./datamgmt_manage.html" class="pagination-link" aria-label="Manage">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Manage</span>
+      <a href="./git_rstudio.html" class="pagination-link" aria-label="Using RStudio, git and GitHub to track your work">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Using RStudio, git and GitHub to track your work</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./git_cli.qmd" class="pagination-link" aria-label="Using git at the command line">
+        <span class="nav-page-text">Using git at the command line</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Designing a Reproducible and Collaborative Lab (RCL)</span>
     </a>
   </div>
-        <div class="quarto-navbar-tools">
+        <div class="quarto-navbar-tools tools-end">
     <a href="https://github.com/UCSB-Library-Research-Data-Services/reproducible-lab" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
           <div id="quarto-search" class="" title="Search"></div>
@@ -163,6 +163,18 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./git_rstudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Using RStudio, git and GitHub to track your work</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro_cli.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using the command line</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./git_cli.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using git at the command line</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -318,7 +330,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Before writing your plan, we recommend you get familiar with the <a href="https://www.go-fair.org/fair-principles/">FAIR</a> and <a href="https://www.gida-global.org/care">CARE</a> principles to guide your process.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/datamgmt_be-FAIR-and-CARE.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+<p><img src="img/datamgmt_be-FAIR-and-CARE.png" class="img-fluid figure-img" style="width:70.0%"></p>
 <figcaption>source: <a href="https://www.gida-global.org/care" class="uri">https://www.gida-global.org/care</a></figcaption>
 </figure>
 </div>
@@ -328,7 +340,7 @@ ul.task-list li input[type="checkbox"] {
 <p>You might already have experience with writing project specific data management plans as they are often required in proposals. The process to develop your lab’s data management plan is very similar, but will be more focused on developing general guidelines for your lab that can be adapted for project specific needs. We recommend using the FAIR &amp; CARE principles as guidance to maximize the reusability of your data by you, your collaborators, other researchers, and futureself. Your plan should ensure that detailed documentation adopting existing standards is developed during the entire duration of your project (don’t wait until the very end!!) and that this documentation is archived along with your data and code in a publicly accessible data repository will set you up for success.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/datamgmt_fair-principles.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+<p><img src="img/datamgmt_fair-principles.png" class="img-fluid figure-img" style="width:70.0%"></p>
 <figcaption>source: <a href="https://www.library.ucsb.edu/sites/default/files/dls-n04-2021-fair-navy.pdf" class="uri">https://www.library.ucsb.edu/sites/default/files/dls-n04-2021-fair-navy.pdf</a></figcaption>
 </figure>
 </div>
@@ -457,6 +469,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/UCSB-Library-Research-Data-Services\.github\.io\/reproducible-lab\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -491,7 +521,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
