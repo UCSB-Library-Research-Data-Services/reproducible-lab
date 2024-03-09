@@ -2,6 +2,7 @@
 title: "Using the Command line Interface"
 execute: 
   eval: FALSE
+engine: knitr
 ---
 
 
