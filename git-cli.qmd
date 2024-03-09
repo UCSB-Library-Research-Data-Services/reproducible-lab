@@ -1,7 +1,8 @@
 ---
-title: "git_cli"
+title: "Using git at the command line"
 execute: 
   eval: FALSE
+engine: knitr
 ---
 
 
@@ -185,13 +186,7 @@ Let's create a text file called `index.md` and add it to our repository. The fil
 :::{.callout-note}
 ## Note
 
-We'll use `nano` to edit the file; you can use whatever editor you like. In
-particular, this does not have to be the `core.editor` you set globally earlier.
-But remember, the bash command to create or edit a new file will depend on the
-editor you choose (it might not be `nano`). For a refresher on text editors,
-check out ["Which
-Editor?"](https://swcarpentry.github.io/shell-novice/03-create.html#which-editor)
-in [The Unix Shell](https://swcarpentry.github.io/shell-novice/) lesson.
+We'll use `nano` to edit the file; you can use whatever editor you like. In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). For a refresher on text editors, check out ["Which Editor?"](https://swcarpentry.github.io/shell-novice/03-create.html#which-editor) in [The Unix Shell](https://swcarpentry.github.io/shell-novice/) lesson.
 :::
 
 ```bash
@@ -280,20 +275,12 @@ $ git commit -m "start new webpage"
 ```
 
 When we run `git commit`,
-Git takes everything we have told it to save by using `git add`
-and stores a copy permanently inside the special `.git` directory.
-This permanent copy is called a [commit](../learners/reference.md#commit)
-(or [revision](../learners/reference.md#revision)) and its short identifier is `f22b25e`. Your commit may have another identifier.
+Git takes everything we have told it to save by using `git add` and stores a copy permanently inside the special `.git` directory.
+This permanent copy is called a commit (revision) and its short identifier is `f22b25e`. Your commit may have another identifier.
 
-We use the `-m` flag (for "message")
-to record a short, descriptive, and specific comment that will help us remember later on what we did and why.
-If we just run `git commit` without the `-m` option,
-Git will launch `nano` (or whatever other editor we configured as `core.editor`)
-so that we can write a longer message.
+We use the `-m` flag (for "message") to record a short, descriptive, and specific comment that will help us remember later on what we did and why. If we just run `git commit` without the `-m` option, Git will launch `nano` (or whatever other editor we configured as `core.editor`) so that we can write a longer message.
 
-[Good commit messages][commit-messages] start with a brief (\<50 characters) statement about the
-changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will" <commit message here>.
-If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
+Good commit messages start with a brief (\<50 characters) statement about the changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will" <commit message here>. If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
 
 If we run `git status` now:
 
@@ -454,7 +441,7 @@ We might want to commit those additions, and the corresponding bibliography entr
 but *not* commit some of our work drafting the conclusion (which we haven't finished yet).
 
 To allow for this, Git has a special *staging area* where it keeps track of things that have been added to
-the current [changeset](../learners/reference.md#changeset) but not yet committed.
+the current changeset but not yet committed.
 :::
 
 ## Exploring git history
