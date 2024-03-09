@@ -548,18 +548,32 @@ $ git log --oneline --graph
 
 ## Sending changes back to GitHub
 
-Now that we have created these two commits on our local machine, our local version of the repository is different from the version on GitHub. RStudio communicate this information to you. If you look below the icons on the git pane, you will see the warning message: "Your branch is ahead of 'origin/master' by two commits". This can be translated as you have two additional commits on your local machine that you never shared back to the remote repository on GitHub. Open your favorite web browser and look at the content of your repository on GitHub. You will see the old version of the `README.md` and `.gitignore` file and no trace of the `.Rproj` file.
+Now that we have created these two commits on our local machine, our local version of the repository is different from the version on GitHub. You can see this when running `git status` at the beginning of the message you should have  "Your branch is ahead of 'origin/master' by two commits". This can be translated as you have two additional commits on your local machine that you never shared back to the remote repository on GitHub. Open your favorite web browser and look at the content of your repository on GitHub. You will see there is no `index.md` file on GitHub.
 
-```{r RStudio git 2 local commits, fig.align='center', echo = FALSE}
-knitr::include_graphics("img/git_repo-not-synched.png")
-```
 
 There are two git commands to exchange between local and remote versions of a repository:
 
-- `pull`: git will get the latest remote version and try to merge it with your local version
-- `push`: git will send your local version to the remote version of the repository (in our case GitHub)
+- `pull`: git will get the latest remote (GitHub in our case) version and try to merge it with your local version
+- `push`: git will send your local version to the remote version of the repository 
 
-Before sending your local version to the remote, you should always get the latest remote version first. In other words, you should pull first and push second. This is the way git protects the remote version against incompatibilities with the local version. You always deal with potential problems on your local machine. Therefore your sequence will always be:
+Before sending your local version to the remote, you should always get the latest remote version first. In other words, **you should pull first and push second**. This is the way git protects the remote version against incompatibilities with the local version. You always deal with potential problems on your local machine. Therefore your sequence will always be:
 
 1. `pull`
 2. `push`
+
+Let's do it:
+
+```bash
+git pull
+```
+
+Normally nothing should have changed on the remote
+
+Now we can push our changes to GitHub:
+
+```bash
+git push
+```
+
+Refresh the repostiroy webpage, you should now see the `index.md` file!
+
