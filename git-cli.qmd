@@ -575,5 +575,9 @@ Now we can push our changes to GitHub:
 git push
 ```
 
-Refresh the repostiroy webpage, you should now see the `index.md` file!
+Refresh the repository webpage, you should now see the `index.md` file!
 
+
+## Aknowledgements
+
+This section is adapted from Seth Erickson's version of the Software Carpentry [introduction to git](https://ucsbcarpentry.github.io/git-novice/)
