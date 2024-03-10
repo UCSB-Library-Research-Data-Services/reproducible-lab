@@ -85,7 +85,7 @@ Create an SSH key pair
 To create an SSH key pair Vlad uses this command, where the `-t` option specifies which type of algorithm to use and `-C` attaches a comment to the key (here, Vlad's email):
 
 ```bash
-$ ssh-keygen -t ed25519 -C "youremail@provider.com"
+$ ssh-keygen -t ed25519 -C "youremail@provider.org"
 ```
 
 If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
