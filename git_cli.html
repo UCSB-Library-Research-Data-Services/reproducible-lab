@@ -417,7 +417,7 @@ Enter file in which to save the key (/Users/brunj7/.ssh/id_ed25519):</code></pre
 <p>We want to use the default file, so just press <kbd>Enter</kbd>.</p>
 <pre class="output"><code>Created directory '/Users/brunj7/.ssh'.
 Enter passphrase (empty for no passphrase):</code></pre>
-<p>Now, it is prompting Dracula for a passphrase. Since he is using his lab’s laptop that other people sometimes have access to, he wants to create a passphrase. Be sure to use something memorable or save your passphrase somewhere, as there is no “reset my password” option.</p>
+<p>Now, it is prompting you for a passphrase. Be sure to use something memorable or save your passphrase somewhere, as there is no “reset my password” option.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -452,10 +452,10 @@ The key's randomart image is:
 <p>The “identification” is actually the private key. You should never share it. The public key is appropriately named. The “key fingerprint” is a shorter version of a public key.</p>
 <p>Now that we have generated the SSH keys, we will find the SSH files when we check.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-al</span> ~/.ssh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 1 Vlad Dracula 197121   0 Jul 16 14:48 ./</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 1 Vlad Dracula 197121   0 Jul 16 14:48 ../</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span> 1 Vlad Dracula 197121 419 Jul 16 14:48 id_ed25519</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span> 1 Vlad Dracula 197121 106 Jul 16 14:48 id_ed25519.pub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 1 brunj7  staff 197121  Oct 23  13:14 ./</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 1 brunj7  staff 197121  Mar 11  09:21 ../</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-------</span> 1 brunj7  staff    464  Apr 21  2023 id_ed25519</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span> 1 brunj7  staff    103  Apr 21  2023 id_ed25519.pub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 </section>
