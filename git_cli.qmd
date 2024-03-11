@@ -104,7 +104,7 @@ Created directory '/Users/brunj7/.ssh'.
 Enter passphrase (empty for no passphrase):
 ```
 
-Now, it is prompting Dracula for a passphrase.  Since he is using his lab's laptop that other people sometimes have access to, he wants to create a passphrase.  Be sure to use something memorable or save your passphrase somewhere, as there is no "reset my password" option.
+Now, it is prompting you for a passphrase. Be sure to use something memorable or save your passphrase somewhere, as there is no "reset my password" option.
 
 :::{.callout-warning}
 When you enter password at the shell, the keystrokes do not produce the usual "dot" showing you that you are typing, but your keystrokes are being registered... so keep typing you password !!
@@ -144,10 +144,10 @@ ls -al ~/.ssh
 ```
 
 ```bash
-drwxr-xr-x 1 Vlad Dracula 197121   0 Jul 16 14:48 ./
-drwxr-xr-x 1 Vlad Dracula 197121   0 Jul 16 14:48 ../
--rw-r--r-- 1 Vlad Dracula 197121 419 Jul 16 14:48 id_ed25519
--rw-r--r-- 1 Vlad Dracula 197121 106 Jul 16 14:48 id_ed25519.pub
+drwxr-xr-x 1 brunj7  staff 197121  Oct 23  13:14 ./
+drwxr-xr-x 1 brunj7  staff 197121  Mar 11  09:21 ../
+-rw------- 1 brunj7  staff    464  Apr 21  2023 id_ed25519
+-rw-r--r-- 1 brunj7  staff    103  Apr 21  2023 id_ed25519.pub
 ```
 
 ## Clone a repository
