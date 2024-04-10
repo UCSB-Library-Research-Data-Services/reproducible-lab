@@ -1,5 +1,19 @@
 ---
 title: "Designing a Reproducible and Collaborative Lab (RCL)"
+author:
+  - name: Julien Brun
+    url: https://brunj7.github.io/
+    orcid: 0000-0002-7751-6238
+  - name: Renata Curty
+    url: https://www.library.ucsb.edu/staff/renata-curty
+    orcid: 0000-0002-4615-6030
+  - name: Greg Janée
+    url: https://www.library.ucsb.edu/staff/greg-janee
+    orcid: 0000-0001-8785-0021
+date: last-modified
+citation: 
+  url: https://ucsb-library-research-data-services.github.io/reproducible-lab/
+categories: [data-science, collaboration, reproducible-research]
 ---
 
 Workshop Series and Coaching Sessions for Faculty and their Teams to help Research Labs set up infrastructures and practices to make their research more reproducible, enable reuse of their own work, and collaborate more effectively.
