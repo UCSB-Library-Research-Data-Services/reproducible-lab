@@ -57,16 +57,21 @@ website:
             contents:
               - href: github_template.qmd
                 text: "Repository template"
-      - section: "Managing your research data"
+      - section: "Managing your Lab data"
         contents:
           - href: data_mgmt.qmd
             text: "What is data management?"
+          - href: data_mgmt.qmd
+            text: "A few questions"
           - href: datamgmt_plan.qmd
             text: "Plan"
           - href: datamgmt_manage.qmd
             text: "Manage"
+      - section: "Preserving things"
+        contents:
           - href: datamgmt_preserve.qmd
-            text: "Preserve"
+            text: "Preserve your data"
+            
 format:
   html:
     theme: 

@@ -5,6 +5,10 @@ title: "Preserve your data for reuse"
 
 As you finalize your projects, often an important task is to archive your data in a publicly available repository (pending sensitivity and by non-disclosure agreement exceptions). There are a few important steps to ensure that your data can be reused by others and thus make your work more reproducible.
 
+## Preservation prompts
+
+- What are the specific expectations from your discipline in terms of sharing data? Should you also share the raw data along with the analysis results?
+- Considering funding and publisher mandates, as well as disciplinary norms, do you anticipate / have had any challenges regarding data sharing and preservation?
 
 ## What scientific products to preserve?
 
