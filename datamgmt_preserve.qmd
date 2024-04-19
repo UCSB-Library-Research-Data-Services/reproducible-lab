@@ -2,7 +2,6 @@
 title: "Preserve your data for reuse"
 ---
 
-
 As you finalize your projects, often an important task is to archive your data in a publicly available repository (pending sensitivity and by non-disclosure agreement exceptions). There are a few important steps to ensure that your data can be reused by others and thus make your work more reproducible.
 
 ## Preservation prompts
@@ -12,15 +11,15 @@ As you finalize your projects, often an important task is to archive your data i
 
 ## What scientific products to preserve?
 
-Often the first question that comes to mind when starting to preserve your work is: What should I include in my data archive?  Generally speaking, you want to preserve **your** work. This means capturing the methodology you used, the raw data you collected, any data cleaning you did, and any data and output (figure, report, etc.) you generated. Okay… so you mean everything!? Well, yes and no. Everything that was relevant to help you to come to the findings and conclusions discussed in your project report or any other publications and deliverables. Let’s break this down!
+Often the first question that comes to mind when starting to preserve your work is: What should I include in my data archive?  Generally speaking, you want to preserve **your** work. This means capturing the methodology you used, the raw data you collected, any data cleaning you did, and any data and output (figure, report, etc.) you generated. Okay… so you mean everything!? Well, yes and no. Everything relevant to help you come to the findings and conclusions discussed in your project report or any other publications and deliverables. Let’s break this down!
 
 ### Raw data
 
 Here are a few questions to ask yourself to determine if you should refer in your documentation to the raw data you used or also include them in your data archive.
 
-1. The **raw data is already publicly accessible**, and the hosting solution (website, FTP server, etc.) seems well maintained (ideally providing a recommended citation) 
+1. The **raw data is already publicly accessible**, and the hosting solution (website, FTP server, etc.) seems well maintained (ideally providing a recommended citation)
 
-=> Document the website or process you used to collect the data and when you accessed/downloaded the data you used. Try also to determine if a pecific version number is associated with the data you used.*
+=> Document the website or process you used to collect the data and when you accessed/downloaded the data you used. Try also to determine if a specific version number is associated with the data you used.*
 
 2. The raw data is **not** publicly accessible
 
@@ -52,9 +51,10 @@ We recommend including any data set used to produce statistics, figures maps, an
 
 We know what we want to archive, now we need to decide where we want to preserve things!
 
-UCSB's institutional data repository [Dryad](https://datadryad.org/stash) will be your default data repository. However, we encourage you to discuss with your Faculty Advisor to determine if other data repositories might suit your targeted audience/community better. 
+UCSB's institutional data repository [Dryad](https://datadryad.org/stash) will be your default data repository. However, we encourage you to discuss with your Faculty Advisor to determine if other data repositories might suit your targeted audience/community better.
 
 If you would like to research on your own which data repository could be best for your project, the [Registry of Research Data Repositories](https://www.re3data.org) is a great resource to do so.
+
 
 ### Dryad
 
