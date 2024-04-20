@@ -1,5 +1,13 @@
 /*-- scss:defaults --*/
 
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display&display=swap');
+
+//font
+$font-family-serif: "Playfair Display", serif;
+$font-family-sans-serif: 'Nunito', sans-serif;
+
+
 // Colors
 $navy: #003660;
 $gold: #FEBC11;
@@ -21,3 +29,13 @@ $body-bg: $clay; // page background
 $body-color: $gray; // page text 
 $footer-bg: $navy; // footer 
 $link-color: $coral; // hyperlinks 
+
+
+// header font & color
+h1, h2, h3, h4 {
+  font-family: $font-family-sans-serif;
+}
+
+.body-text {
+  font-family: $font-family-serif;
+}
