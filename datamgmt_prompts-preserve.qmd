@@ -1,0 +1,6 @@
+---
+title: "Preservation Prompts"
+---
+
+- What are the specific expectations from your discipline in terms of sharing data? Should you also share the raw data along with the analysis results?
+- Considering funding and publisher mandates, as well as disciplinary norms, do you anticipate / have had any challenges regarding data sharing and preservation?

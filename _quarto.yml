@@ -69,6 +69,8 @@ website:
             text: "Manage"
       - section: "Preserving things"
         contents:
+          - href: datamgmt_prompts-preserve.qmd
+            text: "Preservation prompts"
           - href: datamgmt_preserve.qmd
             text: "Preserve your data"
             
