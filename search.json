@@ -70,7 +70,7 @@
     "href": "index.html",
     "title": "Designing a Reproducible and Collaborative Lab (RCL)",
     "section": "",
-    "text": "Workshop Series and Coaching Sessions for Faculty and their Teams to help Research Labs set up infrastructures and practices to make their research more reproducible, enable reuse of their own work, and collaborate more effectively.\n\nTopics\n\nCoding as a lab\nManaging your lab data\nAutomating your analytical workflows\nDocumenting & preserving things to make them reusable\n\n\n\nFormat\n\nScheduled at your convenience\n4 workshops (2-3h) as a primer on a specific topic\nPersonalized coaching sessions focused on lab-specific needs\n\n\n\nOutcomes\n\nMore reproducible management of your lab’s scientific products (data, code etc.)\nBetter analytical strategies for collaboration Safety nets for your research lab content\nMore efficient reuse of your work\nStreamlined on- and off -boarding\n\n\n\nLearning Opportunities\n\nLeverage GitHub to manage and collaborate on your Lab’s code\nDevelop strategies to centralize and manage your Lab’s data\nSet up templates and guidelines on how to document your Lab research and improve its reusability\nEstablish Lab standard operating procedures and documentation standards\nProtect your Lab’s scientific products against loss through backup and computing resources strategies\n\n\n\n\n\n\n\n\n\n\nCitationBibTeX citation:@online{brun2024,\n  author = {Brun, Julien and Curty, Renata and Janée, Greg},\n  title = {Designing a {Reproducible} and {Collaborative} {Lab} {(RCL)}},\n  date = {2024-04-19},\n  url = {https://ucsb-library-research-data-services.github.io/reproducible-lab/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nBrun, Julien, Renata Curty, and Greg Janée. 2024. “Designing a\nReproducible and Collaborative Lab (RCL).” April 19, 2024. https://ucsb-library-research-data-services.github.io/reproducible-lab/.",
+    "text": "Workshop Series and Coaching Sessions for Faculty and their Teams to help Research Labs set up infrastructures and practices to make their research more reproducible, enable reuse of their own work, and collaborate more effectively.\n\nTopics\n\nCoding as a lab\nManaging your lab data\nAutomating your analytical workflows\nDocumenting & preserving things to make them reusable\n\n\n\nFormat\n\nScheduled at your convenience\n4 workshops (2-3h) as a primer on a specific topic\nPersonalized coaching sessions focused on lab-specific needs\n\n\n\nOutcomes\n\nMore reproducible management of your lab’s scientific products (data, code etc.)\nBetter analytical strategies for collaboration Safety nets for your research lab content\nMore efficient reuse of your work\nStreamlined on- and off -boarding\n\n\n\nLearning Opportunities\n\nLeverage GitHub to manage and collaborate on your Lab’s code\nDevelop strategies to centralize and manage your Lab’s data\nSet up templates and guidelines on how to document your Lab research and improve its reusability\nEstablish Lab standard operating procedures and documentation standards\nProtect your Lab’s scientific products against loss through backup and computing resources strategies\n\n\n\n\n\n\n\n\n\n\nCitationBibTeX citation:@online{brun2024,\n  author = {Brun, Julien and Curty, Renata and Janée, Greg},\n  title = {Designing a {Reproducible} and {Collaborative} {Lab} {(RCL)}},\n  date = {2024-04-20},\n  url = {https://ucsb-library-research-data-services.github.io/reproducible-lab/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nBrun, Julien, Renata Curty, and Greg Janée. 2024. “Designing a\nReproducible and Collaborative Lab (RCL).” April 20, 2024. https://ucsb-library-research-data-services.github.io/reproducible-lab/.",
     "crumbs": [
       "About RCL"
     ]
@@ -202,51 +202,441 @@
     ]
   },
   {
-    "objectID": "github_org.html",
-    "href": "github_org.html",
-    "title": "GitHub Organizations",
+    "objectID": "datamgmt_prompts-preserve.html",
+    "href": "datamgmt_prompts-preserve.html",
+    "title": "Preservation Prompts",
     "section": "",
-    "text": "Facilitate collaboration:\n\nCreate teams to easily assign people to repositories\nManage tasks at the organization level (not tight to a specific repository)\n\nSimplify code management:\n\nThe organization owns the repository\nDesign templates to streamline documentation\nAssign roles to users, including external collaborators\n\nIncrease your visibility on GitHub:\n\nCreate a landing page introducing your lab\nOne stop to see your Lab contributions",
+    "text": "What are the specific expectations from your discipline in terms of sharing data? Should you also share the raw data along with the analysis results?\nConsidering funding and publisher mandates, as well as disciplinary norms, do you anticipate / have had any challenges regarding data sharing and preservation?",
     "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "GitHub Organizations for your Lab"
+      "Preserving things",
+      "Preservation prompts"
     ]
   },
   {
-    "objectID": "github_org.html#why-a-github-organization",
-    "href": "github_org.html#why-a-github-organization",
-    "title": "GitHub Organizations",
+    "objectID": "intro_cli.html",
+    "href": "intro_cli.html",
+    "title": "Using the Command line Interface",
     "section": "",
-    "text": "Facilitate collaboration:\n\nCreate teams to easily assign people to repositories\nManage tasks at the organization level (not tight to a specific repository)\n\nSimplify code management:\n\nThe organization owns the repository\nDesign templates to streamline documentation\nAssign roles to users, including external collaborators\n\nIncrease your visibility on GitHub:\n\nCreate a landing page introducing your lab\nOne stop to see your Lab contributions",
+    "text": "The CLI provides a direct way to interact with the Operating System, by typing in commands.\n\n\n\nMight be the only interface you have to a High Performance Computer (HPC)\nCommand statements can be reused easily and saved as scripts\nEasier automation and text files manipulation\n\n\n\n\n\nCommand Line Interface (CLI): This is a user interface that lets you interact with a computer. It is a legacy from the early days of computers. Now a days computers have graphical user interfaces instead (MacOSX, Windows, Linux, …)\nTerminal: It is a an application that lets you run a command line interface. It used to be a physical machine connected to a mainframe computer\nShell: It is the program that runs the command line. There are many different shells, the most common (an default on most system) being bash (Bourne Again SHell)\n\n\n\n\n\n\n\nTip\n\n\n\nNot convinced? Check this out: the CLI pitch\n\n\n\n\n\nYou can access the command line directly from RStudio by using the Terminal tab next to your R console.\n\n\n\n\n\n\npwd: Know where you are\nls: List the content of the directory\ncd: Go inside a directory\n\nSome pseudo directory names. Wherever you are:\n\n~ : Home directory\n. : Here (current directory)\n..: Up one level (upper directory)\n\nLet’s put this into action:\n\ngo to my “Home” directory: cd ~\ngo up one directory level: cd ..\nlist the content: ls\nlist the content showing hidden files: ls -a note that -a is referred as an option (modifies the command)\n\nMore files/directories manipulations:\n\nmkdir: Create a directory\ncp: Copy a file\nmv: Move a file it is also how you rename a file!\nrm / rmdir: Remove a file / directory use those carefully, there is no return / Trash!!\n\nNote: typing is not your thing? the &lt;tab&gt; key is your friend! One hit it will auto-complete the file/directory/path name for you. If there are many options, hit it twice to see the options.\n\n\n\nAll files have permissions and ownership.\n\n\n\nFile permissions\n\n\n\nList files showing ownership and permissions: ls -l\n\n\nbrun@taylor:/courses/EDS214$ ls -l\ntotal 16\ndrwxrwxr-x+ 3 brun      esmdomainusers 4096 Aug 20 04:49 data\ndrwxrwxr-x+ 2 katherine esmdomainusers 4096 Aug 18 18:32 example    \n\nYou can change those permissions:\n\nChange permissions: chmod\nChange ownership: chown\n\n\n\n\n\n\n\nTip\n\n\n\nClear contents in terminal window: clear\n\n\n\n\n\n\ncommand [options] [arguments]\n\nwhere command must be an executable file on your PATH * echo $PATH\nand options can usually take two forms * short form: -a * long form: --all\nYou can combine the options:\n\nls -ltrh\n\nWhat do these options do?\n\nman ls\n\n\n\n\n\n\n\nTip\n\n\n\nhit spacebar to get to the next page of the manual hit q to exit the help\n\n\n\n\n\nFrom the gitbash (MS Windows) or the terminal (Mac) type:\n\nssh taylor.bren.ucsb.edu\n\nYou will be prompted for your username and password.\n\n\n\naurora_ssh\n\n\nYou can also directly add your username:\n\nssh brun@taylor.bren.ucsb.edu\n\nIn this case, you will be only asked for your password as you already specified which user you want to connect with.\n\n\n\n\nWho else is logged into this machine? who\nWho is logged into “this shell”? whoami\n\n\n\n\n\n&lt;command&gt; -h, &lt;command&gt; --help\nman, info, apropos, whereis\nSearch the web!\n\n\n\n\nShow me my Rmarkdown files!\n\nfind . -iname '*.Rmd'\n\nWhich files are larger than 1GB?\n\nfind . -size +1G\n\nWith more details about the files:\n\nfind . -size +1G -ls\n\n\n\n\n\n\n\nCancel (abort) a command: Ctrl-c Note: very different than Windows!!\nStop (suspend) a command: Ctrl-z\nCtrl-z can be used to suspend, then background a process\n\n\n\n\n\nLike Windows Task Manager, OSX Activity Monitor\ntop, ps, jobs (hit q to get out!)\nkill to delete an unwanted job or process\nForeground and background: &\n\n\n\n\n\nHow much storage is available on this system? df -h\nHow much storage am “I” using overall? du -hs &lt;folder&gt;\nHow much storage am “I” using, by sub directory? du -h &lt;folder&gt;\n\n\n\n\n\nSee your command history: history\nRe-run last command: !! (pronounced “bang-bang”)\nRe-run 32th command: !32\nRe-run 5th from last command: !-5\nRe-run last command that started with ‘c’: !c\n\n\n\n\n\n\nwc count lines, words, and/or characters\ndiff compare two files for differences\nsort sort lines in a file\nuniq report or filter out repeated lines in a file\n\n\n\n\n\n\n\nstdin, stdout, stderr\n\n\n\n$ ls *.png | wc -l\n$ ls *.png | wc -l &gt; pngcount.txt\n$ diff &lt;(sort file1.txt) &lt;(sort file2.txt)\n$ ls foo 2&gt;/dev/null\n\n\nnote use of * as character wildcard for zero or more matches (same in Mac and Windows)\n? matches single character; _ is SQL query equivalent\n\n\n\n\n\n\n\nvim\nemacs\nnano\n\n\n$ nano .bashrc",
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "GitHub Organizations for your Lab"
+      "Using the command line"
     ]
   },
   {
-    "objectID": "github_org.html#setting-up-your-labs-github-organization",
-    "href": "github_org.html#setting-up-your-labs-github-organization",
-    "title": "GitHub Organizations",
-    "section": "Setting up your Lab’s GitHub Organization",
-    "text": "Setting up your Lab’s GitHub Organization\nBefore setting up your organization, make sure that you have claimed your education GitHub account first!!\n\n\n\n\n\n\nDid you know you are eligible for GitHub Education perks?\n\n\n\nSince we are part of an University, students and faculty have access to special account benefits for free. The application process is straightforward. Get started here: https://education.github.com/\n\n\n\nYou can create an organization by clicking on the + sign menu at the top right of the GitHub taskbar and select New organization\n\n\n\n\n\n\n\nThis will send you to a new page with several options to start your organization. Choose the free option at this time.\n\n\n\n\n\n\n\nNow you can provide the name of your organization. We recommend naming it in a way that reflects your Lab name to help with the organization’s branding. Select the email you used to get the education discount and check the “my personal account” option.\n\n\n\n\n\n\n\nAnd congratulations this is it!! You can now invite your collaborators to the organization (you will be able to do so later as well).\n\n\n\n\n\n\n\nYour organization page should look as follows:\n\n\n\n\n\n\nNote all the suggestions that GitHub is providing to help you customize your organization according to your needs. We are going to follow the recommendation on the right side (red box above) to add a special README.md that will act as a landing page for our organization.",
+    "objectID": "intro_cli.html#short-introduction-to-the-command-line-interface-cli",
+    "href": "intro_cli.html#short-introduction-to-the-command-line-interface-cli",
+    "title": "Using the Command line Interface",
+    "section": "",
+    "text": "The CLI provides a direct way to interact with the Operating System, by typing in commands.\n\n\n\nMight be the only interface you have to a High Performance Computer (HPC)\nCommand statements can be reused easily and saved as scripts\nEasier automation and text files manipulation\n\n\n\n\n\nCommand Line Interface (CLI): This is a user interface that lets you interact with a computer. It is a legacy from the early days of computers. Now a days computers have graphical user interfaces instead (MacOSX, Windows, Linux, …)\nTerminal: It is a an application that lets you run a command line interface. It used to be a physical machine connected to a mainframe computer\nShell: It is the program that runs the command line. There are many different shells, the most common (an default on most system) being bash (Bourne Again SHell)\n\n\n\n\n\n\n\nTip\n\n\n\nNot convinced? Check this out: the CLI pitch\n\n\n\n\n\nYou can access the command line directly from RStudio by using the Terminal tab next to your R console.\n\n\n\n\n\n\npwd: Know where you are\nls: List the content of the directory\ncd: Go inside a directory\n\nSome pseudo directory names. Wherever you are:\n\n~ : Home directory\n. : Here (current directory)\n..: Up one level (upper directory)\n\nLet’s put this into action:\n\ngo to my “Home” directory: cd ~\ngo up one directory level: cd ..\nlist the content: ls\nlist the content showing hidden files: ls -a note that -a is referred as an option (modifies the command)\n\nMore files/directories manipulations:\n\nmkdir: Create a directory\ncp: Copy a file\nmv: Move a file it is also how you rename a file!\nrm / rmdir: Remove a file / directory use those carefully, there is no return / Trash!!\n\nNote: typing is not your thing? the &lt;tab&gt; key is your friend! One hit it will auto-complete the file/directory/path name for you. If there are many options, hit it twice to see the options.\n\n\n\nAll files have permissions and ownership.\n\n\n\nFile permissions\n\n\n\nList files showing ownership and permissions: ls -l\n\n\nbrun@taylor:/courses/EDS214$ ls -l\ntotal 16\ndrwxrwxr-x+ 3 brun      esmdomainusers 4096 Aug 20 04:49 data\ndrwxrwxr-x+ 2 katherine esmdomainusers 4096 Aug 18 18:32 example    \n\nYou can change those permissions:\n\nChange permissions: chmod\nChange ownership: chown\n\n\n\n\n\n\n\nTip\n\n\n\nClear contents in terminal window: clear\n\n\n\n\n\n\ncommand [options] [arguments]\n\nwhere command must be an executable file on your PATH * echo $PATH\nand options can usually take two forms * short form: -a * long form: --all\nYou can combine the options:\n\nls -ltrh\n\nWhat do these options do?\n\nman ls\n\n\n\n\n\n\n\nTip\n\n\n\nhit spacebar to get to the next page of the manual hit q to exit the help\n\n\n\n\n\nFrom the gitbash (MS Windows) or the terminal (Mac) type:\n\nssh taylor.bren.ucsb.edu\n\nYou will be prompted for your username and password.\n\n\n\naurora_ssh\n\n\nYou can also directly add your username:\n\nssh brun@taylor.bren.ucsb.edu\n\nIn this case, you will be only asked for your password as you already specified which user you want to connect with.\n\n\n\n\nWho else is logged into this machine? who\nWho is logged into “this shell”? whoami\n\n\n\n\n\n&lt;command&gt; -h, &lt;command&gt; --help\nman, info, apropos, whereis\nSearch the web!\n\n\n\n\nShow me my Rmarkdown files!\n\nfind . -iname '*.Rmd'\n\nWhich files are larger than 1GB?\n\nfind . -size +1G\n\nWith more details about the files:\n\nfind . -size +1G -ls\n\n\n\n\n\n\n\nCancel (abort) a command: Ctrl-c Note: very different than Windows!!\nStop (suspend) a command: Ctrl-z\nCtrl-z can be used to suspend, then background a process\n\n\n\n\n\nLike Windows Task Manager, OSX Activity Monitor\ntop, ps, jobs (hit q to get out!)\nkill to delete an unwanted job or process\nForeground and background: &\n\n\n\n\n\nHow much storage is available on this system? df -h\nHow much storage am “I” using overall? du -hs &lt;folder&gt;\nHow much storage am “I” using, by sub directory? du -h &lt;folder&gt;\n\n\n\n\n\nSee your command history: history\nRe-run last command: !! (pronounced “bang-bang”)\nRe-run 32th command: !32\nRe-run 5th from last command: !-5\nRe-run last command that started with ‘c’: !c\n\n\n\n\n\n\nwc count lines, words, and/or characters\ndiff compare two files for differences\nsort sort lines in a file\nuniq report or filter out repeated lines in a file\n\n\n\n\n\n\n\nstdin, stdout, stderr\n\n\n\n$ ls *.png | wc -l\n$ ls *.png | wc -l &gt; pngcount.txt\n$ diff &lt;(sort file1.txt) &lt;(sort file2.txt)\n$ ls foo 2&gt;/dev/null\n\n\nnote use of * as character wildcard for zero or more matches (same in Mac and Windows)\n? matches single character; _ is SQL query equivalent\n\n\n\n\n\n\n\nvim\nemacs\nnano\n\n\n$ nano .bashrc",
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "GitHub Organizations for your Lab"
+      "Using the command line"
     ]
   },
   {
-    "objectID": "github_org.html#customizing-your-github-organization",
-    "href": "github_org.html#customizing-your-github-organization",
-    "title": "GitHub Organizations",
-    "section": "Customizing your GitHub Organization",
-    "text": "Customizing your GitHub Organization\n\nAdding a landing page\nAdding a landing page is a great opportunity to describe your research lab and what content one can expect to find in this organization. It is also a good location to describe guidelines on how to best engage with you and provide contact information.\n\nClick on the create a README file on the right sidebar (see red box above). This will trigger the creation of a new special repository called .github that will be used to host your README file. Click Create repository.\n\n\n\n\n\n\n\nFill out the necessary information as follows:\n\n\n\n\n\n\nWe recommend checking the box Add a README file as a good practice but note it is not the README that will be used as your landing page, it is the one describing this new repository hosting your landing page README in a special subfolder.\n\nCreate your landing page by clicking on the Add README button on the right sidebar (red box below)\n\n Note the path to this special README: .github/profile/README.md\n\nEdit your landing page. The template used to create this special README provides suggestions about the type of information you might want to add to your landing page. Those suggestions are in a comment block (delimited by &lt;!-- & --&gt;) and thus won’t be shown when the README is rendered. We still do recommend deleting this block once you are done editing your README\n\n\n\n\n\n\nHere is an example of how we defined the landing page README for our test organization:\n\n\n\n\n\n\nSave your README: Now that you have your first version of your GitHub organization landing page (you can always iterate later on it), we are ready to save this version by clicking on the Commit changes button (red box above). This will prompt a new page where you can add a commit message to describe the changes. Finally, you can hit the Commit changes button to save this version.\n\n\n\n\n\n\nVoilà 🎉 !! When you go back to your organization’s main page, you should now see the text you just wrote at the top of the landing page!\n\n\n\n\n\n\n\nSetting up your organization profile\nNow that you have a landing page, it is also a great idea to fill out some metadata about your organization under the Settings tab of the main navigation bar (top right). This will help with the discovery of your Organization. You can provide a more Human friendly name, an email to reach out to you, a short description of your organization, and an URL such as your lab home page.\n\nFinally, click Update profile to save your changes.",
+    "objectID": "intro_cli.html#hands-on",
+    "href": "intro_cli.html#hands-on",
+    "title": "Using the Command line Interface",
+    "section": "Hands-on",
+    "text": "Hands-on\nLet’s practice our new skills! Click here",
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "GitHub Organizations for your Lab"
+      "Using the command line"
+    ]
+  },
+  {
+    "objectID": "intro_cli.html#aknowledgements",
+    "href": "intro_cli.html#aknowledgements",
+    "title": "Using the Command line Interface",
+    "section": "Aknowledgements",
+    "text": "Aknowledgements\nThis section adapted materials from NCEAS Open Science for Synthesis (OSS) intensive summer schools and other training. Contributions to this content have been made by Mark Schildhauer, Matt Jones, Jim Regetz and many others; and from EDS-213 10 bash essentials developed by Greg Janée",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Using the command line"
+    ]
+  },
+  {
+    "objectID": "github_teams.html",
+    "href": "github_teams.html",
+    "title": "GitHub Teams",
+    "section": "",
+    "text": "You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages, and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google Drive, this is the same concept.\nTeams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Setting up Teams to better collaborate"
+    ]
+  },
+  {
+    "objectID": "github_teams.html#what-are-github-teams",
+    "href": "github_teams.html#what-are-github-teams",
+    "title": "GitHub Teams",
+    "section": "",
+    "text": "You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages, and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google Drive, this is the same concept.\nTeams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Setting up Teams to better collaborate"
+    ]
+  },
+  {
+    "objectID": "github_teams.html#create-a-team",
+    "href": "github_teams.html#create-a-team",
+    "title": "GitHub Teams",
+    "section": "Create a team",
+    "text": "Create a team\nIn the navigation bar at the top of your organization page, click on the Teams tab. Normally this is the page you use to see and manage the existing teams of your organization. Since we do not have teams yet, this page provides a short overview of what teams can be used for. Click on the New Team green button at the bottom to start creating your first team.\n\nProved the name and a short description of your team. We recommend to let the other options to their default settings.\n\n\n\n\n\nYour team has been created, but as of now you are the only member. Let’s invite some collaborators by clicking on the Add a member button on the top right.\n\n\n\n\n\nOn this new window, you can search for GitHub users by their username. If you do not know their username you can search by their full names. Note that if there are no pictures associated with the profile you found or are not sure it is the right person, we recommend not adding this person at this time and reaching out asking for their username (which is unique). When you are sure you found the right persons you can click on Invite.\n\n\n\n\n\nYour collaborators will receive an invitation to join the team. They will have to accept the invitation before they can use the benefits (access to repositories, …) associated with the team. Once your collaborators have accepted your team should look like below.\n\n\n\n\n\nOK, let’s create a second team! In this example, we will create a Research Facilitators team with two members.\n\n\n\n\n\nOnce your GitHub organization has teams, you will the number of existing teams next to the Teams tab.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Setting up Teams to better collaborate"
+    ]
+  },
+  {
+    "objectID": "github_teams.html#leveraging-teams",
+    "href": "github_teams.html#leveraging-teams",
+    "title": "GitHub Teams",
+    "section": "Leveraging teams",
+    "text": "Leveraging teams\nLet’s create a new repository and use our newly created teams to add several collaborators at once.\n\n\n\n\n\nUnder your newly created organization, create a new repository with the following settings:\n\n\n\n\n\nOnce the repository is created, click on the Settings tab (top right in the grey bar)\n\n\n\n\n\nOn the left panel, click on Collaborators and teams and then click on the green button Add teams\n\n\n\n\n\nStart typing the name of the team you would like to add. Suggestions of teams should come up as you type. Select the relevant team by clicking on the suggestion.\n\n\n\n\n\nFor close collaborators, we recommend using the Maitain level of access that provides a good blend of people being able to do most of the actions they will need to do while not being allowed to conduct destructive actions on accident (like deleting the entire repository). For collaborators you are less familiar with, including their familiarity with GitHub, you might want to start with the Write access.\n\n\n\n\n\nOnce the team added, your settings should look as follow:\n\n\n\n\n\nThe good news is now if you add a collaborator to a specific team, this person will automatically gain access to all the repositories that team has access to! This will streamline the on- and off- boarding process of your team members.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Setting up Teams to better collaborate"
+    ]
+  },
+  {
+    "objectID": "data_mgmt.html",
+    "href": "data_mgmt.html",
+    "title": "Managing your lab data",
+    "section": "",
+    "text": "Data are also part of the scientific products your Lab is producing. It is thus important to develop strategies to manage them well, so you can reuse them. Well managed, data can become an an asset for your lab and your collaborators. In the end, the goal of managing your data is to develop documentation that will enable others (including your future self) to understand and reuse those data sets. This documentation does not start when you are wrapping up your project, this process needs to be integrated all along the data life cycle of your project.\n\n\nTo help you think about your Lab data management, you can divide the life cycle of a data set in several phases:\n\n\n\nResearch Data Management lifecycle; source: https://osf.io/d8fqh",
+    "crumbs": [
+      "Managing your Lab data",
+      "What is data management?"
+    ]
+  },
+  {
+    "objectID": "data_mgmt.html#data-are-a-scientific-product",
+    "href": "data_mgmt.html#data-are-a-scientific-product",
+    "title": "Managing your lab data",
+    "section": "",
+    "text": "Data are also part of the scientific products your Lab is producing. It is thus important to develop strategies to manage them well, so you can reuse them. Well managed, data can become an an asset for your lab and your collaborators. In the end, the goal of managing your data is to develop documentation that will enable others (including your future self) to understand and reuse those data sets. This documentation does not start when you are wrapping up your project, this process needs to be integrated all along the data life cycle of your project.\n\n\nTo help you think about your Lab data management, you can divide the life cycle of a data set in several phases:\n\n\n\nResearch Data Management lifecycle; source: https://osf.io/d8fqh",
+    "crumbs": [
+      "Managing your Lab data",
+      "What is data management?"
+    ]
+  },
+  {
+    "objectID": "git_conflicts.html",
+    "href": "git_conflicts.html",
+    "title": "Managing git merge conflicts",
+    "section": "",
+    "text": "You did nothing wrong!! Git is simply asking for your help to merge files because it can not figure it out on its own.\n\n\n\n\n\n\nOne thing to note before we continue\n\n\n\ngit pull = git fetch (getting things from GitHub) + git merge (merging the versions between your local and GitHub)\n\n\nA conflict arises when git can not automatically merge two versions of a file. When the changes are on different files or on the same file but far apart, git will figure it out on his own and do the merge automatically. However, if changes are overlapping, git will call you to the rescue because it is not sure which version should be kept. When you are in this situation, you are “stalled” between the git fetch & the git merge and you need to edit the file(s) where there is a conflict. Luckily, git will flag the lines that have different versions for you to look at.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Managing version conflicts"
+    ]
+  },
+  {
+    "objectID": "git_conflicts.html#how-to-minimize-the-risk-of-conflicts",
+    "href": "git_conflicts.html#how-to-minimize-the-risk-of-conflicts",
+    "title": "Managing git merge conflicts",
+    "section": "How to minimize the risk of conflicts?",
+    "text": "How to minimize the risk of conflicts?\n\nCommunicate!! Who is working on what script/file today? GitHub issues and tagging people is a great way to do this\ncommit, pull, and push often , so the changes between versions are kept minimal\n\nThese two tips should help you on your git conflict free journey!!\nIf conflicts keep happening in your collaboration, using git branches might be the next step to consider for your team.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Managing version conflicts"
+    ]
+  },
+  {
+    "objectID": "git_conflicts.html#example-using-rstudio",
+    "href": "git_conflicts.html#example-using-rstudio",
+    "title": "Managing git merge conflicts",
+    "section": "Example using RStudio",
+    "text": "Example using RStudio\nOk, let’s create a conflict with our favorite desserts repository.\nUser 1 is going to change a line on the README an push the change to GitHub.\n\n\n\n\n\nNow user 2, is going to also make an edit to the README on this same line while forgetting to pull before starting to edit the file\nIn this example, we will be changing the favorite dessert of the same person:\n\n\n\n\n\nSave and commit your changes.\nNow it is time to pull and push your changes… however git is unsure how to reconcile the two versions of the README.md\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nBefore this you might first have the pop-up below on your screen that prompts you to tell git what techniques it should use to resolve conflicts\n\n\n\n\n\nWe recommend to choose the merge option by copy-pasting this line in the terminal:\ngit config pull.rebase false\n\n\nNote the tags that git has automatically inserted in the text to highlight: 1. where is the conflict and 2. what are the two versions you are trying to reconcile. Note also that RStudio is flagging the file with an orange U logo to let you know that the files are Unmerged.\n\n\n\n\n\nYou can edit the README to resolve the conflict to your liking. You could opt to choose one of the version\n\n\n\n\n\nor to come up with a “blended” version:\n\n\n\n\n\nOnce you are satisfied with your version, you can save the file and commit your changes\n\n\n\n\n\nDon’t forget to pull and push to synchronize your local changes with GitHub.\nIf you now look at the history, you can see how git has tracked the conflict resolution. We will talk about branches later on, but spoiler alert it looks very much how you would merge a branch back to the main branch.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Managing version conflicts"
+    ]
+  },
+  {
+    "objectID": "03-handson_github_workflows.html",
+    "href": "03-handson_github_workflows.html",
+    "title": "GitHub workflows: forks and branches",
+    "section": "",
+    "text": "Setup\n\nPerson 1 (owner):\n\nCreate a repository using the following these instructions steps 1-6\n\n\n\nAdd Person 2 as collaborator following these instructions\nEdit the README to:\n\nReplace the title (first line starting with #) with something better! Maybe Favorite Desserts\nAdd your name and your favorite dessert below the title: e.g. - Julien: crepes\n\n\n\nknitr::include_graphics(\"img/github-readme_desserts.png\")\n\n\n\n\n\n\n\n\n\n\n\nForks\n\nPerson 2: Create a Fork\n\nAsk your teammate to Slack you the link to the repository\nCreate a Fork by clicking on the Fork button on the top right view of your repository homepage\n\n\n\n\n\n\n\n\n\n\n\nOn your Fork, start editing the README.md\nAdd your name and your favorite dessert below your teammate entry: e.g. - Sophia: chocolate\nAdd a descriptive commit message\n\n\nknitr::include_graphics(\"img/github-commit.png\")\n\n\n\n\n\n\n\n\n\nCommit your changes\n\n\n\n\n\n\n\n\n\n\n\nCreate a pull request to merge those changes to the main repository using these instructions\n\n\n\nPerson 1:\n\nGo to your repository and merge the PR\n\n\n\n\n\nBranches\n\nPerson 1: add a file\nDownload this csv file about your favorite desserts to your computer\n\nJust drag and drop it on the Github web page of your repository to upload it\nAdd a short message about the file: e.g. Adding dessert csv & hit Commit changes\nYour file has been uploaded. Click on the filename to see it!\n\nYou should have something similar to this repo: https://github.com/brunj7/favorite-desserts/blob/master/favorite_desserts.csv\nNow you want to collaborate more closely and do not wan your teammate to have to create a fork and be able to work directly on your repository\n\nAdd Person 2 as a collaborator following these instructions\n\n\n\nPerson 2: Create a branch\n\nCheck your email or Github Notifications to accept the invitation\nGo to the repository website (link is provided in the invitation)\nCreate a new branch named after your first name\n\n\nknitr::include_graphics(\"img/github-create_branch.png\")\n\n\n\n\n\n\n\n\n\nEdit the csv file directly on GitHub to add your favorite dessert to it\nCreate a Pull Request (PR) to merge you branch back to main\nAssign person 1 as a reviewer (instructions)\n\n\n\nPerson 1: Merge the branch\n\nReview PR\nMerge and close PR",
+    "crumbs": [
+      "Coding as a Lab",
+      "Collaborative strategies",
+      "Hands-on: forks & branches with Github website"
+    ]
+  },
+  {
+    "objectID": "git_cli.html",
+    "href": "git_cli.html",
+    "title": "Using git at the command line",
+    "section": "",
+    "text": "If you are not sure if you have already set your git identity, you can check this running this command:\ngit config --global --list\nIf you identity is not set yet, you need to provide your name and email (we recommend to use the same email as used when setting your GitHub account):\ngit config --global user.name \"your Full Name\"\ngit config --global user.email \"your Email\"\n\n\nCheck that everything is correct:\ngit config --global --list\nModify everything at the same time:\ngit config --global --edit\nSet your text editor:\ngit config --system core.editor nano\nHere nano is used as example; you can choose most of the text editor you might have installed on your computer (atom, sublime, notepad++ …).\nProblem with any of those steps? Check out Jenny Brian Happy git trouble shooting section\n\n\n\n\nNormally if you have already used GitHub tokens your Operating System (Windows, MacOSX, …) should have cached the necessary credentials to log in to your GitHub account (necessary to be able to push (write) content to the remote repository).\nWe are going to set up the method that is commonly used by many different services to authenticate access on the command line. This method is called Secure Shell Protocol (SSH). SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.\nSSH uses what is called a key pair. This is two keys that work together to validate access. One key is publicly known and called the public key, and the other key called the private key is kept private. Very descriptive names.\nYou can think of the public key as a padlock, and only you have the key (the private key) to open it. You use the public key where you want a secure method of communication, such as your GitHub account. You give this padlock, or public key, to GitHub and say “lock the communications to my account with this so that only computers that have my private key can unlock communications and send git commands as my GitHub account.”\n\n\nThe first thing we are going to do is check if this has already been done on the computer you’re on. Because generally speaking, this setup only needs to happen once and then you can forget about it:\nls -al ~/.ssh\nYour output is going to look a little different depending on whether or not SSH has ever been set up on the computer you are using.\n\n\nIf SSH has been set up on the computer you’re using, the public and private key pairs will be listed. The file names are either id_ed25519/id_ed25519.pub or id_rsa/id_rsa.pub depending on how the key pairs were set up.\n\n\n\nls: cannot access '/Users/brunj7/.ssh': No such file or directory\nCreate an SSH key pair\nTo create an SSH key pair Vlad uses this command, where the -t option specifies which type of algorithm to use and -C attaches a comment to the key (here, Vlad’s email):\n$ ssh-keygen -t ed25519 -C \"youremail@provider.org\"\nIf you are using a legacy system that doesn’t support the Ed25519 algorithm, use:\n$ ssh-keygen -t rsa -b 4096 -C \"your_email@example.com\"\nGenerating public/private ed25519 key pair.\nEnter file in which to save the key (/Users/brunj7/.ssh/id_ed25519):\nWe want to use the default file, so just press Enter.\nCreated directory '/Users/brunj7/.ssh'.\nEnter passphrase (empty for no passphrase):\nNow, it is prompting you for a passphrase. Be sure to use something memorable or save your passphrase somewhere, as there is no “reset my password” option.\n\n\n\n\n\n\nWarning\n\n\n\nWhen you enter password at the shell, the keystrokes do not produce the usual “dot” showing you that you are typing, but your keystrokes are being registered… so keep typing you password !!\n\n\nEnter same passphrase again:\nAfter entering the same passphrase a second time, we receive the confirmation\nYour identification has been saved in /Users/brunj7/.ssh/id_ed25519\nYour public key has been saved in /Users/brunj7/.ssh/id_ed25519.pub\nThe key fingerprint is:\nSHA256:SMSPIStNyA00KPxuYu94KpZgRAYjgt9g4BA4kFy3g1o vlad@tran.sylvan.ia\nThe key's randomart image is:\n+--[ED25519 256]--+\n|^B== o.          |\n|%*=.*.+          |\n|+=.E =.+         |\n| .=.+.o..        |\n|....  . S        |\n|.+ o             |\n|+ =              |\n|.o.o             |\n|oo+.             |\n+----[SHA256]-----+\nThe “identification” is actually the private key. You should never share it. The public key is appropriately named. The “key fingerprint” is a shorter version of a public key.\nNow that we have generated the SSH keys, we will find the SSH files when we check.\nls -al ~/.ssh\ndrwxr-xr-x 1 brunj7  staff 197121  Oct 23  13:14 ./\ndrwxr-xr-x 1 brunj7  staff 197121  Mar 11  09:21 ../\n-rw------- 1 brunj7  staff    464  Apr 21  2023 id_ed25519\n-rw-r--r-- 1 brunj7  staff    103  Apr 21  2023 id_ed25519.pub",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Using git at the command line"
+    ]
+  },
+  {
+    "objectID": "git_cli.html#setup-your-git-profile",
+    "href": "git_cli.html#setup-your-git-profile",
+    "title": "Using git at the command line",
+    "section": "",
+    "text": "If you are not sure if you have already set your git identity, you can check this running this command:\ngit config --global --list\nIf you identity is not set yet, you need to provide your name and email (we recommend to use the same email as used when setting your GitHub account):\ngit config --global user.name \"your Full Name\"\ngit config --global user.email \"your Email\"\n\n\nCheck that everything is correct:\ngit config --global --list\nModify everything at the same time:\ngit config --global --edit\nSet your text editor:\ngit config --system core.editor nano\nHere nano is used as example; you can choose most of the text editor you might have installed on your computer (atom, sublime, notepad++ …).\nProblem with any of those steps? Check out Jenny Brian Happy git trouble shooting section\n\n\n\n\nNormally if you have already used GitHub tokens your Operating System (Windows, MacOSX, …) should have cached the necessary credentials to log in to your GitHub account (necessary to be able to push (write) content to the remote repository).\nWe are going to set up the method that is commonly used by many different services to authenticate access on the command line. This method is called Secure Shell Protocol (SSH). SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.\nSSH uses what is called a key pair. This is two keys that work together to validate access. One key is publicly known and called the public key, and the other key called the private key is kept private. Very descriptive names.\nYou can think of the public key as a padlock, and only you have the key (the private key) to open it. You use the public key where you want a secure method of communication, such as your GitHub account. You give this padlock, or public key, to GitHub and say “lock the communications to my account with this so that only computers that have my private key can unlock communications and send git commands as my GitHub account.”\n\n\nThe first thing we are going to do is check if this has already been done on the computer you’re on. Because generally speaking, this setup only needs to happen once and then you can forget about it:\nls -al ~/.ssh\nYour output is going to look a little different depending on whether or not SSH has ever been set up on the computer you are using.\n\n\nIf SSH has been set up on the computer you’re using, the public and private key pairs will be listed. The file names are either id_ed25519/id_ed25519.pub or id_rsa/id_rsa.pub depending on how the key pairs were set up.\n\n\n\nls: cannot access '/Users/brunj7/.ssh': No such file or directory\nCreate an SSH key pair\nTo create an SSH key pair Vlad uses this command, where the -t option specifies which type of algorithm to use and -C attaches a comment to the key (here, Vlad’s email):\n$ ssh-keygen -t ed25519 -C \"youremail@provider.org\"\nIf you are using a legacy system that doesn’t support the Ed25519 algorithm, use:\n$ ssh-keygen -t rsa -b 4096 -C \"your_email@example.com\"\nGenerating public/private ed25519 key pair.\nEnter file in which to save the key (/Users/brunj7/.ssh/id_ed25519):\nWe want to use the default file, so just press Enter.\nCreated directory '/Users/brunj7/.ssh'.\nEnter passphrase (empty for no passphrase):\nNow, it is prompting you for a passphrase. Be sure to use something memorable or save your passphrase somewhere, as there is no “reset my password” option.\n\n\n\n\n\n\nWarning\n\n\n\nWhen you enter password at the shell, the keystrokes do not produce the usual “dot” showing you that you are typing, but your keystrokes are being registered… so keep typing you password !!\n\n\nEnter same passphrase again:\nAfter entering the same passphrase a second time, we receive the confirmation\nYour identification has been saved in /Users/brunj7/.ssh/id_ed25519\nYour public key has been saved in /Users/brunj7/.ssh/id_ed25519.pub\nThe key fingerprint is:\nSHA256:SMSPIStNyA00KPxuYu94KpZgRAYjgt9g4BA4kFy3g1o vlad@tran.sylvan.ia\nThe key's randomart image is:\n+--[ED25519 256]--+\n|^B== o.          |\n|%*=.*.+          |\n|+=.E =.+         |\n| .=.+.o..        |\n|....  . S        |\n|.+ o             |\n|+ =              |\n|.o.o             |\n|oo+.             |\n+----[SHA256]-----+\nThe “identification” is actually the private key. You should never share it. The public key is appropriately named. The “key fingerprint” is a shorter version of a public key.\nNow that we have generated the SSH keys, we will find the SSH files when we check.\nls -al ~/.ssh\ndrwxr-xr-x 1 brunj7  staff 197121  Oct 23  13:14 ./\ndrwxr-xr-x 1 brunj7  staff 197121  Mar 11  09:21 ../\n-rw------- 1 brunj7  staff    464  Apr 21  2023 id_ed25519\n-rw-r--r-- 1 brunj7  staff    103  Apr 21  2023 id_ed25519.pub",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Using git at the command line"
+    ]
+  },
+  {
+    "objectID": "git_cli.html#clone-a-repository",
+    "href": "git_cli.html#clone-a-repository",
+    "title": "Using git at the command line",
+    "section": "Clone a repository",
+    "text": "Clone a repository\n\n\n\n\n\n\nTip\n\n\n\nIf you not have yet your favorite-desserts GitHub repository, please follow those steps\n\n\nNavigate to the folder (e.g cd ~/Documents) where you want to save your repository and run the following command:\ngit clone https://github.com/brunj7/favorite-desserts.git\nYou should have a new folder on your local machine named favorite-desserts after your repository :\nls\nGo inside the repository:\ncd favorite-desserts\nls -al\nThis should return the exact same content that is currently on GitHub!",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Using git at the command line"
+    ]
+  },
+  {
+    "objectID": "git_cli.html#tracking-your-work",
+    "href": "git_cli.html#tracking-your-work",
+    "title": "Using git at the command line",
+    "section": "Tracking your work",
+    "text": "Tracking your work\nLet’s create a text file called index.md and add it to our repository. The file will later be converted into a webpage by GitHub pages. We’ll write the file using a syntax called Markdown, which is why we use the .md extensions.\n\n\n\n\n\n\nNote\n\n\n\nWe’ll use nano to edit the file; you can use whatever editor you like. In particular, this does not have to be the core.editor you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be nano). For a refresher on text editors, check out “Which Editor?” in The Unix Shell lesson.\n\n\nnano index.md\nType the text below, replacing the names with people you know:\n## Listing of my favorite desserts\n\n- Julien, crepes\n\nExit nano and save your changes.\nCheck it worked:\n$ cat index.md\nYou should see the content you just typed!\nIf we check the status of our project again, Git tells us that it’s noticed the new file:\n$ git status\nOn branch main\n\nNo commits yet\n\nUntracked files:\n   (use \"git add &lt;file&gt;...\" to include in what will be committed)\n\n    index.md\n\nnothing added to commit but untracked files present (use \"git add\" to track)\nThe “untracked files” message means that there’s a file in the directory that Git isn’t keeping track of. We can tell Git to track a file using git add:\n$ git add index.md\nand then check that the right thing happened:\n$ git status\nOn branch main\n\nNo commits yet\n\nChanges to be committed:\n  (use \"git rm --cached &lt;file&gt;...\" to unstage)\n\n    new file:   index.md\n\nGit now knows that it’s supposed to keep track of index.md, but it hasn’t recorded these changes as a commit yet. To get it to do that, we need to run one more command:\n$ git commit -m \"start new webpage\"\n[main (root-commit) f22b25e] Start new webpage\n 1 file changed, 1 insertion(+)\n create mode 100644 index.md\nWhen we run git commit, Git takes everything we have told it to save by using git add and stores a copy permanently inside the special .git directory. This permanent copy is called a commit (revision) and its short identifier is f22b25e. Your commit may have another identifier.\nWe use the -m flag (for “message”) to record a short, descriptive, and specific comment that will help us remember later on what we did and why. If we just run git commit without the -m option, Git will launch nano (or whatever other editor we configured as core.editor) so that we can write a longer message.\nGood commit messages start with a brief (&lt;50 characters) statement about the changes made in the commit. Generally, the message should complete the sentence “If applied, this commit will” . If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.\nIf we run git status now:\n$ git status\nOn branch main\nnothing to commit, working tree clean\nit tells us everything is up to date. If we want to know what we’ve done recently, we can ask Git to show us the project’s history using git log:\n$ git log\ncommit f22b25e3233b4645dabd0d81e651fe074bd8e73b\nAuthor: ...\nDate:   Thu Aug 22 09:51:46 2013 -0400\n\n    start new webpage\ngit log lists all commits made to a repository in reverse chronological order. The listing for each commit includes the commit’s full identifier (which starts with the same characters as the short identifier printed by the git commit command earlier), the commit’s author, when it was created, and the log message Git was given when the commit was created.\n\n\n\n\n\n\nWhere Are My Changes?\n\n\n\nIf we run ls at this point, we will still see just one file called index.md. That’s because Git saves information about files’ history in the special .git directory mentioned earlier so that our filesystem doesn’t become cluttered (and so that we can’t accidentally edit or delete an old version).\n\n\nLet’s adds more information to the file. (Again, we’ll edit with nano and then cat the file to show its contents; you may use a different editor, and don’t need to cat.)\n$ nano index.md\n## Listing of my favorite desserts\n\n- Julien, crepes\n- Sophia, chocolate\n\nWhen we run git status now, it tells us that a file it already knows about has been modified:\n$ git status\nOn branch main\nChanges not staged for commit:\n  (use \"git add &lt;file&gt;...\" to update what will be committed)\n  (use \"git checkout -- &lt;file&gt;...\" to discard changes in working directory)\n\n    modified:   index.md\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\nThe last line is the key phrase: “no changes added to commit”.\nWe have changed this file, but we haven’t told Git we will want to save those changes (which we do with git add) nor have we saved them (which we do with git commit). So let’s do that now. It is good practice to always review our changes before saving them. We do this using git diff.\nThis shows us the differences between the current state of the file and the most recently saved version:\n$ git diff\ndiff --git a/index.md b/index.md\nindex 7d781a7..bbb33fe 100644\n--- a/index.md\n+++ b/index.md\n@@ -1 +1,3 @@\n## Listing of my favorite desserts\n\n- Julien, crepes\n+ - Sophia, chocolate\n\nThe output is cryptic because it is actually a series of commands for tools like editors and patch telling them how to reconstruct one file given the other. If we break it down into pieces:\n\nThe first line tells us that Git is producing output similar to the Unix diff command comparing the old and new versions of the file.\nThe second line tells exactly which versions of the file Git is comparing; 7d781a7 and bbb33fe are unique computer-generated labels for those versions.\nThe third and fourth lines once again show the name of the file being changed.\nThe remaining lines are the most interesting, they show us the actual differences and the lines on which they occur. In particular, the + marker in the first column shows where we added a line.\n\nAfter reviewing our change, it’s time to commit it:\n$ git commit -m \"add Sophia\"\nOn branch main\nChanges not staged for commit:\n  (use \"git add &lt;file&gt;...\" to update what will be committed)\n  (use \"git checkout -- &lt;file&gt;...\" to discard changes in working directory)\n\n    modified:   index.md\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\nWhoops: Git won’t commit because we didn’t use git add first. Let’s fix that:\n$ git add index.md\n$ git commit -m \"add Sophia\"\n[main 019f377] add Sophia\n 1 file changed, 1 insertions(+)\n\n\n\n\n\n\nNote\n\n\n\nGit insists that we add files to the set we want to commit before actually committing anything. This allows us to commit our changes in stages and capture changes in logical portions rather than only large batches. For example, suppose we’re adding a few citations to relevant research to our thesis. We might want to commit those additions, and the corresponding bibliography entries, but not commit some of our work drafting the conclusion (which we haven’t finished yet).\nTo allow for this, Git has a special staging area where it keeps track of things that have been added to the current changeset but not yet committed.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Using git at the command line"
+    ]
+  },
+  {
+    "objectID": "git_cli.html#exploring-git-history",
+    "href": "git_cli.html#exploring-git-history",
+    "title": "Using git at the command line",
+    "section": "Exploring git history",
+    "text": "Exploring git history\nYou can look at the history of what we’ve done so far:\n$ git log\nIt should look something like this:\ncommit d11d7e52ab98d3d4c18cde4c4a0bbeea3fe40983 (HEAD -&gt; main)\nAuthor: ...\nDate:   Thu Oct 19 12:07:51 2023 -0400\n\n    add Sophia\n\ncommit 019f37773f9f18b77f508990df65e56a34df45de\nAuthor: ...\nDate:   Thu Oct 19 12:03:04 2023 -0400\n\n    start new webpage\n\ncommit 8defaab26aa641a4233896ec68e603c541aa77b4\nAuthor: ...\nDate:   Thu Oct 19 12:01:17 2023 -0400\n\n    intial commit\n\nPaging the Log\nWhen the output of git log is too long to fit in your screen, git uses a program to split it into pages of the size of your screen. When this “pager” is called, you will notice that the last line in your screen is a :, instead of your usual prompt.\n\nTo get out of the pager, press Q.\nTo move to the next page, press Spacebar.\nTo search for some_word in all pages, press / and type some_word. Navigate through matches pressing N.\n\nTo avoid having git log cover your entire terminal screen, you can limit the number of commits that Git lists by using -N, where N is the number of commits that you want to view. For example, if you only want information from the last commit you can use:\n$ git log -1\ncommit d11d7e52ab98d3d4c18cde4c4a0bbeea3fe40983 (HEAD -&gt; main)\nAuthor: ...\nDate:   Thu Oct 19 12:07:51 2023 -0400\n\n    add Sophia\nYou can also reduce the quantity of information using the --oneline option:\n$ git log --oneline\nd11d7e5 (HEAD -&gt; main) add Sophia\n019f377 start new webpage\n8defaab initial commit\nYou can also combine the --oneline option with others. One useful combination adds --graph to display the commit history as a text-based graph and to indicate which commits are associated with the current HEAD, the current branch main, or [other Git references][git-references]:\n$ git log --oneline --graph\n* d11d7e5 (HEAD -&gt; main) add Sophia\n* 019f377 start new webpage\n* 8defaab initial commit",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Using git at the command line"
+    ]
+  },
+  {
+    "objectID": "git_cli.html#sending-changes-back-to-github",
+    "href": "git_cli.html#sending-changes-back-to-github",
+    "title": "Using git at the command line",
+    "section": "Sending changes back to GitHub",
+    "text": "Sending changes back to GitHub\nNow that we have created these two commits on our local machine, our local version of the repository is different from the version on GitHub. You can see this when running git status at the beginning of the message you should have “Your branch is ahead of ‘origin/master’ by two commits”. This can be translated as you have two additional commits on your local machine that you never shared back to the remote repository on GitHub. Open your favorite web browser and look at the content of your repository on GitHub. You will see there is no index.md file on GitHub.\nThere are two git commands to exchange between local and remote versions of a repository:\n\npull: git will get the latest remote (GitHub in our case) version and try to merge it with your local version\npush: git will send your local version to the remote version of the repository\n\nBefore sending your local version to the remote, you should always get the latest remote version first. In other words, you should pull first and push second. This is the way git protects the remote version against incompatibilities with the local version. You always deal with potential problems on your local machine. Therefore your sequence will always be:\n\npull\npush\n\nLet’s do it:\ngit pull\nNormally nothing should have changed on the remote\nNow we can push our changes to GitHub:\ngit push\nRefresh the repository webpage, you should now see the index.md file!",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Using git at the command line"
+    ]
+  },
+  {
+    "objectID": "git_cli.html#aknowledgements",
+    "href": "git_cli.html#aknowledgements",
+    "title": "Using git at the command line",
+    "section": "Aknowledgements",
+    "text": "Aknowledgements\nThis section is adapted from Seth Erickson’s version of the Software Carpentry introduction to git",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Using git at the command line"
+    ]
+  },
+  {
+    "objectID": "github_intro.html",
+    "href": "github_intro.html",
+    "title": "git and GitHub",
+    "section": "",
+    "text": "Aka – Say goodbye to script_JB_03v5b.R !!\n\n\n\n\n\n\n\n\n\n\n\nEvery file in the scientific process changes. Manuscripts are edited. Figures get revised. Code gets fixed when problems are discovered. Data files get combined together, then errors are fixed, and then they are split and combined again. In the course of a single analysis, one can expect thousands of changes to files. And yet, all we use to track this are simplistic filenames. You might think there is a better way, and you’d be right: version control.\nVersion control systems help you track all of the changes to your files, without the spaghetti mess that ensues from simple file renaming. In other words, version control is a system that helps you to manage the different versions of your files in an organized manner. It will help you to never have to duplicate files using save as as a way to keep different versions of a file (see below). Version control helps you to develop a timeline of snapshots containing the different versions of a file. At any point in time, you will be able to roll back to a specific version. Bonus: you can add a short description (commit message) to remember what each specific version is about.\nWhat is the difference between git and GitHub?\n\ngit: is a version control software used to track files in a folder (a repository)\n\ngit creates a timeline or history of your files\n\nGitHub: is a code repository in the cloud that enables users to store their git repositories and share them with others. Github also adds many features to manage projects and document your work.\n\n\n\n\n\nThis section focuses on the code versioning system called Git. Note that there are others, such as Mercurial or svn for example.\nGit is a free and open source distributed version control system. It has many functionalities and was originally geared towards software development and production environment. In fact, Git was initially designed and developed in 2005 by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel. Here is a fun video of Linus Torvalds touting Git to Google.\nHow does it work?\nGit can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a repository (which formally is a specific data structure storing versioning information).\nWhat git is not:\n\nGit is not a backup per se\nGit is not good at versioning large files (there are workarounds) =&gt; not meant for large data\n\n\n\n\n\n\n\nFun fact\n\n\n\n\n\nGit was initially designed and developed by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel in 2005. Here is a fun video of Linus Torvalds touting Git to Google engineers.\n\n\n\n\n\nGit can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a repository (which formally is a specific data structure storing versioning information).\nAlthough there are many ways to start a new repository, GitHub (or any other cloud solutions, such as GitLab) provide among the most convenient way of starting a repository.\n\n\n\n\n\nGitHub is a company that hosts git repositories online and provides several collaboration features (among which forking). GitHub fosters a great user community and has built a nice web interface to git, also adding great visualization/rendering capacities of your data.\n\n\nThis is the default landing page when you log into your account. It provides a mix of the most recent resources and activities of your and your collaborators’ actions, as well as some resources relevant to your work. The dashboard therefore changes on a regular basis. Once logged in, you can access your dashboard at https://github.com\n\n\n\n\nThis page can be reached using with the following URL: https://github.com/username. For my user (brunj7) it would be: https://github.com/brunj7. It is a great space for you to provide some information about yourself and the main repositories you are working on. It also lists the GitHub Organizations you are part of. But more importantly, Users own repositories to host and share their code. You can list repositories from a User by clicking on the repositories tab in the main GitHub menu bar at the top.\n\n\n\n\nWe will talk more about GitHub Organizations later. In a nutshell, organizations are like groups or teams that users can be members of. Like Users, Organizations can have a landing page and own repositories. However, they add several perks in terms of user management. Similarly to Users, you can access repositories from an Organization by clicking on the repositories tab in the main GitHub menu bar at the top. You can access an organization’s page similarly to a user: https://github.com/organization-name; e.g. https://github.com/UCSB-Library-Research-Data-Services\n\n\n\n\n\n\n\n\nThis screen shows the copy of a repository stored on GitHub, with its list of files, when the files and directories were last modified, and some information on who made the most recent changes.\n\n\n\n\n\nIf we drill into the “commits” for the repository, we can see the history of changes made to all of the files. Looks like kellijohnson and seananderson were fixing things in June and July:\n\n\n\n\n\nAnd finally, if we drill into the changes made on June 13, we can see exactly what was changed in each file:\n\n\n\n\n\nTracking these changes, and seeing how they relate to released versions of software and files is exactly what Git and GitHub are good for. We will show how they can really be effective for tracking versions of scientific code, figures, and manuscripts to accomplish a reproducible workflow.\n\n\n\n\n\nGitHub.com / your dashboard (if logged in): https://github.com\nA user account: https://github.com/brunj7\nAn organization account: https://github.com/UCSB-Library-Research-Data-Services\n\n\n\n\nBraga PHP, Hébert K, Hudgins EJ, Scott ER, Edwards BPM, Sánchez Reyes LL, et al. Not just for programmers: How GitHub can accelerate collaborative and reproducible research in ecology and evolution. Methods in Ecology and Evolution. 2023;14: 1364–1380. doi:10.1111/2041-210X.14108\n\n\n\nThis materials was adapted from NCEAS Reproducible Research Techniques for Synthesis & Collaborative Coding with GitHub. LNO Scientific Computing Team.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Our tools: git & GitHub"
+    ]
+  },
+  {
+    "objectID": "github_intro.html#the-problem-with-save_as",
+    "href": "github_intro.html#the-problem-with-save_as",
+    "title": "git and GitHub",
+    "section": "",
+    "text": "Every file in the scientific process changes. Manuscripts are edited. Figures get revised. Code gets fixed when problems are discovered. Data files get combined together, then errors are fixed, and then they are split and combined again. In the course of a single analysis, one can expect thousands of changes to files. And yet, all we use to track this are simplistic filenames. You might think there is a better way, and you’d be right: version control.\nVersion control systems help you track all of the changes to your files, without the spaghetti mess that ensues from simple file renaming. In other words, version control is a system that helps you to manage the different versions of your files in an organized manner. It will help you to never have to duplicate files using save as as a way to keep different versions of a file (see below). Version control helps you to develop a timeline of snapshots containing the different versions of a file. At any point in time, you will be able to roll back to a specific version. Bonus: you can add a short description (commit message) to remember what each specific version is about.\nWhat is the difference between git and GitHub?\n\ngit: is a version control software used to track files in a folder (a repository)\n\ngit creates a timeline or history of your files\n\nGitHub: is a code repository in the cloud that enables users to store their git repositories and share them with others. Github also adds many features to manage projects and document your work.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Our tools: git & GitHub"
+    ]
+  },
+  {
+    "objectID": "github_intro.html#git",
+    "href": "github_intro.html#git",
+    "title": "git and GitHub",
+    "section": "",
+    "text": "This section focuses on the code versioning system called Git. Note that there are others, such as Mercurial or svn for example.\nGit is a free and open source distributed version control system. It has many functionalities and was originally geared towards software development and production environment. In fact, Git was initially designed and developed in 2005 by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel. Here is a fun video of Linus Torvalds touting Git to Google.\nHow does it work?\nGit can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a repository (which formally is a specific data structure storing versioning information).\nWhat git is not:\n\nGit is not a backup per se\nGit is not good at versioning large files (there are workarounds) =&gt; not meant for large data\n\n\n\n\n\n\n\nFun fact\n\n\n\n\n\nGit was initially designed and developed by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel in 2005. Here is a fun video of Linus Torvalds touting Git to Google engineers.\n\n\n\n\n\nGit can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a repository (which formally is a specific data structure storing versioning information).\nAlthough there are many ways to start a new repository, GitHub (or any other cloud solutions, such as GitLab) provide among the most convenient way of starting a repository.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Our tools: git & GitHub"
+    ]
+  },
+  {
+    "objectID": "github_intro.html#github",
+    "href": "github_intro.html#github",
+    "title": "git and GitHub",
+    "section": "",
+    "text": "GitHub is a company that hosts git repositories online and provides several collaboration features (among which forking). GitHub fosters a great user community and has built a nice web interface to git, also adding great visualization/rendering capacities of your data.\n\n\nThis is the default landing page when you log into your account. It provides a mix of the most recent resources and activities of your and your collaborators’ actions, as well as some resources relevant to your work. The dashboard therefore changes on a regular basis. Once logged in, you can access your dashboard at https://github.com\n\n\n\n\nThis page can be reached using with the following URL: https://github.com/username. For my user (brunj7) it would be: https://github.com/brunj7. It is a great space for you to provide some information about yourself and the main repositories you are working on. It also lists the GitHub Organizations you are part of. But more importantly, Users own repositories to host and share their code. You can list repositories from a User by clicking on the repositories tab in the main GitHub menu bar at the top.\n\n\n\n\nWe will talk more about GitHub Organizations later. In a nutshell, organizations are like groups or teams that users can be members of. Like Users, Organizations can have a landing page and own repositories. However, they add several perks in terms of user management. Similarly to Users, you can access repositories from an Organization by clicking on the repositories tab in the main GitHub menu bar at the top. You can access an organization’s page similarly to a user: https://github.com/organization-name; e.g. https://github.com/UCSB-Library-Research-Data-Services\n\n\n\n\n\n\n\n\nThis screen shows the copy of a repository stored on GitHub, with its list of files, when the files and directories were last modified, and some information on who made the most recent changes.\n\n\n\n\n\nIf we drill into the “commits” for the repository, we can see the history of changes made to all of the files. Looks like kellijohnson and seananderson were fixing things in June and July:\n\n\n\n\n\nAnd finally, if we drill into the changes made on June 13, we can see exactly what was changed in each file:\n\n\n\n\n\nTracking these changes, and seeing how they relate to released versions of software and files is exactly what Git and GitHub are good for. We will show how they can really be effective for tracking versions of scientific code, figures, and manuscripts to accomplish a reproducible workflow.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Our tools: git & GitHub"
+    ]
+  },
+  {
+    "objectID": "github_intro.html#recap",
+    "href": "github_intro.html#recap",
+    "title": "git and GitHub",
+    "section": "",
+    "text": "GitHub.com / your dashboard (if logged in): https://github.com\nA user account: https://github.com/brunj7\nAn organization account: https://github.com/UCSB-Library-Research-Data-Services",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Our tools: git & GitHub"
+    ]
+  },
+  {
+    "objectID": "github_intro.html#recommended-reading",
+    "href": "github_intro.html#recommended-reading",
+    "title": "git and GitHub",
+    "section": "",
+    "text": "Braga PHP, Hébert K, Hudgins EJ, Scott ER, Edwards BPM, Sánchez Reyes LL, et al. Not just for programmers: How GitHub can accelerate collaborative and reproducible research in ecology and evolution. Methods in Ecology and Evolution. 2023;14: 1364–1380. doi:10.1111/2041-210X.14108",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Our tools: git & GitHub"
+    ]
+  },
+  {
+    "objectID": "github_intro.html#aknowledgements",
+    "href": "github_intro.html#aknowledgements",
+    "title": "git and GitHub",
+    "section": "",
+    "text": "This materials was adapted from NCEAS Reproducible Research Techniques for Synthesis & Collaborative Coding with GitHub. LNO Scientific Computing Team.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Our tools: git & GitHub"
+    ]
+  },
+  {
+    "objectID": "datamgmt_preserve.html",
+    "href": "datamgmt_preserve.html",
+    "title": "Preserve your data for reuse",
+    "section": "",
+    "text": "As you finalize your projects, often an important task is to archive your data in a publicly available repository (pending sensitivity and by non-disclosure agreement exceptions). There are a few important steps to ensure that your data can be reused by others and thus make your work more reproducible.",
+    "crumbs": [
+      "Preserving things",
+      "Preserve your data"
+    ]
+  },
+  {
+    "objectID": "datamgmt_preserve.html#what-scientific-products-to-preserve",
+    "href": "datamgmt_preserve.html#what-scientific-products-to-preserve",
+    "title": "Preserve your data for reuse",
+    "section": "What scientific products to preserve?",
+    "text": "What scientific products to preserve?\nOften the first question that comes to mind when starting to preserve your work is: What should I include in my data archive? Generally speaking, you want to preserve your work. This means capturing the methodology you used, the raw data you collected, any data cleaning you did, and any data and output (figure, report, etc.) you generated. Okay… so you mean everything!? Well, yes and no. Everything relevant to help you come to the findings and conclusions discussed in your project report or any other publications and deliverables. Let’s break this down!\n\nRaw data\nHere are a few questions to ask yourself to determine if you should refer in your documentation to the raw data you used or also include them in your data archive.\n\nThe raw data is already publicly accessible, and the hosting solution (website, FTP server, etc.) seems well maintained (ideally providing a recommended citation)\n\n=&gt; Document the website or process you used to collect the data and when you accessed/downloaded the data you used. Try also to determine if a specific version number is associated with the data you used.*\n\nThe raw data is not publicly accessible\n\nNote that we are not talking about data under a non-disclosure agreement (NDA) here but more about data with an unclear reuse status or obtained by interactions with a person or an institution. For example, if the data you used were sent to you privately, then we recommend that you:\n\ninquire with your person of contact about the status of licensing and if they would be willing to let you share those data publicly. You might face resistance at first, so take the time to explain why you think it is valuable to your work to also share those data sets.\nif, in the end, it is not possible to share the data, please still describe the data in your documentation and list the contact information (person or institution) to inquire about this data set.\n\n\n\nIntermediate data\nThis is data you generated either while cleaning or analyzing the raw data. You should preserve it if:\n\nit was not directly generated by a script (otherwise, preserve the code instead)\nit has reusable value. For example, cleaned-up versions of raw data can be very valuable for others to reuse!\n\n\n\nCode\nScripting your analytical workflow from the raw data to the end products is a great way to make your work more reproducible and more reusable by others. We thus strongly encourage your team to develop code to process and analyze data. Cloud-based code repository services, such as GitHub, GitLab, BitBucket, and more, are a great way to both manage and preserve your code.\nThose services are often well-integrated with data repositories that link your code repository with your data archive. They also offer a way to tag a specific version of your code to ensure it is the exact code you used for a specific analysis.\n\n\nFinal products\nWe recommend including any data set used to produce statistics, figures maps, and other visualizations that were used in your work, in this case, even if generated by scripts.",
+    "crumbs": [
+      "Preserving things",
+      "Preserve your data"
+    ]
+  },
+  {
+    "objectID": "datamgmt_preserve.html#choosing-a-data-repository",
+    "href": "datamgmt_preserve.html#choosing-a-data-repository",
+    "title": "Preserve your data for reuse",
+    "section": "Choosing a data repository",
+    "text": "Choosing a data repository\nWe know what we want to archive, now we need to decide where we want to preserve things!\nUCSB’s institutional data repository Dryad will be your default data repository. However, we encourage you to discuss with your Faculty Advisor to determine if other data repositories might suit your targeted audience/community better.\nIf you would like to research on your own which data repository could be best for your project, the Registry of Research Data Repositories is a great resource to do so.\n\nDryad\nDryad is free of use for any affiliated researcher. Here is an overview of the process of submitting data to DRYAD:\n\n\n\nDRYAD data submission overview",
+    "crumbs": [
+      "Preserving things",
+      "Preserve your data"
+    ]
+  },
+  {
+    "objectID": "02-handson_github_rstudio.html",
+    "href": "02-handson_github_rstudio.html",
+    "title": "GitHub branches using RStudio",
+    "section": "",
+    "text": "Write and R script to compare the csv with your favorite desserts you modified previously with the top 42 most iconic American desserts\n\nClone the repository you just created about your favorite desserts\nCreate a new branch using RStudio and name it *myinitials*_rstudio\nStart a new script named desserts_match_*myinitials*.R\nAs pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see code below) into R and find out if your favorite dessert is part of the most iconic desserts!\nPush your changes to GitHub\nOn the GitHub website, create a Pull Request (PR) and assign your teammate as reviewer\nReviewer – Review the PR. Make comments and/or OK the merge\nRequester – Merge and close the PR\n\n\n\n\n\n\n\nCode to get the iconic desserts listing\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)  # use to scrape website content\n\n# Check if that data folder exists and creates it if not\ndir.create(\"data\", showWarnings = FALSE)\n\n# Read the webpage code\nwebpage &lt;- read_html(\"https://www.eatthis.com/iconic-desserts-united-states/\")\n\n# Extract the desserts listing\ndessert_elements&lt;- html_elements(webpage, \"h2\")\ndessert_listing &lt;- dessert_elements %&gt;% \n  html_text2() %&gt;%             # extracting the text associated with this type of elements of the webpage\n  as_tibble() %&gt;%              # make it a data frame\n  rename(dessert = value) %&gt;%  # better name for the column\n  head(.,-3) %&gt;%               # 3 last ones were not desserts \n  rowid_to_column(\"rank\") %&gt;%  # adding a column using the row number as proxy for the rank\n  write_csv(\"data/iconic_desserts.csv\") # save it as csv",
+    "crumbs": [
+      "Coding as a Lab",
+      "Collaborative strategies",
+      "Hands-on: Branches using RStudio"
+    ]
+  },
+  {
+    "objectID": "02-handson_github_rstudio.html#is-your-fav-dessert-iconic",
+    "href": "02-handson_github_rstudio.html#is-your-fav-dessert-iconic",
+    "title": "GitHub branches using RStudio",
+    "section": "",
+    "text": "Write and R script to compare the csv with your favorite desserts you modified previously with the top 42 most iconic American desserts\n\nClone the repository you just created about your favorite desserts\nCreate a new branch using RStudio and name it *myinitials*_rstudio\nStart a new script named desserts_match_*myinitials*.R\nAs pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see code below) into R and find out if your favorite dessert is part of the most iconic desserts!\nPush your changes to GitHub\nOn the GitHub website, create a Pull Request (PR) and assign your teammate as reviewer\nReviewer – Review the PR. Make comments and/or OK the merge\nRequester – Merge and close the PR\n\n\n\n\n\n\n\nCode to get the iconic desserts listing\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)  # use to scrape website content\n\n# Check if that data folder exists and creates it if not\ndir.create(\"data\", showWarnings = FALSE)\n\n# Read the webpage code\nwebpage &lt;- read_html(\"https://www.eatthis.com/iconic-desserts-united-states/\")\n\n# Extract the desserts listing\ndessert_elements&lt;- html_elements(webpage, \"h2\")\ndessert_listing &lt;- dessert_elements %&gt;% \n  html_text2() %&gt;%             # extracting the text associated with this type of elements of the webpage\n  as_tibble() %&gt;%              # make it a data frame\n  rename(dessert = value) %&gt;%  # better name for the column\n  head(.,-3) %&gt;%               # 3 last ones were not desserts \n  rowid_to_column(\"rank\") %&gt;%  # adding a column using the row number as proxy for the rank\n  write_csv(\"data/iconic_desserts.csv\") # save it as csv",
+    "crumbs": [
+      "Coding as a Lab",
+      "Collaborative strategies",
+      "Hands-on: Branches using RStudio"
+    ]
+  },
+  {
+    "objectID": "collab_exchange.html",
+    "href": "collab_exchange.html",
+    "title": "Code Review Exchange",
+    "section": "",
+    "text": "Code Exchange is an asynchronous activity that takes place when a teammate is finished working on a script (or a section of it). This teammate will submit a request to another team member to look over the code and provide feedback. It is a great way to:\nThe Reviewer should see this activity as a great way to learn from others through constructive feedback… and so should the Submitter!!\nThere are different way to conduct a code review. It ranges from asking a colleague to look at your code once you reached a milestone, for example a new analysis is working, to leveraging Pull Request (PR), which is a way to ask to merge your changes with the previous version.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Collaborative strategies",
+      "Code Exchange"
+    ]
+  },
+  {
+    "objectID": "collab_exchange.html#pull-request-pr",
+    "href": "collab_exchange.html#pull-request-pr",
+    "title": "Code Review Exchange",
+    "section": "Pull Request (PR)",
+    "text": "Pull Request (PR)\nA big advantage of Pull Request is to document and provide a space to discuss the new code and discuss potential modifications. You can even tag others if you want them to chime in.\nTo be able to create a PR, you need to first either create a branch or a fork, which are two ways to encapsulate your changes while you are working on them. Once you are done you can ask to send back and merge those changes to the current version of the main branch of the repository (for now we will only merge back to main).",
+    "crumbs": [
+      "Coding as a Lab",
+      "Collaborative strategies",
+      "Code Exchange"
+    ]
+  },
+  {
+    "objectID": "collab_exchange.html#recommended-reading",
+    "href": "collab_exchange.html#recommended-reading",
+    "title": "Code Review Exchange",
+    "section": "Recommended Reading",
+    "text": "Recommended Reading\nIvimey-Cook ER, Pick JL, Bairos-Novak KR, Culina A, Gould E, Grainger M, et al. Implementing code review in the scientific workflow: Insights from ecology and evolutionary biology. Journal of Evolutionary Biology. 2023;36: 1347–1356. doi:10.1111/jeb.14230",
+    "crumbs": [
+      "Coding as a Lab",
+      "Collaborative strategies",
+      "Code Exchange"
     ]
   },
   {
@@ -358,441 +748,51 @@
     ]
   },
   {
-    "objectID": "collab_exchange.html",
-    "href": "collab_exchange.html",
-    "title": "Code Review Exchange",
+    "objectID": "github_org.html",
+    "href": "github_org.html",
+    "title": "GitHub Organizations",
     "section": "",
-    "text": "Code Exchange is an asynchronous activity that takes place when a teammate is finished working on a script (or a section of it). This teammate will submit a request to another team member to look over the code and provide feedback. It is a great way to:\nThe Reviewer should see this activity as a great way to learn from others through constructive feedback… and so should the Submitter!!\nThere are different way to conduct a code review. It ranges from asking a colleague to look at your code once you reached a milestone, for example a new analysis is working, to leveraging Pull Request (PR), which is a way to ask to merge your changes with the previous version.",
+    "text": "Facilitate collaboration:\n\nCreate teams to easily assign people to repositories\nManage tasks at the organization level (not tight to a specific repository)\n\nSimplify code management:\n\nThe organization owns the repository\nDesign templates to streamline documentation\nAssign roles to users, including external collaborators\n\nIncrease your visibility on GitHub:\n\nCreate a landing page introducing your lab\nOne stop to see your Lab contributions",
     "crumbs": [
       "Coding as a Lab",
-      "Collaborative strategies",
-      "Code Exchange"
+      "Coding together",
+      "GitHub Organizations for your Lab"
     ]
   },
   {
-    "objectID": "collab_exchange.html#pull-request-pr",
-    "href": "collab_exchange.html#pull-request-pr",
-    "title": "Code Review Exchange",
-    "section": "Pull Request (PR)",
-    "text": "Pull Request (PR)\nA big advantage of Pull Request is to document and provide a space to discuss the new code and discuss potential modifications. You can even tag others if you want them to chime in.\nTo be able to create a PR, you need to first either create a branch or a fork, which are two ways to encapsulate your changes while you are working on them. Once you are done you can ask to send back and merge those changes to the current version of the main branch of the repository (for now we will only merge back to main).",
-    "crumbs": [
-      "Coding as a Lab",
-      "Collaborative strategies",
-      "Code Exchange"
-    ]
-  },
-  {
-    "objectID": "collab_exchange.html#recommended-reading",
-    "href": "collab_exchange.html#recommended-reading",
-    "title": "Code Review Exchange",
-    "section": "Recommended Reading",
-    "text": "Recommended Reading\nIvimey-Cook ER, Pick JL, Bairos-Novak KR, Culina A, Gould E, Grainger M, et al. Implementing code review in the scientific workflow: Insights from ecology and evolutionary biology. Journal of Evolutionary Biology. 2023;36: 1347–1356. doi:10.1111/jeb.14230",
-    "crumbs": [
-      "Coding as a Lab",
-      "Collaborative strategies",
-      "Code Exchange"
-    ]
-  },
-  {
-    "objectID": "02-handson_github_rstudio.html",
-    "href": "02-handson_github_rstudio.html",
-    "title": "GitHub branches using RStudio",
+    "objectID": "github_org.html#why-a-github-organization",
+    "href": "github_org.html#why-a-github-organization",
+    "title": "GitHub Organizations",
     "section": "",
-    "text": "Write and R script to compare the csv with your favorite desserts you modified previously with the top 42 most iconic American desserts\n\nClone the repository you just created about your favorite desserts\nCreate a new branch using RStudio and name it *myinitials*_rstudio\nStart a new script named desserts_match_*myinitials*.R\nAs pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see code below) into R and find out if your favorite dessert is part of the most iconic desserts!\nPush your changes to GitHub\nOn the GitHub website, create a Pull Request (PR) and assign your teammate as reviewer\nReviewer – Review the PR. Make comments and/or OK the merge\nRequester – Merge and close the PR\n\n\n\n\n\n\n\nCode to get the iconic desserts listing\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)  # use to scrape website content\n\n# Check if that data folder exists and creates it if not\ndir.create(\"data\", showWarnings = FALSE)\n\n# Read the webpage code\nwebpage &lt;- read_html(\"https://www.eatthis.com/iconic-desserts-united-states/\")\n\n# Extract the desserts listing\ndessert_elements&lt;- html_elements(webpage, \"h2\")\ndessert_listing &lt;- dessert_elements %&gt;% \n  html_text2() %&gt;%             # extracting the text associated with this type of elements of the webpage\n  as_tibble() %&gt;%              # make it a data frame\n  rename(dessert = value) %&gt;%  # better name for the column\n  head(.,-3) %&gt;%               # 3 last ones were not desserts \n  rowid_to_column(\"rank\") %&gt;%  # adding a column using the row number as proxy for the rank\n  write_csv(\"data/iconic_desserts.csv\") # save it as csv",
-    "crumbs": [
-      "Coding as a Lab",
-      "Collaborative strategies",
-      "Hands-on: Branches using RStudio"
-    ]
-  },
-  {
-    "objectID": "02-handson_github_rstudio.html#is-your-fav-dessert-iconic",
-    "href": "02-handson_github_rstudio.html#is-your-fav-dessert-iconic",
-    "title": "GitHub branches using RStudio",
-    "section": "",
-    "text": "Write and R script to compare the csv with your favorite desserts you modified previously with the top 42 most iconic American desserts\n\nClone the repository you just created about your favorite desserts\nCreate a new branch using RStudio and name it *myinitials*_rstudio\nStart a new script named desserts_match_*myinitials*.R\nAs pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see code below) into R and find out if your favorite dessert is part of the most iconic desserts!\nPush your changes to GitHub\nOn the GitHub website, create a Pull Request (PR) and assign your teammate as reviewer\nReviewer – Review the PR. Make comments and/or OK the merge\nRequester – Merge and close the PR\n\n\n\n\n\n\n\nCode to get the iconic desserts listing\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)  # use to scrape website content\n\n# Check if that data folder exists and creates it if not\ndir.create(\"data\", showWarnings = FALSE)\n\n# Read the webpage code\nwebpage &lt;- read_html(\"https://www.eatthis.com/iconic-desserts-united-states/\")\n\n# Extract the desserts listing\ndessert_elements&lt;- html_elements(webpage, \"h2\")\ndessert_listing &lt;- dessert_elements %&gt;% \n  html_text2() %&gt;%             # extracting the text associated with this type of elements of the webpage\n  as_tibble() %&gt;%              # make it a data frame\n  rename(dessert = value) %&gt;%  # better name for the column\n  head(.,-3) %&gt;%               # 3 last ones were not desserts \n  rowid_to_column(\"rank\") %&gt;%  # adding a column using the row number as proxy for the rank\n  write_csv(\"data/iconic_desserts.csv\") # save it as csv",
-    "crumbs": [
-      "Coding as a Lab",
-      "Collaborative strategies",
-      "Hands-on: Branches using RStudio"
-    ]
-  },
-  {
-    "objectID": "datamgmt_preserve.html",
-    "href": "datamgmt_preserve.html",
-    "title": "Preserve your data for reuse",
-    "section": "",
-    "text": "As you finalize your projects, often an important task is to archive your data in a publicly available repository (pending sensitivity and by non-disclosure agreement exceptions). There are a few important steps to ensure that your data can be reused by others and thus make your work more reproducible.",
-    "crumbs": [
-      "Preserving things",
-      "Preserve your data"
-    ]
-  },
-  {
-    "objectID": "datamgmt_preserve.html#preservation-prompts",
-    "href": "datamgmt_preserve.html#preservation-prompts",
-    "title": "Preserve your data for reuse",
-    "section": "Preservation prompts",
-    "text": "Preservation prompts\n\nWhat are the specific expectations from your discipline in terms of sharing data? Should you also share the raw data along with the analysis results?\nConsidering funding and publisher mandates, as well as disciplinary norms, do you anticipate / have had any challenges regarding data sharing and preservation?",
-    "crumbs": [
-      "Preserving things",
-      "Preserve your data"
-    ]
-  },
-  {
-    "objectID": "datamgmt_preserve.html#what-scientific-products-to-preserve",
-    "href": "datamgmt_preserve.html#what-scientific-products-to-preserve",
-    "title": "Preserve your data for reuse",
-    "section": "What scientific products to preserve?",
-    "text": "What scientific products to preserve?\nOften the first question that comes to mind when starting to preserve your work is: What should I include in my data archive? Generally speaking, you want to preserve your work. This means capturing the methodology you used, the raw data you collected, any data cleaning you did, and any data and output (figure, report, etc.) you generated. Okay… so you mean everything!? Well, yes and no. Everything relevant to help you come to the findings and conclusions discussed in your project report or any other publications and deliverables. Let’s break this down!\n\nRaw data\nHere are a few questions to ask yourself to determine if you should refer in your documentation to the raw data you used or also include them in your data archive.\n\nThe raw data is already publicly accessible, and the hosting solution (website, FTP server, etc.) seems well maintained (ideally providing a recommended citation)\n\n=&gt; Document the website or process you used to collect the data and when you accessed/downloaded the data you used. Try also to determine if a specific version number is associated with the data you used.*\n\nThe raw data is not publicly accessible\n\nNote that we are not talking about data under a non-disclosure agreement (NDA) here but more about data with an unclear reuse status or obtained by interactions with a person or an institution. For example, if the data you used were sent to you privately, then we recommend that you:\n\ninquire with your person of contact about the status of licensing and if they would be willing to let you share those data publicly. You might face resistance at first, so take the time to explain why you think it is valuable to your work to also share those data sets.\nif, in the end, it is not possible to share the data, please still describe the data in your documentation and list the contact information (person or institution) to inquire about this data set.\n\n\n\nIntermediate data\nThis is data you generated either while cleaning or analyzing the raw data. You should preserve it if:\n\nit was not directly generated by a script (otherwise, preserve the code instead)\nit has reusable value. For example, cleaned-up versions of raw data can be very valuable for others to reuse!\n\n\n\nCode\nScripting your analytical workflow from the raw data to the end products is a great way to make your work more reproducible and more reusable by others. We thus strongly encourage your team to develop code to process and analyze data. Cloud-based code repository services, such as GitHub, GitLab, BitBucket, and more, are a great way to both manage and preserve your code.\nThose services are often well-integrated with data repositories that link your code repository with your data archive. They also offer a way to tag a specific version of your code to ensure it is the exact code you used for a specific analysis.\n\n\nFinal products\nWe recommend including any data set used to produce statistics, figures maps, and other visualizations that were used in your work, in this case, even if generated by scripts.",
-    "crumbs": [
-      "Preserving things",
-      "Preserve your data"
-    ]
-  },
-  {
-    "objectID": "datamgmt_preserve.html#choosing-a-data-repository",
-    "href": "datamgmt_preserve.html#choosing-a-data-repository",
-    "title": "Preserve your data for reuse",
-    "section": "Choosing a data repository",
-    "text": "Choosing a data repository\nWe know what we want to archive, now we need to decide where we want to preserve things!\nUCSB’s institutional data repository Dryad will be your default data repository. However, we encourage you to discuss with your Faculty Advisor to determine if other data repositories might suit your targeted audience/community better.\nIf you would like to research on your own which data repository could be best for your project, the Registry of Research Data Repositories is a great resource to do so.\n\nDryad\nDryad is free of use for any affiliated researcher. Here is an overview of the process of submitting data to DRYAD:\n\n\n\nDRYAD data submission overview",
-    "crumbs": [
-      "Preserving things",
-      "Preserve your data"
-    ]
-  },
-  {
-    "objectID": "github_intro.html",
-    "href": "github_intro.html",
-    "title": "git and GitHub",
-    "section": "",
-    "text": "Aka – Say goodbye to script_JB_03v5b.R !!\n\n\n\n\n\n\n\n\n\n\n\nEvery file in the scientific process changes. Manuscripts are edited. Figures get revised. Code gets fixed when problems are discovered. Data files get combined together, then errors are fixed, and then they are split and combined again. In the course of a single analysis, one can expect thousands of changes to files. And yet, all we use to track this are simplistic filenames. You might think there is a better way, and you’d be right: version control.\nVersion control systems help you track all of the changes to your files, without the spaghetti mess that ensues from simple file renaming. In other words, version control is a system that helps you to manage the different versions of your files in an organized manner. It will help you to never have to duplicate files using save as as a way to keep different versions of a file (see below). Version control helps you to develop a timeline of snapshots containing the different versions of a file. At any point in time, you will be able to roll back to a specific version. Bonus: you can add a short description (commit message) to remember what each specific version is about.\nWhat is the difference between git and GitHub?\n\ngit: is a version control software used to track files in a folder (a repository)\n\ngit creates a timeline or history of your files\n\nGitHub: is a code repository in the cloud that enables users to store their git repositories and share them with others. Github also adds many features to manage projects and document your work.\n\n\n\n\n\nThis section focuses on the code versioning system called Git. Note that there are others, such as Mercurial or svn for example.\nGit is a free and open source distributed version control system. It has many functionalities and was originally geared towards software development and production environment. In fact, Git was initially designed and developed in 2005 by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel. Here is a fun video of Linus Torvalds touting Git to Google.\nHow does it work?\nGit can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a repository (which formally is a specific data structure storing versioning information).\nWhat git is not:\n\nGit is not a backup per se\nGit is not good at versioning large files (there are workarounds) =&gt; not meant for large data\n\n\n\n\n\n\n\nFun fact\n\n\n\n\n\nGit was initially designed and developed by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel in 2005. Here is a fun video of Linus Torvalds touting Git to Google engineers.\n\n\n\n\n\nGit can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a repository (which formally is a specific data structure storing versioning information).\nAlthough there are many ways to start a new repository, GitHub (or any other cloud solutions, such as GitLab) provide among the most convenient way of starting a repository.\n\n\n\n\n\nGitHub is a company that hosts git repositories online and provides several collaboration features (among which forking). GitHub fosters a great user community and has built a nice web interface to git, also adding great visualization/rendering capacities of your data.\n\n\nThis is the default landing page when you log into your account. It provides a mix of the most recent resources and activities of your and your collaborators’ actions, as well as some resources relevant to your work. The dashboard therefore changes on a regular basis. Once logged in, you can access your dashboard at https://github.com\n\n\n\n\nThis page can be reached using with the following URL: https://github.com/username. For my user (brunj7) it would be: https://github.com/brunj7. It is a great space for you to provide some information about yourself and the main repositories you are working on. It also lists the GitHub Organizations you are part of. But more importantly, Users own repositories to host and share their code. You can list repositories from a User by clicking on the repositories tab in the main GitHub menu bar at the top.\n\n\n\n\nWe will talk more about GitHub Organizations later. In a nutshell, organizations are like groups or teams that users can be members of. Like Users, Organizations can have a landing page and own repositories. However, they add several perks in terms of user management. Similarly to Users, you can access repositories from an Organization by clicking on the repositories tab in the main GitHub menu bar at the top. You can access an organization’s page similarly to a user: https://github.com/organization-name; e.g. https://github.com/UCSB-Library-Research-Data-Services\n\n\n\n\n\n\n\n\nThis screen shows the copy of a repository stored on GitHub, with its list of files, when the files and directories were last modified, and some information on who made the most recent changes.\n\n\n\n\n\nIf we drill into the “commits” for the repository, we can see the history of changes made to all of the files. Looks like kellijohnson and seananderson were fixing things in June and July:\n\n\n\n\n\nAnd finally, if we drill into the changes made on June 13, we can see exactly what was changed in each file:\n\n\n\n\n\nTracking these changes, and seeing how they relate to released versions of software and files is exactly what Git and GitHub are good for. We will show how they can really be effective for tracking versions of scientific code, figures, and manuscripts to accomplish a reproducible workflow.\n\n\n\n\n\nGitHub.com / your dashboard (if logged in): https://github.com\nA user account: https://github.com/brunj7\nAn organization account: https://github.com/UCSB-Library-Research-Data-Services\n\n\n\n\nBraga PHP, Hébert K, Hudgins EJ, Scott ER, Edwards BPM, Sánchez Reyes LL, et al. Not just for programmers: How GitHub can accelerate collaborative and reproducible research in ecology and evolution. Methods in Ecology and Evolution. 2023;14: 1364–1380. doi:10.1111/2041-210X.14108\n\n\n\nThis materials was adapted from NCEAS Reproducible Research Techniques for Synthesis & Collaborative Coding with GitHub. LNO Scientific Computing Team.",
+    "text": "Facilitate collaboration:\n\nCreate teams to easily assign people to repositories\nManage tasks at the organization level (not tight to a specific repository)\n\nSimplify code management:\n\nThe organization owns the repository\nDesign templates to streamline documentation\nAssign roles to users, including external collaborators\n\nIncrease your visibility on GitHub:\n\nCreate a landing page introducing your lab\nOne stop to see your Lab contributions",
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Our tools: git & GitHub"
+      "GitHub Organizations for your Lab"
     ]
   },
   {
-    "objectID": "github_intro.html#the-problem-with-save_as",
-    "href": "github_intro.html#the-problem-with-save_as",
-    "title": "git and GitHub",
-    "section": "",
-    "text": "Every file in the scientific process changes. Manuscripts are edited. Figures get revised. Code gets fixed when problems are discovered. Data files get combined together, then errors are fixed, and then they are split and combined again. In the course of a single analysis, one can expect thousands of changes to files. And yet, all we use to track this are simplistic filenames. You might think there is a better way, and you’d be right: version control.\nVersion control systems help you track all of the changes to your files, without the spaghetti mess that ensues from simple file renaming. In other words, version control is a system that helps you to manage the different versions of your files in an organized manner. It will help you to never have to duplicate files using save as as a way to keep different versions of a file (see below). Version control helps you to develop a timeline of snapshots containing the different versions of a file. At any point in time, you will be able to roll back to a specific version. Bonus: you can add a short description (commit message) to remember what each specific version is about.\nWhat is the difference between git and GitHub?\n\ngit: is a version control software used to track files in a folder (a repository)\n\ngit creates a timeline or history of your files\n\nGitHub: is a code repository in the cloud that enables users to store their git repositories and share them with others. Github also adds many features to manage projects and document your work.",
+    "objectID": "github_org.html#setting-up-your-labs-github-organization",
+    "href": "github_org.html#setting-up-your-labs-github-organization",
+    "title": "GitHub Organizations",
+    "section": "Setting up your Lab’s GitHub Organization",
+    "text": "Setting up your Lab’s GitHub Organization\nBefore setting up your organization, make sure that you have claimed your education GitHub account first!!\n\n\n\n\n\n\nDid you know you are eligible for GitHub Education perks?\n\n\n\nSince we are part of an University, students and faculty have access to special account benefits for free. The application process is straightforward. Get started here: https://education.github.com/\n\n\n\nYou can create an organization by clicking on the + sign menu at the top right of the GitHub taskbar and select New organization\n\n\n\n\n\n\n\nThis will send you to a new page with several options to start your organization. Choose the free option at this time.\n\n\n\n\n\n\n\nNow you can provide the name of your organization. We recommend naming it in a way that reflects your Lab name to help with the organization’s branding. Select the email you used to get the education discount and check the “my personal account” option.\n\n\n\n\n\n\n\nAnd congratulations this is it!! You can now invite your collaborators to the organization (you will be able to do so later as well).\n\n\n\n\n\n\n\nYour organization page should look as follows:\n\n\n\n\n\n\nNote all the suggestions that GitHub is providing to help you customize your organization according to your needs. We are going to follow the recommendation on the right side (red box above) to add a special README.md that will act as a landing page for our organization.",
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Our tools: git & GitHub"
+      "GitHub Organizations for your Lab"
     ]
   },
   {
-    "objectID": "github_intro.html#git",
-    "href": "github_intro.html#git",
-    "title": "git and GitHub",
-    "section": "",
-    "text": "This section focuses on the code versioning system called Git. Note that there are others, such as Mercurial or svn for example.\nGit is a free and open source distributed version control system. It has many functionalities and was originally geared towards software development and production environment. In fact, Git was initially designed and developed in 2005 by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel. Here is a fun video of Linus Torvalds touting Git to Google.\nHow does it work?\nGit can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a repository (which formally is a specific data structure storing versioning information).\nWhat git is not:\n\nGit is not a backup per se\nGit is not good at versioning large files (there are workarounds) =&gt; not meant for large data\n\n\n\n\n\n\n\nFun fact\n\n\n\n\n\nGit was initially designed and developed by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel in 2005. Here is a fun video of Linus Torvalds touting Git to Google engineers.\n\n\n\n\n\nGit can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a repository (which formally is a specific data structure storing versioning information).\nAlthough there are many ways to start a new repository, GitHub (or any other cloud solutions, such as GitLab) provide among the most convenient way of starting a repository.",
+    "objectID": "github_org.html#customizing-your-github-organization",
+    "href": "github_org.html#customizing-your-github-organization",
+    "title": "GitHub Organizations",
+    "section": "Customizing your GitHub Organization",
+    "text": "Customizing your GitHub Organization\n\nAdding a landing page\nAdding a landing page is a great opportunity to describe your research lab and what content one can expect to find in this organization. It is also a good location to describe guidelines on how to best engage with you and provide contact information.\n\nClick on the create a README file on the right sidebar (see red box above). This will trigger the creation of a new special repository called .github that will be used to host your README file. Click Create repository.\n\n\n\n\n\n\n\nFill out the necessary information as follows:\n\n\n\n\n\n\nWe recommend checking the box Add a README file as a good practice but note it is not the README that will be used as your landing page, it is the one describing this new repository hosting your landing page README in a special subfolder.\n\nCreate your landing page by clicking on the Add README button on the right sidebar (red box below)\n\n Note the path to this special README: .github/profile/README.md\n\nEdit your landing page. The template used to create this special README provides suggestions about the type of information you might want to add to your landing page. Those suggestions are in a comment block (delimited by &lt;!-- & --&gt;) and thus won’t be shown when the README is rendered. We still do recommend deleting this block once you are done editing your README\n\n\n\n\n\n\nHere is an example of how we defined the landing page README for our test organization:\n\n\n\n\n\n\nSave your README: Now that you have your first version of your GitHub organization landing page (you can always iterate later on it), we are ready to save this version by clicking on the Commit changes button (red box above). This will prompt a new page where you can add a commit message to describe the changes. Finally, you can hit the Commit changes button to save this version.\n\n\n\n\n\n\nVoilà 🎉 !! When you go back to your organization’s main page, you should now see the text you just wrote at the top of the landing page!\n\n\n\n\n\n\n\nSetting up your organization profile\nNow that you have a landing page, it is also a great idea to fill out some metadata about your organization under the Settings tab of the main navigation bar (top right). This will help with the discovery of your Organization. You can provide a more Human friendly name, an email to reach out to you, a short description of your organization, and an URL such as your lab home page.\n\nFinally, click Update profile to save your changes.",
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Our tools: git & GitHub"
-    ]
-  },
-  {
-    "objectID": "github_intro.html#github",
-    "href": "github_intro.html#github",
-    "title": "git and GitHub",
-    "section": "",
-    "text": "GitHub is a company that hosts git repositories online and provides several collaboration features (among which forking). GitHub fosters a great user community and has built a nice web interface to git, also adding great visualization/rendering capacities of your data.\n\n\nThis is the default landing page when you log into your account. It provides a mix of the most recent resources and activities of your and your collaborators’ actions, as well as some resources relevant to your work. The dashboard therefore changes on a regular basis. Once logged in, you can access your dashboard at https://github.com\n\n\n\n\nThis page can be reached using with the following URL: https://github.com/username. For my user (brunj7) it would be: https://github.com/brunj7. It is a great space for you to provide some information about yourself and the main repositories you are working on. It also lists the GitHub Organizations you are part of. But more importantly, Users own repositories to host and share their code. You can list repositories from a User by clicking on the repositories tab in the main GitHub menu bar at the top.\n\n\n\n\nWe will talk more about GitHub Organizations later. In a nutshell, organizations are like groups or teams that users can be members of. Like Users, Organizations can have a landing page and own repositories. However, they add several perks in terms of user management. Similarly to Users, you can access repositories from an Organization by clicking on the repositories tab in the main GitHub menu bar at the top. You can access an organization’s page similarly to a user: https://github.com/organization-name; e.g. https://github.com/UCSB-Library-Research-Data-Services\n\n\n\n\n\n\n\n\nThis screen shows the copy of a repository stored on GitHub, with its list of files, when the files and directories were last modified, and some information on who made the most recent changes.\n\n\n\n\n\nIf we drill into the “commits” for the repository, we can see the history of changes made to all of the files. Looks like kellijohnson and seananderson were fixing things in June and July:\n\n\n\n\n\nAnd finally, if we drill into the changes made on June 13, we can see exactly what was changed in each file:\n\n\n\n\n\nTracking these changes, and seeing how they relate to released versions of software and files is exactly what Git and GitHub are good for. We will show how they can really be effective for tracking versions of scientific code, figures, and manuscripts to accomplish a reproducible workflow.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Our tools: git & GitHub"
-    ]
-  },
-  {
-    "objectID": "github_intro.html#recap",
-    "href": "github_intro.html#recap",
-    "title": "git and GitHub",
-    "section": "",
-    "text": "GitHub.com / your dashboard (if logged in): https://github.com\nA user account: https://github.com/brunj7\nAn organization account: https://github.com/UCSB-Library-Research-Data-Services",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Our tools: git & GitHub"
-    ]
-  },
-  {
-    "objectID": "github_intro.html#recommended-reading",
-    "href": "github_intro.html#recommended-reading",
-    "title": "git and GitHub",
-    "section": "",
-    "text": "Braga PHP, Hébert K, Hudgins EJ, Scott ER, Edwards BPM, Sánchez Reyes LL, et al. Not just for programmers: How GitHub can accelerate collaborative and reproducible research in ecology and evolution. Methods in Ecology and Evolution. 2023;14: 1364–1380. doi:10.1111/2041-210X.14108",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Our tools: git & GitHub"
-    ]
-  },
-  {
-    "objectID": "github_intro.html#aknowledgements",
-    "href": "github_intro.html#aknowledgements",
-    "title": "git and GitHub",
-    "section": "",
-    "text": "This materials was adapted from NCEAS Reproducible Research Techniques for Synthesis & Collaborative Coding with GitHub. LNO Scientific Computing Team.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Our tools: git & GitHub"
-    ]
-  },
-  {
-    "objectID": "git_cli.html",
-    "href": "git_cli.html",
-    "title": "Using git at the command line",
-    "section": "",
-    "text": "If you are not sure if you have already set your git identity, you can check this running this command:\ngit config --global --list\nIf you identity is not set yet, you need to provide your name and email (we recommend to use the same email as used when setting your GitHub account):\ngit config --global user.name \"your Full Name\"\ngit config --global user.email \"your Email\"\n\n\nCheck that everything is correct:\ngit config --global --list\nModify everything at the same time:\ngit config --global --edit\nSet your text editor:\ngit config --system core.editor nano\nHere nano is used as example; you can choose most of the text editor you might have installed on your computer (atom, sublime, notepad++ …).\nProblem with any of those steps? Check out Jenny Brian Happy git trouble shooting section\n\n\n\n\nNormally if you have already used GitHub tokens your Operating System (Windows, MacOSX, …) should have cached the necessary credentials to log in to your GitHub account (necessary to be able to push (write) content to the remote repository).\nWe are going to set up the method that is commonly used by many different services to authenticate access on the command line. This method is called Secure Shell Protocol (SSH). SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.\nSSH uses what is called a key pair. This is two keys that work together to validate access. One key is publicly known and called the public key, and the other key called the private key is kept private. Very descriptive names.\nYou can think of the public key as a padlock, and only you have the key (the private key) to open it. You use the public key where you want a secure method of communication, such as your GitHub account. You give this padlock, or public key, to GitHub and say “lock the communications to my account with this so that only computers that have my private key can unlock communications and send git commands as my GitHub account.”\n\n\nThe first thing we are going to do is check if this has already been done on the computer you’re on. Because generally speaking, this setup only needs to happen once and then you can forget about it:\nls -al ~/.ssh\nYour output is going to look a little different depending on whether or not SSH has ever been set up on the computer you are using.\n\n\nIf SSH has been set up on the computer you’re using, the public and private key pairs will be listed. The file names are either id_ed25519/id_ed25519.pub or id_rsa/id_rsa.pub depending on how the key pairs were set up.\n\n\n\nls: cannot access '/Users/brunj7/.ssh': No such file or directory\nCreate an SSH key pair\nTo create an SSH key pair Vlad uses this command, where the -t option specifies which type of algorithm to use and -C attaches a comment to the key (here, Vlad’s email):\n$ ssh-keygen -t ed25519 -C \"youremail@provider.org\"\nIf you are using a legacy system that doesn’t support the Ed25519 algorithm, use:\n$ ssh-keygen -t rsa -b 4096 -C \"your_email@example.com\"\nGenerating public/private ed25519 key pair.\nEnter file in which to save the key (/Users/brunj7/.ssh/id_ed25519):\nWe want to use the default file, so just press Enter.\nCreated directory '/Users/brunj7/.ssh'.\nEnter passphrase (empty for no passphrase):\nNow, it is prompting you for a passphrase. Be sure to use something memorable or save your passphrase somewhere, as there is no “reset my password” option.\n\n\n\n\n\n\nWarning\n\n\n\nWhen you enter password at the shell, the keystrokes do not produce the usual “dot” showing you that you are typing, but your keystrokes are being registered… so keep typing you password !!\n\n\nEnter same passphrase again:\nAfter entering the same passphrase a second time, we receive the confirmation\nYour identification has been saved in /Users/brunj7/.ssh/id_ed25519\nYour public key has been saved in /Users/brunj7/.ssh/id_ed25519.pub\nThe key fingerprint is:\nSHA256:SMSPIStNyA00KPxuYu94KpZgRAYjgt9g4BA4kFy3g1o vlad@tran.sylvan.ia\nThe key's randomart image is:\n+--[ED25519 256]--+\n|^B== o.          |\n|%*=.*.+          |\n|+=.E =.+         |\n| .=.+.o..        |\n|....  . S        |\n|.+ o             |\n|+ =              |\n|.o.o             |\n|oo+.             |\n+----[SHA256]-----+\nThe “identification” is actually the private key. You should never share it. The public key is appropriately named. The “key fingerprint” is a shorter version of a public key.\nNow that we have generated the SSH keys, we will find the SSH files when we check.\nls -al ~/.ssh\ndrwxr-xr-x 1 brunj7  staff 197121  Oct 23  13:14 ./\ndrwxr-xr-x 1 brunj7  staff 197121  Mar 11  09:21 ../\n-rw------- 1 brunj7  staff    464  Apr 21  2023 id_ed25519\n-rw-r--r-- 1 brunj7  staff    103  Apr 21  2023 id_ed25519.pub",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Using git at the command line"
-    ]
-  },
-  {
-    "objectID": "git_cli.html#setup-your-git-profile",
-    "href": "git_cli.html#setup-your-git-profile",
-    "title": "Using git at the command line",
-    "section": "",
-    "text": "If you are not sure if you have already set your git identity, you can check this running this command:\ngit config --global --list\nIf you identity is not set yet, you need to provide your name and email (we recommend to use the same email as used when setting your GitHub account):\ngit config --global user.name \"your Full Name\"\ngit config --global user.email \"your Email\"\n\n\nCheck that everything is correct:\ngit config --global --list\nModify everything at the same time:\ngit config --global --edit\nSet your text editor:\ngit config --system core.editor nano\nHere nano is used as example; you can choose most of the text editor you might have installed on your computer (atom, sublime, notepad++ …).\nProblem with any of those steps? Check out Jenny Brian Happy git trouble shooting section\n\n\n\n\nNormally if you have already used GitHub tokens your Operating System (Windows, MacOSX, …) should have cached the necessary credentials to log in to your GitHub account (necessary to be able to push (write) content to the remote repository).\nWe are going to set up the method that is commonly used by many different services to authenticate access on the command line. This method is called Secure Shell Protocol (SSH). SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.\nSSH uses what is called a key pair. This is two keys that work together to validate access. One key is publicly known and called the public key, and the other key called the private key is kept private. Very descriptive names.\nYou can think of the public key as a padlock, and only you have the key (the private key) to open it. You use the public key where you want a secure method of communication, such as your GitHub account. You give this padlock, or public key, to GitHub and say “lock the communications to my account with this so that only computers that have my private key can unlock communications and send git commands as my GitHub account.”\n\n\nThe first thing we are going to do is check if this has already been done on the computer you’re on. Because generally speaking, this setup only needs to happen once and then you can forget about it:\nls -al ~/.ssh\nYour output is going to look a little different depending on whether or not SSH has ever been set up on the computer you are using.\n\n\nIf SSH has been set up on the computer you’re using, the public and private key pairs will be listed. The file names are either id_ed25519/id_ed25519.pub or id_rsa/id_rsa.pub depending on how the key pairs were set up.\n\n\n\nls: cannot access '/Users/brunj7/.ssh': No such file or directory\nCreate an SSH key pair\nTo create an SSH key pair Vlad uses this command, where the -t option specifies which type of algorithm to use and -C attaches a comment to the key (here, Vlad’s email):\n$ ssh-keygen -t ed25519 -C \"youremail@provider.org\"\nIf you are using a legacy system that doesn’t support the Ed25519 algorithm, use:\n$ ssh-keygen -t rsa -b 4096 -C \"your_email@example.com\"\nGenerating public/private ed25519 key pair.\nEnter file in which to save the key (/Users/brunj7/.ssh/id_ed25519):\nWe want to use the default file, so just press Enter.\nCreated directory '/Users/brunj7/.ssh'.\nEnter passphrase (empty for no passphrase):\nNow, it is prompting you for a passphrase. Be sure to use something memorable or save your passphrase somewhere, as there is no “reset my password” option.\n\n\n\n\n\n\nWarning\n\n\n\nWhen you enter password at the shell, the keystrokes do not produce the usual “dot” showing you that you are typing, but your keystrokes are being registered… so keep typing you password !!\n\n\nEnter same passphrase again:\nAfter entering the same passphrase a second time, we receive the confirmation\nYour identification has been saved in /Users/brunj7/.ssh/id_ed25519\nYour public key has been saved in /Users/brunj7/.ssh/id_ed25519.pub\nThe key fingerprint is:\nSHA256:SMSPIStNyA00KPxuYu94KpZgRAYjgt9g4BA4kFy3g1o vlad@tran.sylvan.ia\nThe key's randomart image is:\n+--[ED25519 256]--+\n|^B== o.          |\n|%*=.*.+          |\n|+=.E =.+         |\n| .=.+.o..        |\n|....  . S        |\n|.+ o             |\n|+ =              |\n|.o.o             |\n|oo+.             |\n+----[SHA256]-----+\nThe “identification” is actually the private key. You should never share it. The public key is appropriately named. The “key fingerprint” is a shorter version of a public key.\nNow that we have generated the SSH keys, we will find the SSH files when we check.\nls -al ~/.ssh\ndrwxr-xr-x 1 brunj7  staff 197121  Oct 23  13:14 ./\ndrwxr-xr-x 1 brunj7  staff 197121  Mar 11  09:21 ../\n-rw------- 1 brunj7  staff    464  Apr 21  2023 id_ed25519\n-rw-r--r-- 1 brunj7  staff    103  Apr 21  2023 id_ed25519.pub",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Using git at the command line"
-    ]
-  },
-  {
-    "objectID": "git_cli.html#clone-a-repository",
-    "href": "git_cli.html#clone-a-repository",
-    "title": "Using git at the command line",
-    "section": "Clone a repository",
-    "text": "Clone a repository\n\n\n\n\n\n\nTip\n\n\n\nIf you not have yet your favorite-desserts GitHub repository, please follow those steps\n\n\nNavigate to the folder (e.g cd ~/Documents) where you want to save your repository and run the following command:\ngit clone https://github.com/brunj7/favorite-desserts.git\nYou should have a new folder on your local machine named favorite-desserts after your repository :\nls\nGo inside the repository:\ncd favorite-desserts\nls -al\nThis should return the exact same content that is currently on GitHub!",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Using git at the command line"
-    ]
-  },
-  {
-    "objectID": "git_cli.html#tracking-your-work",
-    "href": "git_cli.html#tracking-your-work",
-    "title": "Using git at the command line",
-    "section": "Tracking your work",
-    "text": "Tracking your work\nLet’s create a text file called index.md and add it to our repository. The file will later be converted into a webpage by GitHub pages. We’ll write the file using a syntax called Markdown, which is why we use the .md extensions.\n\n\n\n\n\n\nNote\n\n\n\nWe’ll use nano to edit the file; you can use whatever editor you like. In particular, this does not have to be the core.editor you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be nano). For a refresher on text editors, check out “Which Editor?” in The Unix Shell lesson.\n\n\nnano index.md\nType the text below, replacing the names with people you know:\n## Listing of my favorite desserts\n\n- Julien, crepes\n\nExit nano and save your changes.\nCheck it worked:\n$ cat index.md\nYou should see the content you just typed!\nIf we check the status of our project again, Git tells us that it’s noticed the new file:\n$ git status\nOn branch main\n\nNo commits yet\n\nUntracked files:\n   (use \"git add &lt;file&gt;...\" to include in what will be committed)\n\n    index.md\n\nnothing added to commit but untracked files present (use \"git add\" to track)\nThe “untracked files” message means that there’s a file in the directory that Git isn’t keeping track of. We can tell Git to track a file using git add:\n$ git add index.md\nand then check that the right thing happened:\n$ git status\nOn branch main\n\nNo commits yet\n\nChanges to be committed:\n  (use \"git rm --cached &lt;file&gt;...\" to unstage)\n\n    new file:   index.md\n\nGit now knows that it’s supposed to keep track of index.md, but it hasn’t recorded these changes as a commit yet. To get it to do that, we need to run one more command:\n$ git commit -m \"start new webpage\"\n[main (root-commit) f22b25e] Start new webpage\n 1 file changed, 1 insertion(+)\n create mode 100644 index.md\nWhen we run git commit, Git takes everything we have told it to save by using git add and stores a copy permanently inside the special .git directory. This permanent copy is called a commit (revision) and its short identifier is f22b25e. Your commit may have another identifier.\nWe use the -m flag (for “message”) to record a short, descriptive, and specific comment that will help us remember later on what we did and why. If we just run git commit without the -m option, Git will launch nano (or whatever other editor we configured as core.editor) so that we can write a longer message.\nGood commit messages start with a brief (&lt;50 characters) statement about the changes made in the commit. Generally, the message should complete the sentence “If applied, this commit will” . If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.\nIf we run git status now:\n$ git status\nOn branch main\nnothing to commit, working tree clean\nit tells us everything is up to date. If we want to know what we’ve done recently, we can ask Git to show us the project’s history using git log:\n$ git log\ncommit f22b25e3233b4645dabd0d81e651fe074bd8e73b\nAuthor: ...\nDate:   Thu Aug 22 09:51:46 2013 -0400\n\n    start new webpage\ngit log lists all commits made to a repository in reverse chronological order. The listing for each commit includes the commit’s full identifier (which starts with the same characters as the short identifier printed by the git commit command earlier), the commit’s author, when it was created, and the log message Git was given when the commit was created.\n\n\n\n\n\n\nWhere Are My Changes?\n\n\n\nIf we run ls at this point, we will still see just one file called index.md. That’s because Git saves information about files’ history in the special .git directory mentioned earlier so that our filesystem doesn’t become cluttered (and so that we can’t accidentally edit or delete an old version).\n\n\nLet’s adds more information to the file. (Again, we’ll edit with nano and then cat the file to show its contents; you may use a different editor, and don’t need to cat.)\n$ nano index.md\n## Listing of my favorite desserts\n\n- Julien, crepes\n- Sophia, chocolate\n\nWhen we run git status now, it tells us that a file it already knows about has been modified:\n$ git status\nOn branch main\nChanges not staged for commit:\n  (use \"git add &lt;file&gt;...\" to update what will be committed)\n  (use \"git checkout -- &lt;file&gt;...\" to discard changes in working directory)\n\n    modified:   index.md\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\nThe last line is the key phrase: “no changes added to commit”.\nWe have changed this file, but we haven’t told Git we will want to save those changes (which we do with git add) nor have we saved them (which we do with git commit). So let’s do that now. It is good practice to always review our changes before saving them. We do this using git diff.\nThis shows us the differences between the current state of the file and the most recently saved version:\n$ git diff\ndiff --git a/index.md b/index.md\nindex 7d781a7..bbb33fe 100644\n--- a/index.md\n+++ b/index.md\n@@ -1 +1,3 @@\n## Listing of my favorite desserts\n\n- Julien, crepes\n+ - Sophia, chocolate\n\nThe output is cryptic because it is actually a series of commands for tools like editors and patch telling them how to reconstruct one file given the other. If we break it down into pieces:\n\nThe first line tells us that Git is producing output similar to the Unix diff command comparing the old and new versions of the file.\nThe second line tells exactly which versions of the file Git is comparing; 7d781a7 and bbb33fe are unique computer-generated labels for those versions.\nThe third and fourth lines once again show the name of the file being changed.\nThe remaining lines are the most interesting, they show us the actual differences and the lines on which they occur. In particular, the + marker in the first column shows where we added a line.\n\nAfter reviewing our change, it’s time to commit it:\n$ git commit -m \"add Sophia\"\nOn branch main\nChanges not staged for commit:\n  (use \"git add &lt;file&gt;...\" to update what will be committed)\n  (use \"git checkout -- &lt;file&gt;...\" to discard changes in working directory)\n\n    modified:   index.md\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\nWhoops: Git won’t commit because we didn’t use git add first. Let’s fix that:\n$ git add index.md\n$ git commit -m \"add Sophia\"\n[main 019f377] add Sophia\n 1 file changed, 1 insertions(+)\n\n\n\n\n\n\nNote\n\n\n\nGit insists that we add files to the set we want to commit before actually committing anything. This allows us to commit our changes in stages and capture changes in logical portions rather than only large batches. For example, suppose we’re adding a few citations to relevant research to our thesis. We might want to commit those additions, and the corresponding bibliography entries, but not commit some of our work drafting the conclusion (which we haven’t finished yet).\nTo allow for this, Git has a special staging area where it keeps track of things that have been added to the current changeset but not yet committed.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Using git at the command line"
-    ]
-  },
-  {
-    "objectID": "git_cli.html#exploring-git-history",
-    "href": "git_cli.html#exploring-git-history",
-    "title": "Using git at the command line",
-    "section": "Exploring git history",
-    "text": "Exploring git history\nYou can look at the history of what we’ve done so far:\n$ git log\nIt should look something like this:\ncommit d11d7e52ab98d3d4c18cde4c4a0bbeea3fe40983 (HEAD -&gt; main)\nAuthor: ...\nDate:   Thu Oct 19 12:07:51 2023 -0400\n\n    add Sophia\n\ncommit 019f37773f9f18b77f508990df65e56a34df45de\nAuthor: ...\nDate:   Thu Oct 19 12:03:04 2023 -0400\n\n    start new webpage\n\ncommit 8defaab26aa641a4233896ec68e603c541aa77b4\nAuthor: ...\nDate:   Thu Oct 19 12:01:17 2023 -0400\n\n    intial commit\n\nPaging the Log\nWhen the output of git log is too long to fit in your screen, git uses a program to split it into pages of the size of your screen. When this “pager” is called, you will notice that the last line in your screen is a :, instead of your usual prompt.\n\nTo get out of the pager, press Q.\nTo move to the next page, press Spacebar.\nTo search for some_word in all pages, press / and type some_word. Navigate through matches pressing N.\n\nTo avoid having git log cover your entire terminal screen, you can limit the number of commits that Git lists by using -N, where N is the number of commits that you want to view. For example, if you only want information from the last commit you can use:\n$ git log -1\ncommit d11d7e52ab98d3d4c18cde4c4a0bbeea3fe40983 (HEAD -&gt; main)\nAuthor: ...\nDate:   Thu Oct 19 12:07:51 2023 -0400\n\n    add Sophia\nYou can also reduce the quantity of information using the --oneline option:\n$ git log --oneline\nd11d7e5 (HEAD -&gt; main) add Sophia\n019f377 start new webpage\n8defaab initial commit\nYou can also combine the --oneline option with others. One useful combination adds --graph to display the commit history as a text-based graph and to indicate which commits are associated with the current HEAD, the current branch main, or [other Git references][git-references]:\n$ git log --oneline --graph\n* d11d7e5 (HEAD -&gt; main) add Sophia\n* 019f377 start new webpage\n* 8defaab initial commit",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Using git at the command line"
-    ]
-  },
-  {
-    "objectID": "git_cli.html#sending-changes-back-to-github",
-    "href": "git_cli.html#sending-changes-back-to-github",
-    "title": "Using git at the command line",
-    "section": "Sending changes back to GitHub",
-    "text": "Sending changes back to GitHub\nNow that we have created these two commits on our local machine, our local version of the repository is different from the version on GitHub. You can see this when running git status at the beginning of the message you should have “Your branch is ahead of ‘origin/master’ by two commits”. This can be translated as you have two additional commits on your local machine that you never shared back to the remote repository on GitHub. Open your favorite web browser and look at the content of your repository on GitHub. You will see there is no index.md file on GitHub.\nThere are two git commands to exchange between local and remote versions of a repository:\n\npull: git will get the latest remote (GitHub in our case) version and try to merge it with your local version\npush: git will send your local version to the remote version of the repository\n\nBefore sending your local version to the remote, you should always get the latest remote version first. In other words, you should pull first and push second. This is the way git protects the remote version against incompatibilities with the local version. You always deal with potential problems on your local machine. Therefore your sequence will always be:\n\npull\npush\n\nLet’s do it:\ngit pull\nNormally nothing should have changed on the remote\nNow we can push our changes to GitHub:\ngit push\nRefresh the repository webpage, you should now see the index.md file!",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Using git at the command line"
-    ]
-  },
-  {
-    "objectID": "git_cli.html#aknowledgements",
-    "href": "git_cli.html#aknowledgements",
-    "title": "Using git at the command line",
-    "section": "Aknowledgements",
-    "text": "Aknowledgements\nThis section is adapted from Seth Erickson’s version of the Software Carpentry introduction to git",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Using git at the command line"
-    ]
-  },
-  {
-    "objectID": "03-handson_github_workflows.html",
-    "href": "03-handson_github_workflows.html",
-    "title": "GitHub workflows: forks and branches",
-    "section": "",
-    "text": "Setup\n\nPerson 1 (owner):\n\nCreate a repository using the following these instructions steps 1-6\n\n\n\nAdd Person 2 as collaborator following these instructions\nEdit the README to:\n\nReplace the title (first line starting with #) with something better! Maybe Favorite Desserts\nAdd your name and your favorite dessert below the title: e.g. - Julien: crepes\n\n\n\nknitr::include_graphics(\"img/github-readme_desserts.png\")\n\n\n\n\n\n\n\n\n\n\n\nForks\n\nPerson 2: Create a Fork\n\nAsk your teammate to Slack you the link to the repository\nCreate a Fork by clicking on the Fork button on the top right view of your repository homepage\n\n\n\n\n\n\n\n\n\n\n\nOn your Fork, start editing the README.md\nAdd your name and your favorite dessert below your teammate entry: e.g. - Sophia: chocolate\nAdd a descriptive commit message\n\n\nknitr::include_graphics(\"img/github-commit.png\")\n\n\n\n\n\n\n\n\n\nCommit your changes\n\n\n\n\n\n\n\n\n\n\n\nCreate a pull request to merge those changes to the main repository using these instructions\n\n\n\nPerson 1:\n\nGo to your repository and merge the PR\n\n\n\n\n\nBranches\n\nPerson 1: add a file\nDownload this csv file about your favorite desserts to your computer\n\nJust drag and drop it on the Github web page of your repository to upload it\nAdd a short message about the file: e.g. Adding dessert csv & hit Commit changes\nYour file has been uploaded. Click on the filename to see it!\n\nYou should have something similar to this repo: https://github.com/brunj7/favorite-desserts/blob/master/favorite_desserts.csv\nNow you want to collaborate more closely and do not wan your teammate to have to create a fork and be able to work directly on your repository\n\nAdd Person 2 as a collaborator following these instructions\n\n\n\nPerson 2: Create a branch\n\nCheck your email or Github Notifications to accept the invitation\nGo to the repository website (link is provided in the invitation)\nCreate a new branch named after your first name\n\n\nknitr::include_graphics(\"img/github-create_branch.png\")\n\n\n\n\n\n\n\n\n\nEdit the csv file directly on GitHub to add your favorite dessert to it\nCreate a Pull Request (PR) to merge you branch back to main\nAssign person 1 as a reviewer (instructions)\n\n\n\nPerson 1: Merge the branch\n\nReview PR\nMerge and close PR",
-    "crumbs": [
-      "Coding as a Lab",
-      "Collaborative strategies",
-      "Hands-on: forks & branches with Github website"
-    ]
-  },
-  {
-    "objectID": "git_conflicts.html",
-    "href": "git_conflicts.html",
-    "title": "Managing git merge conflicts",
-    "section": "",
-    "text": "You did nothing wrong!! Git is simply asking for your help to merge files because it can not figure it out on its own.\n\n\n\n\n\n\nOne thing to note before we continue\n\n\n\ngit pull = git fetch (getting things from GitHub) + git merge (merging the versions between your local and GitHub)\n\n\nA conflict arises when git can not automatically merge two versions of a file. When the changes are on different files or on the same file but far apart, git will figure it out on his own and do the merge automatically. However, if changes are overlapping, git will call you to the rescue because it is not sure which version should be kept. When you are in this situation, you are “stalled” between the git fetch & the git merge and you need to edit the file(s) where there is a conflict. Luckily, git will flag the lines that have different versions for you to look at.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Managing version conflicts"
-    ]
-  },
-  {
-    "objectID": "git_conflicts.html#how-to-minimize-the-risk-of-conflicts",
-    "href": "git_conflicts.html#how-to-minimize-the-risk-of-conflicts",
-    "title": "Managing git merge conflicts",
-    "section": "How to minimize the risk of conflicts?",
-    "text": "How to minimize the risk of conflicts?\n\nCommunicate!! Who is working on what script/file today? GitHub issues and tagging people is a great way to do this\ncommit, pull, and push often , so the changes between versions are kept minimal\n\nThese two tips should help you on your git conflict free journey!!\nIf conflicts keep happening in your collaboration, using git branches might be the next step to consider for your team.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Managing version conflicts"
-    ]
-  },
-  {
-    "objectID": "git_conflicts.html#example-using-rstudio",
-    "href": "git_conflicts.html#example-using-rstudio",
-    "title": "Managing git merge conflicts",
-    "section": "Example using RStudio",
-    "text": "Example using RStudio\nOk, let’s create a conflict with our favorite desserts repository.\nUser 1 is going to change a line on the README an push the change to GitHub.\n\n\n\n\n\nNow user 2, is going to also make an edit to the README on this same line while forgetting to pull before starting to edit the file\nIn this example, we will be changing the favorite dessert of the same person:\n\n\n\n\n\nSave and commit your changes.\nNow it is time to pull and push your changes… however git is unsure how to reconcile the two versions of the README.md\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nBefore this you might first have the pop-up below on your screen that prompts you to tell git what techniques it should use to resolve conflicts\n\n\n\n\n\nWe recommend to choose the merge option by copy-pasting this line in the terminal:\ngit config pull.rebase false\n\n\nNote the tags that git has automatically inserted in the text to highlight: 1. where is the conflict and 2. what are the two versions you are trying to reconcile. Note also that RStudio is flagging the file with an orange U logo to let you know that the files are Unmerged.\n\n\n\n\n\nYou can edit the README to resolve the conflict to your liking. You could opt to choose one of the version\n\n\n\n\n\nor to come up with a “blended” version:\n\n\n\n\n\nOnce you are satisfied with your version, you can save the file and commit your changes\n\n\n\n\n\nDon’t forget to pull and push to synchronize your local changes with GitHub.\nIf you now look at the history, you can see how git has tracked the conflict resolution. We will talk about branches later on, but spoiler alert it looks very much how you would merge a branch back to the main branch.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Managing version conflicts"
-    ]
-  },
-  {
-    "objectID": "data_mgmt.html",
-    "href": "data_mgmt.html",
-    "title": "Managing your lab data",
-    "section": "",
-    "text": "Data are also part of the scientific products your Lab is producing. It is thus important to develop strategies to manage them well, so you can reuse them. Well managed, data can become an an asset for your lab and your collaborators. In the end, the goal of managing your data is to develop documentation that will enable others (including your future self) to understand and reuse those data sets. This documentation does not start when you are wrapping up your project, this process needs to be integrated all along the data life cycle of your project.\n\n\nTo help you think about your Lab data management, you can divide the life cycle of a data set in several phases:\n\n\n\nResearch Data Management lifecycle; source: https://osf.io/d8fqh",
-    "crumbs": [
-      "Managing your Lab data",
-      "What is data management?"
-    ]
-  },
-  {
-    "objectID": "data_mgmt.html#data-are-a-scientific-product",
-    "href": "data_mgmt.html#data-are-a-scientific-product",
-    "title": "Managing your lab data",
-    "section": "",
-    "text": "Data are also part of the scientific products your Lab is producing. It is thus important to develop strategies to manage them well, so you can reuse them. Well managed, data can become an an asset for your lab and your collaborators. In the end, the goal of managing your data is to develop documentation that will enable others (including your future self) to understand and reuse those data sets. This documentation does not start when you are wrapping up your project, this process needs to be integrated all along the data life cycle of your project.\n\n\nTo help you think about your Lab data management, you can divide the life cycle of a data set in several phases:\n\n\n\nResearch Data Management lifecycle; source: https://osf.io/d8fqh",
-    "crumbs": [
-      "Managing your Lab data",
-      "What is data management?"
-    ]
-  },
-  {
-    "objectID": "github_teams.html",
-    "href": "github_teams.html",
-    "title": "GitHub Teams",
-    "section": "",
-    "text": "You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages, and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google Drive, this is the same concept.\nTeams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Setting up Teams to better collaborate"
-    ]
-  },
-  {
-    "objectID": "github_teams.html#what-are-github-teams",
-    "href": "github_teams.html#what-are-github-teams",
-    "title": "GitHub Teams",
-    "section": "",
-    "text": "You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages, and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google Drive, this is the same concept.\nTeams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Setting up Teams to better collaborate"
-    ]
-  },
-  {
-    "objectID": "github_teams.html#create-a-team",
-    "href": "github_teams.html#create-a-team",
-    "title": "GitHub Teams",
-    "section": "Create a team",
-    "text": "Create a team\nIn the navigation bar at the top of your organization page, click on the Teams tab. Normally this is the page you use to see and manage the existing teams of your organization. Since we do not have teams yet, this page provides a short overview of what teams can be used for. Click on the New Team green button at the bottom to start creating your first team.\n\nProved the name and a short description of your team. We recommend to let the other options to their default settings.\n\n\n\n\n\nYour team has been created, but as of now you are the only member. Let’s invite some collaborators by clicking on the Add a member button on the top right.\n\n\n\n\n\nOn this new window, you can search for GitHub users by their username. If you do not know their username you can search by their full names. Note that if there are no pictures associated with the profile you found or are not sure it is the right person, we recommend not adding this person at this time and reaching out asking for their username (which is unique). When you are sure you found the right persons you can click on Invite.\n\n\n\n\n\nYour collaborators will receive an invitation to join the team. They will have to accept the invitation before they can use the benefits (access to repositories, …) associated with the team. Once your collaborators have accepted your team should look like below.\n\n\n\n\n\nOK, let’s create a second team! In this example, we will create a Research Facilitators team with two members.\n\n\n\n\n\nOnce your GitHub organization has teams, you will the number of existing teams next to the Teams tab.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Setting up Teams to better collaborate"
-    ]
-  },
-  {
-    "objectID": "github_teams.html#leveraging-teams",
-    "href": "github_teams.html#leveraging-teams",
-    "title": "GitHub Teams",
-    "section": "Leveraging teams",
-    "text": "Leveraging teams\nLet’s create a new repository and use our newly created teams to add several collaborators at once.\n\n\n\n\n\nUnder your newly created organization, create a new repository with the following settings:\n\n\n\n\n\nOnce the repository is created, click on the Settings tab (top right in the grey bar)\n\n\n\n\n\nOn the left panel, click on Collaborators and teams and then click on the green button Add teams\n\n\n\n\n\nStart typing the name of the team you would like to add. Suggestions of teams should come up as you type. Select the relevant team by clicking on the suggestion.\n\n\n\n\n\nFor close collaborators, we recommend using the Maitain level of access that provides a good blend of people being able to do most of the actions they will need to do while not being allowed to conduct destructive actions on accident (like deleting the entire repository). For collaborators you are less familiar with, including their familiarity with GitHub, you might want to start with the Write access.\n\n\n\n\n\nOnce the team added, your settings should look as follow:\n\n\n\n\n\nThe good news is now if you add a collaborator to a specific team, this person will automatically gain access to all the repositories that team has access to! This will streamline the on- and off- boarding process of your team members.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Setting up Teams to better collaborate"
-    ]
-  },
-  {
-    "objectID": "intro_cli.html",
-    "href": "intro_cli.html",
-    "title": "Using the Command line Interface",
-    "section": "",
-    "text": "The CLI provides a direct way to interact with the Operating System, by typing in commands.\n\n\n\nMight be the only interface you have to a High Performance Computer (HPC)\nCommand statements can be reused easily and saved as scripts\nEasier automation and text files manipulation\n\n\n\n\n\nCommand Line Interface (CLI): This is a user interface that lets you interact with a computer. It is a legacy from the early days of computers. Now a days computers have graphical user interfaces instead (MacOSX, Windows, Linux, …)\nTerminal: It is a an application that lets you run a command line interface. It used to be a physical machine connected to a mainframe computer\nShell: It is the program that runs the command line. There are many different shells, the most common (an default on most system) being bash (Bourne Again SHell)\n\n\n\n\n\n\n\nTip\n\n\n\nNot convinced? Check this out: the CLI pitch\n\n\n\n\n\nYou can access the command line directly from RStudio by using the Terminal tab next to your R console.\n\n\n\n\n\n\npwd: Know where you are\nls: List the content of the directory\ncd: Go inside a directory\n\nSome pseudo directory names. Wherever you are:\n\n~ : Home directory\n. : Here (current directory)\n..: Up one level (upper directory)\n\nLet’s put this into action:\n\ngo to my “Home” directory: cd ~\ngo up one directory level: cd ..\nlist the content: ls\nlist the content showing hidden files: ls -a note that -a is referred as an option (modifies the command)\n\nMore files/directories manipulations:\n\nmkdir: Create a directory\ncp: Copy a file\nmv: Move a file it is also how you rename a file!\nrm / rmdir: Remove a file / directory use those carefully, there is no return / Trash!!\n\nNote: typing is not your thing? the &lt;tab&gt; key is your friend! One hit it will auto-complete the file/directory/path name for you. If there are many options, hit it twice to see the options.\n\n\n\nAll files have permissions and ownership.\n\n\n\nFile permissions\n\n\n\nList files showing ownership and permissions: ls -l\n\n\nbrun@taylor:/courses/EDS214$ ls -l\ntotal 16\ndrwxrwxr-x+ 3 brun      esmdomainusers 4096 Aug 20 04:49 data\ndrwxrwxr-x+ 2 katherine esmdomainusers 4096 Aug 18 18:32 example    \n\nYou can change those permissions:\n\nChange permissions: chmod\nChange ownership: chown\n\n\n\n\n\n\n\nTip\n\n\n\nClear contents in terminal window: clear\n\n\n\n\n\n\ncommand [options] [arguments]\n\nwhere command must be an executable file on your PATH * echo $PATH\nand options can usually take two forms * short form: -a * long form: --all\nYou can combine the options:\n\nls -ltrh\n\nWhat do these options do?\n\nman ls\n\n\n\n\n\n\n\nTip\n\n\n\nhit spacebar to get to the next page of the manual hit q to exit the help\n\n\n\n\n\nFrom the gitbash (MS Windows) or the terminal (Mac) type:\n\nssh taylor.bren.ucsb.edu\n\nYou will be prompted for your username and password.\n\n\n\naurora_ssh\n\n\nYou can also directly add your username:\n\nssh brun@taylor.bren.ucsb.edu\n\nIn this case, you will be only asked for your password as you already specified which user you want to connect with.\n\n\n\n\nWho else is logged into this machine? who\nWho is logged into “this shell”? whoami\n\n\n\n\n\n&lt;command&gt; -h, &lt;command&gt; --help\nman, info, apropos, whereis\nSearch the web!\n\n\n\n\nShow me my Rmarkdown files!\n\nfind . -iname '*.Rmd'\n\nWhich files are larger than 1GB?\n\nfind . -size +1G\n\nWith more details about the files:\n\nfind . -size +1G -ls\n\n\n\n\n\n\n\nCancel (abort) a command: Ctrl-c Note: very different than Windows!!\nStop (suspend) a command: Ctrl-z\nCtrl-z can be used to suspend, then background a process\n\n\n\n\n\nLike Windows Task Manager, OSX Activity Monitor\ntop, ps, jobs (hit q to get out!)\nkill to delete an unwanted job or process\nForeground and background: &\n\n\n\n\n\nHow much storage is available on this system? df -h\nHow much storage am “I” using overall? du -hs &lt;folder&gt;\nHow much storage am “I” using, by sub directory? du -h &lt;folder&gt;\n\n\n\n\n\nSee your command history: history\nRe-run last command: !! (pronounced “bang-bang”)\nRe-run 32th command: !32\nRe-run 5th from last command: !-5\nRe-run last command that started with ‘c’: !c\n\n\n\n\n\n\nwc count lines, words, and/or characters\ndiff compare two files for differences\nsort sort lines in a file\nuniq report or filter out repeated lines in a file\n\n\n\n\n\n\n\nstdin, stdout, stderr\n\n\n\n$ ls *.png | wc -l\n$ ls *.png | wc -l &gt; pngcount.txt\n$ diff &lt;(sort file1.txt) &lt;(sort file2.txt)\n$ ls foo 2&gt;/dev/null\n\n\nnote use of * as character wildcard for zero or more matches (same in Mac and Windows)\n? matches single character; _ is SQL query equivalent\n\n\n\n\n\n\n\nvim\nemacs\nnano\n\n\n$ nano .bashrc",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Using the command line"
-    ]
-  },
-  {
-    "objectID": "intro_cli.html#short-introduction-to-the-command-line-interface-cli",
-    "href": "intro_cli.html#short-introduction-to-the-command-line-interface-cli",
-    "title": "Using the Command line Interface",
-    "section": "",
-    "text": "The CLI provides a direct way to interact with the Operating System, by typing in commands.\n\n\n\nMight be the only interface you have to a High Performance Computer (HPC)\nCommand statements can be reused easily and saved as scripts\nEasier automation and text files manipulation\n\n\n\n\n\nCommand Line Interface (CLI): This is a user interface that lets you interact with a computer. It is a legacy from the early days of computers. Now a days computers have graphical user interfaces instead (MacOSX, Windows, Linux, …)\nTerminal: It is a an application that lets you run a command line interface. It used to be a physical machine connected to a mainframe computer\nShell: It is the program that runs the command line. There are many different shells, the most common (an default on most system) being bash (Bourne Again SHell)\n\n\n\n\n\n\n\nTip\n\n\n\nNot convinced? Check this out: the CLI pitch\n\n\n\n\n\nYou can access the command line directly from RStudio by using the Terminal tab next to your R console.\n\n\n\n\n\n\npwd: Know where you are\nls: List the content of the directory\ncd: Go inside a directory\n\nSome pseudo directory names. Wherever you are:\n\n~ : Home directory\n. : Here (current directory)\n..: Up one level (upper directory)\n\nLet’s put this into action:\n\ngo to my “Home” directory: cd ~\ngo up one directory level: cd ..\nlist the content: ls\nlist the content showing hidden files: ls -a note that -a is referred as an option (modifies the command)\n\nMore files/directories manipulations:\n\nmkdir: Create a directory\ncp: Copy a file\nmv: Move a file it is also how you rename a file!\nrm / rmdir: Remove a file / directory use those carefully, there is no return / Trash!!\n\nNote: typing is not your thing? the &lt;tab&gt; key is your friend! One hit it will auto-complete the file/directory/path name for you. If there are many options, hit it twice to see the options.\n\n\n\nAll files have permissions and ownership.\n\n\n\nFile permissions\n\n\n\nList files showing ownership and permissions: ls -l\n\n\nbrun@taylor:/courses/EDS214$ ls -l\ntotal 16\ndrwxrwxr-x+ 3 brun      esmdomainusers 4096 Aug 20 04:49 data\ndrwxrwxr-x+ 2 katherine esmdomainusers 4096 Aug 18 18:32 example    \n\nYou can change those permissions:\n\nChange permissions: chmod\nChange ownership: chown\n\n\n\n\n\n\n\nTip\n\n\n\nClear contents in terminal window: clear\n\n\n\n\n\n\ncommand [options] [arguments]\n\nwhere command must be an executable file on your PATH * echo $PATH\nand options can usually take two forms * short form: -a * long form: --all\nYou can combine the options:\n\nls -ltrh\n\nWhat do these options do?\n\nman ls\n\n\n\n\n\n\n\nTip\n\n\n\nhit spacebar to get to the next page of the manual hit q to exit the help\n\n\n\n\n\nFrom the gitbash (MS Windows) or the terminal (Mac) type:\n\nssh taylor.bren.ucsb.edu\n\nYou will be prompted for your username and password.\n\n\n\naurora_ssh\n\n\nYou can also directly add your username:\n\nssh brun@taylor.bren.ucsb.edu\n\nIn this case, you will be only asked for your password as you already specified which user you want to connect with.\n\n\n\n\nWho else is logged into this machine? who\nWho is logged into “this shell”? whoami\n\n\n\n\n\n&lt;command&gt; -h, &lt;command&gt; --help\nman, info, apropos, whereis\nSearch the web!\n\n\n\n\nShow me my Rmarkdown files!\n\nfind . -iname '*.Rmd'\n\nWhich files are larger than 1GB?\n\nfind . -size +1G\n\nWith more details about the files:\n\nfind . -size +1G -ls\n\n\n\n\n\n\n\nCancel (abort) a command: Ctrl-c Note: very different than Windows!!\nStop (suspend) a command: Ctrl-z\nCtrl-z can be used to suspend, then background a process\n\n\n\n\n\nLike Windows Task Manager, OSX Activity Monitor\ntop, ps, jobs (hit q to get out!)\nkill to delete an unwanted job or process\nForeground and background: &\n\n\n\n\n\nHow much storage is available on this system? df -h\nHow much storage am “I” using overall? du -hs &lt;folder&gt;\nHow much storage am “I” using, by sub directory? du -h &lt;folder&gt;\n\n\n\n\n\nSee your command history: history\nRe-run last command: !! (pronounced “bang-bang”)\nRe-run 32th command: !32\nRe-run 5th from last command: !-5\nRe-run last command that started with ‘c’: !c\n\n\n\n\n\n\nwc count lines, words, and/or characters\ndiff compare two files for differences\nsort sort lines in a file\nuniq report or filter out repeated lines in a file\n\n\n\n\n\n\n\nstdin, stdout, stderr\n\n\n\n$ ls *.png | wc -l\n$ ls *.png | wc -l &gt; pngcount.txt\n$ diff &lt;(sort file1.txt) &lt;(sort file2.txt)\n$ ls foo 2&gt;/dev/null\n\n\nnote use of * as character wildcard for zero or more matches (same in Mac and Windows)\n? matches single character; _ is SQL query equivalent\n\n\n\n\n\n\n\nvim\nemacs\nnano\n\n\n$ nano .bashrc",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Using the command line"
-    ]
-  },
-  {
-    "objectID": "intro_cli.html#hands-on",
-    "href": "intro_cli.html#hands-on",
-    "title": "Using the Command line Interface",
-    "section": "Hands-on",
-    "text": "Hands-on\nLet’s practice our new skills! Click here",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Using the command line"
-    ]
-  },
-  {
-    "objectID": "intro_cli.html#aknowledgements",
-    "href": "intro_cli.html#aknowledgements",
-    "title": "Using the Command line Interface",
-    "section": "Aknowledgements",
-    "text": "Aknowledgements\nThis section adapted materials from NCEAS Open Science for Synthesis (OSS) intensive summer schools and other training. Contributions to this content have been made by Mark Schildhauer, Matt Jones, Jim Regetz and many others; and from EDS-213 10 bash essentials developed by Greg Janée",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Using the command line"
+      "GitHub Organizations for your Lab"
     ]
   },
   {
