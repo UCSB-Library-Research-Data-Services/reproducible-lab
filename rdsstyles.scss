@@ -4,8 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display&display=swap');
 
 //font
-$font-family-serif: "Playfair Display", serif;
-$font-family-sans-serif: 'Nunito', sans-serif;
+$playfair: "Playfair Display", serif;
+$nunito: 'Nunito', sans-serif;
 
 
 // Colors
@@ -31,7 +31,18 @@ $footer-bg: $navy; // footer
 $link-color: $coral; // hyperlinks 
 
 
+
+/*-- scss:rules --*/
+
 // header font & color
 h1, h2, h3, h4 {
-  font-family: $font-family-sans-serif;
+  font-family: $nunito;
+  color: red;
 }
+
+//body 
+body {
+  font-family: $playfair;
+}
+
+
