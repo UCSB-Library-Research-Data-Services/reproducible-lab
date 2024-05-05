@@ -1,5 +1,5 @@
 ---
-title: "Code ~~Review~~ Exchange"
+title: "Code ~~Review~~ _Exchange_"
 ---
 
 Code Exchange is an asynchronous activity that takes place when a teammate is finished working on a script (or a section of it). This teammate will submit a request to another team member to look over the code and provide feedback. It is a great way to:
