@@ -43,10 +43,10 @@ website:
                 text: "Git and GitHub further readings"
           - section: "Collaborative strategies"
             contents:
-              - href: collab_pairprog.qmd
-                text: "Pair Programming"
               - href: collab_exchange.qmd
                 text: "Code Exchange"
+              - href: collab_pairprog.qmd
+                text: "Pair Programming"
               - href: github_workflows.qmd
                 text: "Collaborative workflows: forks & branches"
               - href: 03-handson_github_workflows.qmd
