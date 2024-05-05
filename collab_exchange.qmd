@@ -6,7 +6,7 @@ Code Exchange is an asynchronous activity that takes place when a teammate is fi
 
 - Have one more pair of eyes looking at your code to detect potential bugs / improvements, including analytical aspects of the code 
 - Motivate development of good documentation
-- Generate conversation about code styling
+- **Generate conversation about code styling**
 - Have several team members sharing knowledge
 - Great way to onboard new team members both in terms of code knowledge but also code styling
 
