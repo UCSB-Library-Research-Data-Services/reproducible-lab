@@ -74,7 +74,10 @@ website:
             text: "Preservation prompts"
           - href: datamgmt_preserve.qmd
             text: "Preserve your data"
-            
+      - section: "About us"
+        contents:
+          - href: about.qmd
+            text: "Data Research Services"
 format:
   html:
     theme: 
