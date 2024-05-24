@@ -62,7 +62,7 @@ website:
         contents:
           - href: data_mgmt.qmd
             text: "What is data management?"
-          - href: data_mgmt.qmd
+          - href: datamgmt_prompts.qmd
             text: "A few questions"
           - href: datamgmt_plan.qmd
             text: "Plan"
