@@ -6,14 +6,16 @@ It is a good practice to add a license to a repository/project. It will help to 
 
 ## Code
 
-Here is a good website to choose a license: https://choosealicense.com/ 
+Here is a good website to choose a license: <https://choosealicense.com/>
 
-Here is also a good set of instructions on how to make this happen on a GitHub repository: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository 
+Here is also a good set of instructions on how to make this happen on a GitHub repository: <https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository> 
+
+Note those type of licensing is more meant for software (such as R packages) rather than analytical scripts. For those scripts, keeping the license minimal such as [MIT](https://choosealicense.com/licenses/mit/) of [3-Clause BSD](https://choosealicense.com/licenses/bsd-3-clause/) is our recommendation.
 
 
 ## Data
 
-Technically, facts are not copyrightable. Only interpretations of facts. However, data licensing falls under the content licensing framework that is more related to copyright. Here is the type of licensing that can be used: https://creativecommons.org/licenses/ 
+Technically, facts are not copyrightable. Only interpretations of facts. However, data licensing falls under the content licensing framework that is more related to copyright. Here is the type of licensing that can be used: <https://creativecommons.org/licenses/>
 
 **CC0 is recommended for data**
 
