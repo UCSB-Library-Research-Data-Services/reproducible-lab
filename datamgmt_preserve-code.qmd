@@ -147,3 +147,18 @@ Let's try to improve the readability and documentation of this repository: <http
 
 For inspiration, you can check out the NASA code for APOLLO 11 dating from 1969: <https://github.com/chrislgarry/Apollo-11>!!
 
+---
+
+
+## Code repositories
+
+On-line code repositories are a great way to version and share your code. Here are a few examples of git-based code repositories:
+
+- GitHub
+- GitLab
+- Bitbucket
+- SourceForge
+
+Note however that there is no long-term commitment of any of those main code repositories and that archiving the specific snapshot of your code that was used for a specific analysis along your data is a great idea. Several data repositories offer an integration that lets you do that with data repositories. For example, Zenodo has a great integration with GitHub that lets you issue a DOI for a specific release (read snapshot) of your repository and preserve it independently from the code repository. See [here](https://github.com/OpenScienceMOOC/Module-5-Open-Research-Software-and-Open-Source/blob/master/content_development/Task_2.md) for more details.
+
+
