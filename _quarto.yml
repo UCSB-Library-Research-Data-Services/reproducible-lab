@@ -71,9 +71,9 @@ website:
       - section: "Preserving things"
         contents:
           - href: datamgmt_prompts-preserve.qmd
-            text: "Preservation prompts"
+            text: "What is preservation"
           - href: preserve-readme.qmd
-            text: "the power of README"
+            text: "The power of README"
           - href: datamgmt_preserve-code.qmd
             text: "Preserve your code"
           - href: datamgmt_preserve.qmd

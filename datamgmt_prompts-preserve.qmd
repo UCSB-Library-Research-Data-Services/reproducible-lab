@@ -1,8 +1,12 @@
 ---
-title: "Preservation Prompts"
+title: "Preserving your work"
 ---
 
-Only a few people with free time ahead of them will sit wondering about what to do next and think "what if I were to write some documentation!?". Make it part of your workflow, and do not let it get out of sync too much as your iterate on your analysis.
+Preserving your work includes developing enough documentation so your future self or another researcher can make sense of your work, enough so that they can at least reproduce your work and reuse it to answer their own research questions. It also includes where to store and share your work in data / code repositories.
+
+## Documentation
+
+Only a few people with free time ahead of them will sit wondering about what to do next and think "what if I were to write some documentation!?". Make it part of your workflow! and do not let it get out of sync too much as you iterate on your analysis.
 
 ```{r, echo=FALSE, fig.cap="https://twitter.com/JenMsft/status/1557218211971489792"}
 knitr::include_graphics("img/found_documentationjpg.jpeg")
@@ -21,6 +25,6 @@ Your potential audience(s) for your documentation can be a future collaborator, 
 
 ## Prompts
 
-- What are the specific expectations from your discipline in terms of sharing data? Should you also share the raw data along with the analysis results?
+- What are the specific expectations from your discipline in terms of documentation and sharing data? For example, should you also share the raw data along with the analysis results?
 
 - Considering funding and publisher mandates, as well as disciplinary norms, do you anticipate / have had any challenges regarding data sharing and preservation?
