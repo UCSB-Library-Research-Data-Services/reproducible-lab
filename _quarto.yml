@@ -72,6 +72,8 @@ website:
         contents:
           - href: datamgmt_prompts-preserve.qmd
             text: "Preservation prompts"
+          - href: preserve-readme.qmd
+            text: "the power of README"
           - href: datamgmt_preserve.qmd
             text: "Preserve your data"
       - section: "About us"

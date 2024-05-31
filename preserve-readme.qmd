@@ -1,0 +1,35 @@
+---
+title: "The power of READMEs"
+---
+
+README files are not a new thing. They have been around computer projects since the early days. One great thing about the popularization of supporting the markdown syntax (and its web rendering in most code repositories) is that you can move beyond a simple text file and start to present a compelling entry point to your project that can link to various parts and external resources.
+
+Good types of information to have on a `README`:
+
+- Title  capturing the essence of the project
+- List of current contributors
+- A short explanation of the goal / purpose
+- How to install / where to start
+- A quick demo on how to use the content (can be a link to another document as well)
+- What to do if a bug is spotted
+- How to contribute
+- Licensing 
+- Acknowledgements of authors, contributors, sponsors or other related work 
+
+**Adding images, short videos / animations can make a README more engaging.**
+
+
+### Data README
+
+Most data repositories will ask you to provide some kind of README file to help describe the content you are archiving. Here is a template you may customize for your project needs: <https://doi.org/10.5281/zenodo.10828379>
+
+
+### Code README
+
+Need some inspiration ?
+
+- Here is a interesting template: <https://github.com/navendu-pottekkat/awesome-readme/tree/master>
+
+- When you start an R package with the `usethis` package, a README will be created for you with all the relevant sections for such type of project.
+
+- pick a package you like and inspect their README
