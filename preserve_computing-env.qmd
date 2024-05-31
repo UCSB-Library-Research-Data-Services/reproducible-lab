@@ -1,0 +1,18 @@
+---
+title: "Preserve your computing environment"
+---
+
+Your analysis was done with specific versions of the program used (e.g. R 4.4.3) but also of all the packages involved, as well as the specifications of the Operating System (OS) that was used. The good use is that there are tools to let you systematically capture this information.
+
+In R:
+
+`sessionInfo()` or `devtools::session_info()` are great ways to capture this information. You should save it into a session_info.txt file to include in your GitHub repository
+
+
+In Python:
+
+`pip freeze > requirements.txt` will capture all the python modules installed in your current environment
+
+### Virtual environments
+
+You can even go a step further and help others to recreate the same computing environment that you used independently of what versions you have installed on your machine: https://rstudio.github.io/renv/articles/renv.html

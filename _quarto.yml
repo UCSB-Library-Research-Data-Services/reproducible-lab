@@ -76,6 +76,8 @@ website:
             text: "The power of README"
           - href: preserve_code.qmd
             text: "Preserve your code"
+          - href: preserve_computing-env.qmd
+            text: "Preserve your computing environment"
           - href: preserve_data.qmd
             text: "Preserve your data"
           - href: preserve_self.qmd

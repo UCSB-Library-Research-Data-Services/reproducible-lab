@@ -96,6 +96,7 @@ knitr::include_graphics("img/fish_length.png")
 
 Data semantics aims at clearly identify those concepts relying on vocabularies and ontologies, such as [ENVO](http://www.obofoundry.org/ontology/envo.html) in environmental sciences. In addition, it enables the leverage relations between those concepts to help with (data) discovery.
 
+
 ## Choosing a data repository
 
 We know what we want to archive, now we need to decide where we want to preserve things!
