@@ -50,12 +50,6 @@ We recommend including any data set used to produce statistics, figures maps, an
 
 ## Metadata
 
-This a very important topic for scientific reproducibility and for today we will be only provide a partial overview of this broader topic.
-
-```{r, fig.cap="Data life cycle, DataONE", out.width="150%", echo=FALSE}
-knitr::include_graphics("img/DLC.png")
-```
-
 Metadata (data about data) is an important part of the data life cycle because it enables data reuse long after the original collection. The goal is to have enough information for the researcher to understand the data, interpret the data, and then re-use the data in another study.
 
 ```{r, fig.cap="metadata analogy", out.width="150%", echo=FALSE}
