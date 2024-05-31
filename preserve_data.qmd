@@ -119,8 +119,3 @@ If you would like to research on your own which data repository could be best fo
 
 ![DRYAD data submission overview](img/datamgmt_dryad_workflow.png)
 
-## Data Licensing
-
-Technically, facts are not copyrightable. Only interpretations of facts. However, data licensing falls under the content licensing framework that is more related to copyright. Here is the type of licensing that can be used: https://creativecommons.org/licenses/ 
-
-**CC0 is recommended for data**

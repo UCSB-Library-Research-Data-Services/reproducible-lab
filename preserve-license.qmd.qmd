@@ -1,0 +1,20 @@
+---
+title: "Choosing a License"
+---
+
+It is a good practice to add a license to a repository/project. It will help to clarify what are the expectations regarding using and potentially contributing to this work.
+
+## Code
+
+Here is a good website to choose a license: https://choosealicense.com/ 
+
+Here is also a good set of instructions on how to make this happen on a GitHub repository: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository 
+
+
+## Data
+
+Technically, facts are not copyrightable. Only interpretations of facts. However, data licensing falls under the content licensing framework that is more related to copyright. Here is the type of licensing that can be used: https://creativecommons.org/licenses/ 
+
+**CC0 is recommended for data**
+
+Note that the license type might be dictated by the data repository you choose as most of the data repositories will have one or two license to choose from.

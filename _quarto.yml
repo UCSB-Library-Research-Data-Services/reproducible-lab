@@ -70,16 +70,18 @@ website:
             text: "Manage"
       - section: "Preserving things"
         contents:
-          - href: datamgmt_prompts-preserve.qmd
+          - href: preserve_prompts.qmd
             text: "What is preservation"
           - href: preserve-readme.qmd
             text: "The power of README"
-          - href: datamgmt_preserve-code.qmd
+          - href: preserve_code.qmd
             text: "Preserve your code"
-          - href: datamgmt_preserve-data.qmd
+          - href: preserve_data.qmd
             text: "Preserve your data"
           - href: preserve-self.qmd
             text: "Document yourself"
+          - href: preserve-license.qmd
+            text: "Licensing"
       - section: "About us"
         contents:
           - href: about.qmd
