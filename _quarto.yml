@@ -78,6 +78,8 @@ website:
             text: "Preserve your code"
           - href: datamgmt_preserve-data.qmd
             text: "Preserve your data"
+          - href: preserve-self.qmd
+            text: "Document yourself"
       - section: "About us"
         contents:
           - href: about.qmd
