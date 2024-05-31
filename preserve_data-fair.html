@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Designing a Reproducible and Collaborative Lab (RCL) - Manage your data as you go</title>
+<title>Designing a Reproducible and Collaborative Lab (RCL) - How FAIR are your data?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./preserve_prompts.html" rel="next">
-<link href="./datamgmt_plan.html" rel="prev">
+<link href="./preserve_self.html" rel="next">
+<link href="./preserve_data.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your Lab data</a></li><li class="breadcrumb-item"><a href="./datamgmt_manage.html">Manage</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_data-fair.html">Are you FAIR?</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -253,13 +253,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
  <span class="menu-text">Managing your Lab data</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data_mgmt.html" class="sidebar-item-text sidebar-link">
@@ -280,7 +280,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datamgmt_manage.html" class="sidebar-item-text sidebar-link active">
+  <a href="./datamgmt_manage.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Manage</span></a>
   </div>
 </li>
@@ -288,13 +288,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
  <span class="menu-text">Preserving things</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./preserve_prompts.html" class="sidebar-item-text sidebar-link">
@@ -327,7 +327,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./preserve_data-fair.html" class="sidebar-item-text sidebar-link">
+  <a href="./preserve_data-fair.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Are you FAIR?</span></a>
   </div>
 </li>
@@ -372,20 +372,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#track-your-data-sources" id="toc-track-your-data-sources" class="nav-link active" data-scroll-target="#track-your-data-sources">Track your data sources</a></li>
-  <li><a href="#keep-raw-data-raw" id="toc-keep-raw-data-raw" class="nav-link" data-scroll-target="#keep-raw-data-raw">Keep raw data raw</a></li>
-  <li><a href="#project-organization" id="toc-project-organization" class="nav-link" data-scroll-target="#project-organization">Project organization</a></li>
-  <li><a href="#adopt-a-consistent-naming-convention" id="toc-adopt-a-consistent-naming-convention" class="nav-link" data-scroll-target="#adopt-a-consistent-naming-convention">Adopt a consistent naming convention</a></li>
-  <li><a href="#backup-your-data" id="toc-backup-your-data" class="nav-link" data-scroll-target="#backup-your-data">Backup your data</a></li>
+  <li><a href="#fair-pinciples" id="toc-fair-pinciples" class="nav-link active" data-scroll-target="#fair-pinciples">FAIR pinciples</a></li>
+  <li><a href="#fair-assessment" id="toc-fair-assessment" class="nav-link" data-scroll-target="#fair-assessment">FAIR assessment</a>
+  <ul class="collapse">
+  <li><a href="#findable" id="toc-findable" class="nav-link" data-scroll-target="#findable"><strong>F</strong>indable</a></li>
+  <li><a href="#accessible" id="toc-accessible" class="nav-link" data-scroll-target="#accessible"><strong>A</strong>ccessible</a></li>
+  <li><a href="#interoperable" id="toc-interoperable" class="nav-link" data-scroll-target="#interoperable"><strong>I</strong>nteroperable</a></li>
+  <li><a href="#reusable" id="toc-reusable" class="nav-link" data-scroll-target="#reusable"><strong>R</strong>eusable</a></li>
+  </ul></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your Lab data</a></li><li class="breadcrumb-item"><a href="./datamgmt_manage.html">Manage</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_data-fair.html">Are you FAIR?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Manage your data as you go</h1>
+<h1 class="title">How FAIR are your data?</h1>
 </div>
 
 
@@ -402,84 +406,150 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>While actively working on your projects, there are several practices that can help you to manage your data in an efficient manner that will help you to collaborate with others (including your futureself!) and make your work more reproducible.</p>
-<section id="track-your-data-sources" class="level2">
-<h2 class="anchored" data-anchor-id="track-your-data-sources">Track your data sources</h2>
-<p>As you collect your data, if using pre-existing data sources, we strongly recommend that you keep track of where/by whom you accessed the data you will use. It can be a link to a data archive, an official agency website, or the contact information of a person. This data log can be developed using a spreadsheet that you can share with your team. The goal here is to make sure you can:</p>
-<ul>
-<li>Go back to the original source and the right version of the data</li>
-<li>Correctly attribute/cite the data sources when you project</li>
-<li>Reach out to data creators and ask for potential clarifications you might need to correctly interpret the data</li>
-<li>Inquiry for any data updates at a later date</li>
-</ul>
-</section>
-<section id="keep-raw-data-raw" class="level2">
-<h2 class="anchored" data-anchor-id="keep-raw-data-raw">Keep raw data raw</h2>
-<p>During the data collection phase, also make sure to create a dedicated folder(s) to save the raw data version you just acquired.</p>
-<p>If you are using a programmatic approach to acquire your data (e.g., API), make sure to only read the raw data and save any processed intermediate data products in a different folder. We recommend changing the permissions on your raw data folder to read-only to avoid any unexpected incidents.</p>
-<p>If you are accessing the data using a Graphical User Interface (GUI), we recommend you create a “working copy” of your raw data in a separate folder and use those files as it is often very easy to accidentally overwrite it.</p>
-</section>
-<section id="project-organization" class="level2">
-<h2 class="anchored" data-anchor-id="project-organization">Project organization</h2>
-<p>We generally recommend encapsulating your project into few folders. It will make it more portable when combined with a <a href="https://www.educative.io/answers/absolute-vs-relative-path">relative path</a> and help you keep the information centralized in one place. Here is a potential starting point for your file structure with three subfolders:</p>
-<ul>
-<li>Data: where you will store your data with the following file structure
-<ul>
-<li>Input_data: to store the raw data you collected or/and are reusing</li>
-<li>Intermediate_data: to store any cleaned or merged data sets</li>
-<li>Analysis_data: any model analytical outputs that you computed</li>
-</ul></li>
-<li>Code or Scripts: you can store your scripts in this folder. You can keep everything within the folder using filename to organize it or create subfolders as needed</li>
-<li>Results: to store tables, graphs, reports, or any other scientific products you are producing</li>
-</ul>
-<p>In the top-level folder, we also recommend you write a README to explain your project, list the contributors and provide information on how to best navigate your project folder as well as a short description of the files it contains.</p>
-<div class="quarto-figure quarto-figure-center">
+<section id="fair-pinciples" class="level2">
+<h2 class="anchored" data-anchor-id="fair-pinciples">FAIR pinciples</h2>
+<p><strong>we recommend using the <a href="https://www.go-fair.org/fair-principles/">FAIR</a> &amp; <a href="https://www.gida-global.org/care">CARE</a> principles as guidance</strong> to maximize the reusability of your data by you, your collaborators, other researchers, and future-you. Your plan should ensure that detailed documentation adopting existing standards is developed during the entire duration of your project (don’t wait until the very end!!) and that this documentation is archived along with your data and code in a publicly accessible data repository will set you up for success.</p>
+<div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="img/datamgmt_project_organization.png" class="img-fluid figure-img"></p>
-<figcaption>Source: <a href="https://www.library.ucsb.edu/sites/default/files/dls-n8-2021-projectfolder-navy.pdf">RDS Data Literacy Series</a></figcaption>
+<p><img src="images/be-FAIR-and-CARE.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>source: <a href="https://www.gida-global.org/care" class="uri">https://www.gida-global.org/care</a></figcaption>
 </figure>
 </div>
-<p><strong>Think of what README template could be developed for your research lab to help with standardizing this information across projects.</strong></p>
 </section>
-<section id="adopt-a-consistent-naming-convention" class="level2">
-<h2 class="anchored" data-anchor-id="adopt-a-consistent-naming-convention">Adopt a consistent naming convention</h2>
-<p>Develop naming conventions for files and folders:</p>
-<ul>
-<li>Avoid spaces (use underscores or dashes)</li>
-<li>Avoid punctuation or special characters</li>
-<li>Try to leverage alphabetical order (e.g., start with dates: 2020-05-08)</li>
-<li>Use descriptive naming (lite metadata)</li>
-<li>Use folders to structure/organize content</li>
-<li>Keep it simple</li>
-<li>Make it programmatically useful:
-<ul>
-<li>Useful to select files (Wildcard *, regular expression)</li>
-<li>But don’t forget Humans need to read file names too!!</li>
-<li>Tip: leverage the use of <code>_</code> and <code>-</code> to make your filename readable by both Humans and machines!</li>
-</ul></li>
-</ul>
-<section id="try-it" class="level4">
-<h4 class="anchored" data-anchor-id="try-it">Try it:</h4>
-<p>Which filename would be the most useful?</p>
-<ul>
-<li><code>06-2020-08-sensor2-plot1.csv</code></li>
-<li><code>2020-05-08_light-sensor-1_plot-1.csv</code></li>
-<li><code>Measurement 1.csv</code></li>
-<li><code>2020-05-08-light-sensor-1-plot-2.csv</code></li>
-<li><code>2020-05-08-windSensor1-plot3.csv</code></li>
-</ul>
-<p><strong><em>Remember, the most important is to make it consistent!</em></strong></p>
-<p>A <a href="https://speakerdeck.com/jennybc/how-to-name-files">good reference</a> on this topic from Jenny Bryan (Posit).</p>
+<section id="fair-assessment" class="level2">
+<h2 class="anchored" data-anchor-id="fair-assessment">FAIR assessment</h2>
+<section id="findable" class="level3">
+<h3 class="anchored" data-anchor-id="findable"><strong>F</strong>indable</h3>
+<section id="does-the-dataset-have-any-identifiers-assigned" class="level4">
+<h4 class="anchored" data-anchor-id="does-the-dataset-have-any-identifiers-assigned">1. Does the dataset have any identifiers assigned?</h4>
+<ol type="a">
+<li><p>No identifier</p></li>
+<li><p>Local identifier</p></li>
+<li><p>Web address (URL)</p></li>
+<li><p>Globally unique identifier, citable and persistent (e.g.&nbsp;DOI, PURL, ARK or Handle)</p></li>
+</ol>
+</section>
+<section id="is-the-dataset-identifier-included-in-all-metadata-recordsfiles-describing-the-data" class="level4">
+<h4 class="anchored" data-anchor-id="is-the-dataset-identifier-included-in-all-metadata-recordsfiles-describing-the-data">2. Is the dataset identifier included in all metadata records/files describing the data?</h4>
+<ol type="a">
+<li><p>No</p></li>
+<li><p>Yes</p></li>
+</ol>
+</section>
+<section id="how-is-the-data-described-with-metadata" class="level4">
+<h4 class="anchored" data-anchor-id="how-is-the-data-described-with-metadata">3. How is the data described with metadata?</h4>
+<ol type="a">
+<li><p>The data are not described</p></li>
+<li><p>Brief title and description</p></li>
+<li><p>Comprehensive, but in a text-based, non-standard format</p></li>
+<li><p>Comprehensively using a recognized formal machine-readable metadata schema</p></li>
+</ol>
+</section>
+<section id="what-type-of-repository-or-registry-is-the-metadata-record-in" class="level4">
+<h4 class="anchored" data-anchor-id="what-type-of-repository-or-registry-is-the-metadata-record-in">4. What type of repository or registry is the metadata record in?</h4>
+<ol type="a">
+<li><p>The data are not described in any repository</p></li>
+<li><p>Local institutional repository</p></li>
+<li><p>Domain-specific repository</p></li>
+<li><p>Generalist public repository</p></li>
+<li><p>Data are in one place but discoverable through several registries</p></li>
+</ol>
 </section>
 </section>
-<section id="backup-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="backup-your-data">Backup your data</h2>
-<p>Don’t forget, things happen!!!</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/datamgmt_broken_laptop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
-</div>
+<section id="accessible" class="level3">
+<h3 class="anchored" data-anchor-id="accessible"><strong>A</strong>ccessible</h3>
+<section id="how-accessible-is-the-data" class="level4">
+<h4 class="anchored" data-anchor-id="how-accessible-is-the-data">5. How accessible is the data</h4>
+<ol type="a">
+<li><p>No access to data or metadata</p></li>
+<li><p>Access to metadata only</p></li>
+<li><p>Unspecified conditional access, e.g.&nbsp;contact the data custodian</p></li>
+<li><p>Embargoed access after a specified date</p></li>
+<li><p>A de-identified / modified subset of the data is publicly accessible</p></li>
+<li><p>Fully accessible to persons who meet explicitly stated conditions, e.g.&nbsp;ethics approval for</p></li>
+</ol>
+<p>sensitive data</p>
+<ol start="7" type="a">
+<li>Publicly accessible</li>
+</ol>
+</section>
+<section id="is-the-data-available-online-without-requiring-specialized-protocols-or-tools-once-access-has-been-approved" class="level4">
+<h4 class="anchored" data-anchor-id="is-the-data-available-online-without-requiring-specialized-protocols-or-tools-once-access-has-been-approved">6. Is the data available online without requiring specialized protocols or tools once access has been approved?</h4>
+<ol type="a">
+<li><p>No access to data</p></li>
+<li><p>By individual arrangement</p></li>
+<li><p>File download from online location</p></li>
+<li><p>Non-standard web service (e.g.&nbsp;OpenAPI, Swagger, Informal API)</p></li>
+<li><p>Standard web service API (e.g.&nbsp;OGC)</p></li>
+</ol>
+</section>
+<section id="will-the-metadata-record-be-available-even-if-the-data-are-no-longer-available" class="level4">
+<h4 class="anchored" data-anchor-id="will-the-metadata-record-be-available-even-if-the-data-are-no-longer-available">7. Will the metadata record be available even if the data are no longer available?</h4>
+<ol type="a">
+<li><p>Unsure</p></li>
+<li><p>No</p></li>
+<li><p>Yes</p></li>
+</ol>
+</section>
+</section>
+<section id="interoperable" class="level3">
+<h3 class="anchored" data-anchor-id="interoperable"><strong>I</strong>nteroperable</h3>
+<section id="what-file-formats-is-the-data-available-in" class="level4">
+<h4 class="anchored" data-anchor-id="what-file-formats-is-the-data-available-in">8. What (file) formats is the data available in?</h4>
+<ol type="a">
+<li><p>Mostly in a proprietary format</p></li>
+<li><p>In a structured, open standard, non-machine-readable format</p></li>
+<li><p>In a structured, open standard, machine-readable format</p></li>
+</ol>
+</section>
+<section id="what-best-describes-the-types-of-vocabulariesontologiestagging-schemas-used-to-define-the-data-elements" class="level4">
+<h4 class="anchored" data-anchor-id="what-best-describes-the-types-of-vocabulariesontologiestagging-schemas-used-to-define-the-data-elements">9. What best describes the types of vocabularies/ontologies/tagging schemas used to define the data elements?</h4>
+<ol type="a">
+<li><p>Data elements not described</p></li>
+<li><p>No standards have been applied in the description of data elements</p></li>
+<li><p>Standardised vocabularies/ontologies/schemas without global identifiers</p></li>
+<li><p>Standardised, open and universal, using resolvable global identifiers linking to explanations</p></li>
+</ol>
+</section>
+<section id="how-is-the-metadata-linked-to-other-data-and-metadata-to-enhance-context-and-clearly-indicate-relationships" class="level4">
+<h4 class="anchored" data-anchor-id="how-is-the-metadata-linked-to-other-data-and-metadata-to-enhance-context-and-clearly-indicate-relationships">10. How is the metadata linked to other data and metadata (to enhance context and clearly indicate relationships)?</h4>
+<ol type="a">
+<li><p>There are no links to other metadata</p></li>
+<li><p>The metadata record includes URI links to related metadata, data and definitions</p></li>
+<li><p>Metadata is represented in machine-readable format, e.g.&nbsp;in a linked format such as</p></li>
+</ol>
+<p>Resource Description Framework (RDF)</p>
+</section>
+</section>
+<section id="reusable" class="level3">
+<h3 class="anchored" data-anchor-id="reusable"><strong>R</strong>eusable</h3>
+<section id="which-of-the-following-best-describes-the-licenceusage-rights-attached-to-the-data" class="level4">
+<h4 class="anchored" data-anchor-id="which-of-the-following-best-describes-the-licenceusage-rights-attached-to-the-data">11. Which of the following best describes the licence/usage rights attached to the data?</h4>
+<ol type="a">
+<li><p>No licence</p></li>
+<li><p>Non-standard text-based licence</p></li>
+<li><p>Non-standard machine-readable licence (clearly indicating under what conditions the data</p></li>
+</ol>
+<p>may be reused)</p>
+<ol start="4" type="a">
+<li><p>Standard text-based licence</p></li>
+<li><p>Standard machine-readable licence (e.g.&nbsp;Creative Commons)</p></li>
+</ol>
+</section>
+<section id="how-much-provenance-information-has-been-captured-to-facilitate-data-reuse" class="level4">
+<h4 class="anchored" data-anchor-id="how-much-provenance-information-has-been-captured-to-facilitate-data-reuse">12. How much provenance information has been captured to facilitate data reuse?</h4>
+<ol type="a">
+<li><p>No provenance information is recorded</p></li>
+<li><p>Partially recorded</p></li>
+<li><p>Fully recorded in a text format</p></li>
+<li><p>Fully recorded in a machine-readable format</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>This evaluation portion of this section has been adapted from the UK Data Service <a href="https://ukdataservice.ac.uk/app/uploads/exercise_fairdata.pdf">https://ukdataservice.ac.uk/app/uploads/exercise_fairdata.pdf</a> and is licensed under a Creative Commons Attribution CC-BY 4.0 International License.</p>
 
 
 </section>
@@ -902,13 +972,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./datamgmt_plan.html" class="pagination-link" aria-label="Plan">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Plan</span>
+      <a href="./preserve_data.html" class="pagination-link" aria-label="Preserve your data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preserve your data</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./preserve_prompts.html" class="pagination-link" aria-label="What is preservation">
-        <span class="nav-page-text">What is preservation</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./preserve_self.html" class="pagination-link" aria-label="Document yourself">
+        <span class="nav-page-text">Document yourself</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
