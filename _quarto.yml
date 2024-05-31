@@ -72,15 +72,15 @@ website:
         contents:
           - href: preserve_prompts.qmd
             text: "What is preservation"
-          - href: preserve-readme.qmd
+          - href: preserve_readme.qmd
             text: "The power of README"
           - href: preserve_code.qmd
             text: "Preserve your code"
           - href: preserve_data.qmd
             text: "Preserve your data"
-          - href: preserve-self.qmd
+          - href: preserve_self.qmd
             text: "Document yourself"
-          - href: preserve-license.qmd
+          - href: preserve_license.qmd
             text: "Licensing"
       - section: "About us"
         contents:
