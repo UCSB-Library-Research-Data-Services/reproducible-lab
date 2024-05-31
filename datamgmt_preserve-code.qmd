@@ -1,0 +1,149 @@
+---
+title: "Preserve your code"
+---
+
+## Making your code readable
+
+```{r, echo=FALSE, fig.cap= "https://twitter.com/cjm4189/status/1557346489613094914"}
+knitr::include_graphics("img/code_handover.jpeg")
+```
+
+
+It is important to make your code easy to read if you hope that others will reuse it. It starts with using a **consistent style** withing your scripts (at least within a project). 
+
+- Here is a good style guide for R: <https://style.tidyverse.org/>
+- Style guide for Python: <https://www.python.org/dev/peps/pep-0008/>
+
+```{python Zen of Python, echo=TRUE}
+import this
+```
+
+There is also the **visual aspect** of the code that should not be neglected. Like a prose, if you receive a long text without any paragraphs, you might be not very excited about reading it. _Indentation_, _spaces_, and _empty lines_ should be leveraged to make a script visually inviting and easy to read. The good news is that most of the Integrated Development Environment (IDE) will help you to do so by auto formatting your scripts according to conventions.  Note that also a lot of IDEs, such as RStudio, rely on some conventions to ease the navigation of scripts and notebooks. For example, _try to add four `-` or `#` after a line starting with one or several `#` in an R Script!_
+
+
+## Comments
+
+***Real Programmers don't comment their code. If it was hard to write, it should be hard to understand.*** \
+Tom Van Vleck, based on people he knew..._ (<https://multicians.org/thvv/realprogs.html>)
+
+Joke aside, it is really hard to comment too much your code, because even steps that might seem trivial today might not be so anymore in a few weeks or months for now. In addition, a well commented code is more likely to be read by others. Note also that **comments should work in complement of the code** and should not being seen as work around vague naming conventions of variables or functions.
+
+```{r, eval=FALSE}
+x <- 9.81  #  gravitational acceleration
+
+gravity_acc <- 9.81  #  gravitational acceleration
+```
+
+
+### Header
+
+It is good to add a header to your script that will provide basic information such as:
+
+- Purpose of the script (Long title style)
+- Who are the authors
+- A contact email 
+
+Optional:
+
+- A longer description about the script purpose
+- A starting date and potentially last updated one, although this information becomes redundant with repository information
+
+Note that R Studio does something similar by default when creating an new R Markdown document!
+
+### Inline 
+
+It does not matter if you are using a script or notebook. It is important to provide comments along your code to complement it by:
+
+- explaining what the code does
+- capturing decisions that were made on the analytical side. For example, why a specific value was used for a threshold.
+- specifying when some code was added to handle an edge case such as an unexpected value in the data (so a new user doesn't have to guess what does lines of code and might want to delete them assuming it is not necessary)
+
+Other thoughts:
+
+- It is OK to state (what seems) the obvious (some might disagree with this statement)
+- Try to keep comments to the point and short
+
+
+
+### Functions
+
+Both Python and R have conventions on how to document functions. Adopting those conventions will help you to make your code readable but also to automate part of the documentation development.
+
+#### Roxygen2
+
+The goal of roxygen2 is to make documenting your code as easy as possible. It can dynamically inspect the objects that it’s documenting, so it can automatically add data that you’d otherwise have to write by hand.
+
+How do we insert it? Make sure you cursor is inside the function you want to document and from RStudio Menu _Code -> Insert Roxygen Skeleton_
+
+Example:
+
+```{r}
+#' Add together two numbers
+#'
+#' @param x A number
+#' @param y A number
+#' @return The sum of \code{x} and \code{y}
+#' @examples
+#' add(1, 1)
+#' add(10, 1)
+add2 <- function(x, y) {
+  x + y
+}
+```
+
+Try it! 
+- Copy the function (without the documentation) in a new script 
+- Add a third parameter to the function such as it sums 3 numbers
+- Add the Roxygen skeleton
+- Fill it to best describe your function
+
+Note that when you are developing an R package, the Roxygen skeleton can be leveraged to develop the help pages of your package so you only have one place to update and the help will synchronize automatically.
+
+#### Python Docstring
+
+A docstring is a string literal that occurs as the first statement in a module,  function, class, or method definition. Such a docstring becomes the `__doc__` special attribute of that object.
+
+
+```{python, eval=FALSE}
+def complex(real=0.0, imag=0.0):
+    """Form a complex number.
+
+    Keyword arguments:
+    real -- the real part (default 0.0)
+    imag -- the imaginary part (default 0.0)
+    """
+    if imag == 0.0 and real == 0.0:
+        return complex_zero
+```
+
+Here for more: <https://www.python.org/dev/peps/pep-0257/>
+
+
+## Leveraging Notebooks
+
+As we have discussed and experimented with Notebooks during the week. It is because Notebooks provide space to further develop content, such as methodology, around the code you are developing in your analysis. Notebooks also enable you to integrate the outputs of your scientific research with the code that was used to produce it. Finally, notebooks can be rendered into various format that let them share with a broad audience.
+
+Notebooks are not only used within the scientific community, see [here](https://peerj.com/preprints/3182.pdf) for some thoughts from Airbnb data science team.
+
+
+---
+
+## Hands-on
+
+### Documenting
+
+```{r, eval=FALSE}
+getPercent <- function( value, pct ) {
+    result <- value * ( pct / 100 )
+    return( result )
+}
+```
+
+Try adding the Roxygen Skeleton to this function and fill all the information you think is necessary to document the function
+
+### Commenting
+
+Let's try to improve the readability and documentation of this repository: <https://github.com/brunj7/better-comments>. Follow the instructions on the README
+
+For inspiration, you can check out the NASA code for APOLLO 11 dating from 1969: <https://github.com/chrislgarry/Apollo-11>!!
+
