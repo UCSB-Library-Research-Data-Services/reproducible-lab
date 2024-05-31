@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Designing a Reproducible and Collaborative Lab (RCL) - Data Management Prompts</title>
+<title>Designing a Reproducible and Collaborative Lab (RCL) - Choosing a License</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./datamgmt_plan.html" rel="next">
-<link href="./data_mgmt.html" rel="prev">
+<link href="./about.html" rel="next">
+<link href="./preserve_self.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your Lab data</a></li><li class="breadcrumb-item"><a href="./datamgmt_prompts.html">A few questions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_license.html">Licensing</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -253,13 +253,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
  <span class="menu-text">Managing your Lab data</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data_mgmt.html" class="sidebar-item-text sidebar-link">
@@ -268,7 +268,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datamgmt_prompts.html" class="sidebar-item-text sidebar-link active">
+  <a href="./datamgmt_prompts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A few questions</span></a>
   </div>
 </li>
@@ -288,13 +288,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
  <span class="menu-text">Preserving things</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./preserve_prompts.html" class="sidebar-item-text sidebar-link">
@@ -327,7 +327,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./preserve_license.html" class="sidebar-item-text sidebar-link">
+  <a href="./preserve_license.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Licensing</span></a>
   </div>
 </li>
@@ -360,22 +360,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#how-are-you-feeling-about-your-data" id="toc-how-are-you-feeling-about-your-data" class="nav-link active" data-scroll-target="#how-are-you-feeling-about-your-data">How are you feeling about your data?</a>
-  <ul class="collapse">
-  <li><a href="#collecting" id="toc-collecting" class="nav-link" data-scroll-target="#collecting">Collecting</a></li>
-  <li><a href="#managing" id="toc-managing" class="nav-link" data-scroll-target="#managing">Managing</a></li>
-  <li><a href="#analyzing" id="toc-analyzing" class="nav-link" data-scroll-target="#analyzing">Analyzing</a></li>
-  </ul></li>
-  <li><a href="#developing-your-research-lab-data-management-guidelines" id="toc-developing-your-research-lab-data-management-guidelines" class="nav-link" data-scroll-target="#developing-your-research-lab-data-management-guidelines">Developing your Research Lab data management guidelines</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link active" data-scroll-target="#code">Code</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your Lab data</a></li><li class="breadcrumb-item"><a href="./datamgmt_prompts.html">A few questions</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_license.html">Licensing</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Data Management Prompts</h1>
+<h1 class="title">Choosing a License</h1>
 </div>
 
 
@@ -392,42 +387,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="how-are-you-feeling-about-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="how-are-you-feeling-about-your-data">How are you feeling about your data?</h2>
-<p>Here are a few prompts to help you start thinking about how you manage your data and where there are potential challenges. These prompts should help you to decide where to start and we encourage you to discuss them with the entire team</p>
-<section id="collecting" class="level3">
-<h3 class="anchored" data-anchor-id="collecting">Collecting</h3>
-<ul>
-<li>Do you collect Field or/and Lab data?</li>
-<li>What is your Research Lab’s typical process for data collection? Frequency, events-based or continuous monitoring?</li>
-<li>Do you have a QA/QC workflow/strategy in place (documented or not)?</li>
-<li>Do you have file naming conventions in place (documented or not)?</li>
-</ul>
+<p>It is a good practice to add a license to a repository/project. It will help to clarify what are the expectations regarding using and potentially contributing to this work.</p>
+<section id="code" class="level2">
+<h2 class="anchored" data-anchor-id="code">Code</h2>
+<p>Here is a good website to choose a license: <a href="https://choosealicense.com/" class="uri">https://choosealicense.com/</a></p>
+<p>Here is also a good set of instructions on how to make this happen on a GitHub repository: <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository" class="uri">https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository</a></p>
+<p>Note those type of licensing is more meant for software (such as R packages) rather than analytical scripts. For those scripts, keeping the license minimal such as <a href="https://choosealicense.com/licenses/mit/">MIT</a> of <a href="https://choosealicense.com/licenses/bsd-3-clause/">3-Clause BSD</a> is our recommendation.</p>
 </section>
-<section id="managing" class="level3">
-<h3 class="anchored" data-anchor-id="managing">Managing</h3>
-<ul>
-<li>What are your lab challenges related to accessing, manipulating and/or moving data?</li>
-<li>What are your lab needs, pain points, or where do you feel time is wasted related to ensuring future use of data by yourself or others?</li>
-<li>What are your main security or data loss concerns related to your data?</li>
-<li>What are your data that might contain sensitive information (geolocation, human subjects, …) and thus need special handling?</li>
-<li>What are your current backup strategies?</li>
-</ul>
-</section>
-<section id="analyzing" class="level3">
-<h3 class="anchored" data-anchor-id="analyzing">Analyzing</h3>
-<ul>
-<li>What type of analysis is conducted on your data?</li>
-<li>What is the unit of analysis for your projects? (individual, community, space, time…)?</li>
-<li>Is it mostly done using a scripting language (R, Python)?</li>
-<li>What is the saturation level and how many events/data points are enough to come to a conclusion?</li>
-<li>Is there a mix of qualitative and quantitative analysis?</li>
-</ul>
-</section>
-</section>
-<section id="developing-your-research-lab-data-management-guidelines" class="level2">
-<h2 class="anchored" data-anchor-id="developing-your-research-lab-data-management-guidelines">Developing your Research Lab data management guidelines</h2>
-<p>One of the goals of our data management session together is to <strong>develop a common understanding of “good enough” norms to adhere to help manage your Research Lab data in a coordinated way</strong>. We strongly encourage building on those discussions to <strong>develop written guidelines</strong> that will reflect those norms and help onboard new lab members. Those guidelines should be seen as a living document that needs to evolve along your research activities.</p>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>Technically, facts are not copyrightable. Only interpretations of facts. However, data licensing falls under the content licensing framework that is more related to copyright. Here is the type of licensing that can be used: <a href="https://creativecommons.org/licenses/" class="uri">https://creativecommons.org/licenses/</a></p>
+<p><strong>CC0 is recommended for data</strong></p>
+<p>Note that the license type might be dictated by the data repository you choose as most of the data repositories will have one or two license to choose from.</p>
 
 
 </section>
@@ -850,13 +821,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./data_mgmt.html" class="pagination-link" aria-label="What is data management?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">What is data management?</span>
+      <a href="./preserve_self.html" class="pagination-link" aria-label="Document yourself">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Document yourself</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./datamgmt_plan.html" class="pagination-link" aria-label="Plan">
-        <span class="nav-page-text">Plan</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./about.html" class="pagination-link" aria-label="Data Research Services">
+        <span class="nav-page-text">Data Research Services</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

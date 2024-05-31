@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Designing a Reproducible and Collaborative Lab (RCL) - Data Management Prompts</title>
+<title>Designing a Reproducible and Collaborative Lab (RCL) - Preserve your code</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./datamgmt_plan.html" rel="next">
-<link href="./data_mgmt.html" rel="prev">
+<link href="./preserve_data.html" rel="next">
+<link href="./preserve_readme.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -93,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your Lab data</a></li><li class="breadcrumb-item"><a href="./datamgmt_prompts.html">A few questions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_code.html">Preserve your code</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -253,13 +287,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
  <span class="menu-text">Managing your Lab data</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data_mgmt.html" class="sidebar-item-text sidebar-link">
@@ -268,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datamgmt_prompts.html" class="sidebar-item-text sidebar-link active">
+  <a href="./datamgmt_prompts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A few questions</span></a>
   </div>
 </li>
@@ -288,13 +322,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
  <span class="menu-text">Preserving things</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./preserve_prompts.html" class="sidebar-item-text sidebar-link">
@@ -309,7 +343,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./preserve_code.html" class="sidebar-item-text sidebar-link">
+  <a href="./preserve_code.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Preserve your code</span></a>
   </div>
 </li>
@@ -360,22 +394,29 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#how-are-you-feeling-about-your-data" id="toc-how-are-you-feeling-about-your-data" class="nav-link active" data-scroll-target="#how-are-you-feeling-about-your-data">How are you feeling about your data?</a>
+  <li><a href="#making-your-code-readable" id="toc-making-your-code-readable" class="nav-link active" data-scroll-target="#making-your-code-readable">Making your code readable</a></li>
+  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">Comments</a>
   <ul class="collapse">
-  <li><a href="#collecting" id="toc-collecting" class="nav-link" data-scroll-target="#collecting">Collecting</a></li>
-  <li><a href="#managing" id="toc-managing" class="nav-link" data-scroll-target="#managing">Managing</a></li>
-  <li><a href="#analyzing" id="toc-analyzing" class="nav-link" data-scroll-target="#analyzing">Analyzing</a></li>
+  <li><a href="#header" id="toc-header" class="nav-link" data-scroll-target="#header">Header</a></li>
+  <li><a href="#inline" id="toc-inline" class="nav-link" data-scroll-target="#inline">Inline</a></li>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
   </ul></li>
-  <li><a href="#developing-your-research-lab-data-management-guidelines" id="toc-developing-your-research-lab-data-management-guidelines" class="nav-link" data-scroll-target="#developing-your-research-lab-data-management-guidelines">Developing your Research Lab data management guidelines</a></li>
+  <li><a href="#leveraging-notebooks" id="toc-leveraging-notebooks" class="nav-link" data-scroll-target="#leveraging-notebooks">Leveraging Notebooks</a></li>
+  <li><a href="#hands-on" id="toc-hands-on" class="nav-link" data-scroll-target="#hands-on">Hands-on</a>
+  <ul class="collapse">
+  <li><a href="#documenting" id="toc-documenting" class="nav-link" data-scroll-target="#documenting">Documenting</a></li>
+  <li><a href="#commenting" id="toc-commenting" class="nav-link" data-scroll-target="#commenting">Commenting</a></li>
+  </ul></li>
+  <li><a href="#code-repositories" id="toc-code-repositories" class="nav-link" data-scroll-target="#code-repositories">Code repositories</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your Lab data</a></li><li class="breadcrumb-item"><a href="./datamgmt_prompts.html">A few questions</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_code.html">Preserve your code</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Data Management Prompts</h1>
+<h1 class="title">Preserve your code</h1>
 </div>
 
 
@@ -392,42 +433,168 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="how-are-you-feeling-about-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="how-are-you-feeling-about-your-data">How are you feeling about your data?</h2>
-<p>Here are a few prompts to help you start thinking about how you manage your data and where there are potential challenges. These prompts should help you to decide where to start and we encourage you to discuss them with the entire team</p>
-<section id="collecting" class="level3">
-<h3 class="anchored" data-anchor-id="collecting">Collecting</h3>
+<section id="making-your-code-readable" class="level2">
+<h2 class="anchored" data-anchor-id="making-your-code-readable">Making your code readable</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/code_handover.jpeg" class="img-fluid figure-img"></p>
+<figcaption>https://twitter.com/cjm4189/status/1557346489613094914</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>It is important to make your code easy to read if you hope that others will reuse it. It starts with using a <strong>consistent style</strong> withing your scripts (at least within a project).</p>
 <ul>
-<li>Do you collect Field or/and Lab data?</li>
-<li>What is your Research Lab’s typical process for data collection? Frequency, events-based or continuous monitoring?</li>
-<li>Do you have a QA/QC workflow/strategy in place (documented or not)?</li>
-<li>Do you have file naming conventions in place (documented or not)?</li>
+<li>Here is a good style guide for R: <a href="https://style.tidyverse.org/" class="uri">https://style.tidyverse.org/</a></li>
+<li>Style guide for Python: <a href="https://www.python.org/dev/peps/pep-0008/" class="uri">https://www.python.org/dev/peps/pep-0008/</a></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> this</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!</code></pre>
+</div>
+</div>
+<p>There is also the <strong>visual aspect</strong> of the code that should not be neglected. Like a prose, if you receive a long text without any paragraphs, you might be not very excited about reading it. <em>Indentation</em>, <em>spaces</em>, and <em>empty lines</em> should be leveraged to make a script visually inviting and easy to read. The good news is that most of the Integrated Development Environment (IDE) will help you to do so by auto formatting your scripts according to conventions. Note that also a lot of IDEs, such as RStudio, rely on some conventions to ease the navigation of scripts and notebooks. For example, <em>try to add four <code>-</code> or <code>#</code> after a line starting with one or several <code>#</code> in an R Script!</em></p>
+</section>
+<section id="comments" class="level2">
+<h2 class="anchored" data-anchor-id="comments">Comments</h2>
+<p><strong><em>Real Programmers don’t comment their code. If it was hard to write, it should be hard to understand.</em></strong><br>
+Tom Van Vleck, based on people he knew…_ (<a href="https://multicians.org/thvv/realprogs.html" class="uri">https://multicians.org/thvv/realprogs.html</a>)</p>
+<p>Joke aside, it is really hard to comment too much your code, because even steps that might seem trivial today might not be so anymore in a few weeks or months for now. In addition, a well commented code is more likely to be read by others. Note also that <strong>comments should work in complement of the code</strong> and should not being seen as work around vague naming conventions of variables or functions.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fl">9.81</span>  <span class="co">#  gravitational acceleration</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>gravity_acc <span class="ot">&lt;-</span> <span class="fl">9.81</span>  <span class="co">#  gravitational acceleration</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="header" class="level3">
+<h3 class="anchored" data-anchor-id="header">Header</h3>
+<p>It is good to add a header to your script that will provide basic information such as:</p>
+<ul>
+<li>Purpose of the script (Long title style)</li>
+<li>Who are the authors</li>
+<li>A contact email</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li>A longer description about the script purpose</li>
+<li>A starting date and potentially last updated one, although this information becomes redundant with repository information</li>
+</ul>
+<p>Note that R Studio does something similar by default when creating an new R Markdown document!</p>
+</section>
+<section id="inline" class="level3">
+<h3 class="anchored" data-anchor-id="inline">Inline</h3>
+<p>It does not matter if you are using a script or notebook. It is important to provide comments along your code to complement it by:</p>
+<ul>
+<li>explaining what the code does</li>
+<li>capturing decisions that were made on the analytical side. For example, why a specific value was used for a threshold.</li>
+<li>specifying when some code was added to handle an edge case such as an unexpected value in the data (so a new user doesn’t have to guess what does lines of code and might want to delete them assuming it is not necessary)</li>
+</ul>
+<p>Other thoughts:</p>
+<ul>
+<li>It is OK to state (what seems) the obvious (some might disagree with this statement)</li>
+<li>Try to keep comments to the point and short</li>
 </ul>
 </section>
-<section id="managing" class="level3">
-<h3 class="anchored" data-anchor-id="managing">Managing</h3>
+<section id="functions" class="level3">
+<h3 class="anchored" data-anchor-id="functions">Functions</h3>
+<p>Both Python and R have conventions on how to document functions. Adopting those conventions will help you to make your code readable but also to automate part of the documentation development.</p>
+<section id="roxygen2" class="level4">
+<h4 class="anchored" data-anchor-id="roxygen2">Roxygen2</h4>
+<p>The goal of roxygen2 is to make documenting your code as easy as possible. It can dynamically inspect the objects that it’s documenting, so it can automatically add data that you’d otherwise have to write by hand.</p>
+<p>How do we insert it? Make sure you cursor is inside the function you want to document and from RStudio Menu <em>Code -&gt; Insert Roxygen Skeleton</em></p>
+<p>Example:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#' Add together two numbers</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#' @param x A number</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#' @param y A number</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#' @return The sum of \code{x} and \code{y}</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">#' @examples</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">#' add(1, 1)</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">#' add(10, 1)</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>add2 <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y) {</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  x <span class="sc">+</span> y</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Try it! - Copy the function (without the documentation) in a new script - Add a third parameter to the function such as it sums 3 numbers - Add the Roxygen skeleton - Fill it to best describe your function</p>
+<p>Note that when you are developing an R package, the Roxygen skeleton can be leveraged to develop the help pages of your package so you only have one place to update and the help will synchronize automatically.</p>
+</section>
+<section id="python-docstring" class="level4">
+<h4 class="anchored" data-anchor-id="python-docstring">Python Docstring</h4>
+<p>A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. Such a docstring becomes the <code>__doc__</code> special attribute of that object.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="bu">complex</span>(real<span class="op">=</span><span class="fl">0.0</span>, imag<span class="op">=</span><span class="fl">0.0</span>):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Form a complex number.</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Keyword arguments:</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">    real -- the real part (default 0.0)</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">    imag -- the imaginary part (default 0.0)</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> imag <span class="op">==</span> <span class="fl">0.0</span> <span class="kw">and</span> real <span class="op">==</span> <span class="fl">0.0</span>:</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> complex_zero</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Here for more: <a href="https://www.python.org/dev/peps/pep-0257/" class="uri">https://www.python.org/dev/peps/pep-0257/</a></p>
+</section>
+</section>
+</section>
+<section id="leveraging-notebooks" class="level2">
+<h2 class="anchored" data-anchor-id="leveraging-notebooks">Leveraging Notebooks</h2>
+<p>As we have discussed and experimented with Notebooks during the week. It is because Notebooks provide space to further develop content, such as methodology, around the code you are developing in your analysis. Notebooks also enable you to integrate the outputs of your scientific research with the code that was used to produce it. Finally, notebooks can be rendered into various format that let them share with a broad audience.</p>
+<p>Notebooks are not only used within the scientific community, see <a href="https://peerj.com/preprints/3182.pdf">here</a> for some thoughts from Airbnb data science team.</p>
+<hr>
+</section>
+<section id="hands-on" class="level2">
+<h2 class="anchored" data-anchor-id="hands-on">Hands-on</h2>
+<section id="documenting" class="level3">
+<h3 class="anchored" data-anchor-id="documenting">Documenting</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>getPercent <span class="ot">&lt;-</span> <span class="cf">function</span>( value, pct ) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    result <span class="ot">&lt;-</span> value <span class="sc">*</span> ( pct <span class="sc">/</span> <span class="dv">100</span> )</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>( result )</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Try adding the Roxygen Skeleton to this function and fill all the information you think is necessary to document the function</p>
+</section>
+<section id="commenting" class="level3">
+<h3 class="anchored" data-anchor-id="commenting">Commenting</h3>
+<p>Let’s try to improve the readability and documentation of this repository: <a href="https://github.com/brunj7/better-comments" class="uri">https://github.com/brunj7/better-comments</a>. Follow the instructions on the README</p>
+<p>For inspiration, you can check out the NASA code for APOLLO 11 dating from 1969: <a href="https://github.com/chrislgarry/Apollo-11" class="uri">https://github.com/chrislgarry/Apollo-11</a>!!</p>
+<hr>
+</section>
+</section>
+<section id="code-repositories" class="level2">
+<h2 class="anchored" data-anchor-id="code-repositories">Code repositories</h2>
+<p>On-line code repositories are a great way to version and share your code. Here are a few examples of git-based code repositories:</p>
 <ul>
-<li>What are your lab challenges related to accessing, manipulating and/or moving data?</li>
-<li>What are your lab needs, pain points, or where do you feel time is wasted related to ensuring future use of data by yourself or others?</li>
-<li>What are your main security or data loss concerns related to your data?</li>
-<li>What are your data that might contain sensitive information (geolocation, human subjects, …) and thus need special handling?</li>
-<li>What are your current backup strategies?</li>
+<li>GitHub</li>
+<li>GitLab</li>
+<li>Bitbucket</li>
+<li>SourceForge</li>
 </ul>
-</section>
-<section id="analyzing" class="level3">
-<h3 class="anchored" data-anchor-id="analyzing">Analyzing</h3>
-<ul>
-<li>What type of analysis is conducted on your data?</li>
-<li>What is the unit of analysis for your projects? (individual, community, space, time…)?</li>
-<li>Is it mostly done using a scripting language (R, Python)?</li>
-<li>What is the saturation level and how many events/data points are enough to come to a conclusion?</li>
-<li>Is there a mix of qualitative and quantitative analysis?</li>
-</ul>
-</section>
-</section>
-<section id="developing-your-research-lab-data-management-guidelines" class="level2">
-<h2 class="anchored" data-anchor-id="developing-your-research-lab-data-management-guidelines">Developing your Research Lab data management guidelines</h2>
-<p>One of the goals of our data management session together is to <strong>develop a common understanding of “good enough” norms to adhere to help manage your Research Lab data in a coordinated way</strong>. We strongly encourage building on those discussions to <strong>develop written guidelines</strong> that will reflect those norms and help onboard new lab members. Those guidelines should be seen as a living document that needs to evolve along your research activities.</p>
+<p>Note however that there is no long-term commitment of any of those main code repositories and that archiving the specific snapshot of your code that was used for a specific analysis along your data is a great idea. Several data repositories offer an integration that lets you do that with data repositories. For example, Zenodo has a great integration with GitHub that lets you issue a DOI for a specific release (read snapshot) of your repository and preserve it independently from the code repository. See <a href="https://github.com/OpenScienceMOOC/Module-5-Open-Research-Software-and-Open-Source/blob/master/content_development/Task_2.md">here</a> for more details.</p>
+<p>Note that one version is not against the other, in contrary you can see your code repository as the live version of your work and the code snapshot archive as the historical trace that was produced for a specific analysis. In other words, we recommend to link both the code repository and its snapshot to the data archive.</p>
 
 
 </section>
@@ -850,13 +1017,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./data_mgmt.html" class="pagination-link" aria-label="What is data management?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">What is data management?</span>
+      <a href="./preserve_readme.html" class="pagination-link" aria-label="The power of README">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The power of README</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./datamgmt_plan.html" class="pagination-link" aria-label="Plan">
-        <span class="nav-page-text">Plan</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./preserve_data.html" class="pagination-link" aria-label="Preserve your data">
+        <span class="nav-page-text">Preserve your data</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

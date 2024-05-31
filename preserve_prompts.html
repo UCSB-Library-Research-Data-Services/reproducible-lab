@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Designing a Reproducible and Collaborative Lab (RCL) - Preservation Prompts</title>
+<title>Designing a Reproducible and Collaborative Lab (RCL) - Preserving your work</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./datamgmt_preserve.html" rel="next">
+<link href="./preserve_readme.html" rel="next">
 <link href="./datamgmt_manage.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./datamgmt_prompts-preserve.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./datamgmt_prompts-preserve.html">Preservation prompts</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_prompts.html">What is preservation</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -297,14 +297,38 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datamgmt_prompts-preserve.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Preservation prompts</span></a>
+  <a href="./preserve_prompts.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">What is preservation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datamgmt_preserve.html" class="sidebar-item-text sidebar-link">
+  <a href="./preserve_readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The power of README</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preserve_code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preserve your code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preserve_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preserve your data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preserve_self.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Document yourself</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preserve_license.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Licensing</span></a>
   </div>
 </li>
       </ul>
@@ -332,14 +356,24 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link active" data-scroll-target="#documentation">Documentation</a>
+  <ul class="collapse">
+  <li><a href="#know-your-audience" id="toc-know-your-audience" class="nav-link" data-scroll-target="#know-your-audience">Know your audience</a></li>
+  </ul></li>
+  <li><a href="#prompts" id="toc-prompts" class="nav-link" data-scroll-target="#prompts">Prompts</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./datamgmt_prompts-preserve.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./datamgmt_prompts-preserve.html">Preservation prompts</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_prompts.html">What is preservation</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Preservation Prompts</h1>
+<h1 class="title">Preserving your work</h1>
 </div>
 
 
@@ -356,12 +390,45 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Preserving your work includes developing enough documentation so your future self or another researcher can make sense of your work, enough so that they can at least reproduce your work and reuse it to answer their own research questions. It also includes where to store and share your work in data / code repositories.</p>
+<section id="documentation" class="level2">
+<h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
+<p>Only a few people with free time ahead of them will sit wondering about what to do next and think “what if I were to write some documentation!?”. Make it part of your workflow! and do not let it get out of sync too much as you iterate on your analysis.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/found_documentationjpg.jpeg" class="img-fluid figure-img"></p>
+<figcaption>https://twitter.com/JenMsft/status/1557218211971489792</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="know-your-audience" class="level3">
+<h3 class="anchored" data-anchor-id="know-your-audience">Know your audience</h3>
+<p>There are actually various ways to document your work!! Here is a potential framework to help to think about those different types of documentation and their related audiences:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/document_diataxis.png" class="img-fluid figure-img" style="width:150.0%"></p>
+<figcaption>source: https://diataxis.fr/</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Your potential audience(s) for your documentation can be a future collaborator, an external researcher with no direct insight on your work, a potential user of a tool you developed?</p>
+</section>
+</section>
+<section id="prompts" class="level2">
+<h2 class="anchored" data-anchor-id="prompts">Prompts</h2>
 <ul>
-<li>What are the specific expectations from your discipline in terms of sharing data? Should you also share the raw data along with the analysis results?</li>
-<li>Considering funding and publisher mandates, as well as disciplinary norms, do you anticipate / have had any challenges regarding data sharing and preservation?</li>
+<li><p>What are the specific expectations from your discipline in terms of documentation and sharing data? For example, should you also share the raw data along with the analysis results?</p></li>
+<li><p>Considering funding and publisher mandates, as well as disciplinary norms, do you anticipate / have had any challenges regarding data sharing and preservation?</p></li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <div>
@@ -786,8 +853,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./datamgmt_preserve.html" class="pagination-link" aria-label="Preserve your data">
-        <span class="nav-page-text">Preserve your data</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./preserve_readme.html" class="pagination-link" aria-label="The power of README">
+        <span class="nav-page-text">The power of README</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

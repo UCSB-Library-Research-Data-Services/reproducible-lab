@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Designing a Reproducible and Collaborative Lab (RCL) - Data Management Prompts</title>
+<title>Designing a Reproducible and Collaborative Lab (RCL) - Preserve your data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./datamgmt_plan.html" rel="next">
-<link href="./data_mgmt.html" rel="prev">
+<link href="./preserve_self.html" rel="next">
+<link href="./preserve_code.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your Lab data</a></li><li class="breadcrumb-item"><a href="./datamgmt_prompts.html">A few questions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_data.html">Preserve your data</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -253,13 +253,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
  <span class="menu-text">Managing your Lab data</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data_mgmt.html" class="sidebar-item-text sidebar-link">
@@ -268,7 +268,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datamgmt_prompts.html" class="sidebar-item-text sidebar-link active">
+  <a href="./datamgmt_prompts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A few questions</span></a>
   </div>
 </li>
@@ -288,13 +288,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
  <span class="menu-text">Preserving things</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./preserve_prompts.html" class="sidebar-item-text sidebar-link">
@@ -315,7 +315,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./preserve_data.html" class="sidebar-item-text sidebar-link">
+  <a href="./preserve_data.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Preserve your data</span></a>
   </div>
 </li>
@@ -360,22 +360,31 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#how-are-you-feeling-about-your-data" id="toc-how-are-you-feeling-about-your-data" class="nav-link active" data-scroll-target="#how-are-you-feeling-about-your-data">How are you feeling about your data?</a>
+  <li><a href="#what-data-products-to-preserve" id="toc-what-data-products-to-preserve" class="nav-link active" data-scroll-target="#what-data-products-to-preserve">What data products to preserve?</a>
   <ul class="collapse">
-  <li><a href="#collecting" id="toc-collecting" class="nav-link" data-scroll-target="#collecting">Collecting</a></li>
-  <li><a href="#managing" id="toc-managing" class="nav-link" data-scroll-target="#managing">Managing</a></li>
-  <li><a href="#analyzing" id="toc-analyzing" class="nav-link" data-scroll-target="#analyzing">Analyzing</a></li>
+  <li><a href="#raw-data" id="toc-raw-data" class="nav-link" data-scroll-target="#raw-data">Raw data</a></li>
+  <li><a href="#intermediate-data" id="toc-intermediate-data" class="nav-link" data-scroll-target="#intermediate-data">Intermediate data</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
+  <li><a href="#final-products" id="toc-final-products" class="nav-link" data-scroll-target="#final-products">Final products</a></li>
   </ul></li>
-  <li><a href="#developing-your-research-lab-data-management-guidelines" id="toc-developing-your-research-lab-data-management-guidelines" class="nav-link" data-scroll-target="#developing-your-research-lab-data-management-guidelines">Developing your Research Lab data management guidelines</a></li>
+  <li><a href="#metadata" id="toc-metadata" class="nav-link" data-scroll-target="#metadata">Metadata</a>
+  <ul class="collapse">
+  <li><a href="#metadata-standards" id="toc-metadata-standards" class="nav-link" data-scroll-target="#metadata-standards">Metadata standards</a></li>
+  </ul></li>
+  <li><a href="#data-provenance-semantics" id="toc-data-provenance-semantics" class="nav-link" data-scroll-target="#data-provenance-semantics">Data provenance &amp; semantics</a></li>
+  <li><a href="#choosing-a-data-repository" id="toc-choosing-a-data-repository" class="nav-link" data-scroll-target="#choosing-a-data-repository">Choosing a data repository</a>
+  <ul class="collapse">
+  <li><a href="#dryad" id="toc-dryad" class="nav-link" data-scroll-target="#dryad">Dryad</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_mgmt.html">Managing your Lab data</a></li><li class="breadcrumb-item"><a href="./datamgmt_prompts.html">A few questions</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_data.html">Preserve your data</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Data Management Prompts</h1>
+<h1 class="title">Preserve your data</h1>
 </div>
 
 
@@ -392,44 +401,118 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="how-are-you-feeling-about-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="how-are-you-feeling-about-your-data">How are you feeling about your data?</h2>
-<p>Here are a few prompts to help you start thinking about how you manage your data and where there are potential challenges. These prompts should help you to decide where to start and we encourage you to discuss them with the entire team</p>
-<section id="collecting" class="level3">
-<h3 class="anchored" data-anchor-id="collecting">Collecting</h3>
+<p>As you finalize your projects, often an important task is to archive your data in a publicly available repository (pending sensitivity and by non-disclosure agreement exceptions). There are a few important steps to ensure that your data can be reused by others and thus make your work more reproducible.</p>
+<section id="what-data-products-to-preserve" class="level2">
+<h2 class="anchored" data-anchor-id="what-data-products-to-preserve">What data products to preserve?</h2>
+<p><strong><em>Your general philosophy when preparing the preservation of your scientific products should be: Document what you used (provenance) and preserve what you produced.</em></strong></p>
+<p>Often the first question that comes to mind when starting to preserve your work is: What should I include in my data archive? Generally speaking, you want to preserve <strong>your</strong> work. This means capturing the methodology you used, the raw data you collected, any data cleaning you did, and any data and output (figure, report, etc.) you generated. Okay… so you mean everything!? Well, yes and no. Everything relevant to help you come to the findings and conclusions discussed in your project report or any other publications and deliverables. Let’s break this down!</p>
+<section id="raw-data" class="level3">
+<h3 class="anchored" data-anchor-id="raw-data">Raw data</h3>
+<p>Here are a few questions to ask yourself to determine if you should refer in your documentation to the raw data you used or also include them in your data archive.</p>
+<ol type="1">
+<li>The <strong>raw data is already publicly accessible</strong>, and the hosting solution (website, FTP server, etc.) seems well maintained (ideally providing a recommended citation)</li>
+</ol>
+<p>=&gt; Document the website or process you used to collect the data and when you accessed/downloaded the data you used. Try also to determine if a specific version number is associated with the data you used.*</p>
+<ol start="2" type="1">
+<li>The raw data is <strong>not</strong> publicly accessible</li>
+</ol>
+<p>Note that we are not talking about data under a non-disclosure agreement (NDA) here but more about data with an unclear reuse status or obtained by interactions with a person or an institution. For example, if the data you used were sent to you privately, then we recommend that you:</p>
 <ul>
-<li>Do you collect Field or/and Lab data?</li>
-<li>What is your Research Lab’s typical process for data collection? Frequency, events-based or continuous monitoring?</li>
-<li>Do you have a QA/QC workflow/strategy in place (documented or not)?</li>
-<li>Do you have file naming conventions in place (documented or not)?</li>
+<li>inquire with your person of contact about the status of licensing and if they would be willing to let you share those data publicly. You might face resistance at first, so take the time to explain why you think it is valuable to your work to also share those data sets.</li>
+<li>if, in the end, it is not possible to share the data, please still describe the data in your documentation and list the contact information (person or institution) to inquire about this data set.</li>
 </ul>
 </section>
-<section id="managing" class="level3">
-<h3 class="anchored" data-anchor-id="managing">Managing</h3>
+<section id="intermediate-data" class="level3">
+<h3 class="anchored" data-anchor-id="intermediate-data">Intermediate data</h3>
+<p>This is data you generated either while cleaning or analyzing the raw data. You should preserve it if:</p>
 <ul>
-<li>What are your lab challenges related to accessing, manipulating and/or moving data?</li>
-<li>What are your lab needs, pain points, or where do you feel time is wasted related to ensuring future use of data by yourself or others?</li>
-<li>What are your main security or data loss concerns related to your data?</li>
-<li>What are your data that might contain sensitive information (geolocation, human subjects, …) and thus need special handling?</li>
-<li>What are your current backup strategies?</li>
+<li>it was not directly generated by a script (otherwise, preserve the code instead)</li>
+<li>it has reusable value. For example, cleaned-up versions of raw data can be very valuable for others to reuse!</li>
 </ul>
 </section>
-<section id="analyzing" class="level3">
-<h3 class="anchored" data-anchor-id="analyzing">Analyzing</h3>
+<section id="code" class="level3">
+<h3 class="anchored" data-anchor-id="code">Code</h3>
+<p>Scripting your analytical workflow from the raw data to the end products is a great way to make your work more reproducible and more reusable by others. We thus strongly encourage your team to develop code to process and analyze data. Cloud-based code repository services, such as GitHub, GitLab, BitBucket, and more, are a great way to both manage and preserve your code.</p>
+<p>Those services are often well-integrated with data repositories that link your code repository with your data archive. They also offer a way to tag a specific version of your code to ensure it is the exact code you used for a specific analysis.</p>
+</section>
+<section id="final-products" class="level3">
+<h3 class="anchored" data-anchor-id="final-products">Final products</h3>
+<p>We recommend including any data set used to produce statistics, figures maps, and other visualizations that were used in your work, in this case, even if generated by scripts.</p>
+</section>
+</section>
+<section id="metadata" class="level2">
+<h2 class="anchored" data-anchor-id="metadata">Metadata</h2>
+<p>Metadata (data about data) is an important part of the data life cycle because it enables data reuse long after the original collection. The goal is to have enough information for the researcher to understand the data, interpret the data, and then re-use the data in another study.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/metadata_cooking.png" class="img-fluid figure-img" style="width:150.0%"></p>
+<figcaption>metadata analogy</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Here are good questions to answer with your metadata:</p>
 <ul>
-<li>What type of analysis is conducted on your data?</li>
-<li>What is the unit of analysis for your projects? (individual, community, space, time…)?</li>
-<li>Is it mostly done using a scripting language (R, Python)?</li>
-<li>What is the saturation level and how many events/data points are enough to come to a conclusion?</li>
-<li>Is there a mix of qualitative and quantitative analysis?</li>
+<li>What was measured?</li>
+<li>Who measured it?</li>
+<li>When was it measured?</li>
+<li>Where was it measured?</li>
+<li>How was it measured?</li>
+<li>How is the data structured?</li>
+<li>Why was the data collected?</li>
+<li>Who should get credit for this data (researcher AND funding agency)?</li>
+<li>How can this data be reused (licensing)?</li>
 </ul>
+<section id="metadata-standards" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-standards">Metadata standards</h3>
+<p>How do you organize all this information? You could use a free-form format, like a README file or spreadsheet. But there is also a great advantage to using a more standardized way that will make the content not only Human readable but also <strong>machine-readable</strong>. This will enhance the data discovery as specific information will be potentially tagged or attributed to specific aspects of your data (e.g.&nbsp;spatial or temporal coverage, taxonomy, …).</p>
+<p>There are a number of environmental <strong>metadata standards</strong> (think, templates) that you could use, including the <a href="https://eml.ecoinformatics.org/">Ecological Metadata Language (EML)</a>, <a href="https://www.fgdc.gov/metadata/iso-standards">Geospatial Metadata Standards</a> like ISO 19115 and ISO 19139, the <a href="https://www.fgdc.gov/standards/projects/FGDC-standards-projects/metadata/biometadata/biodatap.pdf">Biological Data Profile (BDP)</a>, <a href="https://dublincore.org/">Dublin Core</a>, <a href="https://dwc.tdwg.org/">Darwin Core</a>, <a href="https://www.loc.gov/standards/premis/">PREMIS</a>, the <a href="http://www.loc.gov/standards/mets/">Metadata Encoding and Transmission Standard (METS)</a>, and the list goes on and on.</p>
+<p>Some repositories will have standards baked into their systems, so if you plan to archive and preserve your data in a disciplinary repository with specific metadata requirements it is always important to check what are these in advance. You may need to rework your existing documentation accordingly.</p>
 </section>
 </section>
-<section id="developing-your-research-lab-data-management-guidelines" class="level2">
-<h2 class="anchored" data-anchor-id="developing-your-research-lab-data-management-guidelines">Developing your Research Lab data management guidelines</h2>
-<p>One of the goals of our data management session together is to <strong>develop a common understanding of “good enough” norms to adhere to help manage your Research Lab data in a coordinated way</strong>. We strongly encourage building on those discussions to <strong>develop written guidelines</strong> that will reflect those norms and help onboard new lab members. Those guidelines should be seen as a living document that needs to evolve along your research activities.</p>
+<section id="data-provenance-semantics" class="level2">
+<h2 class="anchored" data-anchor-id="data-provenance-semantics">Data provenance &amp; semantics</h2>
+<p><strong>Data provenance</strong> refers to one’s ability to trace the original source of a data set to the raw data that were used as input for the processing/analysis that led to the creation of this data set. It can be done more or less formally and this is an active area of research. Today, we will be focusing on capturing the information about the data you are collecting. Here are a set of good questions to help you in that process:</p>
+<ul>
+<li>Source / owner (Person, institution, website, ….)</li>
+<li>When was it acquired ?</li>
+<li>By whom on the WG ?</li>
+<li>Where is it currently located (Google drive, server, ….) ?</li>
+<li>Short description of the data</li>
+<li>Track if it is used in your analysis</li>
+</ul>
+<p><a href="https://docs.google.com/spreadsheets/d/1LLpOyydCGTZdY8Xk2fDmTPVy8efF-47GtEXkAjvYsJI/edit#gid=0">Here</a> is a template of a data log that could hep to store this information</p>
+<p>Another important and related aspect and also active field of research is <strong>data semantics</strong>. Often data sets store complex information and concepts that can be described more or less accurately. Let’s take an example, you have received a csv file storing a table with several variables about a fish stock assessment. One of the variables is named “length”. However, there are many ways to measure the length of a fish. Which one is it?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="img/fish_length.png" class="img-fluid figure-img" width="694"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Data semantics aims at clearly identify those concepts relying on vocabularies and ontologies, such as <a href="http://www.obofoundry.org/ontology/envo.html">ENVO</a> in environmental sciences. In addition, it enables the leverage relations between those concepts to help with (data) discovery.</p>
+</section>
+<section id="choosing-a-data-repository" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-a-data-repository">Choosing a data repository</h2>
+<p>We know what we want to archive, now we need to decide where we want to preserve things!</p>
+<p>UCSB’s institutional data repository <a href="https://datadryad.org/stash">Dryad</a> will be your default data repository. However, we encourage you to discuss with your colleagues to determine if other data repositories might suit your targeted audience/community better. If you used some data from a specific data repository, that would be a good sign that it is a potential home for your work as well.</p>
+<p>If you would like to research on your own which data repository could be best for your project, the <a href="https://www.re3data.org">Registry of Research Data Repositories</a> is a great resource to do so. You can also search for similar data using data repository aggregators, such as <a href="https://www.dataone.org/,">DataONE</a> to find where those data are hosted.</p>
+<section id="dryad" class="level3">
+<h3 class="anchored" data-anchor-id="dryad">Dryad</h3>
+<p><a href="https://datadryad.org/stash">Dryad</a> is free of use for any UC affiliated researcher. Here is an overview of the process of submitting data to DRYAD:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/datamgmt_dryad_workflow.png" class="img-fluid figure-img"></p>
+<figcaption>DRYAD data submission overview</figcaption>
+</figure>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -850,13 +933,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./data_mgmt.html" class="pagination-link" aria-label="What is data management?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">What is data management?</span>
+      <a href="./preserve_code.html" class="pagination-link" aria-label="Preserve your code">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preserve your code</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./datamgmt_plan.html" class="pagination-link" aria-label="Plan">
-        <span class="nav-page-text">Plan</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./preserve_self.html" class="pagination-link" aria-label="Document yourself">
+        <span class="nav-page-text">Document yourself</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
