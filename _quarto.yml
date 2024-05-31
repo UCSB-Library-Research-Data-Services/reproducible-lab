@@ -80,6 +80,8 @@ website:
             text: "Preserve your computing environment"
           - href: preserve_data.qmd
             text: "Preserve your data"
+          - href: preserve_data-fair.qmd
+            text: "Are you FAIR?"
           - href: preserve_self.qmd
             text: "Document yourself"
           - href: preserve_license.qmd
