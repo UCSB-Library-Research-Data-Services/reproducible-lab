@@ -4,10 +4,13 @@ title: "How FAIR are your data?"
 
 ## FAIR pinciples
 
-**we recommend using the [FAIR](https://www.go-fair.org/fair-principles/) & [CARE](https://www.gida-global.org/care) principles as guidance** to maximize the reusability of your data by you, your collaborators, other researchers, and future-you.  Your plan should ensure that detailed documentation adopting existing standards is developed during the entire duration of your project (don't wait until the very end!!) and that this documentation is archived along with your data and code in a publicly accessible data repository will set you up for success.
+**We recommend using the [FAIR](https://www.go-fair.org/fair-principles/) & [CARE](https://www.gida-global.org/care) principles as guidance** to maximize the reusability of your data by you, your collaborators, other researchers, and future-you.  Your plan should ensure that detailed documentation adopting existing standards is developed during the entire duration of your project (don't wait until the very end!!) and that this documentation is archived along with your data and code in a publicly accessible data repository will set you up for success.
 
 ![source: <https://www.gida-global.org/care>](images/be-FAIR-and-CARE.png){width="80%" fig-align="left"}
 
+A good reference to get you started with FAIR principles: <https://perma.cc/CT8P-D5MK> 
+
+and on CARE principles: <https://perma.cc/3ZHR-6JAG>
 
 ## FAIR assessment
 
