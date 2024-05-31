@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Designing a Reproducible and Collaborative Lab (RCL) - About RDS</title>
+<title>Designing a Reproducible and Collaborative Lab (RCL) - Preserve your computing environment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./preserve_license.html" rel="prev">
+<link href="./preserve_data.html" rel="next">
+<link href="./preserve_code.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -92,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./about.html">About us</a></li><li class="breadcrumb-item"><a href="./about.html">Data Research Services</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_computing-env.html">Preserve your computing environment</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -287,13 +288,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
  <span class="menu-text">Preserving things</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./preserve_prompts.html" class="sidebar-item-text sidebar-link">
@@ -314,7 +315,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./preserve_computing-env.html" class="sidebar-item-text sidebar-link">
+  <a href="./preserve_computing-env.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Preserve your computing environment</span></a>
   </div>
 </li>
@@ -340,16 +341,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
  <span class="menu-text">About us</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link active">
+  <a href="./about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Research Services</span></a>
   </div>
 </li>
@@ -361,14 +362,20 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#virtual-environments" id="toc-virtual-environments" class="nav-link active" data-scroll-target="#virtual-environments">Virtual environments</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./about.html">About us</a></li><li class="breadcrumb-item"><a href="./about.html">Data Research Services</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_computing-env.html">Preserve your computing environment</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">About RDS</h1>
+<h1 class="title">Preserve your computing environment</h1>
 </div>
 
 
@@ -385,16 +392,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="https://www.library.ucsb.edu/research-data-services">Research Data Services (RDS)</a> helps UCSB researchers manage and preserve their research data through:</p>
-<ul>
-<li>Consultations</li>
-<li>Long-term engagements</li>
-<li>Instructional workshops</li>
-</ul>
-<p>Our team offers support across the research data lifecycle, from pre-project planning to post-project archival, connecting researchers with both locally- and externally-provided curation services. Our goal is to ensure that all research data is well-described, FAIR (Findable, Accessible, Interoperable, Reusable), and sustainably preservable, and that researchers receive scholarly credit for sharing and publishing data.</p>
-<p>Contact us if you have any questions: <a href="mailto:rds@library.ucsb.edu" class="email">rds@library.ucsb.edu</a></p>
+<p>Your analysis was done with specific versions of the program used (e.g.&nbsp;R 4.4.3) but also of all the packages involved, as well as the specifications of the Operating System (OS) that was used. The good use is that there are tools to let you systematically capture this information.</p>
+<p>In R:</p>
+<p><code>sessionInfo()</code> or <code>devtools::session_info()</code> are great ways to capture this information. You should save it into a session_info.txt file to include in your GitHub repository</p>
+<p>In Python:</p>
+<p><code>pip freeze &gt; requirements.txt</code> will capture all the python modules installed in your current environment</p>
+<section id="virtual-environments" class="level3">
+<h3 class="anchored" data-anchor-id="virtual-environments">Virtual environments</h3>
+<p>You can even go a step further and help others to recreate the same computing environment that you used independently of what versions you have installed on your machine: https://rstudio.github.io/renv/articles/renv.html</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <div>
@@ -814,11 +822,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./preserve_license.html" class="pagination-link" aria-label="Licensing">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Licensing</span>
+      <a href="./preserve_code.html" class="pagination-link" aria-label="Preserve your code">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preserve your code</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./preserve_data.html" class="pagination-link" aria-label="Preserve your data">
+        <span class="nav-page-text">Preserve your data</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

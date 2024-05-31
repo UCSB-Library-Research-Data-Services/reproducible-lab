@@ -291,63 +291,464 @@
     ]
   },
   {
-    "objectID": "git_further_readings.html",
-    "href": "git_further_readings.html",
-    "title": "Further readings",
+    "objectID": "preserve_computing-env.html",
+    "href": "preserve_computing-env.html",
+    "title": "Preserve your computing environment",
     "section": "",
-    "text": "Jenny Bryan Happy git with R http://happygitwithr.com/\nIntro to GitHub and using git from RStudio GUI: http://ohi-science.org/data-science-training/collaborating.html\nIntro to git and Github using the command line: https://nceas.github.io/oss-lessons/version-control/1-git-basics.html\nTry git in 15min: https://try.github.io/levels/1/challenges/1\nGit terminology: https://www.atlassian.com/git/glossary/terminology\ngit rebase https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase",
+    "text": "Your analysis was done with specific versions of the program used (e.g. R 4.4.3) but also of all the packages involved, as well as the specifications of the Operating System (OS) that was used. The good use is that there are tools to let you systematically capture this information.\nIn R:\nsessionInfo() or devtools::session_info() are great ways to capture this information. You should save it into a session_info.txt file to include in your GitHub repository\nIn Python:\npip freeze &gt; requirements.txt will capture all the python modules installed in your current environment\n\nVirtual environments\nYou can even go a step further and help others to recreate the same computing environment that you used independently of what versions you have installed on your machine: https://rstudio.github.io/renv/articles/renv.html",
     "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Git and GitHub further readings"
+      "Preserving things",
+      "Preserve your computing environment"
     ]
   },
   {
-    "objectID": "git_further_readings.html#git-general-introduction",
-    "href": "git_further_readings.html#git-general-introduction",
-    "title": "Further readings",
+    "objectID": "intro_cli.html",
+    "href": "intro_cli.html",
+    "title": "Using the Command line Interface",
     "section": "",
-    "text": "Jenny Bryan Happy git with R http://happygitwithr.com/\nIntro to GitHub and using git from RStudio GUI: http://ohi-science.org/data-science-training/collaborating.html\nIntro to git and Github using the command line: https://nceas.github.io/oss-lessons/version-control/1-git-basics.html\nTry git in 15min: https://try.github.io/levels/1/challenges/1\nGit terminology: https://www.atlassian.com/git/glossary/terminology\ngit rebase https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase",
+    "text": "The CLI provides a direct way to interact with the Operating System, by typing in commands.\n\n\n\nMight be the only interface you have to a High Performance Computer (HPC)\nCommand statements can be reused easily and saved as scripts\nEasier automation and text files manipulation\n\n\n\n\n\nCommand Line Interface (CLI): This is a user interface that lets you interact with a computer. It is a legacy from the early days of computers. Now a days computers have graphical user interfaces instead (MacOSX, Windows, Linux, …)\nTerminal: It is a an application that lets you run a command line interface. It used to be a physical machine connected to a mainframe computer\nShell: It is the program that runs the command line. There are many different shells, the most common (an default on most system) being bash (Bourne Again SHell)\n\n\n\n\n\n\n\nTip\n\n\n\nNot convinced? Check this out: the CLI pitch\n\n\n\n\n\nYou can access the command line directly from RStudio by using the Terminal tab next to your R console.\n\n\n\n\n\n\npwd: Know where you are\nls: List the content of the directory\ncd: Go inside a directory\n\nSome pseudo directory names. Wherever you are:\n\n~ : Home directory\n. : Here (current directory)\n..: Up one level (upper directory)\n\nLet’s put this into action:\n\ngo to my “Home” directory: cd ~\ngo up one directory level: cd ..\nlist the content: ls\nlist the content showing hidden files: ls -a note that -a is referred as an option (modifies the command)\n\nMore files/directories manipulations:\n\nmkdir: Create a directory\ncp: Copy a file\nmv: Move a file it is also how you rename a file!\nrm / rmdir: Remove a file / directory use those carefully, there is no return / Trash!!\n\nNote: typing is not your thing? the &lt;tab&gt; key is your friend! One hit it will auto-complete the file/directory/path name for you. If there are many options, hit it twice to see the options.\n\n\n\nAll files have permissions and ownership.\n\n\n\nFile permissions\n\n\n\nList files showing ownership and permissions: ls -l\n\n\nbrun@taylor:/courses/EDS214$ ls -l\ntotal 16\ndrwxrwxr-x+ 3 brun      esmdomainusers 4096 Aug 20 04:49 data\ndrwxrwxr-x+ 2 katherine esmdomainusers 4096 Aug 18 18:32 example    \n\nYou can change those permissions:\n\nChange permissions: chmod\nChange ownership: chown\n\n\n\n\n\n\n\nTip\n\n\n\nClear contents in terminal window: clear\n\n\n\n\n\n\ncommand [options] [arguments]\n\nwhere command must be an executable file on your PATH * echo $PATH\nand options can usually take two forms * short form: -a * long form: --all\nYou can combine the options:\n\nls -ltrh\n\nWhat do these options do?\n\nman ls\n\n\n\n\n\n\n\nTip\n\n\n\nhit spacebar to get to the next page of the manual hit q to exit the help\n\n\n\n\n\nFrom the gitbash (MS Windows) or the terminal (Mac) type:\n\nssh taylor.bren.ucsb.edu\n\nYou will be prompted for your username and password.\n\n\n\naurora_ssh\n\n\nYou can also directly add your username:\n\nssh brun@taylor.bren.ucsb.edu\n\nIn this case, you will be only asked for your password as you already specified which user you want to connect with.\n\n\n\n\nWho else is logged into this machine? who\nWho is logged into “this shell”? whoami\n\n\n\n\n\n&lt;command&gt; -h, &lt;command&gt; --help\nman, info, apropos, whereis\nSearch the web!\n\n\n\n\nShow me my Rmarkdown files!\n\nfind . -iname '*.Rmd'\n\nWhich files are larger than 1GB?\n\nfind . -size +1G\n\nWith more details about the files:\n\nfind . -size +1G -ls\n\n\n\n\n\n\n\nCancel (abort) a command: Ctrl-c Note: very different than Windows!!\nStop (suspend) a command: Ctrl-z\nCtrl-z can be used to suspend, then background a process\n\n\n\n\n\nLike Windows Task Manager, OSX Activity Monitor\ntop, ps, jobs (hit q to get out!)\nkill to delete an unwanted job or process\nForeground and background: &\n\n\n\n\n\nHow much storage is available on this system? df -h\nHow much storage am “I” using overall? du -hs &lt;folder&gt;\nHow much storage am “I” using, by sub directory? du -h &lt;folder&gt;\n\n\n\n\n\nSee your command history: history\nRe-run last command: !! (pronounced “bang-bang”)\nRe-run 32th command: !32\nRe-run 5th from last command: !-5\nRe-run last command that started with ‘c’: !c\n\n\n\n\n\n\nwc count lines, words, and/or characters\ndiff compare two files for differences\nsort sort lines in a file\nuniq report or filter out repeated lines in a file\n\n\n\n\n\n\n\nstdin, stdout, stderr\n\n\n\n$ ls *.png | wc -l\n$ ls *.png | wc -l &gt; pngcount.txt\n$ diff &lt;(sort file1.txt) &lt;(sort file2.txt)\n$ ls foo 2&gt;/dev/null\n\n\nnote use of * as character wildcard for zero or more matches (same in Mac and Windows)\n? matches single character; _ is SQL query equivalent\n\n\n\n\n\n\n\nvim\nemacs\nnano\n\n\n$ nano .bashrc",
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Git and GitHub further readings"
+      "Using the command line"
     ]
   },
   {
-    "objectID": "git_further_readings.html#git-workflows",
-    "href": "git_further_readings.html#git-workflows",
-    "title": "Further readings",
-    "section": "Git workflows",
-    "text": "Git workflows\n\nComparing workflow: https://www.atlassian.com/git/tutorials/comparing-workflows\nForking vs branching: https://stackoverflow.com/questions/3611256/forking-vs-branching-in-github\nDevelopment workflow: https://github.com/sevntu-checkstyle/sevntu.checkstyle/wiki/Development-workflow-with-Git:-Fork,-Branching,-Commits,-and-Pull-Request",
+    "objectID": "intro_cli.html#short-introduction-to-the-command-line-interface-cli",
+    "href": "intro_cli.html#short-introduction-to-the-command-line-interface-cli",
+    "title": "Using the Command line Interface",
+    "section": "",
+    "text": "The CLI provides a direct way to interact with the Operating System, by typing in commands.\n\n\n\nMight be the only interface you have to a High Performance Computer (HPC)\nCommand statements can be reused easily and saved as scripts\nEasier automation and text files manipulation\n\n\n\n\n\nCommand Line Interface (CLI): This is a user interface that lets you interact with a computer. It is a legacy from the early days of computers. Now a days computers have graphical user interfaces instead (MacOSX, Windows, Linux, …)\nTerminal: It is a an application that lets you run a command line interface. It used to be a physical machine connected to a mainframe computer\nShell: It is the program that runs the command line. There are many different shells, the most common (an default on most system) being bash (Bourne Again SHell)\n\n\n\n\n\n\n\nTip\n\n\n\nNot convinced? Check this out: the CLI pitch\n\n\n\n\n\nYou can access the command line directly from RStudio by using the Terminal tab next to your R console.\n\n\n\n\n\n\npwd: Know where you are\nls: List the content of the directory\ncd: Go inside a directory\n\nSome pseudo directory names. Wherever you are:\n\n~ : Home directory\n. : Here (current directory)\n..: Up one level (upper directory)\n\nLet’s put this into action:\n\ngo to my “Home” directory: cd ~\ngo up one directory level: cd ..\nlist the content: ls\nlist the content showing hidden files: ls -a note that -a is referred as an option (modifies the command)\n\nMore files/directories manipulations:\n\nmkdir: Create a directory\ncp: Copy a file\nmv: Move a file it is also how you rename a file!\nrm / rmdir: Remove a file / directory use those carefully, there is no return / Trash!!\n\nNote: typing is not your thing? the &lt;tab&gt; key is your friend! One hit it will auto-complete the file/directory/path name for you. If there are many options, hit it twice to see the options.\n\n\n\nAll files have permissions and ownership.\n\n\n\nFile permissions\n\n\n\nList files showing ownership and permissions: ls -l\n\n\nbrun@taylor:/courses/EDS214$ ls -l\ntotal 16\ndrwxrwxr-x+ 3 brun      esmdomainusers 4096 Aug 20 04:49 data\ndrwxrwxr-x+ 2 katherine esmdomainusers 4096 Aug 18 18:32 example    \n\nYou can change those permissions:\n\nChange permissions: chmod\nChange ownership: chown\n\n\n\n\n\n\n\nTip\n\n\n\nClear contents in terminal window: clear\n\n\n\n\n\n\ncommand [options] [arguments]\n\nwhere command must be an executable file on your PATH * echo $PATH\nand options can usually take two forms * short form: -a * long form: --all\nYou can combine the options:\n\nls -ltrh\n\nWhat do these options do?\n\nman ls\n\n\n\n\n\n\n\nTip\n\n\n\nhit spacebar to get to the next page of the manual hit q to exit the help\n\n\n\n\n\nFrom the gitbash (MS Windows) or the terminal (Mac) type:\n\nssh taylor.bren.ucsb.edu\n\nYou will be prompted for your username and password.\n\n\n\naurora_ssh\n\n\nYou can also directly add your username:\n\nssh brun@taylor.bren.ucsb.edu\n\nIn this case, you will be only asked for your password as you already specified which user you want to connect with.\n\n\n\n\nWho else is logged into this machine? who\nWho is logged into “this shell”? whoami\n\n\n\n\n\n&lt;command&gt; -h, &lt;command&gt; --help\nman, info, apropos, whereis\nSearch the web!\n\n\n\n\nShow me my Rmarkdown files!\n\nfind . -iname '*.Rmd'\n\nWhich files are larger than 1GB?\n\nfind . -size +1G\n\nWith more details about the files:\n\nfind . -size +1G -ls\n\n\n\n\n\n\n\nCancel (abort) a command: Ctrl-c Note: very different than Windows!!\nStop (suspend) a command: Ctrl-z\nCtrl-z can be used to suspend, then background a process\n\n\n\n\n\nLike Windows Task Manager, OSX Activity Monitor\ntop, ps, jobs (hit q to get out!)\nkill to delete an unwanted job or process\nForeground and background: &\n\n\n\n\n\nHow much storage is available on this system? df -h\nHow much storage am “I” using overall? du -hs &lt;folder&gt;\nHow much storage am “I” using, by sub directory? du -h &lt;folder&gt;\n\n\n\n\n\nSee your command history: history\nRe-run last command: !! (pronounced “bang-bang”)\nRe-run 32th command: !32\nRe-run 5th from last command: !-5\nRe-run last command that started with ‘c’: !c\n\n\n\n\n\n\nwc count lines, words, and/or characters\ndiff compare two files for differences\nsort sort lines in a file\nuniq report or filter out repeated lines in a file\n\n\n\n\n\n\n\nstdin, stdout, stderr\n\n\n\n$ ls *.png | wc -l\n$ ls *.png | wc -l &gt; pngcount.txt\n$ diff &lt;(sort file1.txt) &lt;(sort file2.txt)\n$ ls foo 2&gt;/dev/null\n\n\nnote use of * as character wildcard for zero or more matches (same in Mac and Windows)\n? matches single character; _ is SQL query equivalent\n\n\n\n\n\n\n\nvim\nemacs\nnano\n\n\n$ nano .bashrc",
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Git and GitHub further readings"
+      "Using the command line"
     ]
   },
   {
-    "objectID": "git_further_readings.html#branches",
-    "href": "git_further_readings.html#branches",
-    "title": "Further readings",
-    "section": "Branches",
-    "text": "Branches\n\nInteractive tutorial to learn more about git branches and more https://learngitbranching.js.org/",
+    "objectID": "intro_cli.html#hands-on",
+    "href": "intro_cli.html#hands-on",
+    "title": "Using the Command line Interface",
+    "section": "Hands-on",
+    "text": "Hands-on\nLet’s practice our new skills! Click here",
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Git and GitHub further readings"
+      "Using the command line"
     ]
   },
   {
-    "objectID": "git_further_readings.html#undoing-things",
-    "href": "git_further_readings.html#undoing-things",
-    "title": "Further readings",
-    "section": "Undoing things",
-    "text": "Undoing things\n\nHelp to decide how to undo your problem: http://justinhileman.info/article/git-pretty/git-pretty.png\nUndo almost everything with git https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/\nDifference between git reset soft, mixed and hard https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/\nResetting, Checking Out & Reverting https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting",
+    "objectID": "intro_cli.html#aknowledgements",
+    "href": "intro_cli.html#aknowledgements",
+    "title": "Using the Command line Interface",
+    "section": "Aknowledgements",
+    "text": "Aknowledgements\nThis section adapted materials from NCEAS Open Science for Synthesis (OSS) intensive summer schools and other training. Contributions to this content have been made by Mark Schildhauer, Matt Jones, Jim Regetz and many others; and from EDS-213 10 bash essentials developed by Greg Janée",
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Git and GitHub further readings"
+      "Using the command line"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Designing a Reproducible and Collaborative Lab (RCL)",
+    "section": "",
+    "text": "Workshop Series and Coaching Sessions for Faculty and their Teams to help Research Labs set up infrastructures and practices to make their research more reproducible, enable reuse of their own work, and collaborate more effectively.\n\nTopics\n\nCoding as a lab\nManaging your lab data\nAutomating your analytical workflows\nDocumenting & preserving things to make them reusable\n\n\n\nFormat\n\nScheduled at your convenience\n4 workshops (2-3h) as a primer on a specific topic\nPersonalized coaching sessions focused on lab-specific needs\n\n\n\nOutcomes\n\nMore reproducible management of your lab’s scientific products (data, code etc.)\nBetter analytical strategies for collaboration Safety nets for your research lab content\nMore efficient reuse of your work\nStreamlined on- and off -boarding\n\n\n\nLearning Opportunities\n\nLeverage GitHub to manage and collaborate on your Lab’s code\nDevelop strategies to centralize and manage your Lab’s data\nSet up templates and guidelines on how to document your Lab research and improve its reusability\nEstablish Lab standard operating procedures and documentation standards\nProtect your Lab’s scientific products against loss through backup and computing resources strategies\n\n\n\n\n\n\n\n\n\n\nCitationBibTeX citation:@online{brun2024,\n  author = {Brun, Julien and Curty, Renata and Janée, Greg},\n  title = {Designing a {Reproducible} and {Collaborative} {Lab} {(RCL)}},\n  date = {2024-05-31},\n  url = {https://ucsb-library-research-data-services.github.io/reproducible-lab/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nBrun, Julien, Renata Curty, and Greg Janée. 2024. “Designing a\nReproducible and Collaborative Lab (RCL).” May 31, 2024. https://ucsb-library-research-data-services.github.io/reproducible-lab/.",
+    "crumbs": [
+      "About RCL"
+    ]
+  },
+  {
+    "objectID": "github_template.html",
+    "href": "github_template.html",
+    "title": "Using GitHub Templates to document things",
+    "section": "",
+    "text": "You can create templates to model a specific repository setup when creating a new repository. The advantage of such a template is that you can provide a boilerplate for the README and any other files you would like your collaborators to provide when setting up a new project / repository.\nTo create a template repository you can either use an existing one or create a new one for this specific purpose. We are going to do the latter.\nLet’s create a new repository as we have done previously we recommend adding the word “template” in the name so it makes its purpose more obvious\n\n\n\n\n\nNow you can work on the content of the repository, for example adding a README with instructions to follow when setting up a new repository: https://github.com/awesomer-lab/repo-template\nOnce your repository is ready, you can go to the Settings tab in the taskbar of the repository and check the box Template repository under the repository name.\n\n\n\n\n\nNote that you can keep editing the template repository after this step.\nNow you can use your template when creating a new repository by selecting your template from the dropdown menu above the repository name. Note is might take a few seconds to fetch all your templates.\n\n\n\n\n\nVoilà! Now you can create standardized repositories and documentation quite easily!! Note that under the name of the newly created repository from the template, it is mentioned that it was created from a template.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Streamlining documentation",
+      "Repository template"
+    ]
+  },
+  {
+    "objectID": "github_template.html#repository-templates",
+    "href": "github_template.html#repository-templates",
+    "title": "Using GitHub Templates to document things",
+    "section": "",
+    "text": "You can create templates to model a specific repository setup when creating a new repository. The advantage of such a template is that you can provide a boilerplate for the README and any other files you would like your collaborators to provide when setting up a new project / repository.\nTo create a template repository you can either use an existing one or create a new one for this specific purpose. We are going to do the latter.\nLet’s create a new repository as we have done previously we recommend adding the word “template” in the name so it makes its purpose more obvious\n\n\n\n\n\nNow you can work on the content of the repository, for example adding a README with instructions to follow when setting up a new repository: https://github.com/awesomer-lab/repo-template\nOnce your repository is ready, you can go to the Settings tab in the taskbar of the repository and check the box Template repository under the repository name.\n\n\n\n\n\nNote that you can keep editing the template repository after this step.\nNow you can use your template when creating a new repository by selecting your template from the dropdown menu above the repository name. Note is might take a few seconds to fetch all your templates.\n\n\n\n\n\nVoilà! Now you can create standardized repositories and documentation quite easily!! Note that under the name of the newly created repository from the template, it is mentioned that it was created from a template.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Streamlining documentation",
+      "Repository template"
+    ]
+  },
+  {
+    "objectID": "github_org.html",
+    "href": "github_org.html",
+    "title": "GitHub Organizations",
+    "section": "",
+    "text": "Facilitate collaboration:\n\nCreate teams to easily assign people to repositories\nManage tasks at the organization level (not tight to a specific repository)\n\nSimplify code management:\n\nThe organization owns the repository\nDesign templates to streamline documentation\nAssign roles to users, including external collaborators\n\nIncrease your visibility on GitHub:\n\nCreate a landing page introducing your lab\nOne stop to see your Lab contributions",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "GitHub Organizations for your Lab"
+    ]
+  },
+  {
+    "objectID": "github_org.html#why-a-github-organization",
+    "href": "github_org.html#why-a-github-organization",
+    "title": "GitHub Organizations",
+    "section": "",
+    "text": "Facilitate collaboration:\n\nCreate teams to easily assign people to repositories\nManage tasks at the organization level (not tight to a specific repository)\n\nSimplify code management:\n\nThe organization owns the repository\nDesign templates to streamline documentation\nAssign roles to users, including external collaborators\n\nIncrease your visibility on GitHub:\n\nCreate a landing page introducing your lab\nOne stop to see your Lab contributions",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "GitHub Organizations for your Lab"
+    ]
+  },
+  {
+    "objectID": "github_org.html#setting-up-your-labs-github-organization",
+    "href": "github_org.html#setting-up-your-labs-github-organization",
+    "title": "GitHub Organizations",
+    "section": "Setting up your Lab’s GitHub Organization",
+    "text": "Setting up your Lab’s GitHub Organization\nBefore setting up your organization, make sure that you have claimed your education GitHub account first!!\n\n\n\n\n\n\nDid you know you are eligible for GitHub Education perks?\n\n\n\nSince we are part of an University, students and faculty have access to special account benefits for free. The application process is straightforward. Get started here: https://education.github.com/\n\n\n\nYou can create an organization by clicking on the + sign menu at the top right of the GitHub taskbar and select New organization\n\n\n\n\n\n\n\nThis will send you to a new page with several options to start your organization. Choose the free option at this time.\n\n\n\n\n\n\n\nNow you can provide the name of your organization. We recommend naming it in a way that reflects your Lab name to help with the organization’s branding. Select the email you used to get the education discount and check the “my personal account” option.\n\n\n\n\n\n\n\nAnd congratulations this is it!! You can now invite your collaborators to the organization (you will be able to do so later as well).\n\n\n\n\n\n\n\nYour organization page should look as follows:\n\n\n\n\n\n\nNote all the suggestions that GitHub is providing to help you customize your organization according to your needs. We are going to follow the recommendation on the right side (red box above) to add a special README.md that will act as a landing page for our organization.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "GitHub Organizations for your Lab"
+    ]
+  },
+  {
+    "objectID": "github_org.html#customizing-your-github-organization",
+    "href": "github_org.html#customizing-your-github-organization",
+    "title": "GitHub Organizations",
+    "section": "Customizing your GitHub Organization",
+    "text": "Customizing your GitHub Organization\n\nAdding a landing page\nAdding a landing page is a great opportunity to describe your research lab and what content one can expect to find in this organization. It is also a good location to describe guidelines on how to best engage with you and provide contact information.\n\nClick on the create a README file on the right sidebar (see red box above). This will trigger the creation of a new special repository called .github that will be used to host your README file. Click Create repository.\n\n\n\n\n\n\n\nFill out the necessary information as follows:\n\n\n\n\n\n\nWe recommend checking the box Add a README file as a good practice but note it is not the README that will be used as your landing page, it is the one describing this new repository hosting your landing page README in a special subfolder.\n\nCreate your landing page by clicking on the Add README button on the right sidebar (red box below)\n\n Note the path to this special README: .github/profile/README.md\n\nEdit your landing page. The template used to create this special README provides suggestions about the type of information you might want to add to your landing page. Those suggestions are in a comment block (delimited by &lt;!-- & --&gt;) and thus won’t be shown when the README is rendered. We still do recommend deleting this block once you are done editing your README\n\n\n\n\n\n\nHere is an example of how we defined the landing page README for our test organization:\n\n\n\n\n\n\nSave your README: Now that you have your first version of your GitHub organization landing page (you can always iterate later on it), we are ready to save this version by clicking on the Commit changes button (red box above). This will prompt a new page where you can add a commit message to describe the changes. Finally, you can hit the Commit changes button to save this version.\n\n\n\n\n\n\nVoilà 🎉 !! When you go back to your organization’s main page, you should now see the text you just wrote at the top of the landing page!\n\n\n\n\n\n\n\nSetting up your organization profile\nNow that you have a landing page, it is also a great idea to fill out some metadata about your organization under the Settings tab of the main navigation bar (top right). This will help with the discovery of your Organization. You can provide a more Human friendly name, an email to reach out to you, a short description of your organization, and an URL such as your lab home page.\n\nFinally, click Update profile to save your changes.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "GitHub Organizations for your Lab"
+    ]
+  },
+  {
+    "objectID": "github_teams.html",
+    "href": "github_teams.html",
+    "title": "GitHub Teams",
+    "section": "",
+    "text": "You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages, and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google Drive, this is the same concept.\nTeams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Setting up Teams to better collaborate"
+    ]
+  },
+  {
+    "objectID": "github_teams.html#what-are-github-teams",
+    "href": "github_teams.html#what-are-github-teams",
+    "title": "GitHub Teams",
+    "section": "",
+    "text": "You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages, and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google Drive, this is the same concept.\nTeams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Setting up Teams to better collaborate"
+    ]
+  },
+  {
+    "objectID": "github_teams.html#create-a-team",
+    "href": "github_teams.html#create-a-team",
+    "title": "GitHub Teams",
+    "section": "Create a team",
+    "text": "Create a team\nIn the navigation bar at the top of your organization page, click on the Teams tab. Normally this is the page you use to see and manage the existing teams of your organization. Since we do not have teams yet, this page provides a short overview of what teams can be used for. Click on the New Team green button at the bottom to start creating your first team.\n\nProved the name and a short description of your team. We recommend to let the other options to their default settings.\n\n\n\n\n\nYour team has been created, but as of now you are the only member. Let’s invite some collaborators by clicking on the Add a member button on the top right.\n\n\n\n\n\nOn this new window, you can search for GitHub users by their username. If you do not know their username you can search by their full names. Note that if there are no pictures associated with the profile you found or are not sure it is the right person, we recommend not adding this person at this time and reaching out asking for their username (which is unique). When you are sure you found the right persons you can click on Invite.\n\n\n\n\n\nYour collaborators will receive an invitation to join the team. They will have to accept the invitation before they can use the benefits (access to repositories, …) associated with the team. Once your collaborators have accepted your team should look like below.\n\n\n\n\n\nOK, let’s create a second team! In this example, we will create a Research Facilitators team with two members.\n\n\n\n\n\nOnce your GitHub organization has teams, you will the number of existing teams next to the Teams tab.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Setting up Teams to better collaborate"
+    ]
+  },
+  {
+    "objectID": "github_teams.html#leveraging-teams",
+    "href": "github_teams.html#leveraging-teams",
+    "title": "GitHub Teams",
+    "section": "Leveraging teams",
+    "text": "Leveraging teams\nLet’s create a new repository and use our newly created teams to add several collaborators at once.\n\n\n\n\n\nUnder your newly created organization, create a new repository with the following settings:\n\n\n\n\n\nOnce the repository is created, click on the Settings tab (top right in the grey bar)\n\n\n\n\n\nOn the left panel, click on Collaborators and teams and then click on the green button Add teams\n\n\n\n\n\nStart typing the name of the team you would like to add. Suggestions of teams should come up as you type. Select the relevant team by clicking on the suggestion.\n\n\n\n\n\nFor close collaborators, we recommend using the Maitain level of access that provides a good blend of people being able to do most of the actions they will need to do while not being allowed to conduct destructive actions on accident (like deleting the entire repository). For collaborators you are less familiar with, including their familiarity with GitHub, you might want to start with the Write access.\n\n\n\n\n\nOnce the team added, your settings should look as follow:\n\n\n\n\n\nThe good news is now if you add a collaborator to a specific team, this person will automatically gain access to all the repositories that team has access to! This will streamline the on- and off- boarding process of your team members.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Setting up Teams to better collaborate"
+    ]
+  },
+  {
+    "objectID": "02-handson_github_rstudio.html",
+    "href": "02-handson_github_rstudio.html",
+    "title": "GitHub branches using RStudio",
+    "section": "",
+    "text": "Write and R script to compare the csv with your favorite desserts you modified previously with the top 42 most iconic American desserts\n\nClone the repository you just created about your favorite desserts\nCreate a new branch using RStudio and name it *myinitials*_rstudio\nStart a new script named desserts_match_*myinitials*.R\nAs pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see code below) into R and find out if your favorite dessert is part of the most iconic desserts!\nPush your changes to GitHub\nOn the GitHub website, create a Pull Request (PR) and assign your teammate as reviewer\nReviewer – Review the PR. Make comments and/or OK the merge\nRequester – Merge and close the PR\n\n\n\n\n\n\n\nCode to get the iconic desserts listing\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)  # use to scrape website content\n\n# Check if that data folder exists and creates it if not\ndir.create(\"data\", showWarnings = FALSE)\n\n# Read the webpage code\nwebpage &lt;- read_html(\"https://www.eatthis.com/iconic-desserts-united-states/\")\n\n# Extract the desserts listing\ndessert_elements&lt;- html_elements(webpage, \"h2\")\ndessert_listing &lt;- dessert_elements %&gt;% \n  html_text2() %&gt;%             # extracting the text associated with this type of elements of the webpage\n  as_tibble() %&gt;%              # make it a data frame\n  rename(dessert = value) %&gt;%  # better name for the column\n  head(.,-3) %&gt;%               # 3 last ones were not desserts \n  rowid_to_column(\"rank\") %&gt;%  # adding a column using the row number as proxy for the rank\n  write_csv(\"data/iconic_desserts.csv\") # save it as csv",
+    "crumbs": [
+      "Coding as a Lab",
+      "Collaborative strategies",
+      "Hands-on: Branches using RStudio"
+    ]
+  },
+  {
+    "objectID": "02-handson_github_rstudio.html#is-your-fav-dessert-iconic",
+    "href": "02-handson_github_rstudio.html#is-your-fav-dessert-iconic",
+    "title": "GitHub branches using RStudio",
+    "section": "",
+    "text": "Write and R script to compare the csv with your favorite desserts you modified previously with the top 42 most iconic American desserts\n\nClone the repository you just created about your favorite desserts\nCreate a new branch using RStudio and name it *myinitials*_rstudio\nStart a new script named desserts_match_*myinitials*.R\nAs pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see code below) into R and find out if your favorite dessert is part of the most iconic desserts!\nPush your changes to GitHub\nOn the GitHub website, create a Pull Request (PR) and assign your teammate as reviewer\nReviewer – Review the PR. Make comments and/or OK the merge\nRequester – Merge and close the PR\n\n\n\n\n\n\n\nCode to get the iconic desserts listing\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)  # use to scrape website content\n\n# Check if that data folder exists and creates it if not\ndir.create(\"data\", showWarnings = FALSE)\n\n# Read the webpage code\nwebpage &lt;- read_html(\"https://www.eatthis.com/iconic-desserts-united-states/\")\n\n# Extract the desserts listing\ndessert_elements&lt;- html_elements(webpage, \"h2\")\ndessert_listing &lt;- dessert_elements %&gt;% \n  html_text2() %&gt;%             # extracting the text associated with this type of elements of the webpage\n  as_tibble() %&gt;%              # make it a data frame\n  rename(dessert = value) %&gt;%  # better name for the column\n  head(.,-3) %&gt;%               # 3 last ones were not desserts \n  rowid_to_column(\"rank\") %&gt;%  # adding a column using the row number as proxy for the rank\n  write_csv(\"data/iconic_desserts.csv\") # save it as csv",
+    "crumbs": [
+      "Coding as a Lab",
+      "Collaborative strategies",
+      "Hands-on: Branches using RStudio"
+    ]
+  },
+  {
+    "objectID": "03-handson_github_workflows.html",
+    "href": "03-handson_github_workflows.html",
+    "title": "GitHub workflows: forks and branches",
+    "section": "",
+    "text": "Setup\n\nPerson 1 (owner):\n\nCreate a repository using the following these instructions steps 1-6\n\n\n\nAdd Person 2 as collaborator following these instructions\nEdit the README to:\n\nReplace the title (first line starting with #) with something better! Maybe Favorite Desserts\nAdd your name and your favorite dessert below the title: e.g. - Julien: crepes\n\n\n\nknitr::include_graphics(\"img/github-readme_desserts.png\")\n\n\n\n\n\n\n\n\n\n\n\nForks\n\nPerson 2: Create a Fork\n\nAsk your teammate to Slack you the link to the repository\nCreate a Fork by clicking on the Fork button on the top right view of your repository homepage\n\n\n\n\n\n\n\n\n\n\n\nOn your Fork, start editing the README.md\nAdd your name and your favorite dessert below your teammate entry: e.g. - Sophia: chocolate\nAdd a descriptive commit message\n\n\nknitr::include_graphics(\"img/github-commit.png\")\n\n\n\n\n\n\n\n\n\nCommit your changes\n\n\n\n\n\n\n\n\n\n\n\nCreate a pull request to merge those changes to the main repository using these instructions\n\n\n\nPerson 1:\n\nGo to your repository and merge the PR\n\n\n\n\n\nBranches\n\nPerson 1: add a file\nDownload this csv file about your favorite desserts to your computer\n\nJust drag and drop it on the Github web page of your repository to upload it\nAdd a short message about the file: e.g. Adding dessert csv & hit Commit changes\nYour file has been uploaded. Click on the filename to see it!\n\nYou should have something similar to this repo: https://github.com/brunj7/favorite-desserts/blob/master/favorite_desserts.csv\nNow you want to collaborate more closely and do not wan your teammate to have to create a fork and be able to work directly on your repository\n\nAdd Person 2 as a collaborator following these instructions\n\n\n\nPerson 2: Create a branch\n\nCheck your email or Github Notifications to accept the invitation\nGo to the repository website (link is provided in the invitation)\nCreate a new branch named after your first name\n\n\nknitr::include_graphics(\"img/github-create_branch.png\")\n\n\n\n\n\n\n\n\n\nEdit the csv file directly on GitHub to add your favorite dessert to it\nCreate a Pull Request (PR) to merge you branch back to main\nAssign person 1 as a reviewer (instructions)\n\n\n\nPerson 1: Merge the branch\n\nReview PR\nMerge and close PR",
+    "crumbs": [
+      "Coding as a Lab",
+      "Collaborative strategies",
+      "Hands-on: forks & branches with Github website"
+    ]
+  },
+  {
+    "objectID": "datamgmt_manage.html",
+    "href": "datamgmt_manage.html",
+    "title": "Manage your data as you go",
+    "section": "",
+    "text": "While actively working on your projects, there are several practices that can help you to manage your data in an efficient manner that will help you to collaborate with others (including your futureself!) and make your work more reproducible.",
+    "crumbs": [
+      "Managing your Lab data",
+      "Manage"
+    ]
+  },
+  {
+    "objectID": "datamgmt_manage.html#track-your-data-sources",
+    "href": "datamgmt_manage.html#track-your-data-sources",
+    "title": "Manage your data as you go",
+    "section": "Track your data sources",
+    "text": "Track your data sources\nAs you collect your data, if using pre-existing data sources, we strongly recommend that you keep track of where/by whom you accessed the data you will use. It can be a link to a data archive, an official agency website, or the contact information of a person. This data log can be developed using a spreadsheet that you can share with your team. The goal here is to make sure you can:\n\nGo back to the original source and the right version of the data\nCorrectly attribute/cite the data sources when you project\nReach out to data creators and ask for potential clarifications you might need to correctly interpret the data\nInquiry for any data updates at a later date",
+    "crumbs": [
+      "Managing your Lab data",
+      "Manage"
+    ]
+  },
+  {
+    "objectID": "datamgmt_manage.html#keep-raw-data-raw",
+    "href": "datamgmt_manage.html#keep-raw-data-raw",
+    "title": "Manage your data as you go",
+    "section": "Keep raw data raw",
+    "text": "Keep raw data raw\nDuring the data collection phase, also make sure to create a dedicated folder(s) to save the raw data version you just acquired.\nIf you are using a programmatic approach to acquire your data (e.g., API), make sure to only read the raw data and save any processed intermediate data products in a different folder. We recommend changing the permissions on your raw data folder to read-only to avoid any unexpected incidents.\nIf you are accessing the data using a Graphical User Interface (GUI), we recommend you create a “working copy” of your raw data in a separate folder and use those files as it is often very easy to accidentally overwrite it.",
+    "crumbs": [
+      "Managing your Lab data",
+      "Manage"
+    ]
+  },
+  {
+    "objectID": "datamgmt_manage.html#project-organization",
+    "href": "datamgmt_manage.html#project-organization",
+    "title": "Manage your data as you go",
+    "section": "Project organization",
+    "text": "Project organization\nWe generally recommend encapsulating your project into few folders. It will make it more portable when combined with a relative path and help you keep the information centralized in one place. Here is a potential starting point for your file structure with three subfolders:\n\nData: where you will store your data with the following file structure\n\nInput_data: to store the raw data you collected or/and are reusing\nIntermediate_data: to store any cleaned or merged data sets\nAnalysis_data: any model analytical outputs that you computed\n\nCode or Scripts: you can store your scripts in this folder. You can keep everything within the folder using filename to organize it or create subfolders as needed\nResults: to store tables, graphs, reports, or any other scientific products you are producing\n\nIn the top-level folder, we also recommend you write a README to explain your project, list the contributors and provide information on how to best navigate your project folder as well as a short description of the files it contains.\n\n\n\nSource: RDS Data Literacy Series\n\n\nThink of what README template could be developed for your research lab to help with standardizing this information across projects.",
+    "crumbs": [
+      "Managing your Lab data",
+      "Manage"
+    ]
+  },
+  {
+    "objectID": "datamgmt_manage.html#adopt-a-consistent-naming-convention",
+    "href": "datamgmt_manage.html#adopt-a-consistent-naming-convention",
+    "title": "Manage your data as you go",
+    "section": "Adopt a consistent naming convention",
+    "text": "Adopt a consistent naming convention\nDevelop naming conventions for files and folders:\n\nAvoid spaces (use underscores or dashes)\nAvoid punctuation or special characters\nTry to leverage alphabetical order (e.g., start with dates: 2020-05-08)\nUse descriptive naming (lite metadata)\nUse folders to structure/organize content\nKeep it simple\nMake it programmatically useful:\n\nUseful to select files (Wildcard *, regular expression)\nBut don’t forget Humans need to read file names too!!\nTip: leverage the use of _ and - to make your filename readable by both Humans and machines!\n\n\n\nTry it:\nWhich filename would be the most useful?\n\n06-2020-08-sensor2-plot1.csv\n2020-05-08_light-sensor-1_plot-1.csv\nMeasurement 1.csv\n2020-05-08-light-sensor-1-plot-2.csv\n2020-05-08-windSensor1-plot3.csv\n\nRemember, the most important is to make it consistent!\nA good reference on this topic from Jenny Bryan (Posit).",
+    "crumbs": [
+      "Managing your Lab data",
+      "Manage"
+    ]
+  },
+  {
+    "objectID": "datamgmt_manage.html#backup-your-data",
+    "href": "datamgmt_manage.html#backup-your-data",
+    "title": "Manage your data as you go",
+    "section": "Backup your data",
+    "text": "Backup your data\nDon’t forget, things happen!!!",
+    "crumbs": [
+      "Managing your Lab data",
+      "Manage"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About RDS",
+    "section": "",
+    "text": "Research Data Services (RDS) helps UCSB researchers manage and preserve their research data through:\n\nConsultations\nLong-term engagements\nInstructional workshops\n\nOur team offers support across the research data lifecycle, from pre-project planning to post-project archival, connecting researchers with both locally- and externally-provided curation services. Our goal is to ensure that all research data is well-described, FAIR (Findable, Accessible, Interoperable, Reusable), and sustainably preservable, and that researchers receive scholarly credit for sharing and publishing data.\nContact us if you have any questions: rds@library.ucsb.edu",
+    "crumbs": [
+      "About us",
+      "Data Research Services"
+    ]
+  },
+  {
+    "objectID": "preserve_readme.html",
+    "href": "preserve_readme.html",
+    "title": "The power of READMEs",
+    "section": "",
+    "text": "README files are not a new thing. They have been around computer projects since the early days. One great thing about the popularization of supporting the markdown syntax (and its web rendering in most code repositories) is that you can move beyond a simple text file and start to present a compelling entry point to your project that can link to various parts and external resources.\nGood types of information to have on a README:\n\nTitle capturing the essence of the project\nList of current contributors\nA short explanation of the goal / purpose\nHow to install / where to start\nA quick demo on how to use the content (can be a link to another document as well)\nWhat to do if a bug is spotted\nHow to contribute\nLicensing\nAcknowledgements of authors, contributors, sponsors or other related work\n\nAdding images, short videos / animations can make a README more engaging.\n\nData README\nMost data repositories will ask you to provide some kind of README file to help describe the content you are archiving. Here is a template you may customize for your project needs: https://doi.org/10.5281/zenodo.10828379\n\n\nCode README\nNeed some inspiration ?\n\nHere is a interesting template: https://github.com/navendu-pottekkat/awesome-readme/tree/master\nWhen you start an R package with the usethis package, a README will be created for you with all the relevant sections for such type of project.\npick a package you like and inspect their README",
+    "crumbs": [
+      "Preserving things",
+      "The power of README"
+    ]
+  },
+  {
+    "objectID": "coding.html",
+    "href": "coding.html",
+    "title": "Code as scientific product",
+    "section": "",
+    "text": "Codes are part of the scientific products your Lab is producing. It is thus important to manage, document, and preserve them as you would do for any other of your scientific products. In this session, we will discuss tools and practices that can ease the management of your codes, as well as develop them in a collaborative way.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Code as scientific product"
+    ]
+  },
+  {
+    "objectID": "coding.html#code-repository",
+    "href": "coding.html#code-repository",
+    "title": "Code as scientific product",
+    "section": "Code repository",
+    "text": "Code repository\nAs data repositories, code repositories are a great way to preserve and share your code (including with your future self!!). One you might have already heard of is GitHub. However, there are other options such as GitLab, Bitbucket Source Forge, and more.\nIn this session, we will be focusing on using GitHub to collaborate and keep track of the development of our scripts.\n\nQuick intro to GitHub\n\nWhy\nWebsite interface walk-through\n\nGitHub Organizations\n\nWhy\nsetup\nmanage: teams and settings\n\nCollaborative coding workflows & techniques\n\nPair Programming\nCode Exchange\nBranch and fork workflows\n\nStreamlining documentation with templates\n\nRepositories",
+    "crumbs": [
+      "Coding as a Lab",
+      "Code as scientific product"
+    ]
+  },
+  {
+    "objectID": "github_workflows.html",
+    "href": "github_workflows.html",
+    "title": "Collaborative workflows to code together",
+    "section": "",
+    "text": "A fork is a copy of a repository that will be stored under your user account. Forking a repository allows you to freely experiment with changes without affecting the original project. We can create a fork on Github by clicking the “fork” button in the top right corner of our repository webpage. \nMost commonly, forks are used to either propose changes to someone else’s project or to use someone else’s project as a starting point for your own idea.\nWhen you are satisfied with your work, you can initiate a Pull Request to initiate discussion about your modifications and requesting to integrate your changes to the main repository. Your commit history allows the original repository administrators to see exactly what changes would be merged if they accept your request. Do this by going to the original repository and clicking the “New pull request” button\nNext, click “compare across forks”, and use the dropdown menus to select your fork as the “head fork” and the original repository as the “base fork”.\nThen type a title and description for the changes you would like to make. By using GitHub’s @mention syntax in your Pull Request message, you can ask for feedback from specific people or teams.\nThis workflow is recommended when you do not have push/write access to a repository, such as contributing to a open source software or R package, or if you are heavily changing a project.\n\n\n\nWhen you collaborate closely and actively with colleagues, you do not want necessarily to have to review all their changes through pull requests. You can then give them write access (git push) to your repository to allow them to directly edit and contribute to its content. This is the workflow we will recommend to use within your working group.\n\n\n\nClick on the repository\nOn the right panel, click \nOn the left pane, click Collaborators and enter the usernames you want to add\n\nUnder this collaborative workflow, we recommend to use git branches combined with pull requests to avoid conflicts and to track and discuss collaborators contributions.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Collaborative strategies",
+      "Collaborative workflows: forks & branches"
+    ]
+  },
+  {
+    "objectID": "github_workflows.html#collaborating-through-forking-aka-the-github-workflow",
+    "href": "github_workflows.html#collaborating-through-forking-aka-the-github-workflow",
+    "title": "Collaborative workflows to code together",
+    "section": "",
+    "text": "A fork is a copy of a repository that will be stored under your user account. Forking a repository allows you to freely experiment with changes without affecting the original project. We can create a fork on Github by clicking the “fork” button in the top right corner of our repository webpage. \nMost commonly, forks are used to either propose changes to someone else’s project or to use someone else’s project as a starting point for your own idea.\nWhen you are satisfied with your work, you can initiate a Pull Request to initiate discussion about your modifications and requesting to integrate your changes to the main repository. Your commit history allows the original repository administrators to see exactly what changes would be merged if they accept your request. Do this by going to the original repository and clicking the “New pull request” button\nNext, click “compare across forks”, and use the dropdown menus to select your fork as the “head fork” and the original repository as the “base fork”.\nThen type a title and description for the changes you would like to make. By using GitHub’s @mention syntax in your Pull Request message, you can ask for feedback from specific people or teams.\nThis workflow is recommended when you do not have push/write access to a repository, such as contributing to a open source software or R package, or if you are heavily changing a project.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Collaborative strategies",
+      "Collaborative workflows: forks & branches"
+    ]
+  },
+  {
+    "objectID": "github_workflows.html#collaborating-through-write-push-access",
+    "href": "github_workflows.html#collaborating-through-write-push-access",
+    "title": "Collaborative workflows to code together",
+    "section": "",
+    "text": "When you collaborate closely and actively with colleagues, you do not want necessarily to have to review all their changes through pull requests. You can then give them write access (git push) to your repository to allow them to directly edit and contribute to its content. This is the workflow we will recommend to use within your working group.\n\n\n\nClick on the repository\nOn the right panel, click \nOn the left pane, click Collaborators and enter the usernames you want to add\n\nUnder this collaborative workflow, we recommend to use git branches combined with pull requests to avoid conflicts and to track and discuss collaborators contributions.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Collaborative strategies",
+      "Collaborative workflows: forks & branches"
+    ]
+  },
+  {
+    "objectID": "github_workflows.html#working-with-branches",
+    "href": "github_workflows.html#working-with-branches",
+    "title": "Collaborative workflows to code together",
+    "section": "Working with branches",
+    "text": "Working with branches\n\nCreating a new branch\nIn RStudio, you can create a branch using the git tab.\n\nClick on the branch button\n\n\n\n\n\n\n\n\n\n\n\nFill the branch name in the new branch window; in this example, we are going to use test for the name; leave the other options as default and click create\n\n\n\n\n\n\n\n\n\n\n\nyou will be directly creating a local and remote branch and switch to it\n\n\n\n\n\n\n\n\n\n\nCongratulations you just created your first branch!\nLet us check on Github:\n\n\n\n\n\n\n\n\n\nAs you can see, now there are two branches on our remote repository: - master - test\n\n\nUsing a branch\nHere there is nothing new. The workflow is exactly the same as we did before, excepts our commit will be created on the test branch instead of the master branch.",
+    "crumbs": [
+      "Coding as a Lab",
+      "Collaborative strategies",
+      "Collaborative workflows: forks & branches"
+    ]
+  },
+  {
+    "objectID": "01-handson_github_website.html",
+    "href": "01-handson_github_website.html",
+    "title": "Using the GitHub website",
+    "section": "",
+    "text": "In this section, we will be using the GitHub.com website and demonstrate that you do not need to be a programmer to use version control and edit files on GitHub.\n\n\n\n\n\n\nDon’t have a GitHub account?\n\n\n\n\n\nIf you have not already created a GitHub username, please do so now:\n\nGitHub: https://github.com\nFollow optional advice on choosing your username\n\n\n\n\n\n\n\n\n\n\nOur asks\n\n\n\n\nAs a Team of two\n\nHelp each other, everyone is bringing different skills! Talk it out!\nListen to each other; avoid judgment and solutioneering.\nHave fun!\n\n\n\nPrompt\nWe want to log the information about people’s favorite desserts using a repository.\n\n\n\n\nPerson 1 (owner):\n\nCreate a repository using the following these instructions steps 1-6\n\n\n\nEdit the README to:\n\nReplace the title (first line starting with #) with something better! Maybe Favorite Desserts\nAdd your name and your favorite dessert below the title: e.g. - Julien: crepes\n\n\n\n\n\n\n\n\n\n\n\n\nAdd Person 2 as a collaborator following these instructions\n\n\n\nPerson 2 (collaborator):\n\nCheck your email to accept the invitation\nGo to the repository website (link is provided in the invitation)\nStart editing the README.md by clicking on pen at the top of the README.md file to edit it\n\n\n\n\n\n\n\n\n\n\n\nAdd your name and your favorite dessert below the title: e.g. - Sophia: chocolate\nClick Commit changes\nAdd a descriptive commit message, “add my favorite dessert”\n\n\n\n\n\n\n\n\n\n\n\nClick Commit changes to confirm\n\n\n\n\n\n\n\n\n\n\n\n\nPerson 1: add a file\nDownload this csv file about your favorite desserts to your computer\n\nJust drag and drop it on the Github web page of your repository to upload it\nAdd a short message about the file e.g. Adding dessert csv & hit Commit changes\nYour have has been uploaded. Click on the filename to see it!\n\nYou should have something similar to this repo: https://github.com/brunj7/favorite-desserts\n\n\nBonus\nPerson 2: Try to edit the csv file directly on GitHub!\nPerson 1: Your turn!\nNo need to be a programmer to contribute to analytical workflows with GitHub!!",
+    "crumbs": [
+      "Coding as a Lab",
+      "Coding together",
+      "Hands-on: Using Github's website"
+    ]
+  },
+  {
+    "objectID": "preserve_code.html",
+    "href": "preserve_code.html",
+    "title": "Preserve your code",
+    "section": "",
+    "text": "https://twitter.com/cjm4189/status/1557346489613094914\n\n\n\n\nIt is important to make your code easy to read if you hope that others will reuse it. It starts with using a consistent style withing your scripts (at least within a project).\n\nHere is a good style guide for R: https://style.tidyverse.org/\nStyle guide for Python: https://www.python.org/dev/peps/pep-0008/\n\n\nimport this\n\nThe Zen of Python, by Tim Peters\n\nBeautiful is better than ugly.\nExplicit is better than implicit.\nSimple is better than complex.\nComplex is better than complicated.\nFlat is better than nested.\nSparse is better than dense.\nReadability counts.\nSpecial cases aren't special enough to break the rules.\nAlthough practicality beats purity.\nErrors should never pass silently.\nUnless explicitly silenced.\nIn the face of ambiguity, refuse the temptation to guess.\nThere should be one-- and preferably only one --obvious way to do it.\nAlthough that way may not be obvious at first unless you're Dutch.\nNow is better than never.\nAlthough never is often better than *right* now.\nIf the implementation is hard to explain, it's a bad idea.\nIf the implementation is easy to explain, it may be a good idea.\nNamespaces are one honking great idea -- let's do more of those!\n\n\nThere is also the visual aspect of the code that should not be neglected. Like a prose, if you receive a long text without any paragraphs, you might be not very excited about reading it. Indentation, spaces, and empty lines should be leveraged to make a script visually inviting and easy to read. The good news is that most of the Integrated Development Environment (IDE) will help you to do so by auto formatting your scripts according to conventions. Note that also a lot of IDEs, such as RStudio, rely on some conventions to ease the navigation of scripts and notebooks. For example, try to add four - or # after a line starting with one or several # in an R Script!",
+    "crumbs": [
+      "Preserving things",
+      "Preserve your code"
+    ]
+  },
+  {
+    "objectID": "preserve_code.html#making-your-code-readable",
+    "href": "preserve_code.html#making-your-code-readable",
+    "title": "Preserve your code",
+    "section": "",
+    "text": "https://twitter.com/cjm4189/status/1557346489613094914\n\n\n\n\nIt is important to make your code easy to read if you hope that others will reuse it. It starts with using a consistent style withing your scripts (at least within a project).\n\nHere is a good style guide for R: https://style.tidyverse.org/\nStyle guide for Python: https://www.python.org/dev/peps/pep-0008/\n\n\nimport this\n\nThe Zen of Python, by Tim Peters\n\nBeautiful is better than ugly.\nExplicit is better than implicit.\nSimple is better than complex.\nComplex is better than complicated.\nFlat is better than nested.\nSparse is better than dense.\nReadability counts.\nSpecial cases aren't special enough to break the rules.\nAlthough practicality beats purity.\nErrors should never pass silently.\nUnless explicitly silenced.\nIn the face of ambiguity, refuse the temptation to guess.\nThere should be one-- and preferably only one --obvious way to do it.\nAlthough that way may not be obvious at first unless you're Dutch.\nNow is better than never.\nAlthough never is often better than *right* now.\nIf the implementation is hard to explain, it's a bad idea.\nIf the implementation is easy to explain, it may be a good idea.\nNamespaces are one honking great idea -- let's do more of those!\n\n\nThere is also the visual aspect of the code that should not be neglected. Like a prose, if you receive a long text without any paragraphs, you might be not very excited about reading it. Indentation, spaces, and empty lines should be leveraged to make a script visually inviting and easy to read. The good news is that most of the Integrated Development Environment (IDE) will help you to do so by auto formatting your scripts according to conventions. Note that also a lot of IDEs, such as RStudio, rely on some conventions to ease the navigation of scripts and notebooks. For example, try to add four - or # after a line starting with one or several # in an R Script!",
+    "crumbs": [
+      "Preserving things",
+      "Preserve your code"
+    ]
+  },
+  {
+    "objectID": "preserve_code.html#comments",
+    "href": "preserve_code.html#comments",
+    "title": "Preserve your code",
+    "section": "Comments",
+    "text": "Comments\nReal Programmers don’t comment their code. If it was hard to write, it should be hard to understand.\nTom Van Vleck, based on people he knew…_ (https://multicians.org/thvv/realprogs.html)\nJoke aside, it is really hard to comment too much your code, because even steps that might seem trivial today might not be so anymore in a few weeks or months for now. In addition, a well commented code is more likely to be read by others. Note also that comments should work in complement of the code and should not being seen as work around vague naming conventions of variables or functions.\n\nx &lt;- 9.81  #  gravitational acceleration\n\ngravity_acc &lt;- 9.81  #  gravitational acceleration\n\n\nHeader\nIt is good to add a header to your script that will provide basic information such as:\n\nPurpose of the script (Long title style)\nWho are the authors\nA contact email\n\nOptional:\n\nA longer description about the script purpose\nA starting date and potentially last updated one, although this information becomes redundant with repository information\n\nNote that R Studio does something similar by default when creating an new R Markdown document!\n\n\nInline\nIt does not matter if you are using a script or notebook. It is important to provide comments along your code to complement it by:\n\nexplaining what the code does\ncapturing decisions that were made on the analytical side. For example, why a specific value was used for a threshold.\nspecifying when some code was added to handle an edge case such as an unexpected value in the data (so a new user doesn’t have to guess what does lines of code and might want to delete them assuming it is not necessary)\n\nOther thoughts:\n\nIt is OK to state (what seems) the obvious (some might disagree with this statement)\nTry to keep comments to the point and short\n\n\n\nFunctions\nBoth Python and R have conventions on how to document functions. Adopting those conventions will help you to make your code readable but also to automate part of the documentation development.\n\nRoxygen2\nThe goal of roxygen2 is to make documenting your code as easy as possible. It can dynamically inspect the objects that it’s documenting, so it can automatically add data that you’d otherwise have to write by hand.\nHow do we insert it? Make sure you cursor is inside the function you want to document and from RStudio Menu Code -&gt; Insert Roxygen Skeleton\nExample:\n\n#' Add together two numbers\n#'\n#' @param x A number\n#' @param y A number\n#' @return The sum of \\code{x} and \\code{y}\n#' @examples\n#' add(1, 1)\n#' add(10, 1)\nadd2 &lt;- function(x, y) {\n  x + y\n}\n\nTry it! - Copy the function (without the documentation) in a new script - Add a third parameter to the function such as it sums 3 numbers - Add the Roxygen skeleton - Fill it to best describe your function\nNote that when you are developing an R package, the Roxygen skeleton can be leveraged to develop the help pages of your package so you only have one place to update and the help will synchronize automatically.\n\n\nPython Docstring\nA docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. Such a docstring becomes the __doc__ special attribute of that object.\n\ndef complex(real=0.0, imag=0.0):\n    \"\"\"Form a complex number.\n\n    Keyword arguments:\n    real -- the real part (default 0.0)\n    imag -- the imaginary part (default 0.0)\n    \"\"\"\n    if imag == 0.0 and real == 0.0:\n        return complex_zero\n\nHere for more: https://www.python.org/dev/peps/pep-0257/",
+    "crumbs": [
+      "Preserving things",
+      "Preserve your code"
+    ]
+  },
+  {
+    "objectID": "preserve_code.html#leveraging-notebooks",
+    "href": "preserve_code.html#leveraging-notebooks",
+    "title": "Preserve your code",
+    "section": "Leveraging Notebooks",
+    "text": "Leveraging Notebooks\nAs we have discussed and experimented with Notebooks during the week. It is because Notebooks provide space to further develop content, such as methodology, around the code you are developing in your analysis. Notebooks also enable you to integrate the outputs of your scientific research with the code that was used to produce it. Finally, notebooks can be rendered into various format that let them share with a broad audience.\nNotebooks are not only used within the scientific community, see here for some thoughts from Airbnb data science team.",
+    "crumbs": [
+      "Preserving things",
+      "Preserve your code"
+    ]
+  },
+  {
+    "objectID": "preserve_code.html#hands-on",
+    "href": "preserve_code.html#hands-on",
+    "title": "Preserve your code",
+    "section": "Hands-on",
+    "text": "Hands-on\n\nDocumenting\n\ngetPercent &lt;- function( value, pct ) {\n    result &lt;- value * ( pct / 100 )\n    return( result )\n}\n\nTry adding the Roxygen Skeleton to this function and fill all the information you think is necessary to document the function\n\n\nCommenting\nLet’s try to improve the readability and documentation of this repository: https://github.com/brunj7/better-comments. Follow the instructions on the README\nFor inspiration, you can check out the NASA code for APOLLO 11 dating from 1969: https://github.com/chrislgarry/Apollo-11!!",
+    "crumbs": [
+      "Preserving things",
+      "Preserve your code"
+    ]
+  },
+  {
+    "objectID": "preserve_code.html#code-repositories",
+    "href": "preserve_code.html#code-repositories",
+    "title": "Preserve your code",
+    "section": "Code repositories",
+    "text": "Code repositories\nOn-line code repositories are a great way to version and share your code. Here are a few examples of git-based code repositories:\n\nGitHub\nGitLab\nBitbucket\nSourceForge\n\nNote however that there is no long-term commitment of any of those main code repositories and that archiving the specific snapshot of your code that was used for a specific analysis along your data is a great idea. Several data repositories offer an integration that lets you do that with data repositories. For example, Zenodo has a great integration with GitHub that lets you issue a DOI for a specific release (read snapshot) of your repository and preserve it independently from the code repository. See here for more details.\nNote that one version is not against the other, in contrary you can see your code repository as the live version of your work and the code snapshot archive as the historical trace that was produced for a specific analysis. In other words, we recommend to link both the code repository and its snapshot to the data archive.",
+    "crumbs": [
+      "Preserving things",
+      "Preserve your code"
     ]
   },
   {
@@ -435,453 +836,63 @@
     ]
   },
   {
-    "objectID": "preserve_code.html",
-    "href": "preserve_code.html",
-    "title": "Preserve your code",
+    "objectID": "git_further_readings.html",
+    "href": "git_further_readings.html",
+    "title": "Further readings",
     "section": "",
-    "text": "https://twitter.com/cjm4189/status/1557346489613094914\n\n\n\n\nIt is important to make your code easy to read if you hope that others will reuse it. It starts with using a consistent style withing your scripts (at least within a project).\n\nHere is a good style guide for R: https://style.tidyverse.org/\nStyle guide for Python: https://www.python.org/dev/peps/pep-0008/\n\n\nimport this\n\nThe Zen of Python, by Tim Peters\n\nBeautiful is better than ugly.\nExplicit is better than implicit.\nSimple is better than complex.\nComplex is better than complicated.\nFlat is better than nested.\nSparse is better than dense.\nReadability counts.\nSpecial cases aren't special enough to break the rules.\nAlthough practicality beats purity.\nErrors should never pass silently.\nUnless explicitly silenced.\nIn the face of ambiguity, refuse the temptation to guess.\nThere should be one-- and preferably only one --obvious way to do it.\nAlthough that way may not be obvious at first unless you're Dutch.\nNow is better than never.\nAlthough never is often better than *right* now.\nIf the implementation is hard to explain, it's a bad idea.\nIf the implementation is easy to explain, it may be a good idea.\nNamespaces are one honking great idea -- let's do more of those!\n\n\nThere is also the visual aspect of the code that should not be neglected. Like a prose, if you receive a long text without any paragraphs, you might be not very excited about reading it. Indentation, spaces, and empty lines should be leveraged to make a script visually inviting and easy to read. The good news is that most of the Integrated Development Environment (IDE) will help you to do so by auto formatting your scripts according to conventions. Note that also a lot of IDEs, such as RStudio, rely on some conventions to ease the navigation of scripts and notebooks. For example, try to add four - or # after a line starting with one or several # in an R Script!",
-    "crumbs": [
-      "Preserving things",
-      "Preserve your code"
-    ]
-  },
-  {
-    "objectID": "preserve_code.html#making-your-code-readable",
-    "href": "preserve_code.html#making-your-code-readable",
-    "title": "Preserve your code",
-    "section": "",
-    "text": "https://twitter.com/cjm4189/status/1557346489613094914\n\n\n\n\nIt is important to make your code easy to read if you hope that others will reuse it. It starts with using a consistent style withing your scripts (at least within a project).\n\nHere is a good style guide for R: https://style.tidyverse.org/\nStyle guide for Python: https://www.python.org/dev/peps/pep-0008/\n\n\nimport this\n\nThe Zen of Python, by Tim Peters\n\nBeautiful is better than ugly.\nExplicit is better than implicit.\nSimple is better than complex.\nComplex is better than complicated.\nFlat is better than nested.\nSparse is better than dense.\nReadability counts.\nSpecial cases aren't special enough to break the rules.\nAlthough practicality beats purity.\nErrors should never pass silently.\nUnless explicitly silenced.\nIn the face of ambiguity, refuse the temptation to guess.\nThere should be one-- and preferably only one --obvious way to do it.\nAlthough that way may not be obvious at first unless you're Dutch.\nNow is better than never.\nAlthough never is often better than *right* now.\nIf the implementation is hard to explain, it's a bad idea.\nIf the implementation is easy to explain, it may be a good idea.\nNamespaces are one honking great idea -- let's do more of those!\n\n\nThere is also the visual aspect of the code that should not be neglected. Like a prose, if you receive a long text without any paragraphs, you might be not very excited about reading it. Indentation, spaces, and empty lines should be leveraged to make a script visually inviting and easy to read. The good news is that most of the Integrated Development Environment (IDE) will help you to do so by auto formatting your scripts according to conventions. Note that also a lot of IDEs, such as RStudio, rely on some conventions to ease the navigation of scripts and notebooks. For example, try to add four - or # after a line starting with one or several # in an R Script!",
-    "crumbs": [
-      "Preserving things",
-      "Preserve your code"
-    ]
-  },
-  {
-    "objectID": "preserve_code.html#comments",
-    "href": "preserve_code.html#comments",
-    "title": "Preserve your code",
-    "section": "Comments",
-    "text": "Comments\nReal Programmers don’t comment their code. If it was hard to write, it should be hard to understand.\nTom Van Vleck, based on people he knew…_ (https://multicians.org/thvv/realprogs.html)\nJoke aside, it is really hard to comment too much your code, because even steps that might seem trivial today might not be so anymore in a few weeks or months for now. In addition, a well commented code is more likely to be read by others. Note also that comments should work in complement of the code and should not being seen as work around vague naming conventions of variables or functions.\n\nx &lt;- 9.81  #  gravitational acceleration\n\ngravity_acc &lt;- 9.81  #  gravitational acceleration\n\n\nHeader\nIt is good to add a header to your script that will provide basic information such as:\n\nPurpose of the script (Long title style)\nWho are the authors\nA contact email\n\nOptional:\n\nA longer description about the script purpose\nA starting date and potentially last updated one, although this information becomes redundant with repository information\n\nNote that R Studio does something similar by default when creating an new R Markdown document!\n\n\nInline\nIt does not matter if you are using a script or notebook. It is important to provide comments along your code to complement it by:\n\nexplaining what the code does\ncapturing decisions that were made on the analytical side. For example, why a specific value was used for a threshold.\nspecifying when some code was added to handle an edge case such as an unexpected value in the data (so a new user doesn’t have to guess what does lines of code and might want to delete them assuming it is not necessary)\n\nOther thoughts:\n\nIt is OK to state (what seems) the obvious (some might disagree with this statement)\nTry to keep comments to the point and short\n\n\n\nFunctions\nBoth Python and R have conventions on how to document functions. Adopting those conventions will help you to make your code readable but also to automate part of the documentation development.\n\nRoxygen2\nThe goal of roxygen2 is to make documenting your code as easy as possible. It can dynamically inspect the objects that it’s documenting, so it can automatically add data that you’d otherwise have to write by hand.\nHow do we insert it? Make sure you cursor is inside the function you want to document and from RStudio Menu Code -&gt; Insert Roxygen Skeleton\nExample:\n\n#' Add together two numbers\n#'\n#' @param x A number\n#' @param y A number\n#' @return The sum of \\code{x} and \\code{y}\n#' @examples\n#' add(1, 1)\n#' add(10, 1)\nadd2 &lt;- function(x, y) {\n  x + y\n}\n\nTry it! - Copy the function (without the documentation) in a new script - Add a third parameter to the function such as it sums 3 numbers - Add the Roxygen skeleton - Fill it to best describe your function\nNote that when you are developing an R package, the Roxygen skeleton can be leveraged to develop the help pages of your package so you only have one place to update and the help will synchronize automatically.\n\n\nPython Docstring\nA docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. Such a docstring becomes the __doc__ special attribute of that object.\n\ndef complex(real=0.0, imag=0.0):\n    \"\"\"Form a complex number.\n\n    Keyword arguments:\n    real -- the real part (default 0.0)\n    imag -- the imaginary part (default 0.0)\n    \"\"\"\n    if imag == 0.0 and real == 0.0:\n        return complex_zero\n\nHere for more: https://www.python.org/dev/peps/pep-0257/",
-    "crumbs": [
-      "Preserving things",
-      "Preserve your code"
-    ]
-  },
-  {
-    "objectID": "preserve_code.html#leveraging-notebooks",
-    "href": "preserve_code.html#leveraging-notebooks",
-    "title": "Preserve your code",
-    "section": "Leveraging Notebooks",
-    "text": "Leveraging Notebooks\nAs we have discussed and experimented with Notebooks during the week. It is because Notebooks provide space to further develop content, such as methodology, around the code you are developing in your analysis. Notebooks also enable you to integrate the outputs of your scientific research with the code that was used to produce it. Finally, notebooks can be rendered into various format that let them share with a broad audience.\nNotebooks are not only used within the scientific community, see here for some thoughts from Airbnb data science team.",
-    "crumbs": [
-      "Preserving things",
-      "Preserve your code"
-    ]
-  },
-  {
-    "objectID": "preserve_code.html#hands-on",
-    "href": "preserve_code.html#hands-on",
-    "title": "Preserve your code",
-    "section": "Hands-on",
-    "text": "Hands-on\n\nDocumenting\n\ngetPercent &lt;- function( value, pct ) {\n    result &lt;- value * ( pct / 100 )\n    return( result )\n}\n\nTry adding the Roxygen Skeleton to this function and fill all the information you think is necessary to document the function\n\n\nCommenting\nLet’s try to improve the readability and documentation of this repository: https://github.com/brunj7/better-comments. Follow the instructions on the README\nFor inspiration, you can check out the NASA code for APOLLO 11 dating from 1969: https://github.com/chrislgarry/Apollo-11!!",
-    "crumbs": [
-      "Preserving things",
-      "Preserve your code"
-    ]
-  },
-  {
-    "objectID": "preserve_code.html#code-repositories",
-    "href": "preserve_code.html#code-repositories",
-    "title": "Preserve your code",
-    "section": "Code repositories",
-    "text": "Code repositories\nOn-line code repositories are a great way to version and share your code. Here are a few examples of git-based code repositories:\n\nGitHub\nGitLab\nBitbucket\nSourceForge\n\nNote however that there is no long-term commitment of any of those main code repositories and that archiving the specific snapshot of your code that was used for a specific analysis along your data is a great idea. Several data repositories offer an integration that lets you do that with data repositories. For example, Zenodo has a great integration with GitHub that lets you issue a DOI for a specific release (read snapshot) of your repository and preserve it independently from the code repository. See here for more details.\nNote that one version is not against the other, in contrary you can see your code repository as the live version of your work and the code snapshot archive as the historical trace that was produced for a specific analysis. In other words, we recommend to link both the code repository and its snapshot to the data archive.",
-    "crumbs": [
-      "Preserving things",
-      "Preserve your code"
-    ]
-  },
-  {
-    "objectID": "01-handson_github_website.html",
-    "href": "01-handson_github_website.html",
-    "title": "Using the GitHub website",
-    "section": "",
-    "text": "In this section, we will be using the GitHub.com website and demonstrate that you do not need to be a programmer to use version control and edit files on GitHub.\n\n\n\n\n\n\nDon’t have a GitHub account?\n\n\n\n\n\nIf you have not already created a GitHub username, please do so now:\n\nGitHub: https://github.com\nFollow optional advice on choosing your username\n\n\n\n\n\n\n\n\n\n\nOur asks\n\n\n\n\nAs a Team of two\n\nHelp each other, everyone is bringing different skills! Talk it out!\nListen to each other; avoid judgment and solutioneering.\nHave fun!\n\n\n\nPrompt\nWe want to log the information about people’s favorite desserts using a repository.\n\n\n\n\nPerson 1 (owner):\n\nCreate a repository using the following these instructions steps 1-6\n\n\n\nEdit the README to:\n\nReplace the title (first line starting with #) with something better! Maybe Favorite Desserts\nAdd your name and your favorite dessert below the title: e.g. - Julien: crepes\n\n\n\n\n\n\n\n\n\n\n\n\nAdd Person 2 as a collaborator following these instructions\n\n\n\nPerson 2 (collaborator):\n\nCheck your email to accept the invitation\nGo to the repository website (link is provided in the invitation)\nStart editing the README.md by clicking on pen at the top of the README.md file to edit it\n\n\n\n\n\n\n\n\n\n\n\nAdd your name and your favorite dessert below the title: e.g. - Sophia: chocolate\nClick Commit changes\nAdd a descriptive commit message, “add my favorite dessert”\n\n\n\n\n\n\n\n\n\n\n\nClick Commit changes to confirm\n\n\n\n\n\n\n\n\n\n\n\n\nPerson 1: add a file\nDownload this csv file about your favorite desserts to your computer\n\nJust drag and drop it on the Github web page of your repository to upload it\nAdd a short message about the file e.g. Adding dessert csv & hit Commit changes\nYour have has been uploaded. Click on the filename to see it!\n\nYou should have something similar to this repo: https://github.com/brunj7/favorite-desserts\n\n\nBonus\nPerson 2: Try to edit the csv file directly on GitHub!\nPerson 1: Your turn!\nNo need to be a programmer to contribute to analytical workflows with GitHub!!",
+    "text": "Jenny Bryan Happy git with R http://happygitwithr.com/\nIntro to GitHub and using git from RStudio GUI: http://ohi-science.org/data-science-training/collaborating.html\nIntro to git and Github using the command line: https://nceas.github.io/oss-lessons/version-control/1-git-basics.html\nTry git in 15min: https://try.github.io/levels/1/challenges/1\nGit terminology: https://www.atlassian.com/git/glossary/terminology\ngit rebase https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase",
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Hands-on: Using Github's website"
+      "Git and GitHub further readings"
     ]
   },
   {
-    "objectID": "github_workflows.html",
-    "href": "github_workflows.html",
-    "title": "Collaborative workflows to code together",
+    "objectID": "git_further_readings.html#git-general-introduction",
+    "href": "git_further_readings.html#git-general-introduction",
+    "title": "Further readings",
     "section": "",
-    "text": "A fork is a copy of a repository that will be stored under your user account. Forking a repository allows you to freely experiment with changes without affecting the original project. We can create a fork on Github by clicking the “fork” button in the top right corner of our repository webpage. \nMost commonly, forks are used to either propose changes to someone else’s project or to use someone else’s project as a starting point for your own idea.\nWhen you are satisfied with your work, you can initiate a Pull Request to initiate discussion about your modifications and requesting to integrate your changes to the main repository. Your commit history allows the original repository administrators to see exactly what changes would be merged if they accept your request. Do this by going to the original repository and clicking the “New pull request” button\nNext, click “compare across forks”, and use the dropdown menus to select your fork as the “head fork” and the original repository as the “base fork”.\nThen type a title and description for the changes you would like to make. By using GitHub’s @mention syntax in your Pull Request message, you can ask for feedback from specific people or teams.\nThis workflow is recommended when you do not have push/write access to a repository, such as contributing to a open source software or R package, or if you are heavily changing a project.\n\n\n\nWhen you collaborate closely and actively with colleagues, you do not want necessarily to have to review all their changes through pull requests. You can then give them write access (git push) to your repository to allow them to directly edit and contribute to its content. This is the workflow we will recommend to use within your working group.\n\n\n\nClick on the repository\nOn the right panel, click \nOn the left pane, click Collaborators and enter the usernames you want to add\n\nUnder this collaborative workflow, we recommend to use git branches combined with pull requests to avoid conflicts and to track and discuss collaborators contributions.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Collaborative strategies",
-      "Collaborative workflows: forks & branches"
-    ]
-  },
-  {
-    "objectID": "github_workflows.html#collaborating-through-forking-aka-the-github-workflow",
-    "href": "github_workflows.html#collaborating-through-forking-aka-the-github-workflow",
-    "title": "Collaborative workflows to code together",
-    "section": "",
-    "text": "A fork is a copy of a repository that will be stored under your user account. Forking a repository allows you to freely experiment with changes without affecting the original project. We can create a fork on Github by clicking the “fork” button in the top right corner of our repository webpage. \nMost commonly, forks are used to either propose changes to someone else’s project or to use someone else’s project as a starting point for your own idea.\nWhen you are satisfied with your work, you can initiate a Pull Request to initiate discussion about your modifications and requesting to integrate your changes to the main repository. Your commit history allows the original repository administrators to see exactly what changes would be merged if they accept your request. Do this by going to the original repository and clicking the “New pull request” button\nNext, click “compare across forks”, and use the dropdown menus to select your fork as the “head fork” and the original repository as the “base fork”.\nThen type a title and description for the changes you would like to make. By using GitHub’s @mention syntax in your Pull Request message, you can ask for feedback from specific people or teams.\nThis workflow is recommended when you do not have push/write access to a repository, such as contributing to a open source software or R package, or if you are heavily changing a project.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Collaborative strategies",
-      "Collaborative workflows: forks & branches"
-    ]
-  },
-  {
-    "objectID": "github_workflows.html#collaborating-through-write-push-access",
-    "href": "github_workflows.html#collaborating-through-write-push-access",
-    "title": "Collaborative workflows to code together",
-    "section": "",
-    "text": "When you collaborate closely and actively with colleagues, you do not want necessarily to have to review all their changes through pull requests. You can then give them write access (git push) to your repository to allow them to directly edit and contribute to its content. This is the workflow we will recommend to use within your working group.\n\n\n\nClick on the repository\nOn the right panel, click \nOn the left pane, click Collaborators and enter the usernames you want to add\n\nUnder this collaborative workflow, we recommend to use git branches combined with pull requests to avoid conflicts and to track and discuss collaborators contributions.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Collaborative strategies",
-      "Collaborative workflows: forks & branches"
-    ]
-  },
-  {
-    "objectID": "github_workflows.html#working-with-branches",
-    "href": "github_workflows.html#working-with-branches",
-    "title": "Collaborative workflows to code together",
-    "section": "Working with branches",
-    "text": "Working with branches\n\nCreating a new branch\nIn RStudio, you can create a branch using the git tab.\n\nClick on the branch button\n\n\n\n\n\n\n\n\n\n\n\nFill the branch name in the new branch window; in this example, we are going to use test for the name; leave the other options as default and click create\n\n\n\n\n\n\n\n\n\n\n\nyou will be directly creating a local and remote branch and switch to it\n\n\n\n\n\n\n\n\n\n\nCongratulations you just created your first branch!\nLet us check on Github:\n\n\n\n\n\n\n\n\n\nAs you can see, now there are two branches on our remote repository: - master - test\n\n\nUsing a branch\nHere there is nothing new. The workflow is exactly the same as we did before, excepts our commit will be created on the test branch instead of the master branch.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Collaborative strategies",
-      "Collaborative workflows: forks & branches"
-    ]
-  },
-  {
-    "objectID": "coding.html",
-    "href": "coding.html",
-    "title": "Code as scientific product",
-    "section": "",
-    "text": "Codes are part of the scientific products your Lab is producing. It is thus important to manage, document, and preserve them as you would do for any other of your scientific products. In this session, we will discuss tools and practices that can ease the management of your codes, as well as develop them in a collaborative way.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Code as scientific product"
-    ]
-  },
-  {
-    "objectID": "coding.html#code-repository",
-    "href": "coding.html#code-repository",
-    "title": "Code as scientific product",
-    "section": "Code repository",
-    "text": "Code repository\nAs data repositories, code repositories are a great way to preserve and share your code (including with your future self!!). One you might have already heard of is GitHub. However, there are other options such as GitLab, Bitbucket Source Forge, and more.\nIn this session, we will be focusing on using GitHub to collaborate and keep track of the development of our scripts.\n\nQuick intro to GitHub\n\nWhy\nWebsite interface walk-through\n\nGitHub Organizations\n\nWhy\nsetup\nmanage: teams and settings\n\nCollaborative coding workflows & techniques\n\nPair Programming\nCode Exchange\nBranch and fork workflows\n\nStreamlining documentation with templates\n\nRepositories",
-    "crumbs": [
-      "Coding as a Lab",
-      "Code as scientific product"
-    ]
-  },
-  {
-    "objectID": "preserve_readme.html",
-    "href": "preserve_readme.html",
-    "title": "The power of READMEs",
-    "section": "",
-    "text": "README files are not a new thing. They have been around computer projects since the early days. One great thing about the popularization of supporting the markdown syntax (and its web rendering in most code repositories) is that you can move beyond a simple text file and start to present a compelling entry point to your project that can link to various parts and external resources.\nGood types of information to have on a README:\n\nTitle capturing the essence of the project\nList of current contributors\nA short explanation of the goal / purpose\nHow to install / where to start\nA quick demo on how to use the content (can be a link to another document as well)\nWhat to do if a bug is spotted\nHow to contribute\nLicensing\nAcknowledgements of authors, contributors, sponsors or other related work\n\nAdding images, short videos / animations can make a README more engaging.\n\nData README\nMost data repositories will ask you to provide some kind of README file to help describe the content you are archiving. Here is a template you may customize for your project needs: https://doi.org/10.5281/zenodo.10828379\n\n\nCode README\nNeed some inspiration ?\n\nHere is a interesting template: https://github.com/navendu-pottekkat/awesome-readme/tree/master\nWhen you start an R package with the usethis package, a README will be created for you with all the relevant sections for such type of project.\npick a package you like and inspect their README",
-    "crumbs": [
-      "Preserving things",
-      "The power of README"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About RDS",
-    "section": "",
-    "text": "Research Data Services (RDS) helps UCSB researchers manage and preserve their research data through:\n\nConsultations\nLong-term engagements\nInstructional workshops\n\nOur team offers support across the research data lifecycle, from pre-project planning to post-project archival, connecting researchers with both locally- and externally-provided curation services. Our goal is to ensure that all research data is well-described, FAIR (Findable, Accessible, Interoperable, Reusable), and sustainably preservable, and that researchers receive scholarly credit for sharing and publishing data.\nContact us if you have any questions: rds@library.ucsb.edu",
-    "crumbs": [
-      "About us",
-      "Data Research Services"
-    ]
-  },
-  {
-    "objectID": "datamgmt_manage.html",
-    "href": "datamgmt_manage.html",
-    "title": "Manage your data as you go",
-    "section": "",
-    "text": "While actively working on your projects, there are several practices that can help you to manage your data in an efficient manner that will help you to collaborate with others (including your futureself!) and make your work more reproducible.",
-    "crumbs": [
-      "Managing your Lab data",
-      "Manage"
-    ]
-  },
-  {
-    "objectID": "datamgmt_manage.html#track-your-data-sources",
-    "href": "datamgmt_manage.html#track-your-data-sources",
-    "title": "Manage your data as you go",
-    "section": "Track your data sources",
-    "text": "Track your data sources\nAs you collect your data, if using pre-existing data sources, we strongly recommend that you keep track of where/by whom you accessed the data you will use. It can be a link to a data archive, an official agency website, or the contact information of a person. This data log can be developed using a spreadsheet that you can share with your team. The goal here is to make sure you can:\n\nGo back to the original source and the right version of the data\nCorrectly attribute/cite the data sources when you project\nReach out to data creators and ask for potential clarifications you might need to correctly interpret the data\nInquiry for any data updates at a later date",
-    "crumbs": [
-      "Managing your Lab data",
-      "Manage"
-    ]
-  },
-  {
-    "objectID": "datamgmt_manage.html#keep-raw-data-raw",
-    "href": "datamgmt_manage.html#keep-raw-data-raw",
-    "title": "Manage your data as you go",
-    "section": "Keep raw data raw",
-    "text": "Keep raw data raw\nDuring the data collection phase, also make sure to create a dedicated folder(s) to save the raw data version you just acquired.\nIf you are using a programmatic approach to acquire your data (e.g., API), make sure to only read the raw data and save any processed intermediate data products in a different folder. We recommend changing the permissions on your raw data folder to read-only to avoid any unexpected incidents.\nIf you are accessing the data using a Graphical User Interface (GUI), we recommend you create a “working copy” of your raw data in a separate folder and use those files as it is often very easy to accidentally overwrite it.",
-    "crumbs": [
-      "Managing your Lab data",
-      "Manage"
-    ]
-  },
-  {
-    "objectID": "datamgmt_manage.html#project-organization",
-    "href": "datamgmt_manage.html#project-organization",
-    "title": "Manage your data as you go",
-    "section": "Project organization",
-    "text": "Project organization\nWe generally recommend encapsulating your project into few folders. It will make it more portable when combined with a relative path and help you keep the information centralized in one place. Here is a potential starting point for your file structure with three subfolders:\n\nData: where you will store your data with the following file structure\n\nInput_data: to store the raw data you collected or/and are reusing\nIntermediate_data: to store any cleaned or merged data sets\nAnalysis_data: any model analytical outputs that you computed\n\nCode or Scripts: you can store your scripts in this folder. You can keep everything within the folder using filename to organize it or create subfolders as needed\nResults: to store tables, graphs, reports, or any other scientific products you are producing\n\nIn the top-level folder, we also recommend you write a README to explain your project, list the contributors and provide information on how to best navigate your project folder as well as a short description of the files it contains.\n\n\n\nSource: RDS Data Literacy Series\n\n\nThink of what README template could be developed for your research lab to help with standardizing this information across projects.",
-    "crumbs": [
-      "Managing your Lab data",
-      "Manage"
-    ]
-  },
-  {
-    "objectID": "datamgmt_manage.html#adopt-a-consistent-naming-convention",
-    "href": "datamgmt_manage.html#adopt-a-consistent-naming-convention",
-    "title": "Manage your data as you go",
-    "section": "Adopt a consistent naming convention",
-    "text": "Adopt a consistent naming convention\nDevelop naming conventions for files and folders:\n\nAvoid spaces (use underscores or dashes)\nAvoid punctuation or special characters\nTry to leverage alphabetical order (e.g., start with dates: 2020-05-08)\nUse descriptive naming (lite metadata)\nUse folders to structure/organize content\nKeep it simple\nMake it programmatically useful:\n\nUseful to select files (Wildcard *, regular expression)\nBut don’t forget Humans need to read file names too!!\nTip: leverage the use of _ and - to make your filename readable by both Humans and machines!\n\n\n\nTry it:\nWhich filename would be the most useful?\n\n06-2020-08-sensor2-plot1.csv\n2020-05-08_light-sensor-1_plot-1.csv\nMeasurement 1.csv\n2020-05-08-light-sensor-1-plot-2.csv\n2020-05-08-windSensor1-plot3.csv\n\nRemember, the most important is to make it consistent!\nA good reference on this topic from Jenny Bryan (Posit).",
-    "crumbs": [
-      "Managing your Lab data",
-      "Manage"
-    ]
-  },
-  {
-    "objectID": "datamgmt_manage.html#backup-your-data",
-    "href": "datamgmt_manage.html#backup-your-data",
-    "title": "Manage your data as you go",
-    "section": "Backup your data",
-    "text": "Backup your data\nDon’t forget, things happen!!!",
-    "crumbs": [
-      "Managing your Lab data",
-      "Manage"
-    ]
-  },
-  {
-    "objectID": "03-handson_github_workflows.html",
-    "href": "03-handson_github_workflows.html",
-    "title": "GitHub workflows: forks and branches",
-    "section": "",
-    "text": "Setup\n\nPerson 1 (owner):\n\nCreate a repository using the following these instructions steps 1-6\n\n\n\nAdd Person 2 as collaborator following these instructions\nEdit the README to:\n\nReplace the title (first line starting with #) with something better! Maybe Favorite Desserts\nAdd your name and your favorite dessert below the title: e.g. - Julien: crepes\n\n\n\nknitr::include_graphics(\"img/github-readme_desserts.png\")\n\n\n\n\n\n\n\n\n\n\n\nForks\n\nPerson 2: Create a Fork\n\nAsk your teammate to Slack you the link to the repository\nCreate a Fork by clicking on the Fork button on the top right view of your repository homepage\n\n\n\n\n\n\n\n\n\n\n\nOn your Fork, start editing the README.md\nAdd your name and your favorite dessert below your teammate entry: e.g. - Sophia: chocolate\nAdd a descriptive commit message\n\n\nknitr::include_graphics(\"img/github-commit.png\")\n\n\n\n\n\n\n\n\n\nCommit your changes\n\n\n\n\n\n\n\n\n\n\n\nCreate a pull request to merge those changes to the main repository using these instructions\n\n\n\nPerson 1:\n\nGo to your repository and merge the PR\n\n\n\n\n\nBranches\n\nPerson 1: add a file\nDownload this csv file about your favorite desserts to your computer\n\nJust drag and drop it on the Github web page of your repository to upload it\nAdd a short message about the file: e.g. Adding dessert csv & hit Commit changes\nYour file has been uploaded. Click on the filename to see it!\n\nYou should have something similar to this repo: https://github.com/brunj7/favorite-desserts/blob/master/favorite_desserts.csv\nNow you want to collaborate more closely and do not wan your teammate to have to create a fork and be able to work directly on your repository\n\nAdd Person 2 as a collaborator following these instructions\n\n\n\nPerson 2: Create a branch\n\nCheck your email or Github Notifications to accept the invitation\nGo to the repository website (link is provided in the invitation)\nCreate a new branch named after your first name\n\n\nknitr::include_graphics(\"img/github-create_branch.png\")\n\n\n\n\n\n\n\n\n\nEdit the csv file directly on GitHub to add your favorite dessert to it\nCreate a Pull Request (PR) to merge you branch back to main\nAssign person 1 as a reviewer (instructions)\n\n\n\nPerson 1: Merge the branch\n\nReview PR\nMerge and close PR",
-    "crumbs": [
-      "Coding as a Lab",
-      "Collaborative strategies",
-      "Hands-on: forks & branches with Github website"
-    ]
-  },
-  {
-    "objectID": "02-handson_github_rstudio.html",
-    "href": "02-handson_github_rstudio.html",
-    "title": "GitHub branches using RStudio",
-    "section": "",
-    "text": "Write and R script to compare the csv with your favorite desserts you modified previously with the top 42 most iconic American desserts\n\nClone the repository you just created about your favorite desserts\nCreate a new branch using RStudio and name it *myinitials*_rstudio\nStart a new script named desserts_match_*myinitials*.R\nAs pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see code below) into R and find out if your favorite dessert is part of the most iconic desserts!\nPush your changes to GitHub\nOn the GitHub website, create a Pull Request (PR) and assign your teammate as reviewer\nReviewer – Review the PR. Make comments and/or OK the merge\nRequester – Merge and close the PR\n\n\n\n\n\n\n\nCode to get the iconic desserts listing\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)  # use to scrape website content\n\n# Check if that data folder exists and creates it if not\ndir.create(\"data\", showWarnings = FALSE)\n\n# Read the webpage code\nwebpage &lt;- read_html(\"https://www.eatthis.com/iconic-desserts-united-states/\")\n\n# Extract the desserts listing\ndessert_elements&lt;- html_elements(webpage, \"h2\")\ndessert_listing &lt;- dessert_elements %&gt;% \n  html_text2() %&gt;%             # extracting the text associated with this type of elements of the webpage\n  as_tibble() %&gt;%              # make it a data frame\n  rename(dessert = value) %&gt;%  # better name for the column\n  head(.,-3) %&gt;%               # 3 last ones were not desserts \n  rowid_to_column(\"rank\") %&gt;%  # adding a column using the row number as proxy for the rank\n  write_csv(\"data/iconic_desserts.csv\") # save it as csv",
-    "crumbs": [
-      "Coding as a Lab",
-      "Collaborative strategies",
-      "Hands-on: Branches using RStudio"
-    ]
-  },
-  {
-    "objectID": "02-handson_github_rstudio.html#is-your-fav-dessert-iconic",
-    "href": "02-handson_github_rstudio.html#is-your-fav-dessert-iconic",
-    "title": "GitHub branches using RStudio",
-    "section": "",
-    "text": "Write and R script to compare the csv with your favorite desserts you modified previously with the top 42 most iconic American desserts\n\nClone the repository you just created about your favorite desserts\nCreate a new branch using RStudio and name it *myinitials*_rstudio\nStart a new script named desserts_match_*myinitials*.R\nAs pair programming, write a script should read a csv file of your favorite dessert (create it if you do not have one yet) and the csv file with the most iconic desserts (see code below) into R and find out if your favorite dessert is part of the most iconic desserts!\nPush your changes to GitHub\nOn the GitHub website, create a Pull Request (PR) and assign your teammate as reviewer\nReviewer – Review the PR. Make comments and/or OK the merge\nRequester – Merge and close the PR\n\n\n\n\n\n\n\nCode to get the iconic desserts listing\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)  # use to scrape website content\n\n# Check if that data folder exists and creates it if not\ndir.create(\"data\", showWarnings = FALSE)\n\n# Read the webpage code\nwebpage &lt;- read_html(\"https://www.eatthis.com/iconic-desserts-united-states/\")\n\n# Extract the desserts listing\ndessert_elements&lt;- html_elements(webpage, \"h2\")\ndessert_listing &lt;- dessert_elements %&gt;% \n  html_text2() %&gt;%             # extracting the text associated with this type of elements of the webpage\n  as_tibble() %&gt;%              # make it a data frame\n  rename(dessert = value) %&gt;%  # better name for the column\n  head(.,-3) %&gt;%               # 3 last ones were not desserts \n  rowid_to_column(\"rank\") %&gt;%  # adding a column using the row number as proxy for the rank\n  write_csv(\"data/iconic_desserts.csv\") # save it as csv",
-    "crumbs": [
-      "Coding as a Lab",
-      "Collaborative strategies",
-      "Hands-on: Branches using RStudio"
-    ]
-  },
-  {
-    "objectID": "github_teams.html",
-    "href": "github_teams.html",
-    "title": "GitHub Teams",
-    "section": "",
-    "text": "You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages, and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google Drive, this is the same concept.\nTeams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually.",
+    "text": "Jenny Bryan Happy git with R http://happygitwithr.com/\nIntro to GitHub and using git from RStudio GUI: http://ohi-science.org/data-science-training/collaborating.html\nIntro to git and Github using the command line: https://nceas.github.io/oss-lessons/version-control/1-git-basics.html\nTry git in 15min: https://try.github.io/levels/1/challenges/1\nGit terminology: https://www.atlassian.com/git/glossary/terminology\ngit rebase https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase",
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Setting up Teams to better collaborate"
+      "Git and GitHub further readings"
     ]
   },
   {
-    "objectID": "github_teams.html#what-are-github-teams",
-    "href": "github_teams.html#what-are-github-teams",
-    "title": "GitHub Teams",
-    "section": "",
-    "text": "You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages, and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google Drive, this is the same concept.\nTeams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually.",
+    "objectID": "git_further_readings.html#git-workflows",
+    "href": "git_further_readings.html#git-workflows",
+    "title": "Further readings",
+    "section": "Git workflows",
+    "text": "Git workflows\n\nComparing workflow: https://www.atlassian.com/git/tutorials/comparing-workflows\nForking vs branching: https://stackoverflow.com/questions/3611256/forking-vs-branching-in-github\nDevelopment workflow: https://github.com/sevntu-checkstyle/sevntu.checkstyle/wiki/Development-workflow-with-Git:-Fork,-Branching,-Commits,-and-Pull-Request",
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Setting up Teams to better collaborate"
+      "Git and GitHub further readings"
     ]
   },
   {
-    "objectID": "github_teams.html#create-a-team",
-    "href": "github_teams.html#create-a-team",
-    "title": "GitHub Teams",
-    "section": "Create a team",
-    "text": "Create a team\nIn the navigation bar at the top of your organization page, click on the Teams tab. Normally this is the page you use to see and manage the existing teams of your organization. Since we do not have teams yet, this page provides a short overview of what teams can be used for. Click on the New Team green button at the bottom to start creating your first team.\n\nProved the name and a short description of your team. We recommend to let the other options to their default settings.\n\n\n\n\n\nYour team has been created, but as of now you are the only member. Let’s invite some collaborators by clicking on the Add a member button on the top right.\n\n\n\n\n\nOn this new window, you can search for GitHub users by their username. If you do not know their username you can search by their full names. Note that if there are no pictures associated with the profile you found or are not sure it is the right person, we recommend not adding this person at this time and reaching out asking for their username (which is unique). When you are sure you found the right persons you can click on Invite.\n\n\n\n\n\nYour collaborators will receive an invitation to join the team. They will have to accept the invitation before they can use the benefits (access to repositories, …) associated with the team. Once your collaborators have accepted your team should look like below.\n\n\n\n\n\nOK, let’s create a second team! In this example, we will create a Research Facilitators team with two members.\n\n\n\n\n\nOnce your GitHub organization has teams, you will the number of existing teams next to the Teams tab.",
+    "objectID": "git_further_readings.html#branches",
+    "href": "git_further_readings.html#branches",
+    "title": "Further readings",
+    "section": "Branches",
+    "text": "Branches\n\nInteractive tutorial to learn more about git branches and more https://learngitbranching.js.org/",
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Setting up Teams to better collaborate"
+      "Git and GitHub further readings"
     ]
   },
   {
-    "objectID": "github_teams.html#leveraging-teams",
-    "href": "github_teams.html#leveraging-teams",
-    "title": "GitHub Teams",
-    "section": "Leveraging teams",
-    "text": "Leveraging teams\nLet’s create a new repository and use our newly created teams to add several collaborators at once.\n\n\n\n\n\nUnder your newly created organization, create a new repository with the following settings:\n\n\n\n\n\nOnce the repository is created, click on the Settings tab (top right in the grey bar)\n\n\n\n\n\nOn the left panel, click on Collaborators and teams and then click on the green button Add teams\n\n\n\n\n\nStart typing the name of the team you would like to add. Suggestions of teams should come up as you type. Select the relevant team by clicking on the suggestion.\n\n\n\n\n\nFor close collaborators, we recommend using the Maitain level of access that provides a good blend of people being able to do most of the actions they will need to do while not being allowed to conduct destructive actions on accident (like deleting the entire repository). For collaborators you are less familiar with, including their familiarity with GitHub, you might want to start with the Write access.\n\n\n\n\n\nOnce the team added, your settings should look as follow:\n\n\n\n\n\nThe good news is now if you add a collaborator to a specific team, this person will automatically gain access to all the repositories that team has access to! This will streamline the on- and off- boarding process of your team members.",
+    "objectID": "git_further_readings.html#undoing-things",
+    "href": "git_further_readings.html#undoing-things",
+    "title": "Further readings",
+    "section": "Undoing things",
+    "text": "Undoing things\n\nHelp to decide how to undo your problem: http://justinhileman.info/article/git-pretty/git-pretty.png\nUndo almost everything with git https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/\nDifference between git reset soft, mixed and hard https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/\nResetting, Checking Out & Reverting https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting",
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Setting up Teams to better collaborate"
-    ]
-  },
-  {
-    "objectID": "github_org.html",
-    "href": "github_org.html",
-    "title": "GitHub Organizations",
-    "section": "",
-    "text": "Facilitate collaboration:\n\nCreate teams to easily assign people to repositories\nManage tasks at the organization level (not tight to a specific repository)\n\nSimplify code management:\n\nThe organization owns the repository\nDesign templates to streamline documentation\nAssign roles to users, including external collaborators\n\nIncrease your visibility on GitHub:\n\nCreate a landing page introducing your lab\nOne stop to see your Lab contributions",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "GitHub Organizations for your Lab"
-    ]
-  },
-  {
-    "objectID": "github_org.html#why-a-github-organization",
-    "href": "github_org.html#why-a-github-organization",
-    "title": "GitHub Organizations",
-    "section": "",
-    "text": "Facilitate collaboration:\n\nCreate teams to easily assign people to repositories\nManage tasks at the organization level (not tight to a specific repository)\n\nSimplify code management:\n\nThe organization owns the repository\nDesign templates to streamline documentation\nAssign roles to users, including external collaborators\n\nIncrease your visibility on GitHub:\n\nCreate a landing page introducing your lab\nOne stop to see your Lab contributions",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "GitHub Organizations for your Lab"
-    ]
-  },
-  {
-    "objectID": "github_org.html#setting-up-your-labs-github-organization",
-    "href": "github_org.html#setting-up-your-labs-github-organization",
-    "title": "GitHub Organizations",
-    "section": "Setting up your Lab’s GitHub Organization",
-    "text": "Setting up your Lab’s GitHub Organization\nBefore setting up your organization, make sure that you have claimed your education GitHub account first!!\n\n\n\n\n\n\nDid you know you are eligible for GitHub Education perks?\n\n\n\nSince we are part of an University, students and faculty have access to special account benefits for free. The application process is straightforward. Get started here: https://education.github.com/\n\n\n\nYou can create an organization by clicking on the + sign menu at the top right of the GitHub taskbar and select New organization\n\n\n\n\n\n\n\nThis will send you to a new page with several options to start your organization. Choose the free option at this time.\n\n\n\n\n\n\n\nNow you can provide the name of your organization. We recommend naming it in a way that reflects your Lab name to help with the organization’s branding. Select the email you used to get the education discount and check the “my personal account” option.\n\n\n\n\n\n\n\nAnd congratulations this is it!! You can now invite your collaborators to the organization (you will be able to do so later as well).\n\n\n\n\n\n\n\nYour organization page should look as follows:\n\n\n\n\n\n\nNote all the suggestions that GitHub is providing to help you customize your organization according to your needs. We are going to follow the recommendation on the right side (red box above) to add a special README.md that will act as a landing page for our organization.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "GitHub Organizations for your Lab"
-    ]
-  },
-  {
-    "objectID": "github_org.html#customizing-your-github-organization",
-    "href": "github_org.html#customizing-your-github-organization",
-    "title": "GitHub Organizations",
-    "section": "Customizing your GitHub Organization",
-    "text": "Customizing your GitHub Organization\n\nAdding a landing page\nAdding a landing page is a great opportunity to describe your research lab and what content one can expect to find in this organization. It is also a good location to describe guidelines on how to best engage with you and provide contact information.\n\nClick on the create a README file on the right sidebar (see red box above). This will trigger the creation of a new special repository called .github that will be used to host your README file. Click Create repository.\n\n\n\n\n\n\n\nFill out the necessary information as follows:\n\n\n\n\n\n\nWe recommend checking the box Add a README file as a good practice but note it is not the README that will be used as your landing page, it is the one describing this new repository hosting your landing page README in a special subfolder.\n\nCreate your landing page by clicking on the Add README button on the right sidebar (red box below)\n\n Note the path to this special README: .github/profile/README.md\n\nEdit your landing page. The template used to create this special README provides suggestions about the type of information you might want to add to your landing page. Those suggestions are in a comment block (delimited by &lt;!-- & --&gt;) and thus won’t be shown when the README is rendered. We still do recommend deleting this block once you are done editing your README\n\n\n\n\n\n\nHere is an example of how we defined the landing page README for our test organization:\n\n\n\n\n\n\nSave your README: Now that you have your first version of your GitHub organization landing page (you can always iterate later on it), we are ready to save this version by clicking on the Commit changes button (red box above). This will prompt a new page where you can add a commit message to describe the changes. Finally, you can hit the Commit changes button to save this version.\n\n\n\n\n\n\nVoilà 🎉 !! When you go back to your organization’s main page, you should now see the text you just wrote at the top of the landing page!\n\n\n\n\n\n\n\nSetting up your organization profile\nNow that you have a landing page, it is also a great idea to fill out some metadata about your organization under the Settings tab of the main navigation bar (top right). This will help with the discovery of your Organization. You can provide a more Human friendly name, an email to reach out to you, a short description of your organization, and an URL such as your lab home page.\n\nFinally, click Update profile to save your changes.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "GitHub Organizations for your Lab"
-    ]
-  },
-  {
-    "objectID": "github_template.html",
-    "href": "github_template.html",
-    "title": "Using GitHub Templates to document things",
-    "section": "",
-    "text": "You can create templates to model a specific repository setup when creating a new repository. The advantage of such a template is that you can provide a boilerplate for the README and any other files you would like your collaborators to provide when setting up a new project / repository.\nTo create a template repository you can either use an existing one or create a new one for this specific purpose. We are going to do the latter.\nLet’s create a new repository as we have done previously we recommend adding the word “template” in the name so it makes its purpose more obvious\n\n\n\n\n\nNow you can work on the content of the repository, for example adding a README with instructions to follow when setting up a new repository: https://github.com/awesomer-lab/repo-template\nOnce your repository is ready, you can go to the Settings tab in the taskbar of the repository and check the box Template repository under the repository name.\n\n\n\n\n\nNote that you can keep editing the template repository after this step.\nNow you can use your template when creating a new repository by selecting your template from the dropdown menu above the repository name. Note is might take a few seconds to fetch all your templates.\n\n\n\n\n\nVoilà! Now you can create standardized repositories and documentation quite easily!! Note that under the name of the newly created repository from the template, it is mentioned that it was created from a template.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Streamlining documentation",
-      "Repository template"
-    ]
-  },
-  {
-    "objectID": "github_template.html#repository-templates",
-    "href": "github_template.html#repository-templates",
-    "title": "Using GitHub Templates to document things",
-    "section": "",
-    "text": "You can create templates to model a specific repository setup when creating a new repository. The advantage of such a template is that you can provide a boilerplate for the README and any other files you would like your collaborators to provide when setting up a new project / repository.\nTo create a template repository you can either use an existing one or create a new one for this specific purpose. We are going to do the latter.\nLet’s create a new repository as we have done previously we recommend adding the word “template” in the name so it makes its purpose more obvious\n\n\n\n\n\nNow you can work on the content of the repository, for example adding a README with instructions to follow when setting up a new repository: https://github.com/awesomer-lab/repo-template\nOnce your repository is ready, you can go to the Settings tab in the taskbar of the repository and check the box Template repository under the repository name.\n\n\n\n\n\nNote that you can keep editing the template repository after this step.\nNow you can use your template when creating a new repository by selecting your template from the dropdown menu above the repository name. Note is might take a few seconds to fetch all your templates.\n\n\n\n\n\nVoilà! Now you can create standardized repositories and documentation quite easily!! Note that under the name of the newly created repository from the template, it is mentioned that it was created from a template.",
-    "crumbs": [
-      "Coding as a Lab",
-      "Streamlining documentation",
-      "Repository template"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Designing a Reproducible and Collaborative Lab (RCL)",
-    "section": "",
-    "text": "Workshop Series and Coaching Sessions for Faculty and their Teams to help Research Labs set up infrastructures and practices to make their research more reproducible, enable reuse of their own work, and collaborate more effectively.\n\nTopics\n\nCoding as a lab\nManaging your lab data\nAutomating your analytical workflows\nDocumenting & preserving things to make them reusable\n\n\n\nFormat\n\nScheduled at your convenience\n4 workshops (2-3h) as a primer on a specific topic\nPersonalized coaching sessions focused on lab-specific needs\n\n\n\nOutcomes\n\nMore reproducible management of your lab’s scientific products (data, code etc.)\nBetter analytical strategies for collaboration Safety nets for your research lab content\nMore efficient reuse of your work\nStreamlined on- and off -boarding\n\n\n\nLearning Opportunities\n\nLeverage GitHub to manage and collaborate on your Lab’s code\nDevelop strategies to centralize and manage your Lab’s data\nSet up templates and guidelines on how to document your Lab research and improve its reusability\nEstablish Lab standard operating procedures and documentation standards\nProtect your Lab’s scientific products against loss through backup and computing resources strategies\n\n\n\n\n\n\n\n\n\n\nCitationBibTeX citation:@online{brun2024,\n  author = {Brun, Julien and Curty, Renata and Janée, Greg},\n  title = {Designing a {Reproducible} and {Collaborative} {Lab} {(RCL)}},\n  date = {2024-05-31},\n  url = {https://ucsb-library-research-data-services.github.io/reproducible-lab/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nBrun, Julien, Renata Curty, and Greg Janée. 2024. “Designing a\nReproducible and Collaborative Lab (RCL).” May 31, 2024. https://ucsb-library-research-data-services.github.io/reproducible-lab/.",
-    "crumbs": [
-      "About RCL"
-    ]
-  },
-  {
-    "objectID": "intro_cli.html",
-    "href": "intro_cli.html",
-    "title": "Using the Command line Interface",
-    "section": "",
-    "text": "The CLI provides a direct way to interact with the Operating System, by typing in commands.\n\n\n\nMight be the only interface you have to a High Performance Computer (HPC)\nCommand statements can be reused easily and saved as scripts\nEasier automation and text files manipulation\n\n\n\n\n\nCommand Line Interface (CLI): This is a user interface that lets you interact with a computer. It is a legacy from the early days of computers. Now a days computers have graphical user interfaces instead (MacOSX, Windows, Linux, …)\nTerminal: It is a an application that lets you run a command line interface. It used to be a physical machine connected to a mainframe computer\nShell: It is the program that runs the command line. There are many different shells, the most common (an default on most system) being bash (Bourne Again SHell)\n\n\n\n\n\n\n\nTip\n\n\n\nNot convinced? Check this out: the CLI pitch\n\n\n\n\n\nYou can access the command line directly from RStudio by using the Terminal tab next to your R console.\n\n\n\n\n\n\npwd: Know where you are\nls: List the content of the directory\ncd: Go inside a directory\n\nSome pseudo directory names. Wherever you are:\n\n~ : Home directory\n. : Here (current directory)\n..: Up one level (upper directory)\n\nLet’s put this into action:\n\ngo to my “Home” directory: cd ~\ngo up one directory level: cd ..\nlist the content: ls\nlist the content showing hidden files: ls -a note that -a is referred as an option (modifies the command)\n\nMore files/directories manipulations:\n\nmkdir: Create a directory\ncp: Copy a file\nmv: Move a file it is also how you rename a file!\nrm / rmdir: Remove a file / directory use those carefully, there is no return / Trash!!\n\nNote: typing is not your thing? the &lt;tab&gt; key is your friend! One hit it will auto-complete the file/directory/path name for you. If there are many options, hit it twice to see the options.\n\n\n\nAll files have permissions and ownership.\n\n\n\nFile permissions\n\n\n\nList files showing ownership and permissions: ls -l\n\n\nbrun@taylor:/courses/EDS214$ ls -l\ntotal 16\ndrwxrwxr-x+ 3 brun      esmdomainusers 4096 Aug 20 04:49 data\ndrwxrwxr-x+ 2 katherine esmdomainusers 4096 Aug 18 18:32 example    \n\nYou can change those permissions:\n\nChange permissions: chmod\nChange ownership: chown\n\n\n\n\n\n\n\nTip\n\n\n\nClear contents in terminal window: clear\n\n\n\n\n\n\ncommand [options] [arguments]\n\nwhere command must be an executable file on your PATH * echo $PATH\nand options can usually take two forms * short form: -a * long form: --all\nYou can combine the options:\n\nls -ltrh\n\nWhat do these options do?\n\nman ls\n\n\n\n\n\n\n\nTip\n\n\n\nhit spacebar to get to the next page of the manual hit q to exit the help\n\n\n\n\n\nFrom the gitbash (MS Windows) or the terminal (Mac) type:\n\nssh taylor.bren.ucsb.edu\n\nYou will be prompted for your username and password.\n\n\n\naurora_ssh\n\n\nYou can also directly add your username:\n\nssh brun@taylor.bren.ucsb.edu\n\nIn this case, you will be only asked for your password as you already specified which user you want to connect with.\n\n\n\n\nWho else is logged into this machine? who\nWho is logged into “this shell”? whoami\n\n\n\n\n\n&lt;command&gt; -h, &lt;command&gt; --help\nman, info, apropos, whereis\nSearch the web!\n\n\n\n\nShow me my Rmarkdown files!\n\nfind . -iname '*.Rmd'\n\nWhich files are larger than 1GB?\n\nfind . -size +1G\n\nWith more details about the files:\n\nfind . -size +1G -ls\n\n\n\n\n\n\n\nCancel (abort) a command: Ctrl-c Note: very different than Windows!!\nStop (suspend) a command: Ctrl-z\nCtrl-z can be used to suspend, then background a process\n\n\n\n\n\nLike Windows Task Manager, OSX Activity Monitor\ntop, ps, jobs (hit q to get out!)\nkill to delete an unwanted job or process\nForeground and background: &\n\n\n\n\n\nHow much storage is available on this system? df -h\nHow much storage am “I” using overall? du -hs &lt;folder&gt;\nHow much storage am “I” using, by sub directory? du -h &lt;folder&gt;\n\n\n\n\n\nSee your command history: history\nRe-run last command: !! (pronounced “bang-bang”)\nRe-run 32th command: !32\nRe-run 5th from last command: !-5\nRe-run last command that started with ‘c’: !c\n\n\n\n\n\n\nwc count lines, words, and/or characters\ndiff compare two files for differences\nsort sort lines in a file\nuniq report or filter out repeated lines in a file\n\n\n\n\n\n\n\nstdin, stdout, stderr\n\n\n\n$ ls *.png | wc -l\n$ ls *.png | wc -l &gt; pngcount.txt\n$ diff &lt;(sort file1.txt) &lt;(sort file2.txt)\n$ ls foo 2&gt;/dev/null\n\n\nnote use of * as character wildcard for zero or more matches (same in Mac and Windows)\n? matches single character; _ is SQL query equivalent\n\n\n\n\n\n\n\nvim\nemacs\nnano\n\n\n$ nano .bashrc",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Using the command line"
-    ]
-  },
-  {
-    "objectID": "intro_cli.html#short-introduction-to-the-command-line-interface-cli",
-    "href": "intro_cli.html#short-introduction-to-the-command-line-interface-cli",
-    "title": "Using the Command line Interface",
-    "section": "",
-    "text": "The CLI provides a direct way to interact with the Operating System, by typing in commands.\n\n\n\nMight be the only interface you have to a High Performance Computer (HPC)\nCommand statements can be reused easily and saved as scripts\nEasier automation and text files manipulation\n\n\n\n\n\nCommand Line Interface (CLI): This is a user interface that lets you interact with a computer. It is a legacy from the early days of computers. Now a days computers have graphical user interfaces instead (MacOSX, Windows, Linux, …)\nTerminal: It is a an application that lets you run a command line interface. It used to be a physical machine connected to a mainframe computer\nShell: It is the program that runs the command line. There are many different shells, the most common (an default on most system) being bash (Bourne Again SHell)\n\n\n\n\n\n\n\nTip\n\n\n\nNot convinced? Check this out: the CLI pitch\n\n\n\n\n\nYou can access the command line directly from RStudio by using the Terminal tab next to your R console.\n\n\n\n\n\n\npwd: Know where you are\nls: List the content of the directory\ncd: Go inside a directory\n\nSome pseudo directory names. Wherever you are:\n\n~ : Home directory\n. : Here (current directory)\n..: Up one level (upper directory)\n\nLet’s put this into action:\n\ngo to my “Home” directory: cd ~\ngo up one directory level: cd ..\nlist the content: ls\nlist the content showing hidden files: ls -a note that -a is referred as an option (modifies the command)\n\nMore files/directories manipulations:\n\nmkdir: Create a directory\ncp: Copy a file\nmv: Move a file it is also how you rename a file!\nrm / rmdir: Remove a file / directory use those carefully, there is no return / Trash!!\n\nNote: typing is not your thing? the &lt;tab&gt; key is your friend! One hit it will auto-complete the file/directory/path name for you. If there are many options, hit it twice to see the options.\n\n\n\nAll files have permissions and ownership.\n\n\n\nFile permissions\n\n\n\nList files showing ownership and permissions: ls -l\n\n\nbrun@taylor:/courses/EDS214$ ls -l\ntotal 16\ndrwxrwxr-x+ 3 brun      esmdomainusers 4096 Aug 20 04:49 data\ndrwxrwxr-x+ 2 katherine esmdomainusers 4096 Aug 18 18:32 example    \n\nYou can change those permissions:\n\nChange permissions: chmod\nChange ownership: chown\n\n\n\n\n\n\n\nTip\n\n\n\nClear contents in terminal window: clear\n\n\n\n\n\n\ncommand [options] [arguments]\n\nwhere command must be an executable file on your PATH * echo $PATH\nand options can usually take two forms * short form: -a * long form: --all\nYou can combine the options:\n\nls -ltrh\n\nWhat do these options do?\n\nman ls\n\n\n\n\n\n\n\nTip\n\n\n\nhit spacebar to get to the next page of the manual hit q to exit the help\n\n\n\n\n\nFrom the gitbash (MS Windows) or the terminal (Mac) type:\n\nssh taylor.bren.ucsb.edu\n\nYou will be prompted for your username and password.\n\n\n\naurora_ssh\n\n\nYou can also directly add your username:\n\nssh brun@taylor.bren.ucsb.edu\n\nIn this case, you will be only asked for your password as you already specified which user you want to connect with.\n\n\n\n\nWho else is logged into this machine? who\nWho is logged into “this shell”? whoami\n\n\n\n\n\n&lt;command&gt; -h, &lt;command&gt; --help\nman, info, apropos, whereis\nSearch the web!\n\n\n\n\nShow me my Rmarkdown files!\n\nfind . -iname '*.Rmd'\n\nWhich files are larger than 1GB?\n\nfind . -size +1G\n\nWith more details about the files:\n\nfind . -size +1G -ls\n\n\n\n\n\n\n\nCancel (abort) a command: Ctrl-c Note: very different than Windows!!\nStop (suspend) a command: Ctrl-z\nCtrl-z can be used to suspend, then background a process\n\n\n\n\n\nLike Windows Task Manager, OSX Activity Monitor\ntop, ps, jobs (hit q to get out!)\nkill to delete an unwanted job or process\nForeground and background: &\n\n\n\n\n\nHow much storage is available on this system? df -h\nHow much storage am “I” using overall? du -hs &lt;folder&gt;\nHow much storage am “I” using, by sub directory? du -h &lt;folder&gt;\n\n\n\n\n\nSee your command history: history\nRe-run last command: !! (pronounced “bang-bang”)\nRe-run 32th command: !32\nRe-run 5th from last command: !-5\nRe-run last command that started with ‘c’: !c\n\n\n\n\n\n\nwc count lines, words, and/or characters\ndiff compare two files for differences\nsort sort lines in a file\nuniq report or filter out repeated lines in a file\n\n\n\n\n\n\n\nstdin, stdout, stderr\n\n\n\n$ ls *.png | wc -l\n$ ls *.png | wc -l &gt; pngcount.txt\n$ diff &lt;(sort file1.txt) &lt;(sort file2.txt)\n$ ls foo 2&gt;/dev/null\n\n\nnote use of * as character wildcard for zero or more matches (same in Mac and Windows)\n? matches single character; _ is SQL query equivalent\n\n\n\n\n\n\n\nvim\nemacs\nnano\n\n\n$ nano .bashrc",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Using the command line"
-    ]
-  },
-  {
-    "objectID": "intro_cli.html#hands-on",
-    "href": "intro_cli.html#hands-on",
-    "title": "Using the Command line Interface",
-    "section": "Hands-on",
-    "text": "Hands-on\nLet’s practice our new skills! Click here",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Using the command line"
-    ]
-  },
-  {
-    "objectID": "intro_cli.html#aknowledgements",
-    "href": "intro_cli.html#aknowledgements",
-    "title": "Using the Command line Interface",
-    "section": "Aknowledgements",
-    "text": "Aknowledgements\nThis section adapted materials from NCEAS Open Science for Synthesis (OSS) intensive summer schools and other training. Contributions to this content have been made by Mark Schildhauer, Matt Jones, Jim Regetz and many others; and from EDS-213 10 bash essentials developed by Greg Janée",
-    "crumbs": [
-      "Coding as a Lab",
-      "Coding together",
-      "Using the command line"
+      "Git and GitHub further readings"
     ]
   },
   {
