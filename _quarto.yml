@@ -76,7 +76,7 @@ website:
             text: "The power of README"
           - href: datamgmt_preserve-code.qmd
             text: "Preserve your code"
-          - href: datamgmt_preserve.qmd
+          - href: datamgmt_preserve-data.qmd
             text: "Preserve your data"
       - section: "About us"
         contents:
