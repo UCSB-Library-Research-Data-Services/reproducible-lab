@@ -14,6 +14,8 @@ title: "GitHub Organizations"
 - Increase your visibility on GitHub:
   - Create a landing page introducing your lab
   - One stop to see your Lab contributions
+  
+**Here is an example we created: <https://github.com/awesomer-lab>** 
 
 
 ## Setting up your Lab's GitHub Organization
