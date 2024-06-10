@@ -28,6 +28,8 @@ Most data repositories will ask you to provide some kind of README file to help 
 
 Need some inspiration ?
 
+- Curated list of READMEs: <https://github.com/matiassingers/awesome-readme>
+
 - Here is a interesting template: <https://github.com/navendu-pottekkat/awesome-readme/tree/master>
 
 - When you start an R package with the `usethis` package, a README will be created for you with all the relevant sections for such type of project.
