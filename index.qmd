@@ -16,40 +16,39 @@ citation:
 categories: [data-science, collaboration, reproducible-research]
 ---
 
-Workshop Series and Coaching Sessions for Faculty and their Teams to help Research Labs set up infrastructures and practices to make their research more reproducible, enable reuse of their own work, and collaborate more effectively.
-
+The “Designing a Reproducible and Collaborative Research Lab” program, currently piloted by the Research & Data Services (RDS) department at the [UCSB Library](https://www.library.ucsb.edu/), combines group workshops, own-pace learning, and personalized coaching sessions for Faculty and their Team son the following topics.
 
 ### Topics
 
-- Coding as a lab
-- Managing your lab data
-- Automating your analytical workflows
-- Documenting & preserving things to make them reusable
-
+-   Coding as a lab
+-   Managing your lab data
+-   Automating your analytical workflows
+-   Documenting & preserving things to make them reusable
 
 ### Format
 
-- Scheduled at your convenience
-- 4 workshops (2-3h) as a primer on a specific topic
-- Personalized coaching sessions focused on lab-specific needs
-
+-   Scheduled at your convenience
+-   4 workshops (2-3h) as a primer on a specific topic
+-   Personalized coaching sessions focused on lab-specific needs
 
 ### Outcomes
 
-- More reproducible management of your lab's scientific products (data, code etc.) 
-- Better analytical strategies for collaboration Safety nets for your research lab content 
-- More efficient reuse of your work
-- Streamlined on- and off -boarding
-
+-   More reproducible management of your lab's scientific products (data, code etc.)
+-   Better analytical strategies for collaboration safety nets for your research lab content
+-   More efficient reuse of your work
+-   Streamlined on- and off -boarding of collaborators
 
 ### Learning Opportunities
 
-- Leverage GitHub to manage and collaborate on your Lab’s code 
-- Develop strategies to centralize and manage your Lab’s data 
-- Set up templates and guidelines on how to document your Lab research and improve its reusability
-- Establish Lab standard operating procedures and documentation standards
-- Protect your Lab’s scientific products against loss through backup and computing resources strategies
+-   Leverage GitHub to manage and collaborate on your Lab’s code
+-   Develop strategies to centralize and manage your Lab’s data
+-   Set up templates and guidelines on how to document your Lab research and improve its reusability
+-   Establish Lab operating procedures and documentation standards
+-   Protect your Lab’s scientific products against loss through backup and computing resources strategies
+
+### Want to know more?
+
+If you are interested in this program, please see the [about](about.qmd) page to connect with us.
 
 
-
-![](img/rds_hex.png){fig-align="center" width=50%}
+![](img/rds_hex.png){fig-align="center" width="50%"}
