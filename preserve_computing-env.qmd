@@ -15,4 +15,4 @@ In Python:
 
 ### Virtual environments
 
-You can even go a step further and help others to recreate the same computing environment that you used independently of what versions you have installed on your machine: https://rstudio.github.io/renv/articles/renv.html
+You can even go a step further and help others to recreate the same computing environment that you used independently of what versions you have installed on your machine: <https://rstudio.github.io/renv/articles/renv.html>
