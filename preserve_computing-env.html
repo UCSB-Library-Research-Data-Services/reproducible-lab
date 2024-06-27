@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -405,9 +439,153 @@ ul.task-list li input[type="checkbox"] {
 <p><code>pip freeze &gt; requirements.txt</code> will capture all the python modules installed in your current environment</p>
 <section id="virtual-environments" class="level3">
 <h3 class="anchored" data-anchor-id="virtual-environments">Virtual environments</h3>
-<p>You can even go a step further and help others to recreate the same computing environment that you used independently of what versions you have installed on your machine: https://rstudio.github.io/renv/articles/renv.html</p>
+<p>You can even go a step further and help others to recreate the same computing environment that you used independently of what versions you have installed on your machine.</p>
+<p><a href="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExemkwd3RnMzA4a3FocHZ2bWJscHgxNG9yaW4yeGZ6YzZpaXgzNHJhciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/x2woMnCz4W0Vy/giphy.gif">Level up!</a></p>
+<section id="r" class="level4">
+<h4 class="anchored" data-anchor-id="r">R</h4>
+<p>Here is a short introduction to <code>renv</code>, an R package that creates virtual environment to encapsulate your R work. <img src="../../img/renv.png" class="img-fluid" alt="source: https://rstudio.github.io/renv/articles/renv.html"></p>
+<p>We are going to add renv to our shorebird data cleaning project. Make sure you have the renv package installed:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You may also choose Tools&gt;Project Options&gt;Environments and check “use renv for this project”</p>
+<p>Or at the R console:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>( )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Let’s check the new files that we have…</p>
+<ul>
+<li>Look at the .gitignore</li>
+<li>Look at the renv.lock file</li>
+</ul>
+<p>Let’s say we reworked our script and suppose we would need the <a href="https://cran.r-project.org/web/packages/naniar/vignettes/getting-started-w-naniar.html">naniar</a> R package to deal with the NAs. Let’s update or virtual environment:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"naniar"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Add some R code using this package, for example</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(naniar)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>snowsurvey_csv <span class="sc">%&gt;%</span> </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">miss_var_summary</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Alright, now that the installation is completed and we added this package to our code, we can save, and take a snapshot:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This action will update the lock file, and we will see naniar and all its dependencies included.</p>
+<p>Let’s check. If updated, you should be good to go. If your attempts to update packages introduced new problems, you may run <code>renv::restore()</code> to revert to the previous state as encoded in the lockfile.</p>
+<p>Use <code>.libPaths()</code> to confirm where package installations are located!</p>
+<p>Want to know more? here is a good resource to get started: <a href="https://rstudio.github.io/renv/articles/renv.html" class="uri">https://rstudio.github.io/renv/articles/renv.html</a></p>
+</section>
+<section id="python" class="level4">
+<h4 class="anchored" data-anchor-id="python">Python</h4>
+<p><a href="https://docs.python-guide.org/dev/virtualenvs/#lower-level-virtualenv"><code>virtualenv</code></a> is a tool to create Python virtual environments. In a nutsheel here are the steps to follow:</p>
+<p>Create a new folder, your project folder. I will use EDS213. Make sure you set the path to this folder.</p>
+<ul>
+<li>Note: The environment will be created in the current version of Python that you are running (in Conda we can specify the version we want).</li>
+</ul>
+<p>To create the environment: (second venv is the name of the environment)</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv venv213</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>The <code>-m</code> flag makes sure you are creating a pip that is tied to the active Python executable</li>
+</ul>
+<p><strong>Time to activate it:</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> venv213/bin/activate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can tell it is activated because it shows (venv213) in the prompt.</p>
+<p>Let’s check which packages are there with a new <code>pip list</code></p>
+<p>Nothing, right? Only setup tools, and pip). Nothing to worry about, it should be this way! Let’s proceed.</p>
+<p><strong>Install libraries:</strong></p>
+<p>We will be installing two packages for this exercise.</p>
+<p>First:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install numpy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>And then:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pandas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>This should take a little longer!</em></p>
+<p>Another <code>pip list</code></p>
+<p>Alright, the packages and dependencies installed are right there!</p>
+<p><strong>Export and allow future replication of the environment:</strong></p>
+<p>Let’s save the packages and dependencies we have after the installs.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> freeze</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>That should be stored in a `requirements.txt file</p>
+<p>So let’s get it redirected to the required file:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> freeze <span class="op">&gt;</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Question: This file won’t leave inside the venv folder, but rather in the project root folder any idea why?</p>
+<p>Well, you only need that file to reproduce the environment. And the venv should be should throw away and be able to rebuild easily! So, do not include any project file in that folder and treat that as disposable after the pip freeze</p>
+<p>To double-check if all is good, we can run the following command:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This file should be included in your repository to let others reinstall your packages and dependencies as needed.</p>
+<p><strong>Deactivate</strong></p>
+<p>If you are done with that, you should deactivate that environment by typing:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">deactivate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then, you will see you no longer have the environment we created in our prompt.</p>
+<p>If you are willing to delete the environment altogether, you should delete the directory for the virtual environment</p>
+<p>Remove folder:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> venv213/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Reusing the Requirements</strong></p>
+<p><em>Create a new project folder to reuse the requirements</em></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> my-project</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Create a virtual env for it</em></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv my-project/venv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Activate it</em></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> my-project/venv/bin/activate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Install required packages</em></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>Attention! Never include project files in the venv folder.</p></li>
+<li><p>Do not commit your venv file to the environment itself to source control (git ignore)</p></li>
+<li><p>You may install more packages and update the requirements.txt with the pip freeze command</p></li>
+<li><p>You should commit /share only your requirements.txt file. That is all that others and your future self need to recreate the environment.</p></li>
+<li><p>The environment should be something you should throw away and be able to rebuild easily.</p></li>
+<li><p>Make sure to deactivate when done using it.</p></li>
+</ul>
+</section>
+<section id="if-you-are-using-conda" class="level4">
+<h4 class="anchored" data-anchor-id="if-you-are-using-conda">If you are using Conda</h4>
+<p><strong>Checking what is in the system:</strong></p>
+<p>conda list</p>
+<p>To create the environment:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> env213</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>proceed ([y]/n)? y</p>
+<p>Time to activate it</p>
+<p>conda activate env213 only work on conda 4.6 and later versions. For Conda versions prior to 4.6, run:</p>
+<ul>
+<li>Windows: activate or Linux and macOS: source activate</li>
+</ul>
+<p>You can tell it is activated because it shows (venv213) in the prompt.</p>
+<p>Let’s check which packages are there with a new</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> list env213</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Empty, right? Nothing to worry about, it should be this way! Let’s proceed.</p>
+<p><strong>Install packages:</strong></p>
+<p>We will be installing two packages for this exercise.</p>
+<p>First:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install numpy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>proceed ([y]/n)? y</p>
+<p>And then, one more package:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install Pandas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>proceed ([y]/n)? y</p>
+<p>Now check which packages are in the specific environment we are working on:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Alright, the packages and dependencies installed are right there!</p>
+<p><strong>Export and allow future replication of the environment:</strong></p>
+<p>Let’s save the packages and dependencies we have after the installs.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> list <span class="at">--export</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>That should be stored in a environments.yml file</p>
+<p>So let’s get it redirected to the required file:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> list <span class="at">-e</span> <span class="op">&gt;</span> environment.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This file should be included in your research compendium to let others reinstall your packages and dependencies as needed.</p>
+<p><strong>Deactivate it:</strong></p>
+<p>If you are done with that, you should deactivate that environment by typing:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> deactivate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Note: only works on conda 4.6 and later versions. For conda versions before 4.6, run:</p>
+<p>Windows: <code>deactivate</code> or Linux and macOS: <code>source deactivate</code></p>
+<p>Then, you will see you no longer have the environment we created in our prompt.</p>
+<p>If you are willing to delete the environment altogether, you should delete the directory for the virtual environment</p>
+<p><strong>Back to base we can create a new environment based on the .yml packages and dependencies by running (this is noted on top of the yml file):</strong></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> my-env <span class="at">--file</span> environment.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>proceed ([y]/n)? y</p>
+<p><strong>Activate it:</strong></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate my-env <span class="er">(</span><span class="ex">or</span> see above if conda version <span class="dt">\&lt;</span> 4.6<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>proceed ([y]/n)? Y</p>
+<p><strong>Check if packages are there:</strong></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Remember to deactivate it when done:</strong></p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> deactivate <span class="er">(</span><span class="ex">or</span> see above if conda version <span class="dt">\&lt;</span> 4.6<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Check all your environments <code>conda env list</code></p>
+<p>More info: <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html"><u>https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html</u></a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
