@@ -85,28 +85,40 @@ We will talk more about GitHub Organizations later. In a nutshell, organizations
 
 ### Let's look at a repository on GitHub
 
-This screen shows the copy of a repository stored on GitHub,
-with its <span style="color:red">list of files</span>, <span style="color:green">when the files and directories were last modified</span>, 
-and <span style="color:blue">some information on who made the most recent changes.</span>  
+The screenshot below shows the landing page of a repository on GitHub. We would like to highlight different important part of this view:
 
-![](img/ss3sim-github_colored.png){fig-align="center" width=80%}
+- Directly under the navigation bar (top-left) you will find the name of the repository (orange)
+- Above the files listing, there is information about the latest commit to this repository (blue)
+- On the left, you will have the files and folder names (red)
+- In the middle, the last commit message on this file (or file contained in a folder) (purple)
+- On the right, the time stamps of the latest commit (green)
 
-If we drill into the 
-"<span style="color:orange">commits</span>" for the repository, we can see the history of changes made to all of 
-the files.  Looks like `kellijohnson` and `seananderson` were fixing things in
-June and July:
+![](img/github-repo.png){fig-align="center" width=80%}
 
-![](img/ss3sim-commits_colored.png){fig-align="center" width=80%}
+Below the file listing, there will be a rendering of the README.md file, one more reason to make sure to add one :) 
+Looking into more details at the information provided about the last commit, we can see that we know:
 
-And finally, if we drill into the changes made on June 13, we can see exactly what
-was changed in each file:
+- Which user did this last commit (brunj7) and the associated commit message
+- The the 7 first digit of unique identifier ([SHA](https://en.wikipedia.org/wiki/Secure_Hash_Algorithms)) of this commit
+- When this last commit was made (3 months ago)
+= The total number of commits on this branch (43 Commits)
 
-![](img/ss3sim-diff.png){fig-align="center" width=80%}
+![](img/github-repo_last-comit.png){fig-align="center" width=80%}
 
-Tracking these changes, and seeing how they relate to released versions of software and files
+This total number of commits is actually a hyperlink that lets you access the full history of the main branch by clicking on it.
+
+![](img/github-repo_history.png){fig-align="center" width=80%}
+
+
+We can keep drilling and look at a specific commit by clicking on the hash number. For example if we look at the first commit at the top (20bc390), we can see the exact changes that have been made:
+
+
+![](img/github-repo_commit-view.png){fig-align="center" width=80%}
+
+Tracking these changes, and seeing how they relate to scripts and files
 is exactly what Git and GitHub are good for. We will show how they can really 
-be effective for tracking versions of scientific code, figures, and manuscripts
-to accomplish a reproducible workflow.
+be effective for tracking versions of scientific code, figures, and other text 
+files such as manuscripts to develop a reproducible workflow.
 
 
 ## Recap

@@ -39,7 +39,7 @@ website:
               - href: git_cli.qmd
                 text: "Using git at the command line"
               - href: git_conflicts.qmd
-                text: "Managing version conflicts"
+                text: "Managing conflicts"
               - href: git_further_readings.qmd
                 text: "Git and GitHub further readings"
           - section: "Collaborative strategies"

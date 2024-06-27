@@ -129,5 +129,5 @@ Don't forget to pull and push to synchronize your local changes with GitHub.
 
 If you now look at the history, you can see how git has tracked the conflict resolution. We will talk about branches later on, but spoiler alert it looks very much how you would merge a branch back to the main branch.
 
-![](img/git_conflict-09_post_merge_history.png){fig-align="center" width=60%}
+![](img/git_conflict-09_post_merge_history.png){fig-align="center" width=80%}
 
