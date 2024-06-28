@@ -84,7 +84,7 @@ Want to know more? here is a good resource to get started: <https://rstudio.gith
 
 [`virtualenv`](https://docs.python-guide.org/dev/virtualenvs/#lower-level-virtualenv) is a tool to create Python virtual environments. In a nutsheel here are the steps to follow:
 
- Create a new folder, your project folder. I will use EDS213. Make
+ Create a new folder, your project folder. I will use `first_example`. Make
     sure you set the path to this folder.
 
 -   Note: The environment will be created in the current version of
@@ -94,7 +94,7 @@ Want to know more? here is a good resource to get started: <https://rstudio.gith
 To create the environment: (second venv is the name of the environment)
 
 ```bash
-python3 -m venv venv213
+python3 -m venv first_example
 ```
 
 -   The `-m` flag makes sure you are creating a pip that is tied to the
@@ -103,10 +103,10 @@ python3 -m venv venv213
 **Time to activate it:**
 
 ```bash
-source venv213/bin/activate
+source first_example/bin/activate
 ```
 
-You can tell it is activated because it shows (venv213) in the prompt.
+You can tell it is activated because it shows (first_example) in the prompt.
 
 Let's check which packages are there with a new `pip list`
 
@@ -115,7 +115,7 @@ should be this way! Let's proceed.
 
 **Install libraries:**
 
-We will be installing two packages for this exercise.
+We will be installing two packages for this example.
 
 First:
 
@@ -187,7 +187,7 @@ delete the directory for the virtual environment
 Remove folder:
 
 ```bash
-rm -rf venv213/
+rm -rf first_example/
 ```
 
 **Reusing the Requirements**
@@ -195,19 +195,19 @@ rm -rf venv213/
 *Create a new project folder to reuse the requirements*
 
 ```bash
-mkdir my-project
+mkdir my_project
 ```
 
 *Create a virtual env for it*
 
 ```bash
-python3 -m venv my-project/venv
+python3 -m venv my_project/venv
 ```
 
 *Activate it*
 
 ```bash
-source my-project/venv/bin/activate
+source my_project/venv/bin/activate
 ```
 
 *Install required packages*
@@ -243,24 +243,24 @@ conda list
 To create the environment:
 
 ```bash
-conda create --name env213
+conda create --name first_example
 ```
 
 proceed (\[y\]/n)? y
 
 Time to activate it
 
-conda activate env213 only work on conda 4.6 and later versions. For
+conda activate first_example only work on conda 4.6 and later versions. For
 Conda versions prior to 4.6, run:
 
 -   Windows: activate or Linux and macOS: source activate
 
-You can tell it is activated because it shows (venv213) in the prompt.
+You can tell it is activated because it shows (first_example) in the prompt.
 
 Let's check which packages are there with a new 
 
 ```bash
-conda list env213
+conda list first_example
 ```
 
 Empty, right? Nothing to worry about, it should be this way! Let's
