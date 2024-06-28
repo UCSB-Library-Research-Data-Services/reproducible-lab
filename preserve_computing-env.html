@@ -406,7 +406,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#virtual-environments" id="toc-virtual-environments" class="nav-link active" data-scroll-target="#virtual-environments">Virtual environments</a></li>
+  <li><a href="#virtual-environments" id="toc-virtual-environments" class="nav-link active" data-scroll-target="#virtual-environments">Virtual environments</a>
+  <ul class="collapse">
+  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -437,12 +441,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><code>sessionInfo()</code> or <code>devtools::session_info()</code> are great ways to capture this information. You should save it into a session_info.txt file to include in your GitHub repository</p>
 <p>In Python:</p>
 <p><code>pip freeze &gt; requirements.txt</code> will capture all the python modules installed in your current environment</p>
-<section id="virtual-environments" class="level3">
-<h3 class="anchored" data-anchor-id="virtual-environments">Virtual environments</h3>
+<section id="virtual-environments" class="level2">
+<h2 class="anchored" data-anchor-id="virtual-environments">Virtual environments</h2>
 <p>You can even go a step further and help others to recreate the same computing environment that you used independently of what versions you have installed on your machine.</p>
 <p><a href="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExemkwd3RnMzA4a3FocHZ2bWJscHgxNG9yaW4yeGZ6YzZpaXgzNHJhciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/x2woMnCz4W0Vy/giphy.gif">Level up!</a></p>
-<section id="r" class="level4">
-<h4 class="anchored" data-anchor-id="r">R</h4>
+<section id="r" class="level3">
+<h3 class="anchored" data-anchor-id="r">R</h3>
 <p>Here is a short introduction to <code>renv</code>, an R package that creates virtual environment to encapsulate your R work. <img src="../../img/renv.png" class="img-fluid" alt="source: https://rstudio.github.io/renv/articles/renv.html"></p>
 <p>We are going to add renv to our shorebird data cleaning project. Make sure you have the renv package installed:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -468,8 +472,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Use <code>.libPaths()</code> to confirm where package installations are located!</p>
 <p>Want to know more? here is a good resource to get started: <a href="https://rstudio.github.io/renv/articles/renv.html" class="uri">https://rstudio.github.io/renv/articles/renv.html</a></p>
 </section>
-<section id="python" class="level4">
-<h4 class="anchored" data-anchor-id="python">Python</h4>
+<section id="python" class="level3">
+<h3 class="anchored" data-anchor-id="python">Python</h3>
 <p><a href="https://docs.python-guide.org/dev/virtualenvs/#lower-level-virtualenv"><code>virtualenv</code></a> is a tool to create Python virtual environments. In a nutsheel here are the steps to follow:</p>
 <p>Create a new folder, your project folder. I will use EDS213. Make sure you set the path to this folder.</p>
 <ul>
@@ -529,7 +533,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>The environment should be something you should throw away and be able to rebuild easily.</p></li>
 <li><p>Make sure to deactivate when done using it.</p></li>
 </ul>
-</section>
 <section id="if-you-are-using-conda" class="level4">
 <h4 class="anchored" data-anchor-id="if-you-are-using-conda">If you are using Conda</h4>
 <p><strong>Checking what is in the system:</strong></p>
@@ -585,6 +588,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>More info: <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html"><u>https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html</u></a></p>
 
 
+</section>
 </section>
 </section>
 
