@@ -13,7 +13,7 @@ In Python:
 
 `pip freeze > requirements.txt` will capture all the python modules installed in your current environment
 
-### Virtual environments
+## Virtual environments
 
 You can even go a step further and help others to recreate the same computing environment that you used independently of what versions you have installed on your machine.
 
@@ -21,7 +21,7 @@ You can even go a step further and help others to recreate the same computing en
 
 
 
-#### R
+### R
 
 Here is a short introduction to `renv`, an R package that creates virtual environment to encapsulate your R work. ![source: https://rstudio.github.io/renv/articles/renv.html](../../img/renv.png)
 
@@ -80,7 +80,7 @@ Use `.libPaths()` to confirm where package installations are located!
 Want to know more? here is a good resource to get started: <https://rstudio.github.io/renv/articles/renv.html>
 
 
-#### Python
+### Python
 
 [`virtualenv`](https://docs.python-guide.org/dev/virtualenvs/#lower-level-virtualenv) is a tool to create Python virtual environments. In a nutsheel here are the steps to follow:
 
