@@ -2,7 +2,7 @@
 title: "Pair Programming"
 ---
 
-Pair programming is an *synchronous* team activity, where several programmers get to work together on the same piece of code. This is a great way to gain a better sense of what coding style people are using and better understand their way of solving challenges. It is also a great way to learn from each other. Generally, there is one Driver who is the person typing at the computer. The other role is called Navigator(s). The Navigator does not write code and focuses on finding solutions to the problem. Their use of computers should be limited to searching online for solutions.
+Pair programming is a *synchronous* team activity, where several programmers get to work together on the same piece of code. This is a great way to gain a better sense of what coding style people are using and better understand their way of solving challenges. It is also a great way to learn from each other. Generally, there is one Driver who is the person typing on the computer. The other role is called Navigator(s). The Navigator does not write code and focuses on finding solutions to the problem. Their use of computers should be limited to searching online for solutions.
 
 
 ## Basic principles & practices 
