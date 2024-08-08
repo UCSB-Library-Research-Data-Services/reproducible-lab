@@ -75,7 +75,7 @@ This page can be reached using with the following URL: https://github.com/`usern
 ![](img/github_overview-02_user.png)
 
 
-### GtiHub Organization page
+### GitHub Organization page
 
 We will talk more about GitHub Organizations later. In a nutshell, organizations are like groups or teams that users can be members of. Like Users, Organizations can have a landing page and own repositories. However, they add several perks in terms of user management. Similarly to Users, you can access repositories from an Organization by clicking on the _repositories_ tab in the main GitHub menu bar at the top. You can access an organization's page similarly to a user: https://github.com/`organization-name`; e.g.  <https://github.com/UCSB-Library-Research-Data-Services>
 
