@@ -444,7 +444,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="git">git</h2>
 <p><img style="float: right;width: 100px;" src="img/git_icon.png"></p>
 <p>This section focuses on the code versioning system called <code>Git</code>. Note that there are others, such as <code>Mercurial</code> or <code>svn</code> for example.</p>
-<p>Git is a <em>free</em> and <em>open source</em> distributed <em>version control system</em>. It has many functionalities and was originally geared towards software development and production environment. In fact, Git was initially designed and developed in 2005 by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel. Here is a <a href="https://www.youtube.com/watch?v=4XpnKHJAok8">fun video</a> of Linus Torvalds touting Git to Google.</p>
+<p>Git is a <em>free</em> and <em>open source</em> distributed <em>version control system</em>. It has many functionalities and was originally geared towards software development and production environment. Git was initially designed and developed in 2005 by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel. Here is a <a href="https://www.youtube.com/watch?v=4XpnKHJAok8">fun video</a> of Linus Torvalds touting Git to Google.</p>
 <p><strong>How does it work?</strong></p>
 <p>Git can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a <strong>repository</strong> (which formally is a specific data structure storing versioning information).</p>
 <p><strong>What git is not:</strong></p>
@@ -471,7 +471,7 @@ Fun fact
 <section id="repository" class="level3">
 <h3 class="anchored" data-anchor-id="repository">Repository</h3>
 <p>Git can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a <strong>repository</strong> (which formally is a specific data structure storing versioning information).</p>
-<p>Although there are many ways to start a new repository, <a href="https://github.com/">GitHub</a> (or any other cloud solutions, such as <a href="https://about.gitlab.com/">GitLab</a>) provide among the most convenient way of starting a repository.</p>
+<p>Although there are many ways to start a new repository, <a href="https://github.com/">GitHub</a> (or any other cloud solution, such as <a href="https://about.gitlab.com/">GitLab</a>) provides among the most convenient way of starting a repository.</p>
 <p><img style="float: right;width: 100px;" src="img/github-logo.png"></p>
 </section>
 </section>
@@ -485,7 +485,7 @@ Fun fact
 </section>
 <section id="gtihub-user-page" class="level3">
 <h3 class="anchored" data-anchor-id="gtihub-user-page">GtiHub User page</h3>
-<p>This page can be reached using with the following URL: https://github.com/<code>username</code>. For my user (<code>brunj7</code>) it would be: <a href="https://github.com/brunj7" class="uri">https://github.com/brunj7</a>. It is a great space for you to provide some information about yourself and the main repositories you are working on. It also lists the GitHub Organizations you are part of. But more importantly, Users own repositories to host and share their code. You can list repositories from a User by clicking on the <em>repositories</em> tab in the main GitHub menu bar at the top.</p>
+<p>This page can be reached using the following URL: https://github.com/<code>username</code>. For my user (<code>brunj7</code>) it would be: <a href="https://github.com/brunj7" class="uri">https://github.com/brunj7</a>. It is a great space for you to provide some information about yourself and the main repositories you are working on. It also lists the GitHub Organizations you are part of. But more importantly, Users own repositories to host and share their code. You can list repositories from a User by clicking on the <em>repositories</em> tab in the main GitHub menu bar at the top.</p>
 <p><img src="img/github_overview-02_user.png" class="img-fluid"></p>
 </section>
 <section id="github-organization-page" class="level3">
@@ -499,7 +499,7 @@ Fun fact
 </section>
 <section id="lets-look-at-a-repository-on-github" class="level3">
 <h3 class="anchored" data-anchor-id="lets-look-at-a-repository-on-github">Let’s look at a repository on GitHub</h3>
-<p>The screenshot below shows the landing page of a repository on GitHub. We would like to highlight different important part of this view:</p>
+<p>The screenshot below shows the landing page of a repository on GitHub. We would like to highlight different important parts of this view:</p>
 <ul>
 <li>Directly under the navigation bar (top-left) you will find the name of the repository (orange)</li>
 <li>Above the files listing, there is information about the latest commit to this repository (blue)</li>
@@ -523,19 +523,19 @@ Fun fact
 <p><img src="img/github-repo_last-comit.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
-<p>This total number of commits is actually a hyperlink that lets you access the full history of the main branch by clicking on it.</p>
+<p>This total number of commits is a hyperlink that lets you access the full history of the main branch by clicking on it.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/github-repo_history.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
-<p>We can keep drilling and look at a specific commit by clicking on the hash number. For example if we look at the first commit at the top (20bc390), we can see the exact changes that have been made:</p>
+<p>We can keep drilling and look at a specific commit by clicking on the hash number listed on the right. For example, we can look at the first commit at the top (d2b75a5) and display the exact changes that have been made since the previous (also named <code>parent</code>) commit <code>20bc390</code>:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/github-repo_commit-view.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
-<p>Tracking these changes, and seeing how they relate to scripts and files is exactly what Git and GitHub are good for. We will show how they can really be effective for tracking versions of scientific code, figures, and other text files such as manuscripts to develop a reproducible workflow.</p>
+<p>Tracking these changes, and seeing how they relate to scripts and files is exactly what Git and GitHub are good for. We will show how they can be effective for tracking versions of scientific code, figures, and other text files such as manuscripts to develop a reproducible workflow.</p>
 </section>
 </section>
 <section id="recap" class="level2">
