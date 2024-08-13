@@ -127,7 +127,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_computing-env.html">Preserve your computing environment</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_computing-env.html">Your computing environment</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -344,19 +344,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./preserve_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preserve your code</span></a>
+ <span class="menu-text">Your code</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./preserve_computing-env.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Preserve your computing environment</span></a>
+ <span class="menu-text">Your computing environment</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./preserve_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preserve your data</span></a>
+ <span class="menu-text">Your data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -417,7 +417,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_computing-env.html">Preserve your computing environment</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preserve_prompts.html">Preserving things</a></li><li class="breadcrumb-item"><a href="./preserve_computing-env.html">Your computing environment</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Preserve your computing environment</h1>
 </div>
@@ -538,8 +538,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Checking what is in the system:</strong></p>
 <p>conda list</p>
 <p>To create the environment:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> first_example</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>proceed ([y]/n)? y</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> first_example</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> proceed <span class="kw">(</span><span class="ex">\[y\]/n</span><span class="kw">)</span><span class="ex">?</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Time to activate it</p>
 <p>conda activate first_example only work on conda 4.6 and later versions. For Conda versions prior to 4.6, run:</p>
 <ul>
@@ -552,11 +553,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Install packages:</strong></p>
 <p>We will be installing two packages for this exercise.</p>
 <p>First:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install numpy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>proceed ([y]/n)? y</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install numpy</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> proceed <span class="kw">(</span><span class="ex">\[y\]/n</span><span class="kw">)</span><span class="ex">?</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>And then, one more package:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install Pandas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>proceed ([y]/n)? y</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install Pandas</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> proceed <span class="kw">(</span><span class="ex">\[y\]/n</span><span class="kw">)</span><span class="ex">?</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now check which packages are in the specific environment we are working on:</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Alright, the packages and dependencies installed are right there!</p>
@@ -575,8 +578,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Then, you will see you no longer have the environment we created in our prompt.</p>
 <p>If you are willing to delete the environment altogether, you should delete the directory for the virtual environment</p>
 <p><strong>Back to base we can create a new environment based on the .yml packages and dependencies by running (this is noted on top of the yml file):</strong></p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> my-env <span class="at">--file</span> environment.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>proceed ([y]/n)? y</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> my-env <span class="at">--file</span> environment.yml</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> proceed <span class="kw">(</span><span class="ex">\[y\]/n</span><span class="kw">)</span><span class="ex">?</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Activate it:</strong></p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate my-env <span class="er">(</span><span class="ex">or</span> see above if conda version <span class="dt">\&lt;</span> 4.6<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>proceed ([y]/n)? Y</p>
@@ -1021,13 +1025,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./preserve_code.html" class="pagination-link" aria-label="Preserve your code">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preserve your code</span>
+      <a href="./preserve_code.html" class="pagination-link" aria-label="Your code">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Your code</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./preserve_data.html" class="pagination-link" aria-label="Preserve your data">
-        <span class="nav-page-text">Preserve your data</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./preserve_data.html" class="pagination-link" aria-label="Your data">
+        <span class="nav-page-text">Your data</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
