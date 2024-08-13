@@ -75,11 +75,11 @@ website:
           - href: preserve_readme.qmd
             text: "The power of README"
           - href: preserve_code.qmd
-            text: "Preserve your code"
+            text: "Your code"
           - href: preserve_computing-env.qmd
-            text: "Preserve your computing environment"
+            text: "Your computing environment"
           - href: preserve_data.qmd
-            text: "Preserve your data"
+            text: "Your data"
           - href: preserve_data-fair.qmd
             text: "Are you FAIR?"
           - href: preserve_self.qmd
