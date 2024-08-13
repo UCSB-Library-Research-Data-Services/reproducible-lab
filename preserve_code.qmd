@@ -5,7 +5,7 @@ title: "Preserve your code"
 ## Making your code readable
 
 ```{r, echo=FALSE, fig.cap= "https://twitter.com/cjm4189/status/1557346489613094914"}
-knitr::include_graphics("img/code_handover.jpeg")
+knitr::include_graphics("img/code_handover.png")
 ```
 
 
