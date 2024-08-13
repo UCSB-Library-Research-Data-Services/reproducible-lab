@@ -88,7 +88,7 @@
     "href": "index.html",
     "title": "Designing a Reproducible and Collaborative Lab (RCL)",
     "section": "",
-    "text": "The Designing a Reproducible and Collaborative Research Lab program, currently piloted by the Research & Data Services (RDS) department at the UCSB Library, combines group workshops, own-pace learning, and personalized coaching sessions for Faculty and their Team son the following topics.\n\nTopics\n\nCoding as a lab\nManaging your lab data\nAutomating your analytical workflows\nDocumenting & preserving things to make them reusable\n\n\n\nFormat\n\nScheduled at your convenience\n4 workshops (2-3h) as a primer on a specific topic\nPersonalized coaching sessions focused on lab-specific needs\n\n\n\nOutcomes\n\nMore reproducible management of your lab’s scientific products (data, code etc.)\nBetter analytical strategies for collaboration safety nets for your research lab content\nMore efficient reuse of your work\nStreamlined on- and off -boarding of collaborators\n\n\n\nLearning Opportunities\n\nLeverage GitHub to manage and collaborate on your Lab’s code\nDevelop strategies to centralize and manage your Lab’s data\nSet up templates and guidelines on how to document your Lab research and improve its reusability\nEstablish Lab operating procedures and documentation standards\nProtect your Lab’s scientific products against loss through backup and computing resources strategies\n\n\n\nWant to know more?\nIf you are interested in this program, please see the about page to connect with us.\n\n\n\n\n\n\n\n\n\nCitationBibTeX citation:@online{brun2024,\n  author = {Brun, Julien and Curty, Renata and Janée, Greg},\n  title = {Designing a {Reproducible} and {Collaborative} {Lab} {(RCL)}},\n  date = {2024-08-08},\n  url = {https://ucsb-library-research-data-services.github.io/reproducible-lab/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nBrun, Julien, Renata Curty, and Greg Janée. 2024. “Designing a\nReproducible and Collaborative Lab (RCL).” August 8, 2024. https://ucsb-library-research-data-services.github.io/reproducible-lab/.",
+    "text": "The Designing a Reproducible and Collaborative Research Lab program, currently piloted by the Research & Data Services (RDS) department at the UCSB Library, combines group workshops, own-pace learning, and personalized coaching sessions for Faculty and their Team son the following topics.\n\nTopics\n\nCoding as a lab\nManaging your lab data\nAutomating your analytical workflows\nDocumenting & preserving things to make them reusable\n\n\n\nFormat\n\nScheduled at your convenience\n4 workshops (2-3h) as a primer on a specific topic\nPersonalized coaching sessions focused on lab-specific needs\n\n\n\nOutcomes\n\nMore reproducible management of your lab’s scientific products (data, code etc.)\nBetter analytical strategies for collaboration safety nets for your research lab content\nMore efficient reuse of your work\nStreamlined on- and off -boarding of collaborators\n\n\n\nLearning Opportunities\n\nLeverage GitHub to manage and collaborate on your Lab’s code\nDevelop strategies to centralize and manage your Lab’s data\nSet up templates and guidelines on how to document your Lab research and improve its reusability\nEstablish Lab operating procedures and documentation standards\nProtect your Lab’s scientific products against loss through backup and computing resources strategies\n\n\n\nWant to know more?\nIf you are interested in this program, please see the about page to connect with us.\n\n\n\n\n\n\n\n\n\nCitationBibTeX citation:@online{brun2024,\n  author = {Brun, Julien and Curty, Renata and Janée, Greg},\n  title = {Designing a {Reproducible} and {Collaborative} {Lab} {(RCL)}},\n  date = {2024-08-13},\n  url = {https://ucsb-library-research-data-services.github.io/reproducible-lab/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nBrun, Julien, Renata Curty, and Greg Janée. 2024. “Designing a\nReproducible and Collaborative Lab (RCL).” August 13, 2024. https://ucsb-library-research-data-services.github.io/reproducible-lab/.",
     "crumbs": [
       "About RCL"
     ]
@@ -380,17 +380,6 @@
     ]
   },
   {
-    "objectID": "datamgmt_prompts.html#developing-your-research-lab-data-management-guidelines",
-    "href": "datamgmt_prompts.html#developing-your-research-lab-data-management-guidelines",
-    "title": "Data Management Prompts",
-    "section": "Developing your Research Lab data management guidelines",
-    "text": "Developing your Research Lab data management guidelines\nOne of the goals of our data management session together is to develop a common understanding of “good enough” norms to adhere to help manage your Research Lab data in a coordinated way. We strongly encourage building on those discussions to develop written guidelines that will reflect those norms and help onboard new lab members. Those guidelines should be seen as a living document that needs to evolve along your research activities.",
-    "crumbs": [
-      "Managing your Lab data",
-      "A few questions"
-    ]
-  },
-  {
     "objectID": "01-handson_github_website.html",
     "href": "01-handson_github_website.html",
     "title": "Using the GitHub website",
@@ -419,6 +408,17 @@
     "title": "Managing your lab data",
     "section": "",
     "text": "Data are also part of the scientific products your Lab is producing. It is thus important to develop strategies to manage them well, so you can reuse them. Well managed, data can become an an asset for your lab and your collaborators. In the end, the goal of managing your data is to develop documentation that will enable others (including your future self) to understand and reuse those data sets. This documentation does not start when you are wrapping up your project, this process needs to be integrated all along the data life cycle of your project.\n\n\nTo help you think about your Lab data management, you can divide the life cycle of a data set in several phases:\n\n\n\nResearch Data Management lifecycle; source: https://osf.io/d8fqh",
+    "crumbs": [
+      "Managing your Lab data",
+      "What is data management?"
+    ]
+  },
+  {
+    "objectID": "data_mgmt.html#goal-developing-your-research-lab-data-management-guidelines",
+    "href": "data_mgmt.html#goal-developing-your-research-lab-data-management-guidelines",
+    "title": "Managing your lab data",
+    "section": "Goal: developing your Research Lab data management guidelines",
+    "text": "Goal: developing your Research Lab data management guidelines\nOne of the goals of our data management session together is to develop a common understanding among lab members of “good enough” norms to adhere to help manage your research lab data in a coordinated way. We strongly encourage building on our discussions to develop written guidelines that reflect those norms and help onboard new lab members. Those guidelines should be seen as a living document that needs to evolve along with your research activities.",
     "crumbs": [
       "Managing your Lab data",
       "What is data management?"
