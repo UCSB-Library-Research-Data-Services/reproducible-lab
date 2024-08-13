@@ -14,7 +14,7 @@ In this session, we will be focusing on using GitHub to collaborate and keep tra
   - Why those are tools you want to use
   - GitHub Website interface walk-through
   - Using RStudio
-  - At the Commande line
+  - At the Command Line
 
 - GitHub Organizations
   - Why do you want one for your Lab
