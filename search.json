@@ -940,7 +940,7 @@
   {
     "objectID": "coding.html",
     "href": "coding.html",
-    "title": "Code as scientific product",
+    "title": "Code as a scientific product",
     "section": "",
     "text": "Codes are part of the scientific products your Lab is producing. It is thus important to manage, document, and preserve them as you would do for any other of your scientific products. In this session, we will discuss tools and practices that can ease the management of your codes, as well as develop them in a collaborative way.",
     "crumbs": [
@@ -951,9 +951,9 @@
   {
     "objectID": "coding.html#code-repository",
     "href": "coding.html#code-repository",
-    "title": "Code as scientific product",
+    "title": "Code as a scientific product",
     "section": "Code repository",
-    "text": "Code repository\nAs data repositories, code repositories are a great way to preserve and share your code (including with your future self!!). One you might have already heard of is GitHub. However, there are other options such as GitLab, Bitbucket Source Forge, and more.\nIn this session, we will be focusing on using GitHub to collaborate and keep track of the development of our scripts.\n\nQuick intro to GitHub\n\nWhy\nWebsite interface walk-through\n\nGitHub Organizations\n\nWhy\nsetup\nmanage: teams and settings\n\nCollaborative coding workflows & techniques\n\nPair Programming\nCode Exchange\nBranch and fork workflows\n\nStreamlining documentation with templates\n\nRepositories",
+    "text": "Code repository\nAs data repositories, code repositories are a great way to preserve and share your code (including with your future self!!). One you might have already heard of is GitHub. However, there are other options such as GitLab, Bitbucket Source Forge, and more.\nIn this session, we will be focusing on using GitHub to collaborate and keep track of the development of our scripts.\n\nQuick intro to git & GitHub\n\nWhy those are tools you want to use\nGitHub Website interface walk-through\nUsing RStudio\nAt the Commande line\n\nGitHub Organizations\n\nWhy do you want one for your Lab\nset it up\nmanage: teams and settings\n\nCollaborative coding workflows & strategies\n\nPair Programming\nCode Exchange\nBranch and fork workflows\n\nStreamlining documentation with templates\n\nRepositories",
     "crumbs": [
       "Coding as a Lab",
       "Code as scientific product"
