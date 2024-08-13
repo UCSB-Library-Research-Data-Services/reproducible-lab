@@ -244,9 +244,9 @@ To create the environment:
 
 ```bash
 conda create --name first_example
-```
 
-proceed (\[y\]/n)? y
+> proceed (\[y\]/n)? y
+```
 
 Time to activate it
 
@@ -274,17 +274,17 @@ First:
 
 ```bash
 conda install numpy
-```
 
-proceed (\[y\]/n)? y
+> proceed (\[y\]/n)? y
+```
 
 And then, one more package:
 
 ```bash
 conda install Pandas
-```
 
-proceed (\[y\]/n)? y
+> proceed (\[y\]/n)? y
+```
 
 Now check which packages are in the specific environment we are working
 on:
@@ -340,9 +340,9 @@ file):**
 
 ```bash
 conda create --name my-env --file environment.yml
-```
 
-proceed (\[y\]/n)? y
+> proceed (\[y\]/n)? y
+```
 
 **Activate it:**
 
