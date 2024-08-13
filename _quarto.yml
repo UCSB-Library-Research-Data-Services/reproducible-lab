@@ -14,7 +14,7 @@ website:
   sidebar:
     style: "docked"
     border: true
-    collapse-level: 1
+    collapse-level: 2
     contents:
       - href: index.qmd
         text: "About RCL"
