@@ -30,7 +30,7 @@ Version control systems help you track all of the changes to your files, without
 
 This section focuses on the code versioning system called `Git`. Note that there are others, such as `Mercurial` or `svn` for example.
 
-Git is a *free* and *open source* distributed *version control system*. It has many functionalities and was originally geared towards software development and production environment. In fact, Git was initially designed and developed in 2005 by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel. Here is a [fun video](https://www.youtube.com/watch?v=4XpnKHJAok8) of Linus Torvalds touting Git to Google. 
+Git is a *free* and *open source* distributed *version control system*. It has many functionalities and was originally geared towards software development and production environment. Git was initially designed and developed in 2005 by Linux kernel developers (including Linus Torvalds) to track the development of the Linux kernel. Here is a [fun video](https://www.youtube.com/watch?v=4XpnKHJAok8) of Linus Torvalds touting Git to Google. 
 
 **How does it work?**
 
@@ -51,7 +51,7 @@ Git was initially designed and developed by Linux kernel developers (including L
 
 Git can be enabled on a specific folder/directory on your file system to version files within that directory (including sub-directories). In git (and other version control systems) terms, this “tracked folder” is called a **repository** (which formally is a specific data structure storing versioning information).
 
-Although there are many ways to start a new repository, [GitHub](https://github.com/) (or any other cloud solutions, such as [GitLab](https://about.gitlab.com/)) provide among the most convenient way of starting a repository.
+Although there are many ways to start a new repository, [GitHub](https://github.com/) (or any other cloud solution, such as [GitLab](https://about.gitlab.com/)) provides among the most convenient way of starting a repository.
 
 <img style="float: right;width: 100px;" src="img/github-logo.png">
 
@@ -70,7 +70,7 @@ This is the default landing page when you log into your account. It provides a m
 
 ### GtiHub User page
 
-This page can be reached using with the following URL: https://github.com/`username`. For my user (`brunj7`) it would be: <https://github.com/brunj7>. It is a great space for you to provide some information about yourself and the main repositories you are working on. It also lists the GitHub Organizations you are part of. But more importantly, Users own repositories to host and share their code. You can list repositories from a User by clicking on the _repositories_ tab in the main GitHub menu bar at the top.
+This page can be reached using the following URL: https://github.com/`username`. For my user (`brunj7`) it would be: <https://github.com/brunj7>. It is a great space for you to provide some information about yourself and the main repositories you are working on. It also lists the GitHub Organizations you are part of. But more importantly, Users own repositories to host and share their code. You can list repositories from a User by clicking on the _repositories_ tab in the main GitHub menu bar at the top.
 
 ![](img/github_overview-02_user.png)
 
@@ -85,7 +85,7 @@ We will talk more about GitHub Organizations later. In a nutshell, organizations
 
 ### Let's look at a repository on GitHub
 
-The screenshot below shows the landing page of a repository on GitHub. We would like to highlight different important part of this view:
+The screenshot below shows the landing page of a repository on GitHub. We would like to highlight different important parts of this view:
 
 - Directly under the navigation bar (top-left) you will find the name of the repository (orange)
 - Above the files listing, there is information about the latest commit to this repository (blue)
@@ -105,20 +105,17 @@ Looking into more details at the information provided about the last commit, we 
 
 ![](img/github-repo_last-comit.png){fig-align="center" width=80%}
 
-This total number of commits is actually a hyperlink that lets you access the full history of the main branch by clicking on it.
+This total number of commits is a hyperlink that lets you access the full history of the main branch by clicking on it.
 
 ![](img/github-repo_history.png){fig-align="center" width=80%}
 
 
-We can keep drilling and look at a specific commit by clicking on the hash number. For example if we look at the first commit at the top (20bc390), we can see the exact changes that have been made:
+We can keep drilling and look at a specific commit by clicking on the hash number listed on the right. For example, we can look at the first commit at the top (d2b75a5) and display the exact changes that have been made since the previous (also named `parent`) commit `20bc390`:
 
 
 ![](img/github-repo_commit-view.png){fig-align="center" width=80%}
 
-Tracking these changes, and seeing how they relate to scripts and files
-is exactly what Git and GitHub are good for. We will show how they can really 
-be effective for tracking versions of scientific code, figures, and other text 
-files such as manuscripts to develop a reproducible workflow.
+Tracking these changes, and seeing how they relate to scripts and files is exactly what Git and GitHub are good for. We will show how they can  be effective for tracking versions of scientific code, figures, and other text files such as manuscripts to develop a reproducible workflow.
 
 
 ## Recap
