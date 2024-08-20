@@ -131,3 +131,17 @@ If you now look at the history, you can see how git has tracked the conflict res
 
 ![](img/git_conflict-09_post_merge_history.png){fig-align="center" width=80%}
 
+### Tips to reduce conflicts
+
+1. Always start your working sessions with a pull and Commit often in small chunks
+
+
+2. This can be often **avoided by good communication about who is working on various sections of each file, and trying to avoid overlaps**.  But sometimes it happens, and *git* is there to warn you about potential problems.  And git will not allow you to overwrite one person's changes to a file with another's changes to the same file if they were based on the same version.
+
+3. Encapsulate your work using branches and forks. This allows you to work on your modifications without interfering with your collaborator's work until you decide it is time to merge your changes via a Pull Request. Note this can still create conflicts between versions but at least you are in control of when it will happen and the Pull Request is a great opportunity to discuss conflicts with your collaborators.
+
+
+
+
+
+
