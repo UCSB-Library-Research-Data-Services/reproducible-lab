@@ -409,7 +409,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#first-and-foremost" id="toc-first-and-foremost" class="nav-link active" data-scroll-target="#first-and-foremost">First and foremost</a></li>
   <li><a href="#a-few-tips-to-deal-with-merge-conflicts" id="toc-a-few-tips-to-deal-with-merge-conflicts" class="nav-link" data-scroll-target="#a-few-tips-to-deal-with-merge-conflicts">A few tips to deal with merge conflicts</a></li>
   <li><a href="#how-to-minimize-the-risk-of-conflicts" id="toc-how-to-minimize-the-risk-of-conflicts" class="nav-link" data-scroll-target="#how-to-minimize-the-risk-of-conflicts">How to minimize the risk of conflicts?</a></li>
-  <li><a href="#example-using-rstudio" id="toc-example-using-rstudio" class="nav-link" data-scroll-target="#example-using-rstudio">Example using RStudio</a></li>
+  <li><a href="#example-using-rstudio" id="toc-example-using-rstudio" class="nav-link" data-scroll-target="#example-using-rstudio">Example using RStudio</a>
+  <ul class="collapse">
+  <li><a href="#tips-to-reduce-conflicts" id="toc-tips-to-reduce-conflicts" class="nav-link" data-scroll-target="#tips-to-reduce-conflicts">Tips to reduce conflicts</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -591,8 +594,16 @@ Note
 <p><img src="img/git_conflict-09_post_merge_history.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
+<section id="tips-to-reduce-conflicts" class="level3">
+<h3 class="anchored" data-anchor-id="tips-to-reduce-conflicts">Tips to reduce conflicts</h3>
+<ol type="1">
+<li><p>Always start your working sessions with a pull and Commit often in small chunks</p></li>
+<li><p>This can be often <strong>avoided by good communication about who is working on various sections of each file, and trying to avoid overlaps</strong>. But sometimes it happens, and <em>git</em> is there to warn you about potential problems. And git will not allow you to overwrite one person’s changes to a file with another’s changes to the same file if they were based on the same version.</p></li>
+<li><p>Encapsulate your work using branches and forks. This allows you to work on your modifications without interfering with your collaborator’s work until you decide it is time to merge your changes via a Pull Request. Note this can still create conflicts between versions but at least you are in control of when it will happen and the Pull Request is a great opportunity to discuss conflicts with your collaborators.</p></li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
