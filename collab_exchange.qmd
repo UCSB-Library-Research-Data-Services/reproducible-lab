@@ -8,12 +8,29 @@ Code Exchange is an asynchronous activity that takes place when a teammate is fi
 - Motivate development of good documentation
 - **Generate conversation about code styling**
 - Have several team members sharing knowledge
-- Great way to onboard new team members both in terms of code knowledge but also code styling
+- Great way to onboard new team members both in terms of code knowledge and code styling
 
-The Reviewer should see this activity as a great way to learn from others through **constructive** feedback... and so should the Submitter!! 
+The Submitter should see this activity as a great way to learn from others through **constructive** feedback... and so should the Reviewer!! This is why we prefer using the term code exchange instead of the usual code review. In some way, since scientists are well used to getting their work reviewed by peers, this process should feel familiar. Generally, when your code reaches a milestone (like finalizing a new analysis or figure), it is a good time to request a code review.
 
-There are different way to conduct a code review. It ranges from asking a colleague to look at your code once you reached a milestone, for example a new analysis is working, to leveraging Pull Request (PR), which is a way to ask to merge your changes with the previous version. 
+## How to conduct a code exchange
 
+### Asynchronous or synchronous
+
+There are different ways to conduct code review. Here are a few examples inspired by Petre and Wilson (2014):
+
+- Asynchronous: The submitter use GitHub or other code repository platform to request review of their code, assigning a teammate. The teammate will look at the code on their own and use the platform to provide written comments
+- Synchronous: Involve meeting (in-person or remotely) to talk over the code details. The Submitter will walk the Reviewer through the code. This can also work as a small team.
+
+Of course you can also blend the two methods with scheduling a meeting once the Reviewer has done a fist pass at the code and has a first series of questions.
+
+- Asynchronous: The submitter uses GitHub or another code repository platform to request a review of their code, assigning a teammate. The teammate will look at the code on their own and use the platform to provide written comments
+- Synchronous: Involve meeting (in-person or remotely) to talk over the code details. The Submitter will walk the Reviewer through the code. This can also work as a small team.
+
+Of course, you can also blend the two methods with scheduling a meeting once the Reviewer has done a first pass at the code and has a first series of questions.
+
+As you are building your code review skills, we recommend organizing a meeting to walk through the code and have a discussion about the content. It maximizes the learning experience and is also a great team-building exercise. Some research labs even organize lab meetings for code (see [here](https://web.archive.org/web/20170701202441/http:/fperez.org/py4science/code_reviews.html) for more)
+
+Synchronous or not, we recommend leveraging Pull Request (PR), which is a GitHub way to request to merge your changes with the current repository version, to create a written trace of the discussion and comments you will be exchanging through the process. So if six months after the review you wonder why you ended up opting for some of those changes you can refer to it to refresh yourself with the rationale at the time of the review.
 
 ## Pull Request (PR)
 
@@ -21,8 +38,20 @@ A big advantage of Pull Request is to document and provide a space to discuss th
 
 To be able to create a PR, you need to first either create a branch or a fork, which are two ways to encapsulate your changes while you are working on them. Once you are done you can ask to send back and merge those changes to the current version of the main branch of the repository (for now we will only merge back to main).
 
+### What to look for in your review
+
+
+
 ## Recommended Reading
 
 Ivimey-Cook ER, Pick JL, Bairos-Novak KR, Culina A, Gould E, Grainger M, et al. _Implementing code review in the scientific workflow: Insights from ecology and evolutionary biology._ Journal of Evolutionary Biology. 2023;36: 1347–1356. [doi:10.1111/jeb.14230](https://doi.org/10.1111/jeb.14230)
+
+Petre, M., Wilson, G., 2014. Code Review For and By Scientists. <https://doi.org/10.48550/arXiv.1407.5648>
+
+Rokem, A., 2024. Ten simple rules for scientific code review. PLoS Computational Biology 20(9): e1012375. <https://doi.org/10.1371/journal.pcbi.1012375>
+
+Code reviews - the lab meeting for code: <https://web.archive.org/web/20170701202441/http:/fperez.org/py4science/code_reviews.html>
+
+Small-Group Code Reviews For Education: <https://cacm.acm.org/blogs/blog-cacm/175944-small-group-code-reviews-for-education/fulltext>
 
 
