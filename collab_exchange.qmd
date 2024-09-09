@@ -4,9 +4,9 @@ title: "Code ~~Review~~ _Exchange_"
 
 Code Exchange is an asynchronous activity that takes place when a teammate is finished working on a script (or a section of it). This teammate will submit a request to another team member to look over the code and provide feedback. It is a great way to:
 
-- Have one more pair of eyes looking at your code to detect potential bugs / improvements, including analytical aspects of the code 
-- Motivate development of good documentation
-- **Generate conversation about code styling**
+- Rigor: have one more pair of eyes looking at your code to detect potential bugs / improvements, including analytical aspects of the code 
+- Reusability: Motivate development of good documentation & increase code readability
+- **Generate conversation about code styling**, this will ease collaboration in the long-term
 - Have several team members sharing knowledge
 - Great way to onboard new team members both in terms of code knowledge and code styling
 
@@ -17,11 +17,7 @@ The Submitter should see this activity as a great way to learn from others throu
 ### Asynchronous or synchronous
 
 There are different ways to conduct code review. Here are a few examples inspired by Petre and Wilson (2014):
-
-- Asynchronous: The submitter use GitHub or other code repository platform to request review of their code, assigning a teammate. The teammate will look at the code on their own and use the platform to provide written comments
-- Synchronous: Involve meeting (in-person or remotely) to talk over the code details. The Submitter will walk the Reviewer through the code. This can also work as a small team.
-
-Of course you can also blend the two methods with scheduling a meeting once the Reviewer has done a fist pass at the code and has a first series of questions.
+se you can also blend the two methods with scheduling a meeting once the Reviewer has done a fist pass at the code and has a first series of questions.
 
 - Asynchronous: The submitter uses GitHub or another code repository platform to request a review of their code, assigning a teammate. The teammate will look at the code on their own and use the platform to provide written comments
 - Synchronous: Involve meeting (in-person or remotely) to talk over the code details. The Submitter will walk the Reviewer through the code. This can also work as a small team.
@@ -38,7 +34,31 @@ A big advantage of Pull Request is to document and provide a space to discuss th
 
 To be able to create a PR, you need to first either create a branch or a fork, which are two ways to encapsulate your changes while you are working on them. Once you are done you can ask to send back and merge those changes to the current version of the main branch of the repository (for now we will only merge back to main).
 
+### How to prepare your code for review
+
+First and foremost, your code will never be ready for review... because it is the point of having it reviewed :)  So make sure you do not wait too long before requesting a code exchange because the more you wait the more complex the request is likely to be. Better request to review a small piece of code, than an entire multi-script analysis at the end of your project. There are also a few things you can check before requesting your code exchange to make sure you use your collaborator’s time wisely. Here is a short checklist to build from:
+
+- Make sure you pushed your latest version of the code to GitHub
+- Make sure the goal/motivation of your code is clearly stated either in a README or at the beginning of your script
+- Highlight or trim any extra code that is not strictly necessary for this specific request or that has already been reviewed. You can also flip this comment and highlight which part of the code should the reviewer focus on
+- If necessary, prepare a few examples of how to use the code (could be a few slides, some documentation, …)
+- If your code uses data, make sure those data sets (or a sample of it) and their metadata are also available to your reviewer 
+- State the expected output of your code (statistics, graphs, …) sharing your own results; for example, knitting a quarto document or Jupyter notebook
+Don’t forget this is the code that is reviewed not you!!
+
+
 ### What to look for in your review
+
+Similarly to a manuscript review, we recommend starting with the big picture first and then looking into the details. If you can not run the code or produce the same results, you should spend a minimum time (20-30min) trying to figure out what and reach out to the Submitter quickly explaining the problem and requesting a code walkthrough.
+
+- Can you run the code? If not, look into the usual suspects: Missing libraries, hard-coded paths, or access to data. If nothing obvious comes up, kindly reach out back to the Submitter mentioning you can not run the code and requesting a walkthrough. 
+- Do you get the expected results / outputs? You should have been provided the expected results by the Submitter. If your results are not the same start to look into why. Again if nothing obvious comes up, kindly reach out back to the Submitter mentioning you can not run the code and requesting a walkthrough. 
+- Is the code reliable? In other words, do you get the same results every time you run the code? If you have access to several machines (laptop, lab computer, server, …) compare results.
+- Code purpose is understandable: Are the goals of the code clearly stated at the beginning of the script? Are inline code comments present to explain decisions? Remember that every analysis is opinionated. Even if you would have written the code differently, it does not mean that is the only way to do it. - However, if you feel strongly about a better way to conduct a specific task, offer your feedback as a suggestion to the Reviewer while offering to further discuss it
+- Documentation: Is there external documentation? If so does it help with understanding both how to use the code but also the methods used? Make sure to check that the methodology described effectively matches  the methods the code is using
+- Visual aspects: Is the code easy to read? Could it be modularized or simplified? Is the styling of things consistent? Is the naming of things consistent?
+
+**Remember to be kind and constructive in your comments**. There are a lot of skills at play to develop scientific code and we all have our strengths and weaknesses; however in the end we are all learners. Finally, do not be shy to share when you feel you are not the best person to assess a specific methodology or some part of the code.
 
 
 
