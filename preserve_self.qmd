@@ -5,3 +5,8 @@ title: "Document yourself"
 Don't forget to document yourself and your collaborators!!
 
 It is important to be able to reference yourself as a researcher and as an author of your work in a non ambiguous manner. [ORCID](https://info.orcid.org/what-is-orcid/){target="_blank"} is a great way to create a persistent digital identifier (an ORCID iD) that you own and control, and that distinguishes you from every other researcher. ORCID is also more and more used as an authentication system for many services (e.g. data repositories).
+
+<iframe width="90%" height="1000" src="https://rcd.ucsb.edu/sites/default/files/2023-03/dls_n1_orcid_navy_0.pdf">
+</iframe>
+
+_Source: <https://rcd.ucsb.edu/data-literacy-series/search-view>_
