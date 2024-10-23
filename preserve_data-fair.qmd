@@ -8,9 +8,9 @@ title: "How FAIR are your data?"
 
 ![source: <https://www.gida-global.org/care>](img/be-FAIR-and-CARE.png){width="80%" fig-align="left"}
 
-A good reference to get you started with FAIR principles: <https://perma.cc/CT8P-D5MK> 
+A good reference to get you started with FAIR principles: <https://perma.cc/CT8P-D5MK>{target="_blank"}
 
-and on CARE principles: <https://perma.cc/3ZHR-6JAG>
+and on CARE principles: <https://perma.cc/3ZHR-6JAG>{target="_blank"}
 
 ## FAIR assessment
 
@@ -176,4 +176,4 @@ d. Fully recorded in a machine-readable format
 
 ## Acknowledgements
 
-This evaluation portion of this section has been adapted from the UK Data Service [https://ukdataservice.ac.uk/app/uploads/exercise_fairdata.pdf](https://ukdataservice.ac.uk/app/uploads/exercise_fairdata.pdf) and is licensed under a Creative Commons Attribution CC-BY 4.0 International License.
+This evaluation portion of this section has been adapted from the UK Data Service [https://ukdataservice.ac.uk/app/uploads/exercise_fairdata.pdf](https://ukdataservice.ac.uk/app/uploads/exercise_fairdata.pdf)target="_blank" and is licensed under a Creative Commons Attribution CC-BY 4.0 International License.
