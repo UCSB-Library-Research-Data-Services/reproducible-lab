@@ -379,7 +379,7 @@
     "href": "preserve_license.html#code",
     "title": "Choosing a License",
     "section": "Code",
-    "text": "Code\nHere is a good website to choose a license: https://choosealicense.com/\nHere is also a good set of instructions on how to make this happen on a GitHub repository: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository\nNote those type of licensing is more meant for software (such as R packages) rather than analytical scripts. For those scripts, keeping the license minimal such as MIT of 3-Clause BSD is our recommendation.",
+    "text": "Code\nHere is a good website to choose a license for your code: https://choosealicense.com/\nHere is also a good set of instructions on how to make this happen on a GitHub repository:\nNote those type of licensing is more meant for software (such as R packages) rather than analytical scripts. For those scripts, keeping the license minimal such as MIT of 3-Clause BSD is our recommendation.",
     "crumbs": [
       "Preserving things",
       "Licensing"
@@ -390,7 +390,7 @@
     "href": "preserve_license.html#data",
     "title": "Choosing a License",
     "section": "Data",
-    "text": "Data\nTechnically, facts are not copyrightable. Only interpretations of facts. However, data licensing falls under the content licensing framework that is more related to copyright. Here is the type of licensing that can be used: https://creativecommons.org/licenses/\nCC0 is recommended for data\nNote that the license type might be dictated by the data repository you choose as most of the data repositories will have one or two license to choose from.",
+    "text": "Data\nTechnically, facts are not copyrightable. Only interpretations of facts. However, data licensing falls under the content licensing framework that is more related to copyright. Here is the type of licensing that can be used: https://creativecommons.org/licenses/\nCC0 is recommended for data\nNote that the license type might be dictated by the data repository you choose as most of the data repositories will have one or two licenses to choose from.",
     "crumbs": [
       "Preserving things",
       "Licensing"
