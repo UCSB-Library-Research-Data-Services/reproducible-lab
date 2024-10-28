@@ -28,10 +28,6 @@ website:
                 text: "Our tools: git & GitHub"
               - href: 01-handson_github_website.qmd
                 text: "Hands-on: Using Github's website"
-              - href: github_org.qmd
-                text: "GitHub Organizations for your Lab"
-              - href: github_teams.qmd
-                text: "Setting up Teams to better collaborate"
               - href: git_rstudio.qmd
                 text: "Using RStudio, git and GitHub to track your work"
               - href: intro_cli.qmd
@@ -48,6 +44,10 @@ website:
                 text: "Code Exchange"
               - href: collab_pairprog.qmd
                 text: "Pair Programming"
+              - href: github_org.qmd
+                text: "GitHub Organizations for your Lab"
+              - href: github_teams.qmd
+                text: "Setting up Teams to better collaborate"
               - href: github_workflows.qmd
                 text: "Collaborative workflows: forks & branches"
               - href: 03-handson_github_workflows.qmd
