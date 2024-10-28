@@ -121,7 +121,7 @@
     "href": "index.html",
     "title": "Designing a Reproducible and Collaborative Lab (RCL)",
     "section": "",
-    "text": "The Designing a Reproducible and Collaborative Research Lab program, currently piloted by the Research & Data Services (RDS) department at the UCSB Library, combines group workshops, own-pace learning, and personalized coaching sessions for Faculty and their Team on the following topics.\n\nTopics\n\nCoding as a lab\nManaging your lab data\nAutomating your analytical workflows\nDocumenting & preserving things to make them reusable\n\n\n\nFormat\n\nScheduled at your convenience\n4 workshops (2-3h) as a primer on a specific topic\nPersonalized coaching sessions focused on lab-specific needs\n\n\n\nOutcomes\n\nMore reproducible management of your lab’s scientific products (data, code, and more!)\nBetter analytical strategies for collaboration safety nets for your research lab content\nMore efficient reuse of your work\nStreamlined on- and off-boarding of collaborators\n\n\n\nLearning Opportunities\n\nLeverage GitHub to manage and collaborate on your Lab’s code\nDevelop strategies to centralize and manage your Lab’s data\nSet up templates and guidelines on how to document your Lab research and improve its reusability\nEstablish Lab operating procedures and documentation standards\nProtect your Lab’s scientific products against loss through backup and computing resources strategies\n\n\n\nWant to know more?\nIf you are interested in this program, please see the about page to connect with us.\n\n\n\n\n\n\n\n\n\nCitationBibTeX citation:@online{brun2024,\n  author = {Brun, Julien and Curty, Renata and Janée, Greg},\n  title = {Designing a {Reproducible} and {Collaborative} {Lab} {(RCL)}},\n  date = {2024-10-23},\n  url = {https://ucsb-library-research-data-services.github.io/reproducible-lab/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nBrun, Julien, Renata Curty, and Greg Janée. 2024. “Designing a\nReproducible and Collaborative Lab (RCL).” October 23, 2024. https://ucsb-library-research-data-services.github.io/reproducible-lab/.",
+    "text": "The Designing a Reproducible and Collaborative Research Lab program, currently piloted by the Research & Data Services (RDS) department at the UCSB Library, combines group workshops, own-pace learning, and personalized coaching sessions for Faculty and their Team on the following topics.\n\nTopics\n\nCoding as a lab\nManaging your lab data\nAutomating your analytical workflows\nDocumenting & preserving things to make them reusable\n\n\n\nFormat\n\nScheduled at your convenience\n4 workshops (2-3h) as a primer on a specific topic\nPersonalized coaching sessions focused on lab-specific needs\n\n\n\nOutcomes\n\nMore reproducible management of your lab’s scientific products (data, code, and more!)\nBetter analytical strategies for collaboration safety nets for your research lab content\nMore efficient reuse of your work\nStreamlined on- and off-boarding of collaborators\n\n\n\nLearning Opportunities\n\nLeverage GitHub to manage and collaborate on your Lab’s code\nDevelop strategies to centralize and manage your Lab’s data\nSet up templates and guidelines on how to document your Lab research and improve its reusability\nEstablish Lab operating procedures and documentation standards\nProtect your Lab’s scientific products against loss through backup and computing resources strategies\n\n\n\nWant to know more?\nIf you are interested in this program, please see the about page to connect with us.\n\n\n\n\n\n\n\n\n\nCitationBibTeX citation:@online{brun2024,\n  author = {Brun, Julien and Curty, Renata and Janée, Greg},\n  title = {Designing a {Reproducible} and {Collaborative} {Lab} {(RCL)}},\n  date = {2024-10-28},\n  url = {https://ucsb-library-research-data-services.github.io/reproducible-lab/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nBrun, Julien, Renata Curty, and Greg Janée. 2024. “Designing a\nReproducible and Collaborative Lab (RCL).” October 28, 2024. https://ucsb-library-research-data-services.github.io/reproducible-lab/.",
     "crumbs": [
       "About RCL"
     ]
@@ -1024,7 +1024,7 @@
     "text": "Facilitate collaboration:\n\nCreate teams to easily assign people to repositories\nManage tasks at the organization level (not tight to a specific repository)\n\nSimplify code management:\n\nThe organization owns the repository\nDesign templates to streamline documentation\nAssign roles to users, including external collaborators\n\nIncrease your visibility on GitHub:\n\nCreate a landing page introducing your lab\nOne stop to see your Lab contributions\n\n\nHere is an example we created: https://github.com/awesomer-lab",
     "crumbs": [
       "Coding as a Lab",
-      "Coding together",
+      "Collaborative strategies",
       "GitHub Organizations for your Lab"
     ]
   },
@@ -1036,7 +1036,7 @@
     "text": "Facilitate collaboration:\n\nCreate teams to easily assign people to repositories\nManage tasks at the organization level (not tight to a specific repository)\n\nSimplify code management:\n\nThe organization owns the repository\nDesign templates to streamline documentation\nAssign roles to users, including external collaborators\n\nIncrease your visibility on GitHub:\n\nCreate a landing page introducing your lab\nOne stop to see your Lab contributions\n\n\nHere is an example we created: https://github.com/awesomer-lab",
     "crumbs": [
       "Coding as a Lab",
-      "Coding together",
+      "Collaborative strategies",
       "GitHub Organizations for your Lab"
     ]
   },
@@ -1048,7 +1048,7 @@
     "text": "Setting up your Lab’s GitHub Organization\nBefore setting up your organization, make sure that you have claimed your education GitHub account first!!\n\n\n\n\n\n\nDid you know you are eligible for GitHub Education perks?\n\n\n\nSince we are part of an University, students and faculty have access to special account benefits for free. The application process is straightforward. Get started here: https://education.github.com/\n\n\n\nYou can create an organization by clicking on the + sign menu at the top right of the GitHub taskbar and select New organization\n\n\n\n\n\n\n\nThis will send you to a new page with several options to start your organization. Choose the free option at this time.\n\n\n\n\n\n\n\nNow you can provide the name of your organization. We recommend naming it in a way that reflects your Lab name to help with the organization’s branding. Select the email you used to get the education discount and check the “my personal account” option.\n\n\n\n\n\n\n\nAnd congratulations this is it!! You can now invite your collaborators to the organization (you will be able to do so later as well).\n\n\n\n\n\n\n\nYour organization page should look as follows:\n\n\n\n\n\n\nNote all the suggestions that GitHub is providing to help you customize your organization according to your needs. We are going to follow the recommendation on the right side (red box above) to add a special README.md that will act as a landing page for our organization.",
     "crumbs": [
       "Coding as a Lab",
-      "Coding together",
+      "Collaborative strategies",
       "GitHub Organizations for your Lab"
     ]
   },
@@ -1060,7 +1060,7 @@
     "text": "Customizing your GitHub Organization\n\nAdding a landing page\nAdding a landing page is a great opportunity to describe your research lab and what content one can expect to find in this organization. It is also a good location to describe guidelines on how to best engage with you and provide contact information.\n\nClick on the create a README file on the right sidebar (see red box above). This will trigger the creation of a new special repository called .github that will be used to host your README file. Click Create repository.\n\n\n\n\n\n\n\nFill out the necessary information as follows:\n\n\n\n\n\n\nWe recommend checking the box Add a README file as a good practice but note it is not the README that will be used as your landing page, it is the one describing this new repository hosting your landing page README in a special subfolder.\n\nCreate your landing page by clicking on the Add README button on the right sidebar (red box below)\n\n Note the path to this special README: .github/profile/README.md\n\nEdit your landing page. The template used to create this special README provides suggestions about the type of information you might want to add to your landing page. Those suggestions are in a comment block (delimited by &lt;!-- & --&gt;) and thus won’t be shown when the README is rendered. We still do recommend deleting this block once you are done editing your README\n\n\n\n\n\n\nHere is an example of how we defined the landing page README for our test organization:\n\n\n\n\n\n\nSave your README: Now that you have your first version of your GitHub organization landing page (you can always iterate later on it), we are ready to save this version by clicking on the Commit changes button (red box above). This will prompt a new page where you can add a commit message to describe the changes. Finally, you can hit the Commit changes button to save this version.\n\n\n\n\n\n\nVoilà 🎉 !! When you go back to your organization’s main page, you should now see the text you just wrote at the top of the landing page!\n\n\n\n\n\n\n\nSetting up your organization profile\nNow that you have a landing page, it is also a great idea to fill out some metadata about your organization under the Settings tab of the main navigation bar (top right). This will help with the discovery of your Organization. You can provide a more Human friendly name, an email to reach out to you, a short description of your organization, and an URL such as your lab home page.\n\nFinally, click Update profile to save your changes.",
     "crumbs": [
       "Coding as a Lab",
-      "Coding together",
+      "Collaborative strategies",
       "GitHub Organizations for your Lab"
     ]
   },
@@ -1072,7 +1072,7 @@
     "text": "You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages, and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google Drive, this is the same concept.\nTeams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually.",
     "crumbs": [
       "Coding as a Lab",
-      "Coding together",
+      "Collaborative strategies",
       "Setting up Teams to better collaborate"
     ]
   },
@@ -1084,7 +1084,7 @@
     "text": "You can use teams to manage access for people in an organization and for sending notifications (you can @team as you will do with @user in issues, commit messages, and more). Teams are a great way to manage access to repositories. You can add specific people to different teams and then you can use those teams to provide similar access to repositories. If you are familiar with Google Groups and how they can be used to provide access to folders in Google Drive, this is the same concept.\nTeams are very convenient when a set of collaborators work on the same project and therefore need the same access to different repositories within your organization. You can simply add the team to a specific repository and all the team members will be added to the repositories instead of having to add each user individually.",
     "crumbs": [
       "Coding as a Lab",
-      "Coding together",
+      "Collaborative strategies",
       "Setting up Teams to better collaborate"
     ]
   },
@@ -1096,7 +1096,7 @@
     "text": "Create a team\nIn the navigation bar at the top of your organization page, click on the Teams tab. Normally this is the page you use to see and manage the existing teams of your organization. Since we do not have teams yet, this page provides a short overview of what teams can be used for. Click on the New Team green button at the bottom to start creating your first team.\n\nProved the name and a short description of your team. We recommend to let the other options to their default settings.\n\n\n\n\n\nYour team has been created, but as of now you are the only member. Let’s invite some collaborators by clicking on the Add a member button on the top right.\n\n\n\n\n\nOn this new window, you can search for GitHub users by their username. If you do not know their username you can search by their full names. Note that if there are no pictures associated with the profile you found or are not sure it is the right person, we recommend not adding this person at this time and reaching out asking for their username (which is unique). When you are sure you found the right persons you can click on Invite.\n\n\n\n\n\nYour collaborators will receive an invitation to join the team. They will have to accept the invitation before they can use the benefits (access to repositories, …) associated with the team. Once your collaborators have accepted your team should look like below.\n\n\n\n\n\nOK, let’s create a second team! In this example, we will create a Research Facilitators team with two members.\n\n\n\n\n\nOnce your GitHub organization has teams, you will the number of existing teams next to the Teams tab.",
     "crumbs": [
       "Coding as a Lab",
-      "Coding together",
+      "Collaborative strategies",
       "Setting up Teams to better collaborate"
     ]
   },
@@ -1108,7 +1108,7 @@
     "text": "Leveraging teams\nLet’s create a new repository and use our newly created teams to add several collaborators at once.\n\n\n\n\n\nUnder your newly created organization, create a new repository with the following settings:\n\n\n\n\n\nOnce the repository is created, click on the Settings tab (top right in the grey bar)\n\n\n\n\n\nOn the left panel, click on Collaborators and teams and then click on the green button Add teams\n\n\n\n\n\nStart typing the name of the team you would like to add. Suggestions of teams should come up as you type. Select the relevant team by clicking on the suggestion.\n\n\n\n\n\nFor close collaborators, we recommend using the Maitain level of access that provides a good blend of people being able to do most of the actions they will need to do while not being allowed to conduct destructive actions on accident (like deleting the entire repository). For collaborators you are less familiar with, including their familiarity with GitHub, you might want to start with the Write access.\n\n\n\n\n\nOnce the team added, your settings should look as follow:\n\n\n\n\n\nThe good news is now if you add a collaborator to a specific team, this person will automatically gain access to all the repositories that team has access to! This will streamline the on- and off- boarding process of your team members.",
     "crumbs": [
       "Coding as a Lab",
-      "Coding together",
+      "Collaborative strategies",
       "Setting up Teams to better collaborate"
     ]
   },
