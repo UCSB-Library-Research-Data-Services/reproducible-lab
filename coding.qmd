@@ -10,7 +10,7 @@ As data repositories, code repositories are a great way to preserve and share yo
 
 In this session, we will be focusing on using GitHub to collaborate and keep track of the development of our scripts.
 
-- Quick intro to git & GitHub
+- Quick intro to Git & GitHub
   - Why those are tools you want to use
   - GitHub Website interface walk-through
   - Using RStudio
