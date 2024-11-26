@@ -2,7 +2,7 @@
 title: "Code as a scientific product"
 ---
 
-Codes are part of the scientific products your Lab is producing. It is thus important to manage, document, and preserve them as you would do for any other of your scientific products. In this session, we will discuss tools and practices that can ease the management of your codes, as well as develop them in a collaborative way.
+Code is very likely one of the scientific products your Lab is producing. It is thus important to manage, document, and preserve source code as you would any other scientific products. In this session, we will discuss tools and practices that can ease the management of your code and facilitate collaborative software development.
 
 ## Code repository
 
@@ -10,7 +10,7 @@ As data repositories, code repositories are a great way to preserve and share yo
 
 In this session, we will be focusing on using GitHub to collaborate and keep track of the development of our scripts.
 
-- Quick intro to git & GitHub
+- Quick intro to Git & GitHub
   - Why those are tools you want to use
   - GitHub Website interface walk-through
   - Using RStudio
