@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-319a45456c9f3aa304860b0661acce20.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-07f741842430ea168d6d98a5eee94292.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./github_intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Our tools: git &amp; GitHub</span></a>
+ <span class="menu-text">Version Control with Git &amp; GitHub</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -398,13 +398,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Codes are part of the scientific products your Lab is producing. It is thus important to manage, document, and preserve them as you would do for any other of your scientific products. In this session, we will discuss tools and practices that can ease the management of your codes, as well as develop them in a collaborative way.</p>
+<p>Code is very likely one of the scientific products your Lab is producing. It is thus important to manage, document, and preserve source code as you would any other scientific products. In this session, we will discuss tools and practices that can ease the management of your code and facilitate collaborative software development.</p>
 <section id="code-repository" class="level2">
 <h2 class="anchored" data-anchor-id="code-repository">Code repository</h2>
 <p>As data repositories, code repositories are a great way to preserve and share your code (including with your future self!!). One you might have already heard of is GitHub. However, there are other options such as GitLab, Bitbucket Source Forge, and more.</p>
 <p>In this session, we will be focusing on using GitHub to collaborate and keep track of the development of our scripts.</p>
 <ul>
-<li>Quick intro to git &amp; GitHub
+<li>Quick intro to Git &amp; GitHub
 <ul>
 <li>Why those are tools you want to use</li>
 <li>GitHub Website interface walk-through</li>
@@ -521,8 +521,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -633,7 +631,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -866,8 +863,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./github_intro.html" class="pagination-link" aria-label="Our tools: git &amp; GitHub">
-        <span class="nav-page-text">Our tools: git &amp; GitHub</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./github_intro.html" class="pagination-link" aria-label="Version Control with Git &amp; GitHub">
+        <span class="nav-page-text">Version Control with Git &amp; GitHub</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
