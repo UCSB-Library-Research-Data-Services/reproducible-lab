@@ -41,7 +41,7 @@
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Version Control with Git & GitHub"
+      "Our tools: Git & GitHub"
     ]
   },
   {
@@ -53,7 +53,7 @@
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Version Control with Git & GitHub"
+      "Our tools: Git & GitHub"
     ]
   },
   {
@@ -65,7 +65,7 @@
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Version Control with Git & GitHub"
+      "Our tools: Git & GitHub"
     ]
   },
   {
@@ -77,7 +77,7 @@
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Version Control with Git & GitHub"
+      "Our tools: Git & GitHub"
     ]
   },
   {
@@ -89,7 +89,7 @@
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Version Control with Git & GitHub"
+      "Our tools: Git & GitHub"
     ]
   },
   {
@@ -101,7 +101,7 @@
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Version Control with Git & GitHub"
+      "Our tools: Git & GitHub"
     ]
   },
   {
@@ -113,7 +113,7 @@
     "crumbs": [
       "Coding as a Lab",
       "Coding together",
-      "Version Control with Git & GitHub"
+      "Our tools: Git & GitHub"
     ]
   },
   {
@@ -121,7 +121,7 @@
     "href": "index.html",
     "title": "Designing a Reproducible and Collaborative Lab (RCL)",
     "section": "",
-    "text": "The Designing a Reproducible and Collaborative Research Lab program, currently piloted by the Research & Data Services (RDS) department at the UCSB Library, combines group workshops, own-pace learning, and personalized coaching sessions for Faculty and their Team on the following topics.\n\nTopics\n\nCoding as a lab\nManaging your lab data\nAutomating your analytical workflows\nDocumenting & preserving things to make them reusable\n\n\n\nFormat\n\nScheduled at your convenience\n4 workshops (2-3h) as a primer on a specific topic\nPersonalized coaching sessions focused on lab-specific needs\n\n\n\nOutcomes\n\nMore reproducible management of your lab’s scientific products (data, code, and more!)\nBetter analytical strategies for collaboration safety nets for your research lab content\nMore efficient reuse of your work\nStreamlined on- and off-boarding of collaborators\n\n\n\nLearning Opportunities\n\nLeverage GitHub to manage and collaborate on your Lab’s code\nDevelop strategies to centralize and manage your Lab’s data\nSet up templates and guidelines on how to document your Lab research and improve its reusability\nEstablish Lab operating procedures and documentation standards\nProtect your Lab’s scientific products against loss through backup and computing resources strategies\n\n\n\nWant to know more?\nIf you are interested in this program, please see the about page to connect with us.\n\n\n\n\n\n\n\n\n\nCitationBibTeX citation:@online{brun2024,\n  author = {Brun, Julien and Curty, Renata and Janée, Greg},\n  title = {Designing a {Reproducible} and {Collaborative} {Lab} {(RCL)}},\n  date = {2024-11-26},\n  url = {https://ucsb-library-research-data-services.github.io/reproducible-lab/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nBrun, Julien, Renata Curty, and Greg Janée. 2024. “Designing a\nReproducible and Collaborative Lab (RCL).” November 26, 2024. https://ucsb-library-research-data-services.github.io/reproducible-lab/.",
+    "text": "The *Designing a Reproducible and Collaborative Research Lab (RCL) Program, currently piloted by the Research & Data Services (RDS) department at the UCSB Library, combines group workshops, self-paced learning, and personalized coaching sessions for Faculty and their Team(s) on the following topics:\n\nTopics\n\nCoding as a lab\nManaging your lab data\nAutomating your analytical workflows\nDocumenting & preserving things to make them reusable\n\n\n\nFormat\n\nScheduled at your convenience\n4 workshops (2-3h) as a primer on a specific topic\nPersonalized coaching sessions focused on lab-specific needs\n\n\n\nOutcomes\n\nMore reproducible management of your lab’s scientific products (data, code, and more!)\nBetter analytical strategies for collaboration safety nets for your research lab content\nMore efficient reuse of your work\nStreamlined on- and off-boarding of collaborators\n\n\n\nLearning Opportunities\n\nLeverage GitHub to manage and collaborate on your lab’s code\nDevelop strategies to centralize and manage your lab’s data\nSet up templates and guidelines on how to document your lab research and improve its reusability\nEstablish lab operating procedures and documentation standards\nProtect your lab’s scientific products against loss through backup and computing resources strategies\n\n\n\nWant to know more?\nIf you are interested in this program, please see the about page to connect with us.\n\n\n\n\n\n\n\n\n\nCitationBibTeX citation:@online{brun2024,\n  author = {Brun, Julien and Curty, Renata and Janée, Greg},\n  title = {Designing a {Reproducible} and {Collaborative} {Lab} {(RCL)}},\n  date = {2024-11-27},\n  url = {https://ucsb-library-research-data-services.github.io/reproducible-lab/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nBrun, Julien, Renata Curty, and Greg Janée. 2024. “Designing a\nReproducible and Collaborative Lab (RCL).” November 27, 2024. https://ucsb-library-research-data-services.github.io/reproducible-lab/.",
     "crumbs": [
       "About RCL"
     ]
