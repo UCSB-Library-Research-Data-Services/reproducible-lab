@@ -43,7 +43,7 @@ website:
               - href: collab_pairprog.qmd
                 text: "Pair Programming"
               - href: github_org.qmd
-                text: "GitHub Organizations for your Lab"
+                text: "GitHub Organization for your Lab"
               - href: github_teams.qmd
                 text: "Setting up Teams to better collaborate"
               - href: github_workflows.qmd
