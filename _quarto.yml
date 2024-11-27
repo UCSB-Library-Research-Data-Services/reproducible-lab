@@ -34,8 +34,6 @@ website:
                 text: "Using the command line"
               - href: git_cli.qmd
                 text: "Using git at the command line"
-              - href: git_conflicts.qmd
-                text: "Managing conflicts"
               - href: git_further_readings.qmd
                 text: "Git and GitHub further readings"
           - section: "Collaborative strategies"
@@ -54,6 +52,8 @@ website:
                 text: "Hands-on: forks & branches with Github website"
               - href: 02-handson_github_rstudio.qmd
                 text: "Hands-on: Branches using RStudio"
+              - href: git_conflicts.qmd
+                text: "Managing conflicts"
           - section: "Streamlining documentation"
             contents:
               - href: github_template.qmd
