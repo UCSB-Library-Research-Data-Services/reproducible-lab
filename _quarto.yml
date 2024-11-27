@@ -25,7 +25,7 @@ website:
           - section: "Coding together"
             contents:
               - href: github_intro.qmd
-                text: "Version Control with Git & GitHub"
+                text: "Our tools: Git & GitHub"
               - href: 01-handson_github_website.qmd
                 text: "Hands-on: Using Github's website"
               - href: git_rstudio.qmd
