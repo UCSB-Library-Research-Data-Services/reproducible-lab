@@ -1025,7 +1025,7 @@
     "crumbs": [
       "Coding as a Lab",
       "Collaborative strategies",
-      "GitHub Organizations for your Lab"
+      "GitHub Organization for your Lab"
     ]
   },
   {
@@ -1037,7 +1037,7 @@
     "crumbs": [
       "Coding as a Lab",
       "Collaborative strategies",
-      "GitHub Organizations for your Lab"
+      "GitHub Organization for your Lab"
     ]
   },
   {
@@ -1049,7 +1049,7 @@
     "crumbs": [
       "Coding as a Lab",
       "Collaborative strategies",
-      "GitHub Organizations for your Lab"
+      "GitHub Organization for your Lab"
     ]
   },
   {
@@ -1061,7 +1061,7 @@
     "crumbs": [
       "Coding as a Lab",
       "Collaborative strategies",
-      "GitHub Organizations for your Lab"
+      "GitHub Organization for your Lab"
     ]
   },
   {
@@ -1164,7 +1164,7 @@
     "text": "You did nothing wrong!! Git is simply asking for your help to merge files because it can not figure it out on its own.\n\n\n\n\n\n\nOne thing to note before we continue\n\n\n\ngit pull = git fetch (getting things from GitHub) + git merge (merging the versions between your local and GitHub)\n\n\nA conflict arises when git can not automatically merge two versions of a file. When the changes are on different files or on the same file but far apart, git will figure it out on his own and do the merge automatically. However, if changes are overlapping, git will call you to the rescue because it is not sure which version should be kept. When you are in this situation, you are “stalled” between the git fetch & the git merge and you need to edit the file(s) where there is a conflict. Luckily, git will flag the lines that have different versions for you to look at.",
     "crumbs": [
       "Coding as a Lab",
-      "Coding together",
+      "Collaborative strategies",
       "Managing conflicts"
     ]
   },
@@ -1176,7 +1176,7 @@
     "text": "How to minimize the risk of conflicts?\n\nCommunicate!! Who is working on what script/file today? GitHub issues and tagging people is a great way to do this\ncommit, pull, and push often , so the changes between versions are kept minimal\n\nThese two tips should help you on your git conflict free journey!!\nIf conflicts keep happening in your collaboration, using git branches might be the next step to consider for your team.",
     "crumbs": [
       "Coding as a Lab",
-      "Coding together",
+      "Collaborative strategies",
       "Managing conflicts"
     ]
   },
@@ -1188,7 +1188,7 @@
     "text": "Example using RStudio\nOk, let’s create a conflict with our favorite desserts repository.\nUser 1 is going to change a line on the README an push the change to GitHub.\n\n\n\n\n\nNow user 2, is going to also make an edit to the README on this same line while forgetting to pull before starting to edit the file\nIn this example, we will be changing the favorite dessert of the same person:\n\n\n\n\n\nSave and commit your changes.\nNow it is time to pull and push your changes… however git is unsure how to reconcile the two versions of the README.md\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nBefore this you might first have the pop-up below on your screen that prompts you to tell git what techniques it should use to resolve conflicts\n\n\n\n\n\nWe recommend to choose the merge option by copy-pasting this line in the terminal:\ngit config pull.rebase false\n\n\nNote the tags that git has automatically inserted in the text to highlight: 1. where is the conflict and 2. what are the two versions you are trying to reconcile. Note also that RStudio is flagging the file with an orange U logo to let you know that the files are Unmerged.\n\n\n\n\n\nYou can edit the README to resolve the conflict to your liking. You could opt to choose one of the version\n\n\n\n\n\nor to come up with a “blended” version:\n\n\n\n\n\nOnce you are satisfied with your version, you can save the file and commit your changes\n\n\n\n\n\nDon’t forget to pull and push to synchronize your local changes with GitHub.\nIf you now look at the history, you can see how git has tracked the conflict resolution. We will talk about branches later on, but spoiler alert it looks very much how you would merge a branch back to the main branch.\n\n\n\n\n\n\nTips to reduce conflicts\n\nAlways start your working sessions with a pull and Commit often in small chunks\nThis can be often avoided by good communication about who is working on various sections of each file, and trying to avoid overlaps. But sometimes it happens, and git is there to warn you about potential problems. And git will not allow you to overwrite one person’s changes to a file with another’s changes to the same file if they were based on the same version.\nEncapsulate your work using branches and forks. This allows you to work on your modifications without interfering with your collaborator’s work until you decide it is time to merge your changes via a Pull Request. Note this can still create conflicts between versions but at least you are in control of when it will happen and the Pull Request is a great opportunity to discuss conflicts with your collaborators.",
     "crumbs": [
       "Coding as a Lab",
-      "Coding together",
+      "Collaborative strategies",
       "Managing conflicts"
     ]
   },
