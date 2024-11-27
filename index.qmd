@@ -16,7 +16,7 @@ citation:
 categories: [data-science, collaboration, reproducible-research]
 ---
 
-The ***Designing a Reproducible and Collaborative Research Lab*** program, currently piloted by the Research & Data Services (RDS) department at the [UCSB Library](https://www.library.ucsb.edu/), combines group workshops, own-pace learning, and personalized coaching sessions for Faculty and their Team on the following topics.
+The ***Designing a Reproducible and Collaborative Research Lab (RCL) Program**, currently piloted by the Research & Data Services (RDS) department at the [UCSB Library](https://www.library.ucsb.edu/), combines group workshops, self-paced learning, and personalized coaching sessions for Faculty and their Team(s) on the following topics:
 
 ### Topics
 
