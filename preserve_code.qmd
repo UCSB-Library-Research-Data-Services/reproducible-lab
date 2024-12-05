@@ -9,7 +9,7 @@ knitr::include_graphics("img/code_handover.png")
 ```
 
 
-It is important to make your code easy to read if you hope that others will reuse it. It starts with using a **consistent style** withing your scripts (at least within a project). 
+It is important to make your code easy to read if you hope that others will reuse it. It starts with using a **consistent style** witing your scripts (at least within a project). 
 
 - Here is a good style guide for R: <https://style.tidyverse.org/>
 - Style guide for Python: <https://www.python.org/dev/peps/pep-0008/>
@@ -18,7 +18,7 @@ It is important to make your code easy to read if you hope that others will reus
 import this
 ```
 
-There is also the **visual aspect** of the code that should not be neglected. Like a prose, if you receive a long text without any paragraphs, you might be not very excited about reading it. _Indentation_, _spaces_, and _empty lines_ should be leveraged to make a script visually inviting and easy to read. The good news is that most of the Integrated Development Environment (IDE) will help you to do so by auto formatting your scripts according to conventions.  Note that also a lot of IDEs, such as RStudio, rely on some conventions to ease the navigation of scripts and notebooks. For example, _try to add four `-` or `#` after a line starting with one or several `#` in an R Script!_
+There is also the **visual aspect** of the code that should not be neglected. Like prose, if you receive a long text without any paragraphs, you might be not very excited about reading it. _Indentation_, _spaces_, and _empty lines_ should be leveraged to make a script visually inviting and easy to read. The good news is that most Integrated Development Environments (IDEs) will help you to do so by auto formatting your scripts according to conventions.  Note that also a lot of IDEs, such as RStudio, rely on some conventions to ease the navigation of scripts and notebooks. For example, _try to add four `-` or `#` after a line starting with one or several `#` in an R Script!_
 
 
 ## Comments
@@ -26,12 +26,14 @@ There is also the **visual aspect** of the code that should not be neglected. Li
 ***Real Programmers don't comment their code. If it was hard to write, it should be hard to understand.*** \
 Tom Van Vleck, based on people he knew..._ (<https://multicians.org/thvv/realprogs.html>)
 
-Joke aside, it is really hard to comment too much your code, because even steps that might seem trivial today might not be so anymore in a few weeks or months for now. In addition, a well commented code is more likely to be read by others. Note also that **comments should work in complement of the code** and should not being seen as work around vague naming conventions of variables or functions.
+Joke aside, it is really hard to comment too much your code, because even steps that might seem trivial today might not be so anymore in a few weeks or months for now. In addition, well commented code is more likely to be read by others. Note also that **comments should complement the code** and should not being seen as work around vague naming conventions of variables or functions, but neither should they simple restate what the code is doing.
 
 ```{r, eval=FALSE}
-x <- 9.81  #  gravitational acceleration
+x <- 9.81  #  gravitational acceleration               POOR
+gravity_acc <- 9.81  #  gravitational acceleration     BETTER
 
-gravity_acc <- 9.81  #  gravitational acceleration
+name_index <- 0  # set name_index to 0                 POOR
+name_index <- 0                                        BETTER
 ```
 
 
@@ -42,21 +44,22 @@ It is good to add a header to your script that will provide basic information su
 - Purpose of the script (Long title style)
 - Who are the authors
 - A contact email 
+- How to run, if the code is a program
 
 Optional:
 
 - A longer description about the script purpose
 - A starting date and potentially last updated one, although this information becomes redundant with repository information
 
-Note that R Studio does something similar by default when creating an new R Markdown document!
+Note that R Studio does something similar by default when creating a new R Markdown document!
 
 ### Inline 
 
 It does not matter if you are using a script or notebook. It is important to provide comments along your code to complement it by:
 
-- explaining what the code does
-- capturing decisions that were made on the analytical side. For example, why a specific value was used for a threshold.
-- specifying when some code was added to handle an edge case such as an unexpected value in the data (so a new user doesn't have to guess what does lines of code and might want to delete them assuming it is not necessary)
+- Explaining what the code does
+- Capturing decisions that were made on the analytical side. For example, why a specific value was used for a threshold.
+- Specifying why and when code was added to handle an edge case such as an unexpected value in the data (so a new user doesn't have to guess what the code does and might want to delete it assuming it is not necessary)
 
 Other thoughts:
 
@@ -116,12 +119,12 @@ def complex(real=0.0, imag=0.0):
         return complex_zero
 ```
 
-Here for more: <https://www.python.org/dev/peps/pep-0257/>
+Go here for more information: <https://www.python.org/dev/peps/pep-0257/>
 
 
 ## Leveraging Notebooks
 
-As we have discussed and experimented with Notebooks during the week. It is because Notebooks provide space to further develop content, such as methodology, around the code you are developing in your analysis. Notebooks also enable you to integrate the outputs of your scientific research with the code that was used to produce it. Finally, notebooks can be rendered into various format that let them share with a broad audience.
+We have focused on and been experimenting with Notebooks during the week because they provide space to further develop content, such as methodology, around the code you are developing in your analysis. Notebooks also enable you to integrate the outputs of your scientific research with the code that was used to produce it. Finally, notebooks can be rendered into various formats that allows them to be shared with a broad audience.
 
 Notebooks are not only used within the scientific community, see [here](https://peerj.com/preprints/3182.pdf) for some thoughts from Airbnb data science team.
 
@@ -161,6 +164,6 @@ On-line code repositories are a great way to version and share your code. Here a
 
 Note however that there is no long-term commitment of any of those main code repositories and that archiving the specific snapshot of your code that was used for a specific analysis along your data is a great idea. Several data repositories offer an integration that lets you do that with data repositories. For example, Zenodo has a great integration with GitHub that lets you issue a DOI for a specific release (read snapshot) of your repository and preserve it independently from the code repository. See [here](https://github.com/OpenScienceMOOC/Module-5-Open-Research-Software-and-Open-Source/blob/master/content_development/Task_2.md) for more details.
 
-Note that one version is not against the other, in contrary you can see your code repository as the live version of your work and the code snapshot archive as the historical trace that was produced for a specific analysis. In other words, we recommend to link both the code repository and its snapshot to the data archive.
+Note that code repositories and data repositories complement each other: you can see your code repository as the live version of your work and the code snapshot archive as the historical trace that was produced for a specific analysis. In other words, we recommend linking both the code repository and its snapshot to the data archive.
 
 
