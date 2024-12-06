@@ -89,7 +89,7 @@ website:
       - section: "About us"
         contents:
           - href: about.qmd
-            text: "Data Research Services"
+            text: "Research Data Services"
 format:
   html:
     theme: 

@@ -2,7 +2,7 @@
 title: "Preserve your computing environment"
 ---
 
-Your analysis was done with specific versions of the program used (e.g. R 4.4.3) but also of all the packages involved, as well as the specifications of the Operating System (OS) that was used. The good use is that there are tools to let you systematically capture this information.
+Your analysis was done with specific versions of the program used (e.g. R 4.4.3) but also of all the packages involved, as well as the specifications of the Operating System (OS) that was used. The good news is that there are tools to help you systematically capture this information.
 
 In R:
 
@@ -16,9 +16,6 @@ In Python:
 ## Virtual environments
 
 You can even go a step further and help others to recreate the same computing environment that you used independently of what versions you have installed on your machine.
-
-[Level up!](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExemkwd3RnMzA4a3FocHZ2bWJscHgxNG9yaW4yeGZ6YzZpaXgzNHJhciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/x2woMnCz4W0Vy/giphy.gif)
-
 
 
 ### R

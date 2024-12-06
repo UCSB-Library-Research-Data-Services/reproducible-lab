@@ -20,11 +20,11 @@ There are actually various ways to document your work!! Here is a potential fram
 knitr::include_graphics("img/document_diataxis.png")
 ```
 
-Your potential audience(s) for your documentation can be a future collaborator, an external researcher with no direct insight on your work, a potential user of a tool you developed?
+Your potential audience(s) for your documentation can be a future collaborator, an external researcher with no direct insight into your work, or a potential user of a tool you developed.
 
 
 ## Prompts
 
 - What are the specific expectations from your discipline in terms of documentation and sharing data? For example, should you also share the raw data along with the analysis results?
 
-- Considering funding and publisher mandates, as well as disciplinary norms, do you anticipate / have had any challenges regarding data sharing and preservation?
+- Considering funding and publisher mandates, as well as disciplinary norms.  Do you anticipate / have had any challenges regarding data sharing and preservation?
