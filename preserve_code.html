@@ -391,7 +391,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./about.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Research Services</span></a>
+ <span class="menu-text">Research Data Services</span></a>
   </div>
 </li>
       </ul>
@@ -457,7 +457,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>It is important to make your code easy to read if you hope that others will reuse it. It starts with using a <strong>consistent style</strong> withing your scripts (at least within a project).</p>
+<p>It is important to make your code easy to read if you hope that others will reuse it. It starts with using a <strong>consistent style</strong> witing your scripts (at least within a project).</p>
 <ul>
 <li>Here is a good style guide for R: <a href="https://style.tidyverse.org/" class="uri">https://style.tidyverse.org/</a></li>
 <li>Style guide for Python: <a href="https://www.python.org/dev/peps/pep-0008/" class="uri">https://www.python.org/dev/peps/pep-0008/</a></li>
@@ -488,17 +488,19 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!</code></pre>
 </div>
 </div>
-<p>There is also the <strong>visual aspect</strong> of the code that should not be neglected. Like a prose, if you receive a long text without any paragraphs, you might be not very excited about reading it. <em>Indentation</em>, <em>spaces</em>, and <em>empty lines</em> should be leveraged to make a script visually inviting and easy to read. The good news is that most of the Integrated Development Environment (IDE) will help you to do so by auto formatting your scripts according to conventions. Note that also a lot of IDEs, such as RStudio, rely on some conventions to ease the navigation of scripts and notebooks. For example, <em>try to add four <code>-</code> or <code>#</code> after a line starting with one or several <code>#</code> in an R Script!</em></p>
+<p>There is also the <strong>visual aspect</strong> of the code that should not be neglected. Like prose, if you receive a long text without any paragraphs, you might be not very excited about reading it. <em>Indentation</em>, <em>spaces</em>, and <em>empty lines</em> should be leveraged to make a script visually inviting and easy to read. The good news is that most Integrated Development Environments (IDEs) will help you to do so by auto formatting your scripts according to conventions. Note that also a lot of IDEs, such as RStudio, rely on some conventions to ease the navigation of scripts and notebooks. For example, <em>try to add four <code>-</code> or <code>#</code> after a line starting with one or several <code>#</code> in an R Script!</em></p>
 </section>
 <section id="comments" class="level2">
 <h2 class="anchored" data-anchor-id="comments">Comments</h2>
 <p><strong><em>Real Programmers don’t comment their code. If it was hard to write, it should be hard to understand.</em></strong><br>
 Tom Van Vleck, based on people he knew…_ (<a href="https://multicians.org/thvv/realprogs.html" class="uri">https://multicians.org/thvv/realprogs.html</a>)</p>
-<p>Joke aside, it is really hard to comment too much your code, because even steps that might seem trivial today might not be so anymore in a few weeks or months for now. In addition, a well commented code is more likely to be read by others. Note also that <strong>comments should work in complement of the code</strong> and should not being seen as work around vague naming conventions of variables or functions.</p>
+<p>Joke aside, it is really hard to comment too much your code, because even steps that might seem trivial today might not be so anymore in a few weeks or months for now. In addition, well commented code is more likely to be read by others. Note also that <strong>comments should complement the code</strong> and should not being seen as work around vague naming conventions of variables or functions, but neither should they simple restate what the code is doing.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fl">9.81</span>  <span class="co">#  gravitational acceleration</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>gravity_acc <span class="ot">&lt;-</span> <span class="fl">9.81</span>  <span class="co">#  gravitational acceleration</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fl">9.81</span>  <span class="co">#  gravitational acceleration               POOR</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>gravity_acc <span class="ot">&lt;-</span> <span class="fl">9.81</span>  <span class="co">#  gravitational acceleration     BETTER</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>name_index <span class="ot">&lt;-</span> <span class="dv">0</span>  <span class="co"># set name_index to 0                 POOR</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>name_index <span class="ot">&lt;-</span> <span class="dv">0</span>                                        BETTER</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="header" class="level3">
 <h3 class="anchored" data-anchor-id="header">Header</h3>
@@ -507,21 +509,22 @@ Tom Van Vleck, based on people he knew…_ (<a href="https://multicians.org/thvv
 <li>Purpose of the script (Long title style)</li>
 <li>Who are the authors</li>
 <li>A contact email</li>
+<li>How to run, if the code is a program</li>
 </ul>
 <p>Optional:</p>
 <ul>
 <li>A longer description about the script purpose</li>
 <li>A starting date and potentially last updated one, although this information becomes redundant with repository information</li>
 </ul>
-<p>Note that R Studio does something similar by default when creating an new R Markdown document!</p>
+<p>Note that R Studio does something similar by default when creating a new R Markdown document!</p>
 </section>
 <section id="inline" class="level3">
 <h3 class="anchored" data-anchor-id="inline">Inline</h3>
 <p>It does not matter if you are using a script or notebook. It is important to provide comments along your code to complement it by:</p>
 <ul>
-<li>explaining what the code does</li>
-<li>capturing decisions that were made on the analytical side. For example, why a specific value was used for a threshold.</li>
-<li>specifying when some code was added to handle an edge case such as an unexpected value in the data (so a new user doesn’t have to guess what does lines of code and might want to delete them assuming it is not necessary)</li>
+<li>Explaining what the code does</li>
+<li>Capturing decisions that were made on the analytical side. For example, why a specific value was used for a threshold.</li>
+<li>Specifying why and when code was added to handle an edge case such as an unexpected value in the data (so a new user doesn’t have to guess what the code does and might want to delete it assuming it is not necessary)</li>
 </ul>
 <p>Other thoughts:</p>
 <ul>
@@ -567,13 +570,13 @@ Tom Van Vleck, based on people he knew…_ (<a href="https://multicians.org/thvv
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> imag <span class="op">==</span> <span class="fl">0.0</span> <span class="kw">and</span> real <span class="op">==</span> <span class="fl">0.0</span>:</span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> complex_zero</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Here for more: <a href="https://www.python.org/dev/peps/pep-0257/" class="uri">https://www.python.org/dev/peps/pep-0257/</a></p>
+<p>Go here for more information: <a href="https://www.python.org/dev/peps/pep-0257/" class="uri">https://www.python.org/dev/peps/pep-0257/</a></p>
 </section>
 </section>
 </section>
 <section id="leveraging-notebooks" class="level2">
 <h2 class="anchored" data-anchor-id="leveraging-notebooks">Leveraging Notebooks</h2>
-<p>As we have discussed and experimented with Notebooks during the week. It is because Notebooks provide space to further develop content, such as methodology, around the code you are developing in your analysis. Notebooks also enable you to integrate the outputs of your scientific research with the code that was used to produce it. Finally, notebooks can be rendered into various format that let them share with a broad audience.</p>
+<p>We have focused on and been experimenting with Notebooks during the week because they provide space to further develop content, such as methodology, around the code you are developing in your analysis. Notebooks also enable you to integrate the outputs of your scientific research with the code that was used to produce it. Finally, notebooks can be rendered into various formats that allows them to be shared with a broad audience.</p>
 <p>Notebooks are not only used within the scientific community, see <a href="https://peerj.com/preprints/3182.pdf">here</a> for some thoughts from Airbnb data science team.</p>
 <hr>
 </section>
@@ -606,7 +609,7 @@ Tom Van Vleck, based on people he knew…_ (<a href="https://multicians.org/thvv
 <li>SourceForge</li>
 </ul>
 <p>Note however that there is no long-term commitment of any of those main code repositories and that archiving the specific snapshot of your code that was used for a specific analysis along your data is a great idea. Several data repositories offer an integration that lets you do that with data repositories. For example, Zenodo has a great integration with GitHub that lets you issue a DOI for a specific release (read snapshot) of your repository and preserve it independently from the code repository. See <a href="https://github.com/OpenScienceMOOC/Module-5-Open-Research-Software-and-Open-Source/blob/master/content_development/Task_2.md">here</a> for more details.</p>
-<p>Note that one version is not against the other, in contrary you can see your code repository as the live version of your work and the code snapshot archive as the historical trace that was produced for a specific analysis. In other words, we recommend to link both the code repository and its snapshot to the data archive.</p>
+<p>Note that code repositories and data repositories complement each other: you can see your code repository as the live version of your work and the code snapshot archive as the historical trace that was produced for a specific analysis. In other words, we recommend linking both the code repository and its snapshot to the data archive.</p>
 
 
 </section>
