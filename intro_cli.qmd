@@ -24,7 +24,7 @@ The CLI provides a direct way to interact with the Operating System, by typing i
 - `Shell`: It is the program that runs the command line. There are many different shells, the most common (an default on most system) being `bash` (Bourne Again SHell)
 
 ::: {.callout-tip}
-Not convinced? Check this out: [the CLI pitch](https://brunj7.github.io/eds214-handson-cli/cli-pitch.html)
+Not convinced? Check this out: [the CLI pitch](https://eds-214.github.io/eds214-handson-cli/cli-pitch.html)
 :::
 
 ### The Terminal from RStudio
@@ -249,7 +249,7 @@ $ nano .bashrc
 
 ## Hands-on
 
-Let's practice our new skills! Click [here](https://brunj7.github.io/eds214-handson-cli/cli-handson-files.html){.external target="_blank"}
+Let's practice our new skills! Click [here](https://eds-214.github.io/eds214-handson-cli/cli-handson-files.html){.external target="_blank"}
 
 
 ## Aknowledgements
