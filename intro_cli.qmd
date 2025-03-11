@@ -121,26 +121,6 @@ hit `spacebar` to get to the next page of the manual
 hit `q` to exit the help
 :::
 
-### Connecting to a remote server via `ssh`
-
-From the gitbash (MS Windows) or the terminal (Mac) type:
-
-```{bash}
-ssh taylor.bren.ucsb.edu
-```
-
-You will be prompted for your username and password.
-
-![aurora_ssh](img/aurora-ssh.png)
-
-You can also directly add your username:
-
-```{bash}
-ssh brun@taylor.bren.ucsb.edu
-```
-
-In this case, you will be only asked for your password as you already specified which user you want to connect with.
-
 
 
 ### Unix systems are multi-user
@@ -245,6 +225,28 @@ $ ls foo 2>/dev/null
 ```{bash}
 $ nano .bashrc
 ```
+
+
+### Connecting to a remote server via `ssh`
+
+From the gitbash (MS Windows) or the terminal (Mac) type:
+
+```{bash}
+ssh taylor.bren.ucsb.edu
+```
+
+You will be prompted for your username and password.
+
+![aurora_ssh](img/aurora-ssh.png)
+
+You can also directly add your username:
+
+```{bash}
+ssh brun@taylor.bren.ucsb.edu
+```
+
+In this case, you will be only asked for your password as you already specified which user you want to connect with.
+
 
 
 ## Hands-on
