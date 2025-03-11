@@ -414,7 +414,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#navigating-and-managing-filesdirectories-in-nix" id="toc-navigating-and-managing-filesdirectories-in-nix" class="nav-link" data-scroll-target="#navigating-and-managing-filesdirectories-in-nix">Navigating and managing files/directories in *NIX</a></li>
   <li><a href="#permissions" id="toc-permissions" class="nav-link" data-scroll-target="#permissions">Permissions</a></li>
   <li><a href="#general-command-syntax" id="toc-general-command-syntax" class="nav-link" data-scroll-target="#general-command-syntax">General command syntax</a></li>
-  <li><a href="#connecting-to-a-remote-server-via-ssh" id="toc-connecting-to-a-remote-server-via-ssh" class="nav-link" data-scroll-target="#connecting-to-a-remote-server-via-ssh">Connecting to a remote server via <code>ssh</code></a></li>
   <li><a href="#unix-systems-are-multi-user" id="toc-unix-systems-are-multi-user" class="nav-link" data-scroll-target="#unix-systems-are-multi-user">Unix systems are multi-user</a></li>
   <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help">Getting help</a></li>
   <li><a href="#finding-stuff" id="toc-finding-stuff" class="nav-link" data-scroll-target="#finding-stuff">finding stuff</a></li>
@@ -422,6 +421,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#a-sampling-of-simple-commands-for-dealing-with-files" id="toc-a-sampling-of-simple-commands-for-dealing-with-files" class="nav-link" data-scroll-target="#a-sampling-of-simple-commands-for-dealing-with-files">A sampling of simple commands for dealing with files</a></li>
   <li><a href="#get-into-the-flow-with-pipes" id="toc-get-into-the-flow-with-pipes" class="nav-link" data-scroll-target="#get-into-the-flow-with-pipes">Get into the flow, with pipes</a></li>
   <li><a href="#text-editing" id="toc-text-editing" class="nav-link" data-scroll-target="#text-editing">Text editing</a></li>
+  <li><a href="#connecting-to-a-remote-server-via-ssh" id="toc-connecting-to-a-remote-server-via-ssh" class="nav-link" data-scroll-target="#connecting-to-a-remote-server-via-ssh">Connecting to a remote server via <code>ssh</code></a></li>
   </ul></li>
   <li><a href="#hands-on" id="toc-hands-on" class="nav-link" data-scroll-target="#hands-on">Hands-on</a></li>
   <li><a href="#aknowledgements" id="toc-aknowledgements" class="nav-link" data-scroll-target="#aknowledgements">Aknowledgements</a></li>
@@ -583,25 +583,6 @@ Tip
 </div>
 </div>
 </section>
-<section id="connecting-to-a-remote-server-via-ssh" class="level3">
-<h3 class="anchored" data-anchor-id="connecting-to-a-remote-server-via-ssh">Connecting to a remote server via <code>ssh</code></h3>
-<p>From the gitbash (MS Windows) or the terminal (Mac) type:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> taylor.bren.ucsb.edu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>You will be prompted for your username and password.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/aurora-ssh.png" class="img-fluid figure-img"></p>
-<figcaption>aurora_ssh</figcaption>
-</figure>
-</div>
-<p>You can also directly add your username:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> brun@taylor.bren.ucsb.edu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>In this case, you will be only asked for your password as you already specified which user you want to connect with.</p>
-</section>
 <section id="unix-systems-are-multi-user" class="level3">
 <h3 class="anchored" data-anchor-id="unix-systems-are-multi-user">Unix systems are multi-user</h3>
 <ul>
@@ -621,15 +602,15 @@ Tip
 <h3 class="anchored" data-anchor-id="finding-stuff">finding stuff</h3>
 <p>Show me my Rmarkdown files!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> . <span class="at">-iname</span> <span class="st">'*.Rmd'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> . <span class="at">-iname</span> <span class="st">'*.Rmd'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Which files are larger than 1GB?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> . <span class="at">-size</span> +1G</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> . <span class="at">-size</span> +1G</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>With more details about the files:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> . <span class="at">-size</span> +1G <span class="at">-ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> . <span class="at">-size</span> +1G <span class="at">-ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="getting-things-done" class="level3">
@@ -688,10 +669,10 @@ Tip
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="pp">*</span>.png <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="pp">*</span>.png <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span> <span class="op">&gt;</span> pngcount.txt</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> diff <span class="op">&lt;(</span><span class="fu">sort</span> file1.txt<span class="op">)</span> <span class="op">&lt;(</span><span class="fu">sort</span> file2.txt<span class="op">)</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls foo <span class="dv">2</span><span class="op">&gt;</span>/dev/null</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="pp">*</span>.png <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="pp">*</span>.png <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span> <span class="op">&gt;</span> pngcount.txt</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> diff <span class="op">&lt;(</span><span class="fu">sort</span> file1.txt<span class="op">)</span> <span class="op">&lt;(</span><span class="fu">sort</span> file2.txt<span class="op">)</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls foo <span class="dv">2</span><span class="op">&gt;</span>/dev/null</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>note use of <code>*</code> as character wildcard for zero or more matches (same in Mac and Windows)</li>
@@ -708,9 +689,28 @@ Tip
 <li><code>nano</code></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano .bashrc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano .bashrc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
+</section>
+<section id="connecting-to-a-remote-server-via-ssh" class="level3">
+<h3 class="anchored" data-anchor-id="connecting-to-a-remote-server-via-ssh">Connecting to a remote server via <code>ssh</code></h3>
+<p>From the gitbash (MS Windows) or the terminal (Mac) type:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> taylor.bren.ucsb.edu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You will be prompted for your username and password.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/aurora-ssh.png" class="img-fluid figure-img"></p>
+<figcaption>aurora_ssh</figcaption>
+</figure>
+</div>
+<p>You can also directly add your username:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> brun@taylor.bren.ucsb.edu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In this case, you will be only asked for your password as you already specified which user you want to connect with.</p>
 </section>
 </section>
 <section id="hands-on" class="level2">
