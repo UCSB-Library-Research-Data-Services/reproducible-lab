@@ -256,4 +256,4 @@ Let's practice our new skills! Click [here](https://eds-214.github.io/eds214-han
 
 ## Aknowledgements
 
-This section adapted materials from [NCEAS Open Science for Synthesis (OSS)](https://learning.nceas.ucsb.edu/) intensive summer schools and other training. Contributions to this content have been made by Mark Schildhauer, Matt Jones, Jim Regetz and many others; and from EDS-213 [10 bash essentials](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-class-data/blob/main/week5/bash-essentials.md) developed by Greg Janée
+This section adapted materials from [NCEAS Open Science for Synthesis (OSS)](https://learning.nceas.ucsb.edu/) intensive summer schools and other training. Contributions to this content have been made by Mark Schildhauer, Matt Jones, Jim Regetz and many others; and from EDS-213 [10 bash essentials](https://ucsb-library-research-data-services.github.io/bren-eds213/modules/week05/bash-essentials.html) developed by Greg Janée
