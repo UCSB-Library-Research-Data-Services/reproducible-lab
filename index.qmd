@@ -50,4 +50,4 @@ The **Designing a Reproducible and Collaborative Lab (RCL) Program**, currently 
 
 If you are interested in this program, please see the [about](about.qmd) page to connect with us.
 
-![](img/rds_hex.png){fig-align="center" width="50%"}
+![](img/rds_hex.png){fig-align="center" width="55%"}
