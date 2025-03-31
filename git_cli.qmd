@@ -53,13 +53,38 @@ Problem with any of those steps? Check out Jenny Brian [Happy git trouble shooti
 
 Normally if you have already used GitHub tokens your Operating System (Windows, MacOSX, ...) should have cached the necessary credentials to log in to your GitHub account (necessary to be able to push (write) content to the remote repository).
 
-We are going to set up the method that is commonly used by many different services to authenticate access on the command line.  This method is called Secure Shell Protocol (SSH).  SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.
+#### Setting up your GitHub Token
+
+You can find the latest guidelines on how to setup your personal GitHub token **[here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)**
+
+1. Choose a token name that is related to the machine you are using (not requires, but a good idea :) )
+
+2. Set the expiration date to `90 days`
+
+3. We recommend to select the following options:
+
+- all repo actions
+- workflow
+- gist
+- all user actions
+
+[GitHub token settings](img/github-token.png)
+
+4. Then click the `Generate token` button at the bottom of the page.
+
+DO NOT CLOSE the next page as it will be the only time you can see your token.
+
+Copy your token to your clipboard and then try to push to GitHub from the command line. When you are prompted for your password, copy your token.
+
+Only once it has worked and that your token as been cached by your OS password manager you should be able to close the GitHub webpage displaying your token value.
+
+#### Setting up your SSH key
+
+Another option is to set up the method that is commonly used by many different services to authenticate access on the command line.  This method is called Secure Shell Protocol (SSH).  SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.
 
 SSH uses what is called a key pair. This is **two** keys that work together to validate access. One key is publicly known and called the **public key**, and the other key called the **private key** is kept private. Very descriptive names.
 
 You can think of the public key as a padlock, and only you have the key (the private key) to open it. You use the public key where you want a secure method of communication, such as your GitHub account.  You give this padlock, or public key, to GitHub and say "lock the communications to my account with this so that only computers that have my private key can unlock communications and send git commands as my GitHub account."
-
-#### Setting up your SSH key
 
 The first thing we are going to do is check if this has already been done on the computer you're on.  Because generally speaking, this setup only needs to happen once and then you can forget about it:
 
