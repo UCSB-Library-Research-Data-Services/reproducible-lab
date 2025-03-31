@@ -63,10 +63,10 @@ You can find the latest guidelines on how to setup your personal GitHub token **
 
 3. We recommend to select the following options:
 
-- all repo actions
-- workflow
-- gist
-- all user actions
+   - all repo actions
+   - workflow
+   - gist
+   - all user actions
 
 [GitHub token settings](img/github-token.png)
 
