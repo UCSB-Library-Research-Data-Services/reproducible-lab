@@ -468,11 +468,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="github-credentials" class="level3">
 <h3 class="anchored" data-anchor-id="github-credentials">GitHub credentials</h3>
 <p>Normally if you have already used GitHub tokens your Operating System (Windows, MacOSX, …) should have cached the necessary credentials to log in to your GitHub account (necessary to be able to push (write) content to the remote repository).</p>
-<p>We are going to set up the method that is commonly used by many different services to authenticate access on the command line. This method is called Secure Shell Protocol (SSH). SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.</p>
-<p>SSH uses what is called a key pair. This is <strong>two</strong> keys that work together to validate access. One key is publicly known and called the <strong>public key</strong>, and the other key called the <strong>private key</strong> is kept private. Very descriptive names.</p>
-<p>You can think of the public key as a padlock, and only you have the key (the private key) to open it. You use the public key where you want a secure method of communication, such as your GitHub account. You give this padlock, or public key, to GitHub and say “lock the communications to my account with this so that only computers that have my private key can unlock communications and send git commands as my GitHub account.”</p>
+<section id="setting-up-your-github-token" class="level4">
+<h4 class="anchored" data-anchor-id="setting-up-your-github-token">Setting up your GitHub Token</h4>
+<p>You can find the latest guidelines on how to setup your personal GitHub token <strong><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic">here</a></strong></p>
+<ol type="1">
+<li><p>Choose a token name that is related to the machine you are using (not requires, but a good idea :) )</p></li>
+<li><p>Set the expiration date to <code>90 days</code></p></li>
+<li><p>We recommend to select the following options:</p></li>
+</ol>
+<ul>
+<li>all repo actions</li>
+<li>workflow</li>
+<li>gist</li>
+<li>all user actions</li>
+</ul>
+<p><a href="img/github-token.png">GitHub token settings</a></p>
+<ol start="4" type="1">
+<li>Then click the <code>Generate token</code> button at the bottom of the page.</li>
+</ol>
+<p>DO NOT CLOSE the next page as it will be the only time you can see your token.</p>
+<p>Copy your token to your clipboard and then try to push to GitHub from the command line. When you are prompted for your password, copy your token.</p>
+<p>Only once it has worked and that your token as been cached by your OS password manager you should be able to close the GitHub webpage displaying your token value.</p>
+</section>
 <section id="setting-up-your-ssh-key" class="level4">
 <h4 class="anchored" data-anchor-id="setting-up-your-ssh-key">Setting up your SSH key</h4>
+<p>Another option is to set up the method that is commonly used by many different services to authenticate access on the command line. This method is called Secure Shell Protocol (SSH). SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.</p>
+<p>SSH uses what is called a key pair. This is <strong>two</strong> keys that work together to validate access. One key is publicly known and called the <strong>public key</strong>, and the other key called the <strong>private key</strong> is kept private. Very descriptive names.</p>
+<p>You can think of the public key as a padlock, and only you have the key (the private key) to open it. You use the public key where you want a secure method of communication, such as your GitHub account. You give this padlock, or public key, to GitHub and say “lock the communications to my account with this so that only computers that have my private key can unlock communications and send git commands as my GitHub account.”</p>
 <p>The first thing we are going to do is check if this has already been done on the computer you’re on. Because generally speaking, this setup only needs to happen once and then you can forget about it:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-al</span> ~/.ssh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Your output is going to look a little different depending on whether or not SSH has ever been set up on the computer you are using.</p>
