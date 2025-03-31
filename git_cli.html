@@ -409,7 +409,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#setup-your-git-profile" id="toc-setup-your-git-profile" class="nav-link active" data-scroll-target="#setup-your-git-profile">Setup your git profile</a>
   <ul class="collapse">
   <li><a href="#your-git-identity" id="toc-your-git-identity" class="nav-link" data-scroll-target="#your-git-identity">your git identity</a></li>
-  <li><a href="#github-credentials" id="toc-github-credentials" class="nav-link" data-scroll-target="#github-credentials">GitHub credentials</a></li>
+  </ul></li>
+  <li><a href="#github-credentials" id="toc-github-credentials" class="nav-link" data-scroll-target="#github-credentials">GitHub credentials</a>
+  <ul class="collapse">
+  <li><a href="#setting-up-your-github-token" id="toc-setting-up-your-github-token" class="nav-link" data-scroll-target="#setting-up-your-github-token">Setting up your GitHub Token</a></li>
+  <li><a href="#setting-up-your-ssh-key" id="toc-setting-up-your-ssh-key" class="nav-link" data-scroll-target="#setting-up-your-ssh-key">Setting up your SSH key</a></li>
   </ul></li>
   <li><a href="#clone-a-repository" id="toc-clone-a-repository" class="nav-link" data-scroll-target="#clone-a-repository">Clone a repository</a></li>
   <li><a href="#tracking-your-work" id="toc-tracking-your-work" class="nav-link" data-scroll-target="#tracking-your-work">Tracking your work</a></li>
@@ -465,11 +469,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Problem with any of those steps? Check out Jenny Brian <a href="http://happygitwithr.com/troubleshooting.html" target="_blank">Happy git trouble shooting section</a></p>
 </section>
 </section>
-<section id="github-credentials" class="level3">
-<h3 class="anchored" data-anchor-id="github-credentials">GitHub credentials</h3>
+</section>
+<section id="github-credentials" class="level2">
+<h2 class="anchored" data-anchor-id="github-credentials">GitHub credentials</h2>
 <p>Normally if you have already used GitHub tokens your Operating System (Windows, MacOSX, …) should have cached the necessary credentials to log in to your GitHub account (necessary to be able to push (write) content to the remote repository).</p>
-<section id="setting-up-your-github-token" class="level4">
-<h4 class="anchored" data-anchor-id="setting-up-your-github-token">Setting up your GitHub Token</h4>
+<section id="setting-up-your-github-token" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-your-github-token">Setting up your GitHub Token</h3>
 <p>You can find the latest guidelines on how to setup your personal GitHub token <strong><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic">here</a></strong></p>
 <ol type="1">
 <li><p>Choose a token name that is related to the machine you are using (not requires, but a good idea :) )</p></li>
@@ -488,20 +493,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Copy your token to your clipboard and then push to GitHub from the command line using <code>git push</code>. When you are prompted for your password, copy your token.</p>
 <p>Only once it has worked and that your token as been cached by your OS password manager you can close the GitHub webpage displaying your token value.</p>
 </section>
-<section id="setting-up-your-ssh-key" class="level4">
-<h4 class="anchored" data-anchor-id="setting-up-your-ssh-key">Setting up your SSH key</h4>
+<section id="setting-up-your-ssh-key" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-your-ssh-key">Setting up your SSH key</h3>
 <p>Another option is to set up the method that is commonly used by many different services to authenticate access on the command line. This method is called Secure Shell Protocol (SSH). SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.</p>
 <p>SSH uses what is called a key pair. This is <strong>two</strong> keys that work together to validate access. One key is publicly known and called the <strong>public key</strong>, and the other key called the <strong>private key</strong> is kept private. Very descriptive names.</p>
 <p>You can think of the public key as a padlock, and only you have the key (the private key) to open it. You use the public key where you want a secure method of communication, such as your GitHub account. You give this padlock, or public key, to GitHub and say “lock the communications to my account with this so that only computers that have my private key can unlock communications and send git commands as my GitHub account.”</p>
 <p>The first thing we are going to do is check if this has already been done on the computer you’re on. Because generally speaking, this setup only needs to happen once and then you can forget about it:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-al</span> ~/.ssh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Your output is going to look a little different depending on whether or not SSH has ever been set up on the computer you are using.</p>
-<section id="already-set-up" class="level5">
-<h5 class="anchored" data-anchor-id="already-set-up">Already set up:</h5>
+<section id="already-set-up" class="level4">
+<h4 class="anchored" data-anchor-id="already-set-up">Already set up:</h4>
 <p>If SSH has been set up on the computer you’re using, the public and private key pairs will be listed. The file names are either <code>id_ed25519</code>/<code>id_ed25519.pub</code> or <code>id_rsa</code>/<code>id_rsa.pub</code> depending on how the key pairs were set up.</p>
 </section>
-<section id="not-set-up" class="level5">
-<h5 class="anchored" data-anchor-id="not-set-up">Not Set up:</h5>
+<section id="not-set-up" class="level4">
+<h4 class="anchored" data-anchor-id="not-set-up">Not Set up:</h4>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ls:</span> cannot access <span class="st">'/Users/brunj7/.ssh'</span>: No such file or directory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Create an SSH key pair</p>
 <p>To create an SSH key pair Vlad uses this command, where the <code>-t</code> option specifies which type of algorithm to use and <code>-C</code> attaches a comment to the key (here, Vlad’s email):</p>
@@ -552,7 +557,6 @@ The key's randomart image is:
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 1 brunj7  staff 197121  Mar 11  09:21 ../</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-------</span> 1 brunj7  staff    464  Apr 21  2023 id_ed25519</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span> 1 brunj7  staff    103  Apr 21  2023 id_ed25519.pub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
 </section>
 </section>
 </section>
