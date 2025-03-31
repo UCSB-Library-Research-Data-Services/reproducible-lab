@@ -49,11 +49,11 @@ Here [`nano`](https://www.nano-editor.org) is used as example; you can choose mo
 Problem with any of those steps? Check out Jenny Brian [Happy git trouble shooting section](http://happygitwithr.com/troubleshooting.html){target="_blank"}
 
 
-### GitHub credentials
+## GitHub credentials
 
 Normally if you have already used GitHub tokens your Operating System (Windows, MacOSX, ...) should have cached the necessary credentials to log in to your GitHub account (necessary to be able to push (write) content to the remote repository).
 
-#### Setting up your GitHub Token
+### Setting up your GitHub Token
 
 You can find the latest guidelines on how to setup your personal GitHub token **[here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)**
 
@@ -78,7 +78,7 @@ Copy your token to your clipboard and then push to GitHub from the command line 
 
 Only once it has worked and that your token as been cached by your OS password manager you can close the GitHub webpage displaying your token value.
 
-#### Setting up your SSH key
+### Setting up your SSH key
 
 Another option is to set up the method that is commonly used by many different services to authenticate access on the command line.  This method is called Secure Shell Protocol (SSH).  SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.
 
@@ -95,11 +95,11 @@ ls -al ~/.ssh
 Your output is going to look a little different depending on whether or not SSH has ever been set up on the computer you are using.
 
 
-##### Already set up: 
+#### Already set up: 
 
 If SSH has been set up on the computer you're using, the public and private key pairs will be listed. The file names are either `id_ed25519`/`id_ed25519.pub` or `id_rsa`/`id_rsa.pub` depending on how the key pairs were set up.  
 
-##### Not Set up:
+#### Not Set up:
 
 ```bash
 ls: cannot access '/Users/brunj7/.ssh': No such file or directory
