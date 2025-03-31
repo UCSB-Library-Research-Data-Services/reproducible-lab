@@ -68,15 +68,15 @@ You can find the latest guidelines on how to setup your personal GitHub token **
    - gist
    - all user actions
 
-[GitHub token settings](img/github-token.png)
+   ![](img/github-token.png){width="65%"}
 
 4. Then click the `Generate token` button at the bottom of the page.
 
-DO NOT CLOSE the next page as it will be the only time you can see your token.
+**DO NOT CLOSE the next page** as it will be the only time you can see your token.
 
-Copy your token to your clipboard and then try to push to GitHub from the command line. When you are prompted for your password, copy your token.
+Copy your token to your clipboard and then push to GitHub from the command line using `git push`. When you are prompted for your password, copy your token.
 
-Only once it has worked and that your token as been cached by your OS password manager you should be able to close the GitHub webpage displaying your token value.
+Only once it has worked and that your token as been cached by your OS password manager you can close the GitHub webpage displaying your token value.
 
 #### Setting up your SSH key
 
