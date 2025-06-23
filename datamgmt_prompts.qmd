@@ -4,7 +4,7 @@ title: "Data Management Prompts"
 
 ## How are you feeling about your data?
 
-Here are a few prompts to help you start thinking about how you manage your data and where there are potential challenges. These prompts should help you to decide where to start and we encourage you to discuss them with the entire team
+Here are a few prompts to help you start thinking about how to manage your research lab data and identify potential challenges. These prompts aim at helping you to highlight potential unknowns or challenges and stimulate a discussion with the entire team.
 
 ### Collecting
 
