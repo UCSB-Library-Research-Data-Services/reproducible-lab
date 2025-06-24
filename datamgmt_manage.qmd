@@ -12,7 +12,7 @@ As you collect your data, if using pre-existing data sources, we strongly recomm
 - Go back to the original source and the right version of the data
 - Correctly attribute/cite the data sources when you project
 - Reach out to data creators and ask for potential clarifications you might need to correctly interpret the data
-- Inquiry for any data updates at a later date
+- Inquire about potential data updates at a later date
 
 
 ## Keep raw data raw
@@ -49,11 +49,12 @@ In the top-level folder, we also recommend you write a README to explain your pr
 Develop naming conventions for files and folders:
 
 - Avoid spaces (use underscores or dashes)
-- Avoid punctuation or special characters
-- Try to leverage alphabetical order (e.g., start with dates: 2020-05-08)
+- Avoid any other punctuation or special characters
+- Try to leverage alphabetical order used by default by computers to sort files (e.g., start with dates in the [ISO format](https://en.wikipedia.org/wiki/ISO_8601): YYYY-MM-DD, as example 2020-05-08)
 - Use descriptive naming (lite metadata)
-- Use folders to structure/organize content
-- Keep it simple
+- Avoid using upper case, or at least be consistent in usage (e.g. Folder's name start with upper case, files with lower case)
+- Use folders to structure/organize content, but avoid more than 3 levels of nesting
+- Keep it simple, e.g. no path longer than 255 characters
 - Make it programmatically useful:
     - Useful to select files (Wildcard *, regular expression)
     - But don’t forget Humans need to read file names too!!
