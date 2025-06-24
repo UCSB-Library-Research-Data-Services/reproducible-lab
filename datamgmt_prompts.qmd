@@ -4,7 +4,8 @@ title: "Data Management Prompts"
 
 ## How are you feeling about your data?
 
-Here are a few prompts to help you start thinking about how to manage your research lab data and identify potential challenges. These prompts aim at helping you to highlight potential unknowns or challenges and stimulate a discussion with the entire team.
+Here are a few prompts to help you start thinking about how to manage your research Lab data and identify potential challenges. These prompts aim at helping you to highlight potential unknowns or challenges and stimulate a discussion with the entire team.
+
 
 ### Collecting
 
@@ -12,13 +13,19 @@ Here are a few prompts to help you start thinking about how to manage your resea
 - What is your Research Lab's typical process for data collection? Frequency, events-based or continuous monitoring?
 - Do you have a QA/QC workflow/strategy in place (documented or not)?
 - Do you have file naming conventions in place (documented or not)?
+- What data would you consider critical?
+
 
 ### Managing
 
-- What are your lab challenges related to accessing, manipulating and/or moving data?
-- What are your lab needs, pain points, or where do you feel time is wasted related to ensuring future use of data by yourself or others?
+- What are the types of data you work with? e.g. images, videos, tabular, geospatial, ...
+- Where do you store your data?
+- Who has access to your data?
+- What are your Lab challenges related to accessing, manipulating and/or moving data?
+- What are your Lab needs, pain points, or where do you feel time is wasted related to ensuring future use of data by yourself or others?
 - What are your main security or data loss concerns related to your data?
 - What are your data that might contain sensitive information (geolocation, human subjects, ...) and thus need special handling?
+- Do you reuse data from others (collaborators or institutions)?
 - What are your current backup strategies?
 
 
@@ -26,8 +33,18 @@ Here are a few prompts to help you start thinking about how to manage your resea
 
 - What type of analysis is conducted on your data?
 - What is the unit of analysis for your projects? (individual, community, space, time...)?
-- Is it mostly done using a scripting language (R, Python)?
+- Is it mostly done using a scripting language (R, Python, others)?
 - What is the saturation level and how many events/data points are enough to come to a conclusion?
 - Is there a mix of qualitative and quantitative analysis?
+
+
+### Documenting
+
+- Do you have Lab guidelines to develop documentation for code and data?
+- Do you use any metadata standards or is any structured format used for your documentation?
+- Is you current documentation process project or Lab wide based?
+- Do you have guidelines stating expectations when off boarding Lab members
+
+
 
 
