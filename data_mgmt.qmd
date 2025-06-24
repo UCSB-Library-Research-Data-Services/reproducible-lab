@@ -14,6 +14,6 @@ To help you think about your Lab data management, you can divide the life cycle 
 
 ![Research Data Management lifecycle; source: <https://osf.io/d8fqh>](img/data_lifecycle_rdm.png){width="70%" fig-align="center"}
 
-##  Goal: Developing your data management strategy
+##  Goal: Developing your Data Management Strategy
 
-One of the goals of our data management sessions together is to **develop a common understanding among lab members of “good enough” norms to adhere to help manage your research lab data in a coordinated way**.  We strongly encourage building on our discussions to **develop written guidelines** for your reserach lab that reflect those norms and help to on/off-board lab members. Those guidelines should be seen as a living document that needs to evolve along with your research activities.
+One of the goals of our data management sessions together is to **develop a common understanding among lab members of "good enough" norms to adhere to help manage your research lab data in a coordinated way**.  We strongly encourage building on our discussions to **develop written guidelines** for your research lab that reflect those norms and help to on/off-board lab members. Those guidelines should be seen as a living document that needs to evolve along with your research activities. They will also set the basis for writing Data Management Plan (DMP) for grant proposals and more.
