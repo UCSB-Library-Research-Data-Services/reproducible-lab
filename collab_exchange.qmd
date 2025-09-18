@@ -74,4 +74,6 @@ Code reviews - the lab meeting for code: <https://web.archive.org/web/2017070120
 
 Small-Group Code Reviews For Education: <https://cacm.acm.org/blogs/blog-cacm/175944-small-group-code-reviews-for-education/fulltext>
 
+Tidyverse team code review guidelines: <https://code-review.tidyverse.org/>
+
 
