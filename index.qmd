@@ -20,34 +20,45 @@ The **Designing a Reproducible and Collaborative Lab (RCL) Program**,  currently
 
 ### Topics
 
--   Coding as a lab
--   Managing your lab data
--   Automating your analytical workflows
--   Documenting & preserving things to make them reusable
+- Managing your lab data more efficiently
+- Collaborative coding as a lab
+- Automating your analytical workflows from raw data to scientific outputs
+- Documenting & preserving things to make them reusable
+
 
 ### Format
 
--   Scheduled at your convenience
--   4 workshops (2-3h) as a primer on a specific topic
--   Personalized coaching sessions focused on lab-specific needs
+- Scheduled at your convenience
+- 4 whole lab workshops as a primer on a specific topic
+- Personalized coaching sessions focused on lab-specific needs
 
-### Outcomes
+### Lab Outcomes
 
--   More reproducible management of your lab's scientific products (data, code, and more!)
--   Better analytical strategies for collaboration safety nets for your research lab content
--   More efficient reuse of your work
--   Streamlined on- and off-boarding of collaborators
+- More reproducible management of your lab’s scientific products (data, code, and more!)
+- Better analytical strategies for collaboration 
+- Safety nets for your research lab content
+- More efficient reuse of your work
+- Streamlined on- and off- boarding of collaborators
 
-### Learning Opportunities
 
--   Leverage GitHub to manage and collaborate on your lab’s code
--   Develop strategies to centralize and manage your lab’s data
--   Set up templates and guidelines on how to document your lab research and improve its reusability
--   Establish lab operating procedures and documentation standards
--   Protect your lab’s scientific products against loss through backup and computing resources strategies
+### Learning Opportunities for Lab Members
+
+- Leverage GitHub to manage and collaborate on your lab’s code
+- Develop strategies to centralize and manage your lab data
+- Protect your lab’s scientific products against loss through backup and computing resources strategies
+- Develop guidelines and templates on how to document your Lab research products and improve their reusability
+- Adopt "good enough" research computing strategies for robust and more reusable code development & data management
+
+### Testimony
+
+"Participating in this program has been absolutely invaluable for my team. We all learned so much, from using GitHub for lab coding projects to best practices for naming files, to how to create an ‘asset library’ for all of the video data we collect that will be future-proof and useful for numerous unforeseen projects into the future."
+
+_-- Dr.Eleanor Caves, former participant_
+
 
 ### Want to know more?
 
-If you are interested in this program, please see the [about](about.qmd) page to connect with us.
+ You can read more on the RCL program in the [UCSB Current article](https://news.ucsb.edu/in-focus/librarys-new-consultation-service-targets-campus-research-labs 
+). If you are interested in this program, please see the [about](about.qmd) page to connect with us.
 
 ![](img/rds_hex.png){fig-align="center" width="55%"}
