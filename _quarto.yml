@@ -1,7 +1,10 @@
 project:
   type: website
   title: "Designing a Reproducible and Collaborative Lab (RCL)"
-  
+
+execute:
+  freeze: auto  # re-render only when source changes  
+
 website:
   page-navigation: true
   search: 
