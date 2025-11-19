@@ -45,7 +45,6 @@ The **Designing a Reproducible and Collaborative Lab (RCL) Program**,  currently
 
 - Leverage GitHub to manage and collaborate on your lab’s code
 - Develop strategies to centralize and manage your lab data
-- Protect your lab’s scientific products against loss through backup and computing resources strategies
 - Develop guidelines and templates on how to document your Lab research products and improve their reusability
 - Adopt "good enough" research computing strategies for robust and more reusable code development & data management
 
