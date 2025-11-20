@@ -1,0 +1,15 @@
+{
+  "hash": "ccb102313e2dbd5089304584a4fa1710",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Preserving your work\"\n---\n\nPreserving your work includes developing enough documentation so your future self or another researcher can make sense of your work, enough so that they can at least reproduce your work and reuse it to answer their own research questions. It also includes where to store and share your work in data / code repositories.\n\n## Documentation\n\nOnly a few people with free time ahead of them will sit wondering about what to do next and think \"what if I were to write some documentation!?\". Make it part of your workflow! and do not let it get out of sync too much as you iterate on your analysis.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![https://twitter.com/JenMsft/status/1557218211971489792](img/found_documentationjpg.jpeg)\n:::\n:::\n\n\n### Know your audience\n\nThere are actually various ways to document your work!! Here is a potential framework to help to think about those different types of documentation and their related audiences:\n\n\n::: {.cell}\n::: {.cell-output-display}\n![ source:  https://diataxis.fr/](img/document_diataxis.png){width=150%}\n:::\n:::\n\n\nYour potential audience(s) for your documentation can be a future collaborator, an external researcher with no direct insight into your work, or a potential user of a tool you developed.\n\n\n## Prompts\n\n- What are the specific expectations from your discipline in terms of documentation and sharing data? For example, should you also share the raw data along with the analysis results?\n\n- Considering funding and publisher mandates, as well as disciplinary norms.  Do you anticipate / have had any challenges regarding data sharing and preservation?\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
