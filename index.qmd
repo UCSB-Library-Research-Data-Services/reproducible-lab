@@ -25,19 +25,25 @@ Welcome to the _Reproducible & Collaborative Lab Handbook_, a resource developed
 We view the research lab as the primary unit of scientific production. This guide is designed to help you build sustainable systems that outlast individual project timelines, ensuring your research products—data, code, and methods—remain reusable and robust for you, your labmates, and future collaborators.
 
 
-### Topics
+### What You’ll Find Inside
 
-- Managing your lab data more efficiently
-- Collaborative coding as a lab
-- Automating your analytical workflows from raw data to scientific outputs
-- Documenting & preserving things to make them reusable
+Explore these core pillars of research computing at your own pace:
+
+- **Collaborative Coding**: Learn to leverage GitHub to manage code as a team, conduct code reviews, and streamline analytical workflows.
+- **Data Management Strategy**: Develop systems to centralize, back up, and organize your lab’s data so nothing gets lost.
+- **Rerunnable Workflows**: Move away from manual, error-prone steps toward transparent, automated pipelines that take you from raw data to scientific output.
+- **Documentation & Preservation**: Create actionable guidelines and templates to document your research, making it easy for new members to onboard and your work to be reused.
+- **"Good Enough" Scientific Computing**: Adopt practical, scalable research computing strategies that improve robustness without overwhelming your team.
 
 
-### Format
+### Why Use This Handbook?
 
-- Scheduled at your convenience
-- 4 whole lab workshops as a primer on a specific topic
-- Personalized coaching sessions focused on lab-specific needs
+By implementing the strategies in this guide, your lab builds "safety nets" for your research:
+
+- **For the PI**: Streamline onboarding and off-boarding, reduce the risk of data loss, and ensure the long-term quality of your lab's scientific output.
+- **For Lab Members**: Gain proficiency in modern computational tools and analytical strategies that will serve your career long-term.
+- **For the Group**: Foster an environment where analysts and non-coders alike feel empowered to contribute to the lab’s digital infrastructure.
+
 
 ### Lab Outcomes
 
