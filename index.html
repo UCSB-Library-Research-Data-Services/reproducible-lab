@@ -2,17 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Julien Brun">
 <meta name="author" content="Renata Curty">
 <meta name="author" content="Greg Janée">
-<meta name="dcterms.date" content="2026-01-23">
+<meta name="dcterms.date" content="2026-07-17">
 
 <title>Designing a Reproducible and Collaborative Lab (RCL)</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -37,15 +40,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./coding.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-65803ac9f8b9a226f900d64efc7d6e1f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ee4c798a696f410de894479ed283eeec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-37f75bca56b013319e57bec4883979ca.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3fcd36bff3e4d3e4a952e3df70241dd1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -377,12 +379,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#topics" id="toc-topics" class="nav-link active" data-scroll-target="#topics">Topics</a></li>
-  <li><a href="#format" id="toc-format" class="nav-link" data-scroll-target="#format">Format</a></li>
-  <li><a href="#lab-outcomes" id="toc-lab-outcomes" class="nav-link" data-scroll-target="#lab-outcomes">Lab Outcomes</a></li>
-  <li><a href="#learning-opportunities-for-lab-members" id="toc-learning-opportunities-for-lab-members" class="nav-link" data-scroll-target="#learning-opportunities-for-lab-members">Learning Opportunities for Lab Members</a></li>
+  <li><a href="#reproducible-collaborative-lab-handbook" id="toc-reproducible-collaborative-lab-handbook" class="nav-link active" data-scroll-target="#reproducible-collaborative-lab-handbook">Reproducible &amp; Collaborative Lab Handbook</a>
+  <ul class="collapse">
+  <li><a href="#what-youll-find-inside" id="toc-what-youll-find-inside" class="nav-link" data-scroll-target="#what-youll-find-inside">What You’ll Find Inside</a></li>
+  <li><a href="#why-use-this-handbook" id="toc-why-use-this-handbook" class="nav-link" data-scroll-target="#why-use-this-handbook">Why Use This Handbook?</a></li>
+  <li><a href="#how-to-get-started" id="toc-how-to-get-started" class="nav-link" data-scroll-target="#how-to-get-started">How to Get Started</a></li>
+  <li><a href="#outcomes" id="toc-outcomes" class="nav-link" data-scroll-target="#outcomes">Outcomes</a></li>
   <li><a href="#testimony" id="toc-testimony" class="nav-link" data-scroll-target="#testimony">Testimony</a></li>
   <li><a href="#want-to-know-more" id="toc-want-to-know-more" class="nav-link" data-scroll-target="#want-to-know-more">Want to know more?</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -415,7 +420,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 23, 2026</p>
+      <p class="date">July 17, 2026</p>
     </div>
   </div>
   
@@ -427,41 +432,47 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The <strong>Designing a Reproducible and Collaborative Lab (RCL) Program</strong>, currently piloted by the Research &amp; Data Services (RDS) department at the <a href="https://www.library.ucsb.edu/">UCSB Library</a>, combines group workshops, self-paced learning, and personalized coaching sessions for Faculty and their Team(s) on the following topics:</p>
-<section id="topics" class="level3">
-<h3 class="anchored" data-anchor-id="topics">Topics</h3>
+<section id="reproducible-collaborative-lab-handbook" class="level2">
+<h2 class="anchored" data-anchor-id="reproducible-collaborative-lab-handbook">Reproducible &amp; Collaborative Lab Handbook</h2>
+<p><strong>Practical strategies to help your research group work smarter, together.</strong></p>
+<p>Welcome to the <em>Reproducible &amp; Collaborative Lab Handbook</em>, a resource developed by Research &amp; Data Services (RDS) at the UCSB Library as a self-paced companion to the <a href="https://drive.google.com/file/d/17qHz0cYwI9ZyjV1CzCeTMEduMIx8Mnzf/view?usp=sharing">Reproducible &amp; Collaborative Lab Program</a> during which our team engages with your lab over several months. Whether you are a Principal Investigator building from the ground up or managing a current lab, a team member looking to streamline your data workflows, or a lab manager wanting to improve your lab data management, this handbook provides practices for enabling a research environment that is open, efficient, and reproducible.</p>
+<p>We view the research lab as the primary unit of scientific production. This guide is designed to help you build sustainable systems that outlast individual project timelines, ensuring your research products—data, code, and methods—remain reusable and robust for you, your labmates, and future collaborators.</p>
+<section id="what-youll-find-inside" class="level3">
+<h3 class="anchored" data-anchor-id="what-youll-find-inside">What You’ll Find Inside</h3>
+<p>Explore these core pillars of research computing at your own pace:</p>
 <ul>
-<li>Managing your lab data more efficiently</li>
-<li>Collaborative coding as a lab</li>
-<li>Automating your analytical workflows from raw data to scientific outputs</li>
-<li>Documenting &amp; preserving things to make them reusable</li>
+<li><strong>Collaborative Coding</strong>: Learn to leverage GitHub to manage code as a team, conduct code reviews, and streamline analytical workflows.</li>
+<li><strong>Data Management Strategy</strong>: Develop systems to centralize, back up, and organize your lab’s data so nothing gets lost.</li>
+<li><strong>Rerunnable Workflows</strong>: Move away from manual, error-prone steps toward transparent, automated pipelines that take you from raw data to scientific output.</li>
+<li><strong>Documentation &amp; Preservation</strong>: Create actionable guidelines and templates to document your research, making it easy for new members to onboard and your work to be reused.</li>
+<li><strong>“Good Enough” Scientific Programming</strong>: research computing strategies for robust and more reusable code development scaling beyond your laptop.</li>
 </ul>
 </section>
-<section id="format" class="level3">
-<h3 class="anchored" data-anchor-id="format">Format</h3>
+<section id="why-use-this-handbook" class="level3">
+<h3 class="anchored" data-anchor-id="why-use-this-handbook">Why Use This Handbook?</h3>
+<p>By implementing the strategies in this guide, your lab builds “safety nets” for your research:</p>
 <ul>
-<li>Scheduled at your convenience</li>
-<li>4 whole lab workshops as a primer on a specific topic</li>
-<li>Personalized coaching sessions focused on lab-specific needs</li>
+<li><strong>For the PI</strong>: Streamline onboarding and off-boarding, reduce the risk of data loss, and ensure the long-term quality of your lab’s scientific output.</li>
+<li><strong>For Lab Members</strong>: Gain proficiency in modern computational tools and analytical strategies that will serve your career long-term.</li>
+<li><strong>For the Group</strong>: Foster an environment where analysts and non-coders alike feel empowered to contribute to the lab’s digital infrastructure.</li>
 </ul>
 </section>
-<section id="lab-outcomes" class="level3">
-<h3 class="anchored" data-anchor-id="lab-outcomes">Lab Outcomes</h3>
+<section id="how-to-get-started" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-get-started">How to Get Started</h3>
+<p>This handbook is designed to be explored according to your lab’s unique needs. You can jump directly to specific topics or follow our suggested learning paths.</p>
+<ul>
+<li>Use the left panel to start browsing the modules.</li>
+<li>While this handbook is self-paced, our team at the UCSB Library RDS is here to help. Contact us at <a href="mailto:rds@library.ucsb.edu" class="email">rds@library.ucsb.edu</a> if you’d like to discuss how to implement your strategies specific to lab context.</li>
+</ul>
+</section>
+<section id="outcomes" class="level3">
+<h3 class="anchored" data-anchor-id="outcomes">Outcomes</h3>
 <ul>
 <li>More reproducible management of your lab’s scientific products (data, code, and more!)</li>
 <li>Better analytical strategies for collaboration</li>
 <li>Safety nets for your research lab content</li>
 <li>More efficient reuse of your work</li>
 <li>Streamlined on- and off- boarding of collaborators</li>
-</ul>
-</section>
-<section id="learning-opportunities-for-lab-members" class="level3">
-<h3 class="anchored" data-anchor-id="learning-opportunities-for-lab-members">Learning Opportunities for Lab Members</h3>
-<ul>
-<li>Leverage GitHub to manage and collaborate on your lab’s code</li>
-<li>Develop strategies to centralize and manage your lab data</li>
-<li>Develop guidelines and templates on how to document your Lab research products and improve their reusability</li>
-<li>Adopt “good enough” research computing strategies for robust and more reusable code development &amp; data management</li>
 </ul>
 </section>
 <section id="testimony" class="level3">
@@ -480,17 +491,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 </section>
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{brun2026,
   author = {Brun, Julien and Curty, Renata and Janée, Greg},
   title = {Designing a {Reproducible} and {Collaborative} {Lab} {(RCL)}},
-  date = {2026-01-23},
+  date = {2026-07-17},
   url = {https://ucsb-library-research-data-services.github.io/reproducible-lab/},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-brun2026" class="csl-entry quarto-appendix-citeas" role="listitem">
 Brun, Julien, Renata Curty, and Greg Janée. 2026. <span>“Designing a
-Reproducible and Collaborative Lab (RCL).”</span> January 23, 2026. <a href="https://ucsb-library-research-data-services.github.io/reproducible-lab/">https://ucsb-library-research-data-services.github.io/reproducible-lab/</a>.
+Reproducible and Collaborative Lab (RCL).”</span> July 17. <a href="https://ucsb-library-research-data-services.github.io/reproducible-lab/">https://ucsb-library-research-data-services.github.io/reproducible-lab/</a>.
 </div></div></section></div></main> <!-- /main -->
 <div>
   <p></p><hr><p></p>
