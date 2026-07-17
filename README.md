@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/688205071.svg)](https://doi.org/10.5281/zenodo.18351977)
+
 # Designing a Reproducible and Collaborative Research Lab (RCL)
 
 This repository hosts the content for the RCL workshop series website:
