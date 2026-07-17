@@ -16,7 +16,14 @@ citation:
 categories: [data-science, collaboration, reproducible-research]
 ---
 
-The **Designing a Reproducible and Collaborative Lab (RCL) Program**,  currently piloted by the Research & Data Services (RDS) department at the [UCSB Library](https://www.library.ucsb.edu/), combines group workshops, self-paced learning, and personalized coaching sessions for Faculty and their Team(s) on the following topics:
+## Reproducible & Collaborative Lab Handbook
+
+**Practical strategies to help your research group work smarter, together.**
+
+Welcome to the _Reproducible & Collaborative Lab Handbook_, a resource developed by Research & Data Services (RDS) at the UCSB Library as a self-paced companion to the [Reproducible & Collaborative Lab Program](https://drive.google.com/file/d/17qHz0cYwI9ZyjV1CzCeTMEduMIx8Mnzf/view?usp=sharing) during which our team engages with your lab over several months. Whether you are a Principal Investigator building from the ground up or managing a current lab, a team member looking to streamline your data workflows, or a lab manager wanting to improve your lab data management, this handbook provides practices for enabling a research environment that is open, efficient, and reproducible.
+
+We view the research lab as the primary unit of scientific production. This guide is designed to help you build sustainable systems that outlast individual project timelines, ensuring your research products—data, code, and methods—remain reusable and robust for you, your labmates, and future collaborators.
+
 
 ### Topics
 
@@ -47,6 +54,7 @@ The **Designing a Reproducible and Collaborative Lab (RCL) Program**,  currently
 - Develop strategies to centralize and manage your lab data
 - Develop guidelines and templates on how to document your Lab research products and improve their reusability
 - Adopt "good enough" research computing strategies for robust and more reusable code development & data management
+
 
 ### Testimony
 
