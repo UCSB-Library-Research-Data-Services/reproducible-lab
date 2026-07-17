@@ -62,6 +62,17 @@ This handbook is designed to be explored according to your lab’s unique needs.
 - Streamlined on- and off- boarding of collaborators
 
 
+### Consultation program
+
+Over a few months, the Research Data Services (RDS) team will partner with you and your lab members to set up the necessary infrastructure and practices to enhance the reproducibility of your research, enabling your lab to efficiently reuse your work and collaborate more effectively.
+
+#### Format
+
+- Scheduled at your convenience (e.g. during lab meeting)
+- 4 workshops (1-2h) for your whole team as a primer on a specific topic
+- Personalized coaching sessions as follow-up, focusing on project-specific needs
+
+
 ### Testimony
 
 "Participating in this program has been **absolutely invaluable** for my team. We all learned so much, from using GitHub for lab coding projects to best practices for naming files, to how to create an 'asset library' for all of the video data we collect that will be future-proof and useful for numerous unforeseen projects into the future."
