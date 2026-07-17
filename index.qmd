@@ -33,7 +33,7 @@ Explore these core pillars of research computing at your own pace:
 - **Data Management Strategy**: Develop systems to centralize, back up, and organize your lab’s data so nothing gets lost.
 - **Rerunnable Workflows**: Move away from manual, error-prone steps toward transparent, automated pipelines that take you from raw data to scientific output.
 - **Documentation & Preservation**: Create actionable guidelines and templates to document your research, making it easy for new members to onboard and your work to be reused.
-- **"Good Enough" Scientific Computing**: Adopt practical, scalable research computing strategies that improve robustness without overwhelming your team.
+- **"Good Enough" Scientific Programming**: research computing strategies for robust and more reusable code development scaling beyond your laptop.
 
 
 ### Why Use This Handbook?
@@ -45,21 +45,21 @@ By implementing the strategies in this guide, your lab builds "safety nets" for 
 - **For the Group**: Foster an environment where analysts and non-coders alike feel empowered to contribute to the lab’s digital infrastructure.
 
 
-### Lab Outcomes
+### How to Get Started
+
+This handbook is designed to be explored according to your lab’s unique needs. You can jump directly to specific topics or follow our suggested learning paths.
+
+- Use the left panel to start browsing the modules.
+- While this handbook is self-paced, our team at the UCSB Library RDS is here to help. Contact us at <rds@library.ucsb.edu> if you’d like to discuss how to implement your strategies specific to lab context.
+
+
+### Outcomes
 
 - More reproducible management of your lab’s scientific products (data, code, and more!)
 - Better analytical strategies for collaboration 
 - Safety nets for your research lab content
 - More efficient reuse of your work
 - Streamlined on- and off- boarding of collaborators
-
-
-### Learning Opportunities for Lab Members
-
-- Leverage GitHub to manage and collaborate on your lab’s code
-- Develop strategies to centralize and manage your lab data
-- Develop guidelines and templates on how to document your Lab research products and improve their reusability
-- Adopt "good enough" research computing strategies for robust and more reusable code development & data management
 
 
 ### Testimony
