@@ -15,7 +15,7 @@ This session will cover:
 
 # Setting up git on your computer
 
-`MacOSX` and `Linux` computers all come with git pre-installed, but it is not always directly usable. The best way to test if `git` is ready to use is at the command line:
+`MacOS` and `Linux` computers all come with git pre-installed, but it is not always directly usable. The best way to test if `git` is ready to use is at the command line:
 
 ```{bash git test, eval=FALSE}
 git --version
