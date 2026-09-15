@@ -50,7 +50,7 @@ By implementing the strategies in this guide, your lab builds "safety nets" for 
 This handbook is designed to be explored according to your lab’s unique needs. You can jump directly to specific topics or follow our suggested learning paths.
 
 - Use the left panel to start browsing the modules.
-- While this handbook is self-paced, our team at the UCSB Library RDS is here to help. Contact us at <rds@library.ucsb.edu> if you’d like to discuss how to implement your strategies specific to lab context.
+- While this handbook is self-paced, *our team at the UCSB Library is here to help. Contact us at <rds@library.ucsb.edu> if you’d like to discuss how to implement strategies specific to lab needs.*
 
 
 ### Outcomes
