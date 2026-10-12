@@ -1,10 +1,10 @@
 ---
-title: "Using GitHub Templates to document things"
+title: "Leveraging GitHub Templates"
 ---
 
 ## Repository templates
 
-You can create templates to model a specific repository setup when creating a new repository. The advantage of such a template is that you can provide a boilerplate for the README and any other files you would like your collaborators to provide when setting up a new project / repository.
+You can create a **Repository Template** to model a specific repository setup every time you create a new repository. The advantage of such a template is that you can include a boilerplate for the `README` and any other files you would like your collaborators to provide when setting up a new project / repository.
 
 To create a template repository you can either use an existing one or create a new one for this specific purpose. We are going to do the latter.
 

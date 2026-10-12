@@ -57,10 +57,12 @@ website:
                 text: "Hands-on: Branches using RStudio"
               - href: git_conflicts.qmd
                 text: "Managing conflicts"
-          - section: "Streamlining documentation"
+          - section: "Add a README"
             contents:
+              - href: github_readme.qmd
+                text: "Repository READMEs"
               - href: github_template.qmd
-                text: "Repository template"
+                text: "Repository README template"
       - section: "Managing your Lab data"
         contents:
           - href: data_mgmt.qmd

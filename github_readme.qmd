@@ -1,0 +1,141 @@
+---
+title: "What information should add to your README"
+---
+
+**You should always include a [README](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) in the root directory of your GitHub repositories.** A README is typically the first item that visitors will see when they arrive at your repository. This makes them the perfect place to tell people what your project is, why its useful, and how to get started using it. What you include in a given README will look different depending on the project, but here are some guidelines for getting started:
+
+::: {.callout-tip collapse=true}
+## How to add a repository-level README:
+
+*There are a number of different ways:*
+
+**From GitHub:**
+
+  a. Check the **Add a README file** box when creating a repository from GitHub, or
+  b. Click the green **Add a README** button that appears below your files on a GitHub repository that does not yet have a README
+  c. Click the **Add file** button at the top of a repository's landing page (next to the green **Code** button) > select **+ Create new file** > name it `README.md` and add content > click **Commit changes...**
+
+**From RStudio (GUI):**
+
+  d. Use the **Files pane** to click **Blank File** > select **Text File** > type `README.md`
+
+**From the command line:**
+
+  e. Navigate to your repository's root directory using `cd` (use `pwd` to verify / check your location) > type `touch README.md`
+:::
+
+### Things you should *always* include in your GitHub repository READMEs: {#always-include}
+
+
+- [ ] [**A short, but descriptive title**]
+    - A README’s title is set to the repository name by default - change this!
+- [ ] [**A brief explanation of the repository's purpose**]
+    - Paragraphs or a bulleted list are both acceptable options
+    - You may include an image or logo that represents the project
+- [ ] [**A concise description of what’s housed in the repository**] 
+    - This includes information about the repository structure or file organization
+
+::: {.callout-tip collapse=true}
+## Creating a repository structure using `tree`
+
+The `tree` command-line tool prints a visual, hierarchical map of your directory. The nicely outputted tree can be pasted into your README to orient newcomers to your file organization.
+
+**Install `tree`:**
+
+*Mac (requires [Homebrew](https://brew.sh/)):*
+```bash
+brew install tree
+```
+
+*Windows (requires [Chocolatey](https://chocolatey.org/)):*
+```bash
+choco install tree
+```
+
+Alternatively on Windows, `tree` is available via [Git Bash](https://gitforwindows.org/) or [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+
+**Generate your repository structure:**
+
+Navigate to your repository's root directory, then run:
+```bash
+tree
+```
+
+Some useful flags:
+
+| Flag | Description |
+|------|-------------|
+| `-L 2` | Limit depth to 2 levels (replace `2` with your  preferred depth) |
+| `-a` | Include hidden files (e.g. `.gitignore`) |
+| `--gitignore` | Exclude files listed in `.gitignore` |
+| `-I "directory_name"` | Exclude a specific directory by name |
+
+**Copy the output into your README** inside a code block (use triple backticks) so it renders as fixed-width text:
+
+
+``` output
+my-repo/
+├── data/
+│   ├── raw/
+│   └── processed/
+├── scripts/
+│   └── analysis.R
+└── README.md
+```
+
+
+:::
+
+
+- [ ] [**Details regarding data access**]
+   - Any necessary information on where data lives (e.g. is it housed in the repo, on a server, in a library / package etc.) and how to access it in order to run the code
+- [ ] [**A list of authors or current contributors (for collaborative work)**]
+    - Consider hyperlinking collaborators' GitHub profiles or other professional profile
+- [ ] [**References and / or Acknowledgements**]
+    - In an appropriate, consistent format, including links
+    - Provide reference to any other individuals or sources that supported the development of the repository. For example, did you fork an existing repository? Did the work have any funding sources? Were there individuals you consulted with or were inspired by?
+    - Don't forget to add references for data sets too
+
+
+### Things you should consider including, but may vary depending on the goals and complexity of the project: {#consider-including}
+
+- [ ] [**How to install or where to start**]{.teal-text} 
+    - Does your repository contain software that users will need to download or install? Do users access your software via a web browser? Do they need to install any dependencies? Do users need to clone your repository? etc.
+- [ ] [**A quick demo**]{.teal-text} 
+    - Related to #1, above. Its important to keep this concise! You may include images. Any long-form instructional documentation is best moved to the repository's wiki
+- [ ] [**What do do if a bug is spotted**]{.teal-text} 
+    - Make mention of GitHub issues and what information a user should include in an issue
+- [ ] [**Contributing**]{.teal-text} 
+    - Do you welcome contributions from others? If so, its important to explain how one might contribute (e.g. fork & pull request, open an issue, both?)
+- [ ] [**License**]{.teal-text} 
+    - Important for allowing others to reuse your work (which is copyrighted, by default; [read about what it means when no license is available](https://choosealicense.com/no-permission/))
+    - What license you choose depends on what type of work you are trying to license. There are different licenses used for code / software, content, and data. Some helpful resources for getting started: 
+        a. *Licensing code / software:* check out this page, [Choose an open source license](https://choosealicense.com/), by GitHub. A couple popular options for software include [MIT License](https://choosealicense.com/licenses/mit/) and [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
+        b. *Licensing content (i.e. non-software):* check out this page, [About CC Licenses](https://creativecommons.org/share-your-work/cclicenses/), by Creative Commons. A few good CC options for non-software content include [CC BY](https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1), [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/), and [CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0/).
+        c. *Licensing data:* You'll chat more about this in [EDS 213 (Databases and Data Management)](https://bren.ucsb.edu/courses/eds-213)!
+    
+::: {.callout-note}
+## Keep READMEs concise
+
+While it may be tempting to provide as much information as you possibly can into your README, it might not necessarily be the right home for *everything* (see the [Wikis](#wikis) section, below). I find this advice from [Kira Oakley](https://github.com/hackergrrl) in her article, [Art of README](https://github.com/hackergrrl/art-of-readme?tab=readme-ov-file#readme) to be a helpful reminder:
+
+>"The lack of a README is a powerful red flag, but even a lengthy README is not indicative of there being high quality. The ideal README is as short as it can be without being any shorter. Detailed documentation is good -- make separate pages for it! -- but keep your README succinct."
+
+:::
+
+
+### Example GitHub repository READMEs: 
+
+Each project is different and so is its README. As you browse through different repositories you will see that not all of them have the same sections. However, they all offer a clear starting point for a newcomer to understand what the project is about. Here are some GitHub repositories with READMEs we like:
+
+- **[strava-dashboard](https://github.com/samanthacsik/strava-dashboard)**, by Samantha Csik - code for a Shiny dashboard
+- **[EDS-240-data-viz](https://github.com/samanthacsik/EDS-240-data-viz)**, by Samantha Csik - code for a course website
+- **[xarray](https://github.com/pydata/xarray)** - a Python package for working with multidimensional arrays and datasets
+- **[palmerpenguins](https://github.com/allisonhorst/palmerpenguins/)** - an R package that contains teaching data
+- **[metajam](https://github.com/NCEAS/metajam)** - an R package for downloading and reading in metadata from repositories in the DataONE network
+- **[awesome-readme](https://github.com/matiassingers/awesome-readme)**, by Matias Singers - a curated list of awesome READMEs
+
+
+### Acknowledgement
+
+This section has been adapted from the Bren School Master in Environmental Data Science README Guidelines <https://ucsb-meds.github.io/README-guidelines/>.
