@@ -7,6 +7,7 @@
 # quarto stuff
 /.quarto/
 /_site/
+/_freeze/
 
 # Mac stuff
 .DS_Store
