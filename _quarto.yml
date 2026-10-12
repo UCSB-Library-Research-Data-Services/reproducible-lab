@@ -60,9 +60,9 @@ website:
           - section: "Add a README"
             contents:
               - href: github_readme.qmd
-                text: "Repository READMEs"
+                text: "Adding a READMEs"
               - href: github_template.qmd
-                text: "Repository README template"
+                text: "Leveraging templates"
       - section: "Managing your Lab data"
         contents:
           - href: data_mgmt.qmd
