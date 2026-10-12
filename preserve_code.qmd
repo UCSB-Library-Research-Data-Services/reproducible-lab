@@ -14,10 +14,6 @@ It is important to make your code easy to read if you hope that others will reus
 - Here is a good style guide for R: <https://style.tidyverse.org/>
 - Style guide for Python: <https://www.python.org/dev/peps/pep-0008/>
 
-```{python Zen of Python, echo=TRUE}
-import this
-```
-
 There is also the **visual aspect** of the code that should not be neglected. Like prose, if you receive a long text without any paragraphs, you might be not very excited about reading it. _Indentation_, _spaces_, and _empty lines_ should be leveraged to make a script visually inviting and easy to read. The good news is that most Integrated Development Environments (IDEs) will help you to do so by auto formatting your scripts according to conventions.  Note that also a lot of IDEs, such as RStudio, rely on some conventions to ease the navigation of scripts and notebooks. For example, _try to add four `-` or `#` after a line starting with one or several `#` in an R Script!_
 
 
@@ -28,6 +24,13 @@ Tom Van Vleck, based on people he knew..._ (<https://multicians.org/thvv/realpro
 
 Joke aside, it is really hard to comment too much your code, because even steps that might seem trivial today might not be so anymore in a few weeks or months for now. In addition, well commented code is more likely to be read by others. Note also that **comments should complement the code** and should not being seen as work around vague naming conventions of variables or functions, but neither should they simple restate what the code is doing.
 
+Here are a few principles to help you write useful code comments:
+
+- Comments should focus on the `why` not the `what`. In other words, your code should already explain the what and your comments explain why a specific decision was made (e.g filter out all the values <10 because it is within the sensor sensitivity)
+- Comments should be concise and add value
+
+In action:
+
 ```{r, eval=FALSE}
 x <- 9.81  #  gravitational acceleration               POOR
 gravity_acc <- 9.81  #  gravitational acceleration     BETTER
@@ -35,6 +38,12 @@ gravity_acc <- 9.81  #  gravitational acceleration     BETTER
 name_index <- 0  # set name_index to 0                 POOR
 name_index <- 0                                        BETTER
 ```
+
+:::{.callout-note}
+## Gen-AI generated code
+
+Gen-AI assisted coding often generate very verbose comments. However this does nto mean that their are all useful and correct. As you review Gen-AI generated code, it is a good idea to also review comments for correctness and usefulness.
+:::
 
 
 ### Header
