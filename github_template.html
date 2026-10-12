@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Using GitHub Templates to document things – Designing a Reproducible and Collaborative Lab (RCL)</title>
+<title>Leveraging GitHub Templates – Designing a Reproducible and Collaborative Lab (RCL)</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,17 +37,17 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./data_mgmt.html" rel="next">
-<link href="./git_conflicts.html" rel="prev">
+<link href="./github_readme.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-17e5a23d094ee4d3ea1f9bf67e0e3d54.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-36b0b5132996e368dba5a78941f6c871.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-83b7032f35e50f8e07ab8374988bff5c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-91b5615c2ff8d8be0afeaa33edb79e7d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./github_template.html">Streamlining documentation</a></li><li class="breadcrumb-item"><a href="./github_template.html">Repository template</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./github_readme.html">Add a README</a></li><li class="breadcrumb-item"><a href="./github_template.html">Repository README template</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -242,7 +242,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Streamlining documentation</span></a>
+ <span class="menu-text">Add a README</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -250,8 +250,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./github_readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repository READMEs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./github_template.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Repository template</span></a>
+ <span class="menu-text">Repository README template</span></a>
   </div>
 </li>
       </ul>
@@ -386,9 +392,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./github_template.html">Streamlining documentation</a></li><li class="breadcrumb-item"><a href="./github_template.html">Repository template</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./coding.html">Coding as a Lab</a></li><li class="breadcrumb-item"><a href="./github_readme.html">Add a README</a></li><li class="breadcrumb-item"><a href="./github_template.html">Repository README template</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Using GitHub Templates to document things</h1>
+<h1 class="title">Leveraging GitHub Templates</h1>
 </div>
 
 
@@ -407,7 +413,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="repository-templates" class="level2">
 <h2 class="anchored" data-anchor-id="repository-templates">Repository templates</h2>
-<p>You can create templates to model a specific repository setup when creating a new repository. The advantage of such a template is that you can provide a boilerplate for the README and any other files you would like your collaborators to provide when setting up a new project / repository.</p>
+<p>You can create a <strong>Repository Template</strong> to model a specific repository setup every time you create a new repository. The advantage of such a template is that you can include a boilerplate for the <code>README</code> and any other files you would like your collaborators to provide when setting up a new project / repository.</p>
 <p>To create a template repository you can either use an existing one or create a new one for this specific purpose. We are going to do the latter.</p>
 <p>Let’s create a new repository as we have done previously we recommend adding the word “template” in the name so it makes its purpose more obvious</p>
 <div class="quarto-figure quarto-figure-center">
@@ -848,8 +854,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./git_conflicts.html" class="pagination-link" aria-label="Managing conflicts">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Managing conflicts</span>
+      <a href="./github_readme.html" class="pagination-link" aria-label="Repository READMEs">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Repository READMEs</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
